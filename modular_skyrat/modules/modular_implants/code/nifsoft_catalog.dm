@@ -8,6 +8,10 @@ GLOBAL_LIST_INIT(purchasable_nifsofts, list(
 	/datum/nifsoft/scryer,
 	/datum/nifsoft/summoner/book,
 	/datum/nifsoft/action_granter/hypnosis,
+	// GS13 EDIT our NIFSofts
+	/datum/nifsoft/fat_scanner,
+	/datum/nifsoft/weight_display,
+	// GS13 END EDIT
 ))
 
 /datum/computer_file/program/nifsoft_downloader

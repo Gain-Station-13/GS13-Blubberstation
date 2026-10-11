@@ -526,6 +526,10 @@
 	new /obj/item/disk/nifsoft_uploader/dorms/hypnosis(src)
 	new /obj/item/disk/nifsoft_uploader/soulcatcher(src)
 	new /obj/item/disk/nifsoft_uploader/money_sense(src)
+	// GS13 EDIT
+	new /obj/item/disk/nifsoft_uploader/weight_display(src)
+	new /obj/item/disk/nifsoft_uploader/fat_scanner(src)
+	// GS13 END EDIT
 
 /obj/item/storage/box/nif_ghost_box/ghost_role/PopulateContents()
 	. = ..()

@@ -15,7 +15,7 @@
 | Bubberstation Code			| https://github.com/Bubberstation/Bubberstation										|
 | Bubberstation Discord   | https://discord.gg/AvjrTqnqEx                                     |
 | Gain Station 13 Code		| https://github.com/sheepishgoat/GS13-Blubberstation								|
-| Gain Station 13 Configs | https://github.com/Khaira-Hol/GS13-Configs												|
+| Gain Station 13 Configs | https://github.com/Gain-Station-13/GS13-Configs										|
 | Gain Station 13 Discord | https://discord.gg/7zRr6NFWX2																		  |
 | Coderbus Discord        | https://discord.gg/Vh8TJp9                                        |
 

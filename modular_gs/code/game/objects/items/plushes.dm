@@ -1,7 +1,7 @@
 /obj/item/toy/plush/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(attempt_to_feed(tool, user))
 		return
-	
+
 	return ..()
 
 /obj/item/toy/plush/gs13
@@ -305,4 +305,13 @@
 	stuffed_icon_state = "sato_stuffed"
 	pred_plush = FALSE
 	prey_plush = TRUE
+	can_eat_food = TRUE
+
+/obj/item/toy/plush/gs13/zelia
+	name = "Crafty Moth Plushie"
+	desc = "It's either planning for an elaborate heist, or it's next gut-busting meal."
+	icon_state = "zelia"
+	stuffed_icon_state = "zelia_stuffed"
+	pred_plush = FALSE
+	prey_plush = FALSE
 	can_eat_food = TRUE

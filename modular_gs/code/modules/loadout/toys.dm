@@ -112,6 +112,10 @@
 	name = "Timid Snow Leopard Plush"
 	item_path = /obj/item/toy/plush/gs13/sato
 
+/datum/loadout_item/toys/plush/zelia_plush
+	name = "Crafty Moth Plush"
+	item_path = /obj/item/toy/plush/gs13/zelia
+
 // #endregion
 
 /datum/loadout_item/toys/caloritepen

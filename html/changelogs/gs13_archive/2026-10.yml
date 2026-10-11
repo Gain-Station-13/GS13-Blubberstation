@@ -22,3 +22,12 @@
       now also properly protect from radiation
   - bugfix: fixes fizz wizz and sootheseltz not having crushed sprites
   - bugfix: fixes galbanic compound addiction triggering very quickly
+2026-10-07:
+  sheepishgoat:
+  - rscadd: Adds in the Internal Scale NIFSoft. It functions as an internal version
+      of a scale or weight scanner.
+  - rscadd: Adds in blueberry kegs. Blueberry kegs can be crafted with 1000u of blueberry
+      juice and 5 sheets of iron. It can be exported by cargo for ~2500cr
+  - bugfix: fixes milkers not milking blueberry juice
+  - bugfix: fixes the Weight Watcher NIFSoft, now actually allowing it to be purchasable
+      and usable.
