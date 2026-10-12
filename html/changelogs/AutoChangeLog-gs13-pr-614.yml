@@ -1,0 +1,5 @@
+author: "Icepick200"
+delete-after: True
+changes:
+  - rscadd: "Added in the Modular Swimsuit, compatible with Belly GS13, Smooth No Arms, and Round belly types."
+  - bugfix: "Fixed the bunnysuit's round belly sprites not working."
