@@ -71,6 +71,9 @@
 #define TRAIT_HELPLESS_LISP				"lisp_helpless"
 #define TRAIT_LISP						"lisp"
 #define TRAIT_HELPLESS_NEARSIGHTED		"nearsighted_from_weight_helpless"
+#define TRAIT_STOMP						"stomping"
+#define TRAIT_HELPLESS_STOMP			"stomping_helpless"
+#define FOOTSTEP_MOB_STOMP
 
 // GS13 positive quirks
 #define TRAIT_BLOB_BED					"blob_bed"

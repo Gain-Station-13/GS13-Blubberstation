@@ -124,6 +124,12 @@ export const lisp: Feature<number> = {
   component: FeatureNumberInput,
 };
 
+export const stomping: Feature<number> = {
+  name: 'Stomping',
+  description: 'At what weight do your footsteps sound like loud stomping when barefoot? 0 disables this.',
+  component: FeatureNumberInput,
+};
+
 /*
 export const weak_lungs: Feature<number> = {
   name: 'Weak lungs',
