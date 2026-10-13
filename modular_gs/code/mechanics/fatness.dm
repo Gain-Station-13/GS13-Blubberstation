@@ -47,6 +47,16 @@
 
 	adjustment_amount = get_fatness_adjustment_amount(adjustment_amount, ignore_rate)
 
+	if(HAS_TRAIT(src, TRAIT_HARDCORE_FATTY) && (adjustment_amount < 0))
+		if(perma_fatness_loss_stored < -adjustment_amount)
+			adjustment_amount = adjustment_amount * 0.01 // Good luck :3
+		else
+			var/percentage_of_perma_fat_removed = (adjustment_amount / perma_fatness_loss_stored)
+			// Adding because we know that the adjustment amount is negative
+			perma_loss_time_stored += (percentage_of_perma_fat_removed * perma_loss_time_stored)
+			perma_fatness_loss_stored += adjustment_amount
+
+
 	if(fatness_perma + adjustment_amount < 0)
 		adjustment_amount = -fatness_perma
 

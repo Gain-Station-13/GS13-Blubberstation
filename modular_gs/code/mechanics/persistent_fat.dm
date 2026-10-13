@@ -7,6 +7,11 @@
 	/// How many hardcore fatty points have we currently accumulated?
 	var/hardcore_fatty_current_streak = 0
 
+	/// How much time has the mob been accruing their perma_fatness loss allowance?
+	var/perma_loss_time_stored = PERMA_LOSS_ALLOWANCE_TIME_MAX_IN_HOURS
+	/// How much perma fatness is the mob able to put off?
+	var/perma_fatness_loss_stored = 1000
+
 /mob/living/carbon/proc/save_persistent_fat(datum/modular_persistence/persistence)
 	persistence.real_fat = fatness_real
 
@@ -15,11 +20,16 @@
 	// we save this all the time, but we'll only load if we have the prefs
 	persistence.micro_calorite_poisoning = micro_calorite_poisoning
 
-	if(hardcore_fatty_streak_total)
-		persistence.hardcore_fatty_current_streak += hardcore_fatty_streak_total
+	if(!hardcore_fatty_streak_total)
+		return
 
-		if(persistence.hardcore_fatty_current_streak > persistence.hardcore_fatty_max_streak)
-			persistence.hardcore_fatty_max_streak = persistence.hardcore_fatty_current_streak
+	persistence.hardcore_fatty_current_streak += hardcore_fatty_streak_total
+
+	if(persistence.hardcore_fatty_current_streak > persistence.hardcore_fatty_max_streak)
+		persistence.hardcore_fatty_max_streak = persistence.hardcore_fatty_current_streak
+
+	persistence.perma_loss_time_stored = perma_loss_time_stored
+	persistence.perma_fatness_loss_stored = perma_fatness_loss_stored
 
 
 /mob/living/carbon/proc/load_persistent_fat(datum/modular_persistence/persistence)
@@ -41,6 +51,9 @@
 		fatness_perma = persistence.perma_fat
 		micro_calorite_poisoning = persistence.micro_calorite_poisoning
 		addtimer(CALLBACK(src, PROC_REF(update_hardcore_fatty_value)), HARDCORE_FATTY_POINT_CHECK_INTERVAL)
+
+		perma_loss_time_stored = persistence.perma_loss_time_stored
+		perma_fatness_loss_stored = persistence.perma_fatness_loss_stored
 		return
 
 	if(persistence.hardcore_fatty_current_streak) // Reset the streak, if you've joined into a round without the quirk
@@ -57,4 +70,6 @@
 		micro_calorite_poisoning = persistence.micro_calorite_poisoning
 	else
 		persistence.micro_calorite_poisoning = 0
+
+
 

@@ -61,3 +61,8 @@
 
 	/// How many points have we gotten over the course of this round, for this character?
 	var/hardcore_fatty_streak_total = 0
+
+	/// How much time has the mob been accruing their perma_fatness loss allowance?
+	var/perma_loss_time_stored = 0
+	/// How much perma fatness is the mob able to put off?
+	var/perma_fatness_loss_stored = 0

@@ -49,4 +49,11 @@
 	client?.give_award(/datum/award/score/hardcore_fatty_total, src, HARDCORE_FATTY_POINTS_PER_INTERVAL)
 	hardcore_fatty_streak_total += HARDCORE_FATTY_POINTS_PER_INTERVAL
 
+	if(perma_loss_time_stored <= (PERMA_LOSS_ALLOWANCE_TIME_MAX_IN_HOURS - HARDCORE_FATTY_POINT_CHECK_INTERVAL)) // Store
+		var/fatness_loss_allocation_added = (fatness_perma / PERMA_LOSS_ALLOWANCE_TIME_MAX_NUMBER)
+
+		perma_fatness_loss_stored += max(PERMA_LOSS_ALLOWANCE_PER_HOUR_MINIMUM, fatness_loss_allocation_added)
+		perma_loss_time_stored += HARDCORE_FATTY_POINT_CHECK_INTERVAL
+
+
 	addtimer(CALLBACK(src, PROC_REF(update_hardcore_fatty_value)), HARDCORE_FATTY_POINT_CHECK_INTERVAL)
