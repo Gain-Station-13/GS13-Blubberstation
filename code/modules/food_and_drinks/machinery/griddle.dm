@@ -21,7 +21,7 @@
 	///What variant of griddle is this?
 	var/variant = 1
 	///How many shit fits on the griddle?
-	var/max_items = 8
+	var/max_items = 20 //GS13 EDIT 8 -> 20
 
 /obj/machinery/griddle/Initialize(mapload)
 	. = ..()
