@@ -7481,6 +7481,8 @@
 #include "modular_gs\code\modules\atmospherics\gasmixtures\gas_types.dm"
 #include "modular_gs\code\modules\atmospherics\gasmixtures\reaction_factors.dm"
 #include "modular_gs\code\modules\atmospherics\gasmixtures\reactions.dm"
+#include "modular_gs\code\modules\atmospherics\machinery\superparticle_projector.dm"
+#include "modular_gs\code\modules\atmospherics\machinery\superparticle_status_effects.dm"
 #include "modular_gs\code\modules\atmospherics\machinery\components\gas_recipe_machines\atmos_machine_recipes.dm"
 #include "modular_gs\code\modules\atmospherics\machinery\portable\canister.dm"
 #include "modular_gs\code\modules\berry\clothing\collar.dm"
