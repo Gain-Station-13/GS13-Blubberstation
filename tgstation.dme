@@ -7588,6 +7588,7 @@
 #include "modular_gs\code\modules\paperwork\paperwork.dm"
 #include "modular_gs\code\modules\power\powerator.dm"
 #include "modular_gs\code\modules\power\smes.dm"
+#include "modular_gs\code\modules\power\supermatter_gas.dm"
 #include "modular_gs\code\modules\projectiles\projectile.dm"
 #include "modular_gs\code\modules\projectiles\projectiles.dm"
 #include "modular_gs\code\modules\reagents\chemistry\reagents\blueberry.dm"
