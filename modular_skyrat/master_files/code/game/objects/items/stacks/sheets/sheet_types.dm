@@ -49,8 +49,7 @@ GLOBAL_LIST_INIT(skyrat_metal_airlock_recipes, list(
 
 GLOBAL_LIST_INIT(skyrat_plasteel_recipes, list(
 	new/datum/stack_recipe("plasteel barricade", /obj/structure/deployable_barricade/metal/plasteel, 2, time = 1 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND | CRAFT_CHECK_DIRECTION, category = CAT_STRUCTURE),
-	// GS13 EDIT - Scales
-	new/datum/stack_recipe("large scale", /obj/structure/scale/plasteel, 3, time = 2 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_FURNITURE),
+	new/datum/stack_recipe("large scale", /obj/structure/scale/plasteel, 3, time = 2 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_FURNITURE),	// GS13 EDIT - Scales
 ))
 
 /obj/item/stack/sheet/plasteel/get_main_recipes()

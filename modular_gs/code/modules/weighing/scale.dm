@@ -12,14 +12,6 @@
 	/// Component responsible for scale behavior
 	var/datum/component/weight_scale/scale_component
 
-/obj/structure/scale/Initialize(mapload)
-	. = ..()
-	scale_component = AddComponent(/datum/component/weight_scale)
-
-/obj/structure/scale/examine(mob/user)
-	. = ..()
-	. += span_notice("It's held together by a couple of <b>bolts</b>.")
-
 /obj/structure/scale/wrench_act_secondary(mob/living/user, obj/item/tool)
 	..()
 	tool.play_tool_sound(src)
@@ -30,11 +22,19 @@
 	for(var/datum/material/mat as anything in custom_materials)
 		new mat.sheet_type(loc, FLOOR(custom_materials[mat] / SHEET_MATERIAL_AMOUNT, 1))
 
+/obj/structure/scale/Initialize(mapload)
+	. = ..()
+	scale_component = AddComponent(/datum/component/weight_scale)
+
 /obj/structure/scale/Destroy(force)
 	if(scale_component)
 		QDEL_NULL(scale_component)
 
 	return ..()
+
+/obj/structure/scale/examine(mob/user)
+	. = ..()
+	. += span_notice("It's held together by a couple of <b>bolts</b>.")
 
 /obj/structure/scale/ui_interact(mob/user)
 	scale_component.ui_interact(user)
