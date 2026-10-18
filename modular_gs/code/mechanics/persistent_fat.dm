@@ -47,7 +47,7 @@
 
 
 	if("Hardcore Fatty" in prefs.all_quirks) // You get all of the fun!
-		fatness_real += persistence.real_fat
+		fatness_real = persistence.real_fat
 		fatness_perma = persistence.perma_fat
 		micro_calorite_poisoning = persistence.micro_calorite_poisoning
 		addtimer(CALLBACK(src, PROC_REF(update_hardcore_fatty_value)), HARDCORE_FATTY_POINT_CHECK_INTERVAL)
@@ -61,7 +61,7 @@
 		to_chat(src, span_boldwarning("Your hardcore fatty streak has been reset!"))
 
 	if (prefs.read_preference(/datum/preference/toggle/weight_gain_persistent))
-		fatness_real += persistence.real_fat
+		fatness_real = persistence.real_fat
 
 	if (prefs.read_preference(/datum/preference/toggle/weight_gain_permanent))
 		fatness_perma = persistence.perma_fat
