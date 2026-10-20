@@ -59,6 +59,7 @@
 	var/new_pref_value = !(prefs.read_preference(/datum/preference/toggle/master_wg_pref))
 	prefs.write_preference(master_wg_pref, new_pref_value)
 
+	to_chat(owner, span_notice("Weight Gain is now [new_pref_value ? "enabled" : "disabled"]"))
 	build_all_button_icons(UPDATE_BUTTON_BACKGROUND)
 	return ..()
 
