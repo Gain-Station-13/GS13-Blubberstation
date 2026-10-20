@@ -5,6 +5,12 @@
 	default_value = FALSE
 
 /datum/preference/toggle/master_wg_pref/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+	if(locate(/datum/action/innate/wg_toggle) in target.actions) // if we already have the action present, skip past this.
+		return
+
+	var/datum/action/innate/wg_toggle/new_toggle_action = new(target)
+	new_toggle_action.Grant(target)
+
 	return
 
 /datum/preference/numeric/starting_fatness
