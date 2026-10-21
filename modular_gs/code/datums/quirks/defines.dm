@@ -1,3 +1,6 @@
+/datum/quirk/helplessness
+	overwrite_wg_prefs = TRUE
+
 /datum/quirk/helplessness/add_to_holder(mob/living/new_holder, quirk_transfer, client/client_source, unique, announce)
 	. = ..()
 	// if (!HAS_TRAIT(new_holder, TRAIT_UNIVERSAL_GAINER))

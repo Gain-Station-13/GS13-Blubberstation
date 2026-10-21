@@ -11,7 +11,6 @@ import {
   Tooltip,
 } from 'tgui-core/components';
 import { createSearch } from 'tgui-core/string';
-
 import {
   type PreferencesMenuData,
   type Quirk,
@@ -95,7 +94,15 @@ type QuirkDisplayProps = {
 
 function QuirkDisplay(props: QuirkDisplayProps) {
   const { quirk, quirkKey, handleClick, selected, quirkActionLocked } = props;
-  const { icon, value, name, description, customizable, failTooltip } = quirk;
+  const {
+    icon,
+    value,
+    name,
+    description,
+    overwrite_wg_prefs,
+    customizable,
+    failTooltip,
+  } = quirk; //GS13 EDIT add WG pref overwrite warning
 
   const [customizationExpanded, setCustomizationExpanded] = useState(false);
 
@@ -109,8 +116,7 @@ function QuirkDisplay(props: QuirkDisplayProps) {
         pointerEvents: props.quirkActionLocked ? 'none' : 'auto',
       }}
       onClick={() => {
-        if (quirkActionLocked)
-          return;
+        if (quirkActionLocked) return;
         if (selected) {
           setCustomizationExpanded(false);
         }
@@ -179,6 +185,17 @@ function QuirkDisplay(props: QuirkDisplayProps) {
               }}
             >
               {description}
+              {!!overwrite_wg_prefs && (
+                <>
+                  <br />
+                  <br />
+                  <i>
+                    This quirk will <b>IGNORE PREFERENCES</b> and enable weight
+                    gain from all sources. If you do not want this, do not
+                    choose this quirk.
+                  </i>
+                </>
+              )}
               {!!customizable && (
                 <QuirkPopper
                   {...props}
@@ -519,7 +536,9 @@ function QuirkPage() {
 
                 withQuirkDebounce(() => {
                   setSelectedQuirks(
-                    selectedQuirks.filter((otherQuirk) => quirkName !== otherQuirk),
+                    selectedQuirks.filter(
+                      (otherQuirk) => quirkName !== otherQuirk,
+                    ),
                   );
 
                   act('remove_quirk', { quirk: quirk.name });
