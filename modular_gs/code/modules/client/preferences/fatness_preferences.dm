@@ -11,8 +11,6 @@
 	var/datum/action/innate/wg_toggle/new_toggle_action = new(target)
 	new_toggle_action.Grant(target)
 
-	return
-
 /datum/preference/numeric/starting_fatness
 	category = WG_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER

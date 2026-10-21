@@ -104,7 +104,7 @@ export type Quirk = {
   value: number;
   customizable: boolean;
   customization_options?: string[];
-  overwrite_wg_prefs: boolean; //
+  overwrite_wg_prefs: boolean; //GS13 EDIT
 };
 
 // SKYRAT EDIT START

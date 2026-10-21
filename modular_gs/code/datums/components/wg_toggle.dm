@@ -11,6 +11,9 @@
 
 // Need to do this so that the icon properly shows up as active when spawning in
 /datum/action/innate/wg_toggle/Grant(mob/grant_to)
+	if(!istype(grant_to, /mob/living/carbon))
+		return
+
 	build_all_button_icons(UPDATE_BUTTON_BACKGROUND)
 	return ..()
 

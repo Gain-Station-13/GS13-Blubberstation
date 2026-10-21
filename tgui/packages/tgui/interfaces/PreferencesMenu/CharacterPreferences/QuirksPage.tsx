@@ -94,7 +94,7 @@ type QuirkDisplayProps = {
 
 function QuirkDisplay(props: QuirkDisplayProps) {
   const { quirk, quirkKey, handleClick, selected, quirkActionLocked } = props;
-  const {
+  const { // GS13 EDIT START add WG pref overwrite warning
     icon,
     value,
     name,
@@ -102,7 +102,7 @@ function QuirkDisplay(props: QuirkDisplayProps) {
     overwrite_wg_prefs,
     customizable,
     failTooltip,
-  } = quirk; //GS13 EDIT add WG pref overwrite warning
+  } = quirk; //GS13 EDIT END
 
   const [customizationExpanded, setCustomizationExpanded] = useState(false);
 
@@ -185,6 +185,7 @@ function QuirkDisplay(props: QuirkDisplayProps) {
               }}
             >
               {description}
+              {/* GS13 EDIT START */}
               {!!overwrite_wg_prefs && (
                 <>
                   <br />
@@ -196,6 +197,8 @@ function QuirkDisplay(props: QuirkDisplayProps) {
                   </i>
                 </>
               )}
+
+              {/* GS13 EDIT END */}
               {!!customizable && (
                 <QuirkPopper
                   {...props}
@@ -333,7 +336,8 @@ function QuirkPage() {
   const [quirkActionLocked, setQuirkActionLocked] = useState(false);
 
   function withQuirkDebounce(debounce: () => void, delay = 200) {
-    if (quirkActionLocked) return;
+    if (quirkActionLocked)
+      return;
 
     setQuirkActionLocked(true);
     debounce();
@@ -536,9 +540,7 @@ function QuirkPage() {
 
                 withQuirkDebounce(() => {
                   setSelectedQuirks(
-                    selectedQuirks.filter(
-                      (otherQuirk) => quirkName !== otherQuirk,
-                    ),
+                    selectedQuirks.filter((otherQuirk) => quirkName !== otherQuirk),
                   );
 
                   act('remove_quirk', { quirk: quirk.name });
