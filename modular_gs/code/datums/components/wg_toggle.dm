@@ -53,6 +53,7 @@
 
 	if(HAS_TRAIT(owner, TRAIT_UNIVERSAL_GAINER))
 		to_chat(owner, span_warning("You are unable to disable WG due to one of your quirks or something else."))
+		build_all_button_icons(UPDATE_BUTTON_BACKGROUND) // Just incase the background isn't already toggled.
 		return ..()
 
 	var/datum/preference/toggle/master_wg_pref/master_wg_pref = GLOB.preference_entries[/datum/preference/toggle/master_wg_pref]
