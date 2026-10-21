@@ -11,6 +11,7 @@ import {
   Tooltip,
 } from 'tgui-core/components';
 import { createSearch } from 'tgui-core/string';
+
 import {
   type PreferencesMenuData,
   type Quirk,
@@ -116,7 +117,8 @@ function QuirkDisplay(props: QuirkDisplayProps) {
         pointerEvents: props.quirkActionLocked ? 'none' : 'auto',
       }}
       onClick={() => {
-        if (quirkActionLocked) return;
+        if (quirkActionLocked)
+          return;
         if (selected) {
           setCustomizationExpanded(false);
         }
@@ -336,8 +338,7 @@ function QuirkPage() {
   const [quirkActionLocked, setQuirkActionLocked] = useState(false);
 
   function withQuirkDebounce(debounce: () => void, delay = 200) {
-    if (quirkActionLocked)
-      return;
+    if (quirkActionLocked) return;
 
     setQuirkActionLocked(true);
     debounce();
