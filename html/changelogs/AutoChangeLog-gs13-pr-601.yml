@@ -1,0 +1,4 @@
+author: "sheepishgoat"
+delete-after: True
+changes:
+  - rscadd: "Introduces the hardcore fatty quirk, see https://github.com/sheepishgoat/GS13-Blubberstation/pull/601 for more details."

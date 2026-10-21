@@ -1,0 +1,7 @@
+author: "Throughawaynadir"
+delete-after: True
+changes:
+  - rscadd: "Added mechanic that causes base scale to break if fatty weights over 1000 lbs"
+  - rscadd: "Added new plasteel scale that takes up two tiles and has an uncapped weight limit"
+  - rscadd: "Added new plasteel scale recipe"
+  - image: "added megascale sprite to icons: modular_gs\\icons\\obj\\megascale.dmi"

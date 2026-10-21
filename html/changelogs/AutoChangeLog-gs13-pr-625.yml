@@ -1,0 +1,5 @@
+author: "Swan"
+delete-after: True
+changes:
+  - rscadd: "Adds lipoifium interactions with the superparticle generator"
+  - rscadd: "Adds lipoifium and galbanium now affect the stats of the SM"
