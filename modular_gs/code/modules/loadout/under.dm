@@ -180,3 +180,169 @@
 /datum/loadout_item/uniform/jumpsuit/gs13/turtleneck
 	name = "Turtleneck Shirt (Modular)"
 	item_path = /obj/item/clothing/under/dual_tone/button_up/turtleneck
+
+// AUTODROBE -> LOADOUT START
+
+// COSTUMES
+
+/datum/loadout_item/uniform/costume/referee
+	name = "Referee Uniform"
+	item_path = /obj/item/clothing/under/costume/referee
+
+/datum/loadout_item/uniform/costume/henchmen
+	name = "Henchmen Jumpsuit"
+	item_path = /obj/item/clothing/under/costume/henchmen
+
+/datum/loadout_item/uniform/costume/jackbros
+	name = "Jack Bros Outfit"
+	item_path = /obj/item/clothing/under/costume/jackbros
+
+/datum/loadout_item/uniform/costume/deckers
+	name = "Deckers Outfit"
+	item_path = /obj/item/clothing/under/costume/deckers
+
+/datum/loadout_item/uniform/costume/gi
+	name = "Martial Gi"
+	item_path = /obj/item/clothing/under/costume/gi
+
+/datum/loadout_item/uniform/costume/hlciv
+	name = "Blue Citizen Uniform"
+	item_path = /obj/item/clothing/under/costume/hlciv
+
+/datum/loadout_item/uniform/costume/playbunny/british
+	name = "British Bunny Suit"
+	item_path = /obj/item/clothing/under/costume/playbunny/british
+
+/datum/loadout_item/uniform/costume/playbunny/communist
+	name = "Really Red Bunny Suit"
+	item_path = /obj/item/clothing/under/costume/playbunny/communist
+
+/datum/loadout_item/uniform/costume/playbunny/greyscale
+	name = "Bunny Suit"
+	item_path = /obj/item/clothing/under/costume/playbunny/greyscale
+
+/datum/loadout_item/uniform/costume/playbunny/magician
+	name = "Magician's Bunny Suit"
+	item_path = /obj/item/clothing/under/costume/playbunny/magician
+
+/datum/loadout_item/uniform/costume/playbunny/usa
+	name = "Striped Bunny Suit"
+	item_path = /obj/item/clothing/under/costume/playbunny/usa
+
+/datum/loadout_item/uniform/doug_dimmadome
+	name = "Dimmadome Formal Outfit"
+	item_path = /obj/item/clothing/under/doug_dimmadome
+
+// ENTERTAINERS
+
+/datum/loadout_item/uniform/rank/civilian/clown/blue
+	name = "Blue Clown Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/blue
+
+/datum/loadout_item/uniform/rank/civilian/clown/green
+	name = "Green Clown Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/green
+
+/datum/loadout_item/uniform/rank/civilian/clown/orange
+	name = "Orange Clown Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/orange
+
+/datum/loadout_item/uniform/rank/civilian/clown/yellow
+	name = "Yellow Clown Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/yellow
+
+/datum/loadout_item/uniform/rank/civilian/clown/purple
+	name = "Purple Clown Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/purple
+
+/datum/loadout_item/uniform/rank/civilian/clown/sexy
+	name = "Sexy-clown Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/sexy
+
+/datum/loadout_item/uniform/rank/civilian/mime/sexy
+	name = "Sexy Mime Outfit"
+	item_path = /obj/item/clothing/under/rank/civilian/mime/sexy
+
+/datum/loadout_item/uniform/rank/civilian/mime/skirt
+	name = "Mime's Skirt"
+	item_path = /obj/item/clothing/under/rank/civilian/mime/skirt
+
+/datum/loadout_item/uniform/costume/joker
+	name = "Comedian Suit"
+	item_path = /obj/item/clothing/under/costume/joker
+
+/datum/loadout_item/uniform/costume/singer/yellow
+	name = "Yellow Preformer's Outfit"
+	item_path = /obj/item/clothing/under/costume/singer/yellow
+
+/datum/loadout_item/uniform/costume/singer/blue
+	name = "Blue Preformer's Outfit"
+	item_path = /obj/item/clothing/under/costume/singer/blue
+
+/datum/loadout_item/uniform/costume/singer/red
+	name = "Red Preformer's Outfit"
+	item_path = /obj/item/clothing/under/costume/singer/red
+
+/datum/loadout_item/uniform/rank/civilian/clown/clown_bunnysuit
+	name = "Clown's Bunny Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/clown_bunnysuit
+
+/datum/loadout_item/uniform/rank/civilian/mime_bunnysuit
+	name = "Mime's Bunny Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/mime_bunnysuit
+
+// FANCY
+
+/datum/loadout_item/uniform/costume/captain
+	name = "Captain's Suit"
+	item_path = /obj/item/clothing/under/costume/captain
+
+/datum/loadout_item/uniform/costume/captain/skirt
+	name = "Green Suitskirt"
+	item_path = /obj/item/clothing/under/costume/captain/skirt
+
+/datum/loadout_item/uniform/costume/seifuku
+	name = "Schoolgirl Uniform"
+	item_path = /obj/item/clothing/under/costume/seifuku
+
+/datum/loadout_item/uniform/costume/seifuku/red
+	name = "Schoolgirl Uniform"
+	item_path = /obj/item/clothing/under/costume/seifuku/red
+
+/datum/loadout_item/uniform/costume/seifuku/teal
+	name = "Schoolgirl Uniform"
+	item_path = /obj/item/clothing/under/costume/seifuku/teal
+
+/datum/loadout_item/uniform/costume/seifuku/tan
+	name = "Schoolgirl Uniform"
+	item_path = /obj/item/clothing/under/costume/seifuku/tan
+
+/datum/loadout_item/uniform/costume/skyrat/kamishimo
+	name = "Kamisimo"
+	item_path = /obj/item/clothing/under/costume/skyrat/kamishimo
+
+// SERVICE
+
+/datum/loadout_item/uniform/costume/buttondown/skirt/service
+	name = "Button-Down Shirt With Skirt"
+	item_path = /obj/item/clothing/under/costume/buttondown/skirt/service
+
+// PREMIUM
+
+/datum/loadout_item/uniform/rank/civilian/clown/rainbow
+	name = "Rainbow Clown Suit"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/rainbow
+
+/datum/loadout_item/uniform/costume/roman
+	name = "Roman Armor"
+	item_path = /obj/item/clothing/under/costume/roman
+
+/datum/loadout_item/uniform/costume/drfreeze
+	name = "Doctor Freeze's Jumpsuit"
+	item_path = /obj/item/clothing/under/costume/drfreeze
+
+/datum/loadout_item/uniform/dress/wedding_dress
+	name = "Wedding Dress"
+	item_path = /obj/item/clothing/under/dress/wedding_dress
+
+// AUTODROBE -> LOADOUT END
