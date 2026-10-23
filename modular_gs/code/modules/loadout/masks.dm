@@ -1,11 +1,5 @@
 // AUTODROBE -> LOADOUT START
 
-// COSTUMES
-
-/datum/loadout_item/mask/whistle // horrible. I will regret this.
-	name = "Police Whistle"
-	item_path = /obj/item/clothing/mask/whistle
-
 // ENTERTAINERS
 
 /datum/loadout_item/mask/gas/sexyclown
