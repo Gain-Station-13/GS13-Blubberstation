@@ -2,10 +2,6 @@
 
 // COSTUMES
 
-/datum/loadout_item/suit/labcoat/mad
-	name = "The Mad's Labcoat"
-	item_path = /obj/item/clothing/suit/toggle/labcoat/mad
-
 /datum/loadout_item/suit/costume/dracula
 	name = "Dracula Coat"
 	item_path = /obj/item/clothing/suit/costume/dracula

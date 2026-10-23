@@ -14,10 +14,6 @@
 	name = "Bald Clown Mask"
 	item_path = /obj/item/clothing/mask/gas/clownbald
 
-/datum/loadout_item/mask/gas/britches
-	name = "Britches' Mask"
-	item_path = /obj/item/clothing/mask/gas/britches
-
 // ANIMALS
 
 /datum/loadout_item/mask/animal/small/bat
