@@ -1,6 +1,6 @@
 // AUTODROBE -> LOADOUT START
 
-// ENTERTAINERS
+// ENTERTAINERS (Its all clowns? Always will be.)
 
 /datum/loadout_item/mask/gas/sexyclown
 	name = "Sexy-clown Wig And Mask"
