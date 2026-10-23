@@ -1,4 +1,4 @@
-// AUTODROBE -> LOADOUT START
+// #region autodrobe to loadout
 
 // COSTUMES
 
@@ -106,4 +106,4 @@
 	name = "Headdress Of Nemes"
 	item_path = /obj/item/clothing/head/costume/nemes
 
-// AUTODROBE -> LOADOUT END
+// #endregion

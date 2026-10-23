@@ -1,4 +1,4 @@
-// AUTODROBE -> LOADOUT START
+// #region autodrobe to loadout
 
 // COSTUMES
 
@@ -124,4 +124,4 @@
 	name = "Pharaoh Tunic"
 	item_path = /obj/item/clothing/suit/costume/nemes
 
-// AUTODROBE -> LOADOUT END
+// #endregion

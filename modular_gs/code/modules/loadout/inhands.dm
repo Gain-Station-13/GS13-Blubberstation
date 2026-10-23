@@ -6,7 +6,7 @@
 	name = "Mobility exoskeleton"
 	item_path = /obj/item/mod/control/pre_equipped/exoskeleton/locked
 
-// AUTODROBE -> LOADOUT START
+// #region autodrobe to loadout
 
 // SUPERNATURAL
 
@@ -28,4 +28,4 @@
 	name = "Roman Shield"
 	item_path = /obj/item/shield/roman/fake
 
-// AUTODROBE -> LOADOUT END
+// #endregion

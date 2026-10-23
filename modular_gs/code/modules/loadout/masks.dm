@@ -1,6 +1,6 @@
-// AUTODROBE -> LOADOUT START
+// #region autodrobe to loadout
 
-// ENTERTAINERS (Its all clowns? Always will be.)
+// ENTERTAINERS
 
 /datum/loadout_item/mask/gas/sexyclown
 	name = "Sexy-clown Wig And Mask"
@@ -82,4 +82,4 @@
 	name = "Tribal Mask"
 	item_path = /obj/item/clothing/mask/animal/small/tribal
 
-// AUTODROBE -> LOADOUT END
+// #endregion

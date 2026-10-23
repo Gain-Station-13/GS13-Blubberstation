@@ -181,7 +181,7 @@
 	name = "Turtleneck Shirt (Modular)"
 	item_path = /obj/item/clothing/under/dual_tone/button_up/turtleneck
 
-// AUTODROBE -> LOADOUT START
+// #region autodrobe to loadout
 
 // COSTUMES
 
@@ -345,4 +345,4 @@
 	name = "Wedding Dress"
 	item_path = /obj/item/clothing/under/dress/wedding_dress
 
-// AUTODROBE -> LOADOUT END
+// #endregion

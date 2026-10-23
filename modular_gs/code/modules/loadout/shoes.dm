@@ -1,4 +1,4 @@
-// AUTODROBE -> LOADOUT START
+// #region autodrobe to loadout
 
 // ENTERTAINERS
 
@@ -18,4 +18,4 @@
 	name = "Honk Heels"
 	item_path = /obj/item/clothing/shoes/clown_shoes/heeled
 
-// AUTODROBE -> LOADOUT END
+// #endregion

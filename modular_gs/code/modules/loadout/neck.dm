@@ -1,4 +1,4 @@
-// AUTODROBE -> LOADOUT START
+// #region autodrobe to loadout
 
 // COSTUMES
 
@@ -28,4 +28,4 @@
 	name = "Clown's Bowtie"
 	item_path = /obj/item/clothing/neck/tie/clown
 
-// AUTODROBE -> LOADOUT END
+// #endregion
