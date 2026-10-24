@@ -9,18 +9,18 @@
 	description = "Ending world hunger was never made easier!"
 	prereq_ids = list(TECHWEB_NODE_MEDBAY_EQUIP, TECHWEB_NODE_EXP_TOOLS)
 	design_ids = list(
-		"calorite_collar",
-		"ci-nutrimentturbo",
-		"bluespace_belt",
-		"adipoelectric_transformer",
-		"adipoelectric_generator",
-		"cookie_synthesizer",
-		"borg_upgrade_cookiesynthesizer",
-		"borg_feeding_tube_upgrade",
-		"ci-fatmobility",
-		"bluespace_collar_receiver",
-		"bluespace_collar_transmitter",
-		"blueberry_field_collar",
+		/datum/design/calorite_collar,
+		/datum/design/cyberimp_nutriment_turbo,
+		/datum/design/bluespace_belt,
+		/datum/design/board/adipoelectric_transformer,
+		/datum/design/board/adipoelectric_generator,
+		/datum/design/cookie_synthesizer,
+		/datum/design/borg_cookie_synthesizer,
+		/datum/design/borg_feeding_tube_upgrade,
+		/datum/design/cyberimp_fat_mobility,
+		/datum/design/bluespace_collar_receiver,
+		/datum/design/bluespace_collar_transmitter,
+		/datum/design/berry_collar,
 		)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	required_items_to_unlock = list(
@@ -37,14 +37,13 @@
 	description = "Ever wanted to reach your daily caloric intake in just 5 seconds?"
 	prereq_ids = list(TECHWEB_NODE_MEDBAY_EQUIP, TECHWEB_NODE_EXP_TOOLS)
 	design_ids = list(
-		"fatoray_weak",
-		"fatoray_cannon_weak",
-		"alter_ray_metabolism",
-		"alter_ray_reverser",
-		"borg_upgrade_fatoray",
-		"bwomf_nanites",
-		"caloray",
-		// "docility_implant"
+		/datum/design/fatoray_weak,
+		/datum/design/fatoray_cannon_weak,
+		/datum/design/alter_ray_metabolism,
+		/datum/design/alter_ray_reverser,
+		/datum/design/borg_fatoray,
+		/datum/design/caloray,
+		/datum/design/nanites/bwomf,
 		)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	required_items_to_unlock = list(
