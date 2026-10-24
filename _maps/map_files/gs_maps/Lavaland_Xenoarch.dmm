@@ -10631,7 +10631,7 @@
 /area/lavaland/underground/xenoarch/calorite_temple)
 "hxG" = (
 /obj/structure/rack,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /obj/effect/spawner/random/maintenance/three,
 /obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/iron,
@@ -22797,7 +22797,7 @@
 /area/xenoarch/lavaland/lowerlevel)
 "pKm" = (
 /obj/structure/closet/crate/trashcart,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plating,
 /area/xenoarch/lavaland/maint_west)
@@ -31028,7 +31028,7 @@
 /area/lavaland/underground/xenoarch/donut_factory)
 "vnD" = (
 /obj/structure/rack,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /turf/open/floor/plating,
 /area/xenoarch/lavaland/maint_east)
 "vnJ" = (
