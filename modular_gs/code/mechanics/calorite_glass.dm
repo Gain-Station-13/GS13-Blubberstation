@@ -118,9 +118,11 @@ GLOBAL_LIST_INIT(calorite_glass_recipes, list ( \
 
 /datum/design/calorite_glass
 	name = "Calorite Glass"
-	id = "calorite_glass"
 	build_type = AUTOLATHE | SMELTER | PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/calorite = SHEET_MATERIAL_AMOUNT)
+	materials = list(
+		/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT,
+		/datum/material/calorite = SHEET_MATERIAL_AMOUNT,
+		)
 	build_path = /obj/item/stack/sheet/calorite_glass
 	category = list(
 		RND_CATEGORY_INITIAL,

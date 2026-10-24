@@ -151,7 +151,7 @@
 		/datum/design/board/manurouter,
 		/datum/design/board/mailsorter,
 		//GS13 EDIT START
-		/datum/design/treadmill,
+		/datum/design/board/treadmill,
 		//GS13 EDIT END
 	)
 
