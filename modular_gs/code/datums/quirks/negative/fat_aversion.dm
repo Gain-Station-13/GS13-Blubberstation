@@ -6,7 +6,7 @@
 	value = -2
 	// gain_text = span_notice("You feel like making someone your pet.")
 	// lose_text = span_notice("You feel less assertive than before")
-	quirk_flags = QUIRK_HIDE_FROM_SCAN | QUIRK_PROCESSES | QUIRK_MOODLET_BASED
+	quirk_flags = QUIRK_HIDE_FROM_SCAN | QUIRK_PROCESSES
 	erp_quirk = FALSE // Disables on ERP config.
 	mob_trait = TRAIT_FAT_BAD
 

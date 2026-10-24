@@ -1,6 +1,5 @@
 /datum/design/weightanalyzer
 	name = "Weight Analyzer"
-	id = "weightanalyzer"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(
 		/datum/material/iron = SMALL_MATERIAL_AMOUNT * 5,
@@ -13,7 +12,6 @@
 
 /datum/design/borg_weight_analyzer
 	name = "Borg Weight Analyzer"
-	id = "borg_weightanalyzer"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/weight_analyzer
 	materials = list(
@@ -27,7 +25,6 @@
 
 /datum/design/borg_feeding_tube
 	name = "Borg Feeding Tube"
-	id = "borg_feeding_tube"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/feeding_tube
 	materials = list(
@@ -42,7 +39,6 @@
 /datum/design/board/heft_scale
 	name = "Machine Design (HEF-T Scale Board)"
 	desc = "The circuit board for a HEF-T Scale."
-	id = "heftscale"
 	build_path = /obj/item/circuitboard/machine/heft_scale
 	category = list(
 		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_SERVICE
