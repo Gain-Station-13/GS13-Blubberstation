@@ -124,8 +124,11 @@
 /datum/design/mod_shell/exoskeleton
 	name = "MOD exoskeleton"
 	desc = "A pre-built GATO mobility exoskeleton, designed to support high weights, favor movement and weight loss."
-	id = "mod_exoskeleton"
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*10, /datum/material/glass = SHEET_MATERIAL_AMOUNT*5, /datum/material/plasma = SHEET_MATERIAL_AMOUNT*2.5)
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 10,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT * 5,
+		/datum/material/plasma = SHEET_MATERIAL_AMOUNT * 2.5
+		)
 	build_path = /obj/item/mod/control/pre_equipped/exoskeleton
 	desc = "A GATO-designed assistance exoskeleton based on MODsuit tech."
 	build_type = MECHFAB

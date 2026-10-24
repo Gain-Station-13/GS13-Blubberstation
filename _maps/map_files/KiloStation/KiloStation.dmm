@@ -25515,7 +25515,7 @@
 /area/station/command/vault)
 "ifv" = (
 /obj/structure/table,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
 /obj/item/bodypart/chest/robot{
 	pixel_y = 4
 	},
@@ -47829,7 +47829,7 @@
 /obj/item/flashlight,
 /obj/item/flashlight/flare,
 /obj/machinery/light/small/directional/west,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /obj/structure/sign/poster/contraband/random/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
@@ -54696,7 +54696,7 @@
 /area/station/medical/virology)
 "rBV" = (
 /obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
@@ -63838,9 +63838,9 @@
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/suit/apron/surgical,
 /obj/item/clothing/mask/surgical,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
+/obj/item/brain_processor/organic,
+/obj/item/brain_processor/organic,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/item/tank/internals/anesthetic,
 /obj/item/clothing/mask/breath/medical,

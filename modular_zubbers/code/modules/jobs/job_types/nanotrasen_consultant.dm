@@ -60,12 +60,13 @@
 		"Corporate Liaison",
 		"Corporate Interest Officer",
 	)
+	tgui_icon = FA_ICON_CLIPBOARD
 
 /datum/outfit/job/nanotrasen_consultant
 	name = "Nanotrasen Consultant"
 	jobtype = /datum/job/nanotrasen_consultant
 
-	belt = /obj/item/modular_computer/pda/nanotrasen_consultant
+	belt = /obj/item/modular_computer/pda/crew/nanotrasen_consultant
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/heads/nanotrasen_consultant
 	gloves = /obj/item/clothing/gloves/combat
@@ -126,9 +127,9 @@
 	gloves = /obj/item/clothing/gloves/captain //Too iconic to be replaced with a plasma version
 	head = /obj/item/clothing/head/helmet/space/plasmaman/centcom_official
 
-/obj/item/modular_computer/pda/nanotrasen_consultant
+/obj/item/modular_computer/pda/crew/nanotrasen_consultant
 	name = "nanotrasen consultant's PDA"
-	icon_state = "/obj/item/modular_computer/pda/nanotrasen_consultant"
+	icon_state = "/obj/item/modular_computer/pda/crew/nanotrasen_consultant"
 	inserted_disk = /obj/item/disk/computer/command/captain
 	inserted_item = /obj/item/pen/fountain/pink	// GS13 EDIT, original: /obj/item/pen/fountain/green
 	greyscale_colors = "#ee2cb4#1a1a20#1a1a20"	// GS13 EDIT, original: #017941#0060b8
