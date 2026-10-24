@@ -86,7 +86,7 @@
 	dir = 5
 	},
 /obj/item/kirbyplants/synthetic/plant27,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "acQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1705,7 +1705,7 @@
 /obj/structure/railing/corner{
 	dir = 1
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "bdX" = (
 /obj/item/book/manual/wiki/barman_recipes,
@@ -1728,7 +1728,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "bfg" = (
 /obj/item/clothing/under/color/grey/science{
@@ -2282,7 +2282,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 1
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "bzQ" = (
 /obj/structure/sink/directional/east,
@@ -2953,7 +2953,7 @@
 /area/lavaland/underground/xenoarch/candy_outpost)
 "bXh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "bXD" = (
 /obj/item/radio/intercom{
@@ -3322,7 +3322,7 @@
 /area/xenoarch/lavaland/gen)
 "ckF" = (
 /obj/effect/turf_decal/siding/wideplating/terracotta/corner,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "ckG" = (
 /obj/machinery/door/airlock/grunge{
@@ -4749,7 +4749,7 @@
 	dir = 5
 	},
 /obj/machinery/light/floor,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "diF" = (
 /obj/item/trash/tray,
@@ -6947,7 +6947,7 @@
 /obj/machinery/airalarm{
 	pixel_y = 24
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "eRe" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7191,7 +7191,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "eXS" = (
 /obj/structure/cable,
@@ -7975,7 +7975,7 @@
 "fFS" = (
 /obj/effect/turf_decal/siding/wideplating/terracotta,
 /obj/item/kirbyplants/synthetic/plant27,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "fFT" = (
 /obj/structure/disposalpipe/segment{
@@ -8259,7 +8259,7 @@
 "fOe" = (
 /obj/effect/turf_decal/siding/wideplating/terracotta/corner,
 /obj/structure/railing/corner,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "fOk" = (
 /obj/item/circuitboard/machine/telecomms/receiver{
@@ -8558,7 +8558,7 @@
 	dir = 10
 	},
 /obj/structure/closet/emcloset/anchored,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "gax" = (
 /turf/open/floor/plating,
@@ -8959,7 +8959,7 @@
 	pixel_x = 1;
 	pixel_y = 10
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "goK" = (
 /obj/structure/cable,
@@ -9276,7 +9276,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "gAG" = (
 /obj/machinery/shower{
@@ -9816,7 +9816,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 5
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "gXt" = (
 /obj/structure/fence/door,
@@ -10047,7 +10047,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 10
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "hga" = (
 /obj/effect/turf_decal{
@@ -10806,7 +10806,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta/corner{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "hBL" = (
 /obj/effect/turf_decal/siding/dark{
@@ -10843,7 +10843,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "hCT" = (
 /obj/item/stack/sheet/mineral/calorite,
@@ -11995,7 +11995,7 @@
 /obj/structure/railing/corner{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "ioH" = (
 /obj/effect/turf_decal/stripes/line{
@@ -12275,7 +12275,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "izs" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12506,7 +12506,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 9
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "iJk" = (
 /obj/structure/barricade/wooden/crude,
@@ -13308,7 +13308,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "jpX" = (
 /obj/structure/hedge,
@@ -13930,7 +13930,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "jOp" = (
 /obj/machinery/vending/gato{
@@ -13945,7 +13945,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 1
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "jOD" = (
 /obj/structure/broken_flooring/singular/always_floorplane/directional/north,
@@ -14253,7 +14253,7 @@
 	dir = 1
 	},
 /obj/machinery/digital_clock/directional/north,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "jZN" = (
 /obj/machinery/biogenerator,
@@ -14619,7 +14619,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 6
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "kkJ" = (
 /obj/effect/spawner/random/decoration/glowstick/on,
@@ -15050,7 +15050,7 @@
 "kAd" = (
 /obj/effect/turf_decal/siding/wideplating/terracotta/corner,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "kAh" = (
 /obj/structure/falsewall,
@@ -15219,7 +15219,7 @@
 /area/xenoarch/lavaland/arch)
 "kHm" = (
 /obj/effect/turf_decal/siding/wideplating/terracotta,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "kHu" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
@@ -15290,7 +15290,7 @@
 /turf/open/floor/plating,
 /area/lavaland/underground/xenoarch/caloriteresearch)
 "kJT" = (
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "kKc" = (
 /turf/open/floor/holofloor/stairs{
@@ -15854,7 +15854,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "lfu" = (
 /obj/machinery/shower{
@@ -19370,7 +19370,7 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "ntt" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
@@ -19475,7 +19475,7 @@
 	pixel_x = -1;
 	pixel_y = 9
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "nyn" = (
 /obj/item/kirbyplants/random/dead,
@@ -19721,7 +19721,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "nFt" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -20612,7 +20612,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "ohL" = (
 /obj/machinery/shower{
@@ -21080,7 +21080,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "oxt" = (
 /obj/structure/cable,
@@ -23836,7 +23836,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "qzB" = (
 /obj/machinery/computer/operating,
@@ -23964,7 +23964,7 @@
 /area/lavaland/underground/xenoarch/candyland)
 "qEn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "qEI" = (
 /turf/open/water/jungle,
@@ -25238,7 +25238,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "ruA" = (
 /obj/effect/turf_decal/siding/dark{
@@ -25855,7 +25855,7 @@
 	dir = 9
 	},
 /obj/item/kirbyplants/synthetic/plant27,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "rTE" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
@@ -27791,7 +27791,7 @@
 	dir = 9
 	},
 /obj/machinery/light/floor,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "tlf" = (
 /turf/closed/wall,
@@ -28497,7 +28497,7 @@
 	dir = 6
 	},
 /obj/machinery/light/floor,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "tNf" = (
 /obj/item/trash/sosjerky{
@@ -29410,7 +29410,7 @@
 	dir = 10
 	},
 /obj/machinery/light/floor,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "uoj" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning/corner{
@@ -29707,7 +29707,7 @@
 	dir = 6
 	},
 /obj/structure/closet/firecloset/full,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "uuO" = (
 /obj/structure/reagent_dispensers/servingdish,
@@ -31940,7 +31940,7 @@
 	dir = 4
 	},
 /obj/item/sign/flag/gato,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "vWw" = (
 /obj/structure/chair/sofa/bench{
@@ -34605,7 +34605,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
 "xNg" = (
 /obj/effect/spawner/structure/window/reinforced,
