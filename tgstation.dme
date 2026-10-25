@@ -7438,6 +7438,7 @@
 #include "modular_gs\code\datums\quirks\positive\positive_quirks.dm"
 #include "modular_gs\code\datums\status_effects\fatstun.dm"
 #include "modular_gs\code\datums\storage\subtypes\bags.dm"
+#include "modular_gs\code\datums\weather\weather_types\radiation_storm.dm"
 #include "modular_gs\code\datums\wires\airlock.dm"
 #include "modular_gs\code\game\donator.dm"
 #include "modular_gs\code\game\lore_papers.dm"
