@@ -517,7 +517,7 @@
 	},
 /obj/item/assembly/flash/handheld,
 /obj/item/assembly/flash/handheld,
-/obj/item/brain_processor/organic,
+/obj/item/mmi,
 /obj/item/assembly/prox_sensor{
 	pixel_x = -8;
 	pixel_y = 4
@@ -10648,7 +10648,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/obj/item/assembly/relic,
+/obj/item/relic,
 /turf/open/floor/iron/dark,
 /area/station/science/explab)
 "aTo" = (
@@ -15899,9 +15899,9 @@
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "btd" = (
-/obj/item/brain_processor/organic,
-/obj/item/brain_processor/organic,
-/obj/item/brain_processor/organic,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/mmi,
 /obj/structure/table,
 /obj/machinery/camera/directional/south{
 	c_tag = "Robotics Surgery";
@@ -27033,7 +27033,7 @@
 /area/station/security/brig)
 "duj" = (
 /obj/structure/rack,
-/obj/item/brain_processor/organic,
+/obj/item/mmi,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
@@ -45427,7 +45427,7 @@
 /area/station/security/prison/mess)
 "oXe" = (
 /obj/structure/table/glass,
-/obj/item/brain_processor/organic,
+/obj/item/mmi,
 /obj/item/clothing/mask/balaclava,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 8
