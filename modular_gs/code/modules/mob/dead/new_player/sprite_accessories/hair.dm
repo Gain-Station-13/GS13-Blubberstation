@@ -30,3 +30,15 @@
 	icon = 'modular_gs/icons/customization/hair.dmi'
 	name = "Misshapen"
 	icon_state = "hair_misshapen"
+
+// Hair sprites from Iris/Oculis Station
+
+/datum/sprite_accessory/hair/ruby
+	icon = 'modular_gs/icons/customization/hair.dmi'
+	name = "Ruby"
+	icon_state = "hair_ruby"
+
+/datum/sprite_accessory/hair/ruby_long
+	icon = 'modular_gs/icons/customization/hair.dmi'
+	name = "Ruby Long"
+	icon_state = "hair_rubylong"
