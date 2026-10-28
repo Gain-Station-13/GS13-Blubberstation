@@ -7,4 +7,3 @@
 	name = "Sloog Bobbers"
 	icon_state = "sloogbobbers"
 	icon = 'modular_gs/icons/customization/ears.dmi'
-
