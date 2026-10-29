@@ -120,8 +120,4 @@
 	name = "Pharaoh Tunic"
 	item_path = /obj/item/clothing/suit/costume/nemes
 
-/datum/loadout_item/suit/replica_parade_jacket
-	name = "Replica Parade Jacket"
-	item_path = /obj/item/clothing/suit/replica_parade_jacket
-
 // #endregion
