@@ -106,4 +106,8 @@
 	name = "Headdress Of Nemes"
 	item_path = /obj/item/clothing/head/costume/nemes
 
+/datum/loadout_item/head/utility/hardhat/pumpkinhead
+	name = "Carved Pumpkin"
+	item_path = /obj/item/clothing/head/utility/hardhat/pumpkinhead
+
 // #endregion
