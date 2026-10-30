@@ -1,0 +1,6 @@
+author: "Icepick200"
+delete-after: True
+changes:
+  - rscadd: "Added new taurs. hairs, a snout, a tail, and some ears to the character creator, too!"
+  - rscadd: "Added the carved pumpkin hat to the loadout."
+  - bugfix: "fixed a runtime with the space candy maze"
