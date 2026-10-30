@@ -1,4 +1,4 @@
-# The modularization handbook - Gain Station style
+**The modularization handbook - Gain Station style**
 
 **Failure to follow this guide will result in you being asked to change your PR.**
 
@@ -33,6 +33,7 @@ If possible, try to keep the original code commented out. However, this may not 
 
 For example:
 
+<!-- yes, we use C++ here because the syntax is the most similar to DM -->
 ```C++
 // GS13 EDIT START - stop message spam with nutripump turbo. Had to move it one tab to the right
 if(send_messages)
