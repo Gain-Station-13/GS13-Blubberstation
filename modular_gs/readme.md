@@ -12,7 +12,7 @@ Whenever you have to modify content outside of the `modular_gs/` folder, you are
 
 ### Single line edits
 
-If your code is modifying only a single (or in general, small amounts of) line of code, you are only required to append a `GS13 EDIT` comment at the end, additionally describing why the change was made, and the original value of that line of code. A few examples are listed below:
+If your code is modifying only a single (or in general, small amounts of) line of code, you are only required to append a `GS13 EDIT` comment at the end, additionally describing why the change was made. Additionaly you may (but are not always be required to) add the original value of that line of code. An example is listed below:
 
 ```diff
 - something = 5
