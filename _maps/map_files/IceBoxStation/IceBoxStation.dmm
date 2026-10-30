@@ -26743,7 +26743,7 @@
 	c_tag = "Medbay Lobby";
 	network = list("ss13","medbay")
 	},
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "hmy" = (
@@ -38282,7 +38282,7 @@
 /obj/structure/rack,
 /obj/item/poster/random_official,
 /obj/effect/spawner/random/maintenance,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/morgue)
 "kxp" = (
@@ -39980,7 +39980,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron,
 /area/station/commons/fitness)
 "kVb" = (
@@ -46403,7 +46403,7 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/hallway/primary/aft)
 "mKH" = (
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /obj/effect/turf_decal/siding/wideplating_new/terracotta/end{
 	dir = 1
 	},
@@ -49765,7 +49765,7 @@
 /area/station/commons/storage/primary)
 "nFG" = (
 /obj/structure/table,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /obj/effect/spawner/random/maintenance,
 /obj/item/screwdriver,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -74856,7 +74856,7 @@
 "uus" = (
 /obj/machinery/status_display/evac/directional/north,
 /obj/structure/table,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
 "uuw" = (

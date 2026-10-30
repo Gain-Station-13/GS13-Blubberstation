@@ -1,10 +1,11 @@
 /obj/item/toy/plush/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(attempt_to_feed(tool, user))
 		return
-	
+
 	return ..()
 
 /obj/item/toy/plush/gs13
+	abstract_type = /obj/item/toy/plush/gs13
 	name = "gs13 plush"
 	desc = "You're not supposed to see this..."
 	icon = 'modular_gs/icons/obj/plushes.dmi'
@@ -295,4 +296,22 @@
 	stuffed_icon_state = "duke_stuffed"
 	pred_plush = TRUE
 	prey_plush = TRUE
+	can_eat_food = TRUE
+
+/obj/item/toy/plush/gs13/sato
+	name = "Timid Snow Leopard Plushie"
+	desc = "They look quite timid, why not carry them and show them around the station?"
+	icon_state = "sato"
+	stuffed_icon_state = "sato_stuffed"
+	pred_plush = FALSE
+	prey_plush = TRUE
+	can_eat_food = TRUE
+
+/obj/item/toy/plush/gs13/zelia
+	name = "Crafty Moth Plushie"
+	desc = "It's either planning for an elaborate heist, or it's next gut-busting meal."
+	icon_state = "zelia"
+	stuffed_icon_state = "zelia_stuffed"
+	pred_plush = FALSE
+	prey_plush = FALSE
 	can_eat_food = TRUE

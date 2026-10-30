@@ -95,7 +95,15 @@ type QuirkDisplayProps = {
 
 function QuirkDisplay(props: QuirkDisplayProps) {
   const { quirk, quirkKey, handleClick, selected, quirkActionLocked } = props;
-  const { icon, value, name, description, customizable, failTooltip } = quirk;
+  const { // GS13 EDIT START add WG pref overwrite warning
+    icon,
+    value,
+    name,
+    description,
+    overwrite_wg_prefs,
+    customizable,
+    failTooltip,
+  } = quirk; //GS13 EDIT END
 
   const [customizationExpanded, setCustomizationExpanded] = useState(false);
 
@@ -179,6 +187,20 @@ function QuirkDisplay(props: QuirkDisplayProps) {
               }}
             >
               {description}
+              {/* GS13 EDIT START */}
+              {!!overwrite_wg_prefs && (
+                <>
+                  <br />
+                  <br />
+                  <i>
+                    This quirk will <b>IGNORE PREFERENCES</b> and enable weight
+                    gain from all sources. If you do not want this, do not
+                    choose this quirk.
+                  </i>
+                </>
+              )}
+
+              {/* GS13 EDIT END */}
               {!!customizable && (
                 <QuirkPopper
                   {...props}

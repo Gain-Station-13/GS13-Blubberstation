@@ -406,7 +406,7 @@ export const BubberChangelog = (props) => {
       </p>
       <p>
         {'Our GitHub repository is available '}
-        <a href="https://github.com/sheepishgoat/GS13-Blubberstation">here</a>
+        <a href="https://github.com/Gain-Station-13/GS13-Blubberstation">here</a>
         .
       </p>
       <p>

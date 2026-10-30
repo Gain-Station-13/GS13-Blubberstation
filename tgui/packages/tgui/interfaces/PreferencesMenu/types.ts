@@ -104,6 +104,7 @@ export type Quirk = {
   value: number;
   customizable: boolean;
   customization_options?: string[];
+  overwrite_wg_prefs: boolean; //GS13 EDIT
 };
 
 // SKYRAT EDIT START
@@ -279,7 +280,6 @@ export type PreferencesMenuData = {
   selected_quirks: string[];
   selected_personalities: typePath[] | null;
   max_personalities: number;
-  mood_enabled: BooleanLike;
   species_disallowed_quirks: string[];
 
   antag_bans?: string[];

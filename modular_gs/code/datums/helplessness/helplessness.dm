@@ -290,6 +290,29 @@
 		message = replacetext(message,"x","th")
 		speech_args[SPEECH_MESSAGE] = message
 
+/datum/helplessness/stomping
+	helplessness_trait = TRAIT_STOMP
+	default_trigger_weight = FATNESS_LEVEL_BLOB
+	override_quirk = TRAIT_HELPLESS_STOMP
+	preference = /datum/preference/numeric/helplessness/stomping
+	gain_message = "Your legs start hitting the floor like anvils."
+	lose_message = "You feel like you can tip-toe again."
+	forced_weight_config = /datum/config_entry/number/forced_helplessness/stomping
+
+/datum/helplessness/stomping/apply_helplessness(mob/living/carbon/human/fatty, trigger_weight, fatness)
+	. = ..()
+	if (!.)
+		return
+	ADD_TRAIT(fatty, TRAIT_STOMP, REF(src))
+	fatty.update_stomp_footsteps()
+
+/datum/helplessness/stomping/disable_helplessness(mob/living/carbon/human/fatty, trigger_weight, fatness)
+	. = ..()
+	if (!.)
+		return
+	REMOVE_TRAIT(fatty, TRAIT_STOMP, REF(src))
+	fatty.update_stomp_footsteps()
+
 #define MAX_PRESSURE_DEBUFF 0.5
 /*
 /datum/helplessness/weak_lungs

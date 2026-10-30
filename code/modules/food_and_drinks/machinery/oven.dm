@@ -264,7 +264,7 @@
 	name = "oven tray"
 	desc = "Time to bake cookies!"
 	icon_state = "oven_tray"
-	max_items = 6
+	max_items = 20 // GS13 EDIT 6 -> 20
 	biggest_w_class = WEIGHT_CLASS_BULKY
 	sound_vary = TRUE
 	pickup_sound = SFX_TRAY_PICKUP

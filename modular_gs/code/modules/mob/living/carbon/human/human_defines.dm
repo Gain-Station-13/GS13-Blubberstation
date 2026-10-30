@@ -9,3 +9,7 @@
 	var/cursed_fat = 0
 	/// Decides on the lenght of the curse
 	var/fattening_steps_left = 0
+	/// Stomping helplessness things to make it work properly
+	var/list/stomp_old_sounds = list()
+	var/list/stomp_old_types = list()
+	var/stomp_old_footstep_type

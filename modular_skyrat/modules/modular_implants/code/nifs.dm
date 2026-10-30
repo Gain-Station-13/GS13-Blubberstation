@@ -241,7 +241,7 @@
 	if(!bypass && !nutrition_check())
 		return FALSE
 
-	var/hunger_modifier = linked_mob.physiology.hunger_mod
+	var/hunger_modifier = GET_PHYSIOLOGY(linked_mob, PHYS_COEFF_HUNGER_MOD)
 
 	if(nutrition_drain)
 		hunger_modifier = nutrition_drain_rate
@@ -526,6 +526,10 @@
 	new /obj/item/disk/nifsoft_uploader/dorms/hypnosis(src)
 	new /obj/item/disk/nifsoft_uploader/soulcatcher(src)
 	new /obj/item/disk/nifsoft_uploader/money_sense(src)
+	// GS13 EDIT
+	new /obj/item/disk/nifsoft_uploader/weight_display(src)
+	new /obj/item/disk/nifsoft_uploader/fat_scanner(src)
+	// GS13 END EDIT
 
 /obj/item/storage/box/nif_ghost_box/ghost_role/PopulateContents()
 	. = ..()

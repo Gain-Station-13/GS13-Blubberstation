@@ -8,3 +8,59 @@
   - rscadd: Re-added belch/wg trap spells and spellbooks, wand of gluttony, and the
       cream demon.
   - refactor: Turns candyland plants into actual flora that can be harvested.
+2026-10-02:
+  evilew:
+  - map: 'Kilo: fixed a missing blueshield area, seperated duplicated aft corridors
+      around sec/engie, placed APCs appropriately, moved the plasma sheets elsewhere
+      (they always just turn into plasma)'
+  - map: fixed disposals on GATO Fast Food
+2026-10-05:
+  Swan:
+  - bugfix: fixes fullness not affecting belly size when wearing modular items
+  - rscadd: reworks (and fixes) radiotropic metabolism. Its per baseline per second
+      WG is now affected by the light level of the turf on which the mob is. It should
+      now also properly protect from radiation
+  - bugfix: fixes fizz wizz and sootheseltz not having crushed sprites
+  - bugfix: fixes galbanic compound addiction triggering very quickly
+2026-10-07:
+  sheepishgoat:
+  - rscadd: Adds in the Internal Scale NIFSoft. It functions as an internal version
+      of a scale or weight scanner.
+  - rscadd: Adds in blueberry kegs. Blueberry kegs can be crafted with 1000u of blueberry
+      juice and 5 sheets of iron. It can be exported by cargo for ~2500cr
+  - bugfix: fixes milkers not milking blueberry juice
+  - bugfix: fixes the Weight Watcher NIFSoft, now actually allowing it to be purchasable
+      and usable.
+2026-10-23:
+  Icepick200:
+  - rscadd: Added the Bluespace Serving Tray to research and protolathes, for ease
+      of access cooking.
+  - qol: Tweaked the numbers on the Griddle, Oven, and standard Serving Tray to be
+      able to hold 20 items each.
+  - rscadd: Added a new helplessness pref for fatty stomping noises when barefoot.
+  - rscadd: Added in the Modular Swimsuit, compatible with Belly GS13, Smooth No Arms,
+      and Round belly types.
+  - bugfix: Fixed the bunnysuit's round belly sprites not working.
+  Swan:
+  - bugfix: Fixes air in the calorite temple not being breathable
+  - qol: makes server initialization times a few seconds faster
+  - rscadd: Adds lipoifium interactions with the superparticle generator
+  - rscadd: Adds lipoifium and galbanium now affect the stats of the SM
+  Throughawaynadir:
+  - rscadd: Added mechanic that causes base scale to break if fatty weights over 1000
+      lbs
+  - rscadd: Added new plasteel scale that takes up two tiles and has an uncapped weight
+      limit
+  - rscadd: Added new plasteel scale recipe
+  - image: 'added megascale sprite to icons: modular_gs\icons\obj\megascale.dmi'
+  evilew:
+  - rscadd: added a new donator plush - Zelia
+  sheepishgoat:
+  - qol: adds a weight gain toggle button
+  - qol: adds disclaimer text for helplessness quirks
+  - rscadd: Introduces the hardcore fatty quirk, see https://github.com/sheepishgoat/GS13-Blubberstation/pull/601
+      for more details.
+2026-10-24:
+  Icepick200:
+  - qol: Shoved everything we didn't have from the autodrobe into the loadout section,
+      and added the pharaoh tunic and headdress of nemes too.
