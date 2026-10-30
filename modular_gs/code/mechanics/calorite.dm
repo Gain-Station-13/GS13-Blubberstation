@@ -130,7 +130,6 @@ GLOBAL_LIST_INIT(calorite_recipes, list ( \
 
 /datum/design/calorite
 	name = "Calorite"
-	id = "calorite"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/stack/sheet/mineral/calorite

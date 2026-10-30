@@ -1,8 +1,11 @@
 /datum/design/tray/bluespace
 	name = "Bluespace Serving Tray"
-	id = "bluservingtray"
 	build_type = AUTOLATHE | PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/gold = SHEET_MATERIAL_AMOUNT * 0.75, /datum/material/plasma = SHEET_MATERIAL_AMOUNT * 0.75, /datum/material/uranium = SMALL_MATERIAL_AMOUNT * 2.5)
+	materials = list(
+		/datum/material/gold = SHEET_MATERIAL_AMOUNT * 0.75,
+		/datum/material/plasma = SHEET_MATERIAL_AMOUNT * 0.75,
+		/datum/material/uranium = SMALL_MATERIAL_AMOUNT * 2.5
+		)
 	build_path = /obj/item/storage/bag/tray/bluespace
 	category = list(
 		RND_CATEGORY_INITIAL,

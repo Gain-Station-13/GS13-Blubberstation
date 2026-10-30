@@ -205,7 +205,6 @@ GLOBAL_LIST_EMPTY(adipoelectric_transformer)
 /datum/design/board/adipoelectric_transformer
 	name = "Machine Design (Adipoelectric Transformer Board)"
 	desc = "The circuit board for an Adipoelectric Transformer."
-	id = "adipoelectric_transformer"
 	build_path = /obj/item/circuitboard/machine/adipoelectric_transformer
 	category = list(
 		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_ENGINEERING
