@@ -96,11 +96,11 @@
 /// This controls whether vore components are added on any mob Login for vore-enabled clients
 #ifndef VORE_DEBUG
 GLOBAL_LIST_INIT(vore_allowed_mob_types, typecacheof(list(
-	/* GS13 EDIT - makes all mobs voreable
+	/* GS13 EDIT START - makes all mobs voreable
 	/mob/living/carbon/human,
 	/mob/living/silicon/robot
 	*/
-	/mob/living,	// GS13 END EDIT
+	/mob/living,	// GS13 EDIT END
 )))
 #else
 // Vore debug mode: all mobs are fair game
