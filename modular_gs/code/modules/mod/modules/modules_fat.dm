@@ -57,8 +57,10 @@
 
 /datum/design/module/hydraulic_movement
 	name = "Hydraulic Assistance Module"
-	id = "mod_hydraulic"
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*2.5, /datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT)
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5,
+		/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT
+		)
 	build_path = /obj/item/mod/module/hydraulic_movement
 	desc = "A GATO-designed module that supports plumper bodies and allows easier movement."
 
@@ -106,8 +108,11 @@
 
 /datum/design/module/calovoltaic
 	name = "Calovoltaic Generator Module"
-	id = "mod_calovoltaic"
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/plasma = SHEET_MATERIAL_AMOUNT * 2.5)
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT * 2.5,
+		/datum/material/plasma = SHEET_MATERIAL_AMOUNT * 2.5
+		)
 	build_path = /obj/item/mod/module/calovoltaic
 	desc = "A GATO-designed module for burning excess fat to make power for your suit."
 

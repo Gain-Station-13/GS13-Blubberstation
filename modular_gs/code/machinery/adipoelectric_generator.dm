@@ -175,7 +175,6 @@
 /datum/design/board/adipoelectric_generator
 	name = "Machine Design (Adipoelectric Generator Board)"
 	desc = "The circuit board for an Adipoelectric Generator."
-	id = "adipoelectric_generator"
 	build_path = /obj/item/circuitboard/machine/power/adipoelectric_generator
 	category = list(
 		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_ENGINEERING

@@ -1,11 +1,3 @@
-/turf/open/floor/mineral/sandstone_floor
-	name = "sandstone floor"
-	icon_state = "sandstonef"
-	floor_tile = /obj/item/stack/tile/mineral/sandstone
-	icon = 'modular_gs/icons/turf/floors.dmi'
-	damaged_dmi = 'modular_gs/icons/turf/floors.dmi'
-	icons = list("sandstonef","sandstonef_dam")
-
 /turf/open/floor/mineral/crimsonstone_floor
 	name = "crimson floor"
 	icon_state = "crimsonstone"
