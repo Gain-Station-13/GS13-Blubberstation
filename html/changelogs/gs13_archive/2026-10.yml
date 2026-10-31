@@ -64,3 +64,11 @@
   Icepick200:
   - qol: Shoved everything we didn't have from the autodrobe into the loadout section,
       and added the pharaoh tunic and headdress of nemes too.
+2026-10-31:
+  Icepick200:
+  - rscadd: Added new taurs. hairs, a snout, a tail, and some ears to the character
+      creator, too!
+  - rscadd: Added the carved pumpkin hat to the loadout.
+  - bugfix: fixed a runtime with the space candy maze
+  Swan:
+  - rscadd: makes it so all mobs are voreable
