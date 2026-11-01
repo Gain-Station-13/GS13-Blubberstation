@@ -1,4 +1,4 @@
-/datum/gas_reaction/lipoifium_formation/init_factors()
+/datum/gas_reaction/standard/lipoifium_formation/init_factors()
 	factor = list(
 		/datum/gas/plasma = "Plasma is consumed at 0.5 moles per mole of lipoifium created.",
 		/datum/gas/tritium = "Tritium is consumed at 0.5 moles per mole of lipoifium created.",
@@ -7,7 +7,7 @@
 		"Energy" = "[FIRE_CARBON_ENERGY_RELEASED] joules of energy is released per mol of lipoifium formed.",
 	)
 
-/datum/gas_reaction/galbanium_formation/init_factors()
+/datum/gas_reaction/standard/galbanium_formation/init_factors()
 	factor = list(
 		/datum/gas/lipoifium = "Lipoifium is consumed at 0.5 moles per mole of galbanium created.",
 		/datum/gas/bz = "BZ is consumed at 0.5 moles per mole of galbanium created.",

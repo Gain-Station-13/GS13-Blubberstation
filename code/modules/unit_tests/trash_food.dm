@@ -35,6 +35,7 @@
 		/obj/item/stack/sheet/mineral/runescoopercore,
 		/obj/item/stack/sheet/mineral/bananiumberrycore,
 		// BUBBER EDIT ADDITION END
+		/obj/item/wendigo_skull, // you get back the wendigo skull as it mostly acts as bowl.
 		//GS13 EDIT START
 		/obj/item/food/blueberry_gum,
 		//GS13 EDIT END

@@ -5,7 +5,11 @@
 	default_value = FALSE
 
 /datum/preference/toggle/master_wg_pref/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
-	return
+	if(locate(/datum/action/innate/wg_toggle) in target.actions) // if we already have the action present, skip past this.
+		return
+
+	var/datum/action/innate/wg_toggle/new_toggle_action = new(target)
+	new_toggle_action.Grant(target)
 
 /datum/preference/numeric/starting_fatness
 	category = WG_PREFERENCES
@@ -33,6 +37,8 @@
 
 /datum/preference/numeric/weight_gain_rate/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	target.weight_gain_rate = value
+	if("Hardcore Fatty" in preferences.all_quirks)
+		target.weight_gain_rate = HARDCORE_FATTY_DEFAULT_WG_RATE
 
 /datum/preference/numeric/weight_loss_rate
 	category = WG_PREFERENCES
@@ -47,6 +53,8 @@
 
 /datum/preference/numeric/weight_loss_rate/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	target.weight_loss_rate = value
+	if("Hardcore Fatty" in preferences.all_quirks)
+		target.weight_loss_rate = HARDCORE_FATTY_DEFAULT_WL_RATE
 
 /datum/preference/numeric/max_weight
 	category = WG_PREFERENCES

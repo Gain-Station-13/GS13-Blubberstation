@@ -3,7 +3,7 @@
 	desc = "You like fat people, alot, maybe even a little bit too much. You are happier when fat, and having fat people around you will make you even happier!"
 	icon = "fa-heart"
 	value = 1
-	quirk_flags = QUIRK_HIDE_FROM_SCAN | QUIRK_PROCESSES | QUIRK_MOODLET_BASED
+	quirk_flags = QUIRK_HIDE_FROM_SCAN | QUIRK_PROCESSES
 	erp_quirk = FALSE // Disables on ERP config.
 	mob_trait = TRAIT_FAT_GOOD
 	medical_record_text = "Patient seems to take a liking towards those at higher weights, including themselves"

@@ -493,8 +493,10 @@ Used by the AI doomsday and the self-destruct nuke.
 		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
 	else if (!isnull(current_map.minetype) && current_map.minetype != MINETYPE_NONE && current_map.minetype != MINETYPE_ICE)
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[current_map.minetype]' was set! This is being ignored! Update the maploader code!")
-	load_xenoarch(FailedZs)	// GS13 EDIT
 #endif
+#ifndef SKIP_XENOARCH	// GS13 EDIT
+	load_xenoarch(FailedZs)
+#endif	// GS13 END EDIT
 
 	if(LAZYLEN(FailedZs)) //but seriously, unless the server's filesystem is messed up this will never happen
 		var/msg = "RED ALERT! The following map files failed to load: [FailedZs[1]]"
@@ -778,6 +780,9 @@ ADMIN_VERB(load_away_mission, R_FUN, "Load Away Mission", "Load a specific away 
 
 	if(contain_turfs)
 		build_area_turfs(z_value, filled_with_space)
+
+	if(SSweather.initialized)
+		SSweather.generate_holders(z_value, z_value)
 
 /datum/controller/subsystem/mapping/proc/build_area_turfs(z_level, space_guaranteed)
 	// If we know this is filled with default tiles, we can use the default area

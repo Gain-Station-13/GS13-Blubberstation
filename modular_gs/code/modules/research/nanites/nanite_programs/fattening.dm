@@ -67,7 +67,6 @@
 /datum/design/nanites/fat_sensor
 	name = "BFI Sensor"
 	desc = "The nanites boost can detect the host's BFI."
-	id = "fat_sensor_nanites"
 	program_type = /datum/nanite_program/sensor/fat_sensor
 	category = list("Sensor Nanites")
 
@@ -106,7 +105,6 @@
 /datum/design/nanites/fat_adjuster
 	name = "BFI Regulator"
 	desc = "The nanites adjust the host's BFI."
-	id = "fat_adjuster_nanites"
 	program_type = /datum/nanite_program/fat_adjuster
 	category = list("Medical Nanites")
 
@@ -134,7 +132,6 @@
 /datum/design/nanites/fat_converter
 	name = "Adipose Conversion"
 	desc = "The nanites use fat to replicate quickly."
-	id = "fat_converter_nanites"
 	program_type = /datum/nanite_program/fat_converter
 	category = list("Medical Nanites")
 
@@ -156,6 +153,5 @@
 /datum/design/nanites/bwomf
 	name = "B.W.O.M.F."
 	desc = "Massively increase host's mass on trigger."
-	id = "bwomf_nanites"
 	program_type = /datum/nanite_program/bwomf
 	category = list("Medical Nanites")

@@ -6,7 +6,7 @@
 	value = -1
 	gain_text = span_notice("You feel a connection to the dark realm forming.")
 	lose_text = span_notice("You no longer feel the call of hell.")
-	quirk_flags = QUIRK_HIDE_FROM_SCAN | QUIRK_MOODLET_BASED
+	quirk_flags = QUIRK_HIDE_FROM_SCAN
 	mob_trait = TRAIT_DEMONIC
 
 /datum/mood_event/demon_in_church
