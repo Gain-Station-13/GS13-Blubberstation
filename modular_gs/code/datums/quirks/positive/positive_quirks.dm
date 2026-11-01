@@ -136,16 +136,16 @@
 	var/mob/living/carbon/human/fatty = quirk_holder
 
 	// remove old modifier
-	fatty.physiology.brute_mod *= damage_resistance
-	fatty.physiology.tox_mod *= damage_resistance
+	MODIFY_PHYSIOLOGY(fatty, BRUTE, damage_resistance)
+	MODIFY_PHYSIOLOGY(fatty, TOX, damage_resistance)
 
 	// calc the new one
 	damage_resistance = 1 + ((fatty.fatness - FATNESS_LEVEL_VERYFAT) / (FATNESS_LEVEL_BLOB - FATNESS_LEVEL_VERYFAT)) // we divide by (FATNESS_LEVEL_BLOB - FATNESS_LEVEL_VERYFAT) so that at FATNESS_LEVEL_BLOB the expression equals 2
 	damage_resistance = clamp(damage_resistance, 1, 2)
 
 	// apply the new one
-	fatty.physiology.brute_mod /= damage_resistance
-	fatty.physiology.tox_mod /= damage_resistance
+	MODIFY_PHYSIOLOGY(fatty, BRUTE, 1 / damage_resistance)
+	MODIFY_PHYSIOLOGY(fatty, TOX, 1 / damage_resistance)
 
 /datum/quirk/slime_eater
 	name = "Slime eater"

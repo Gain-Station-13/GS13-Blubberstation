@@ -1,17 +1,17 @@
-/datum/gas_reaction/lipoifium_formation
+/datum/gas_reaction/standard/lipoifium_formation
 	priority_group = PRIORITY_FORMATION
 	name = "Lipoifium Formation"
 	id = "lipoifium_formation"
 	desc = "Plasma has characteristics similar to hydrocarbons. Cooling it with tritium around causes the creation of a highly fattening gas."
 
-/datum/gas_reaction/lipoifium_formation/init_reqs()
+/datum/gas_reaction/standard/lipoifium_formation/init_reqs()
 	requirements = list(
 		"MAX_TEMP" = 100,
 		/datum/gas/plasma = MINIMUM_MOLE_COUNT,
 		/datum/gas/tritium = MINIMUM_MOLE_COUNT,
 	)
 
-/datum/gas_reaction/lipoifium_formation/react(datum/gas_mixture/air, datum/holder)
+/datum/gas_reaction/standard/lipoifium_formation/react(datum/gas_mixture/air, datum/holder)
 	var/list/cached_moles = air.moles
 	var/plasma_moles = cached_moles[/datum/gas/plasma]
 	var/tritium_moles = cached_moles[/datum/gas/tritium]
@@ -41,20 +41,20 @@
 
 	return REACTING
 
-/datum/gas_reaction/galbanium_formation
+/datum/gas_reaction/standard/galbanium_formation
 	priority_group = PRIORITY_FORMATION
 	name = "Galbanium Formation"
 	id = "galbanium_formation"
 	desc = "Enriching lipoifium with BZ drastically changes the way in which it affects people inhaling it."
 
-/datum/gas_reaction/galbanium_formation/init_reqs()
+/datum/gas_reaction/standard/galbanium_formation/init_reqs()
 	requirements = list(
 		"MIN_TEMP" = 5000,
 		/datum/gas/lipoifium = MINIMUM_MOLE_COUNT,
 		/datum/gas/bz = MINIMUM_MOLE_COUNT,
 	)
 
-/datum/gas_reaction/galbanium_formation/react(datum/gas_mixture/air, datum/holder)
+/datum/gas_reaction/standard/galbanium_formation/react(datum/gas_mixture/air, datum/holder)
 	var/list/cached_moles = air.moles
 	var/lipoifium_moles = cached_moles[/datum/gas/lipoifium]
 	var/bz_moles = cached_moles[/datum/gas/bz]

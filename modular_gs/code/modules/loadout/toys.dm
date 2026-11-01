@@ -2,6 +2,8 @@
 	name = "Handheld Transmogrifier Soulcatcher"
 	item_path = /obj/item/portable_transmog
 
+// #region plushies
+
 /datum/loadout_item/toys/plush/sharky_plush
 	name = "Sharky Plush"
 	item_path = /obj/item/toy/plush/gs13/sharky
@@ -105,6 +107,16 @@
 /datum/loadout_item/toys/plush/duke_plush
 	name = "Small Kitsune Plush"
 	item_path = /obj/item/toy/plush/gs13/duke
+
+/datum/loadout_item/toys/plush/sato_plush
+	name = "Timid Snow Leopard Plush"
+	item_path = /obj/item/toy/plush/gs13/sato
+
+/datum/loadout_item/toys/plush/zelia_plush
+	name = "Crafty Moth Plush"
+	item_path = /obj/item/toy/plush/gs13/zelia
+
+// #endregion
 
 /datum/loadout_item/toys/caloritepen
 	name = "Calorite Pen"

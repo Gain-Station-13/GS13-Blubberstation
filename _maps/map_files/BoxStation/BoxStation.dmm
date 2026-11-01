@@ -23492,7 +23492,7 @@
 /obj/effect/turf_decal/trimline/white/mid_joiner{
 	dir = 4
 	},
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron/white/smooth_corner{
 	dir = 1
 	},
@@ -30244,7 +30244,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/obj/item/relic/lavaland,
+/obj/item/assembly/relic/lavaland,
 /obj/structure/closet/crate{
 	name = "E.X.P.E.R.I-MENTOR Supply Crate"
 	},
@@ -58906,7 +58906,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron/dark/small,
 /area/station/commons/fitness)
 "mBv" = (
@@ -64844,7 +64844,7 @@
 /obj/effect/turf_decal/trimline/white/line{
 	dir = 6
 	},
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron/white/smooth_corner{
 	dir = 1
 	},
@@ -65285,15 +65285,15 @@
 /area/station/security/office)
 "pzG" = (
 /obj/structure/rack,
-/obj/item/mmi{
+/obj/item/brain_processor/organic{
 	pixel_x = 2;
 	pixel_y = -4
 	},
-/obj/item/mmi{
+/obj/item/brain_processor/organic{
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/item/mmi{
+/obj/item/brain_processor/organic{
 	pixel_x = -4;
 	pixel_y = 6
 	},
@@ -84927,7 +84927,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm/directional/west,
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron/cafeteria,
 /area/station/commons/dorms/laundry)
 "ydB" = (

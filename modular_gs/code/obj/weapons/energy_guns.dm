@@ -24,6 +24,11 @@
 		/datum/material/calorite = SHEET_MATERIAL_AMOUNT * 0.5
 		)
 
+/obj/item/gun/energy/fatoray/weak/cyborg
+	name = "Cyborg Mounted Basic Fatoray"
+	can_charge = FALSE
+	use_cyborg_cell = TRUE
+
 /// cannon variant, strong but can be charged
 /obj/item/gun/energy/fatoray/cannon
 	name = "Fatoray Cannon"

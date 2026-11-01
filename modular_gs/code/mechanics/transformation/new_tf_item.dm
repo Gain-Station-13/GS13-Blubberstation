@@ -6,7 +6,7 @@
 	/// What items do we want to prevent the viewer from attaching this to? (Copy and pasted from the attachable soulcatcher)
 	var/list/blacklisted_items = list(
 		/obj/item/organ,
-		/obj/item/mmi,
+		/obj/item/brain_processor/organic,
 		/obj/item/pai_card,
 		/obj/item/aicard,
 		/obj/item/card,

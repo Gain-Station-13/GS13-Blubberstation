@@ -32,3 +32,5 @@
 /datum/config_entry/number/forced_helplessness/waddle
 
 /datum/config_entry/number/forced_helplessness/lisp
+
+/datum/config_entry/number/forced_helplessness/stomping

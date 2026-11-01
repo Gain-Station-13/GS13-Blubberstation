@@ -85,3 +85,13 @@
       above certain weights. Can only be prevented by using the MOD mobility module,
       or being in one of the ERP areas (ghost cafe, dorms, etc.)
   - bugfix: fixes XWG causing exponential increase in weight in pounds
+2026-09-29:
+  Swan:
+  - qol: Instant storyteller vote no longer has the voting window popup on reminder
+  - bugfix: Fixes BMI calculations being wrong for anyone with scale other than 1
+  evilew:
+  - map: tiny tweaks (removed roulette gun from pubby bar & added a scrubber to kilo
+      gato dorm & fixed error sprites on xenoarch)
+  - map: lot of QOL and general (layout, items, balance, typos) tweaks / fixes to
+      GATO Fast Food
+  - rscadd: added the new fatty guns to the fatwankus vendor

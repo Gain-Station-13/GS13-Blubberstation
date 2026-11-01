@@ -1,14 +1,3 @@
-/obj/item/stack/tile/mineral/sandstone
-	name = "sandstone tile"
-	singular_name = "sandstone floor tile"
-	desc = "A rough stone tile."
-	icon = 'modular_gs/icons/obj/tiles.dmi'
-	icon_state = "tile_sandstone"
-	turf_type = /turf/open/floor/mineral/sandstone_floor
-	mineralType = "sandstone"
-	custom_materials = list(/datum/material/sandstone=500)
-	merge_type = /obj/item/stack/tile/mineral/sandstone
-
 /obj/item/stack/tile/mineral/crimsonstone
 	name = "crimson tile"
 	singular_name = "crimson floor tile"
