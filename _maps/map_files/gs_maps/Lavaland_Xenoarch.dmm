@@ -710,22 +710,8 @@
 /turf/open/floor/iron/half,
 /area/xenoarch/lavaland/foyer)
 "avK" = (
-/obj/effect/turf_decal/box/corners,
-/obj/effect/turf_decal/box/corners{
-	dir = 4
-	},
-/obj/effect/turf_decal/box/corners{
-	dir = 1
-	},
-/obj/effect/turf_decal/box/corners{
-	dir = 8
-	},
-/obj/structure/closet/crate/miningcar,
-/obj/item/storage/bag/ore,
-/obj/item/pickaxe/drill,
-/obj/item/mining_scanner,
-/obj/item/clothing/glasses/meson,
-/obj/item/flashlight,
+/obj/effect/turf_decal/siding/dark,
+/obj/effect/turf_decal/trimline/white/warning,
 /turf/open/floor/plating/lavaland_atmos,
 /area/xenoarch/lavaland/public)
 "avS" = (
@@ -2791,6 +2777,10 @@
 /obj/machinery/firealarm/directional/south,
 /obj/effect/turf_decal/trimline/tram/filled/line,
 /turf/open/floor/iron,
+/area/xenoarch/lavaland/public)
+"bRz" = (
+/obj/structure/cable,
+/turf/open/floor/plating/lavaland_atmos,
 /area/xenoarch/lavaland/public)
 "bRA" = (
 /obj/structure/broken_flooring/singular/directional/north,
@@ -4899,11 +4889,9 @@
 /turf/open/floor/iron,
 /area/lavaland/underground/xenoarch/caloriteresearch)
 "dnx" = (
-/obj/item/flashlight/lantern{
-	anchored = 1;
-	icon_state = "lantern-on";
-	pixel_x = 7;
-	pixel_y = -1
+/obj/item/flashlight/lantern/on{
+	pixel_x = 9;
+	pixel_y = -2
 	},
 /turf/open/floor/wood,
 /area/lavaland/underground)
@@ -5070,6 +5058,15 @@
 /obj/structure/barricade/wooden/crude,
 /turf/open/indestructible/chocolate,
 /area/lavaland/underground/xenoarch/candyland)
+"dtw" = (
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wideplating_new/dark/corner{
+	dir = 1
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
 "dtT" = (
 /obj/item/food/chocolatebunny{
 	pixel_x = -3;
@@ -5077,6 +5074,10 @@
 	},
 /turf/open/indestructible/chocolate,
 /area/lavaland/underground/xenoarch/candyland)
+"duU" = (
+/obj/item/flashlight/lantern/on,
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
 "duY" = (
 /obj/effect/turf_decal/stripes,
 /obj/effect/turf_decal/caution/stand_clear,
@@ -7392,12 +7393,6 @@
 /turf/open/floor/hay,
 /area/lavaland/underground)
 "fii" = (
-/obj/effect/turf_decal/siding/dark{
-	dir = 4
-	},
-/obj/effect/turf_decal/trimline/white/warning{
-	dir = 4
-	},
 /obj/structure/railing/corner/end{
 	dir = 8
 	},
@@ -10003,6 +9998,16 @@
 /obj/machinery/light/floor,
 /turf/open/floor/iron,
 /area/lavaland/underground/xenoarch/donut_factory)
+"heP" = (
+/obj/structure/railing/corner/end/flip{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wideplating_new,
+/obj/effect/turf_decal/siding/wideplating_new/dark/corner{
+	dir = 8
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
 "hfm" = (
 /obj/machinery/power/smes/super/full,
 /obj/structure/cable,
@@ -11097,16 +11102,8 @@
 /turf/open/floor/plating,
 /area/lavaland/underground/xenoarch/caloriteresearch)
 "hMi" = (
-/obj/effect/turf_decal/box/corners{
-	dir = 8
-	},
-/obj/effect/turf_decal/box/corners{
-	dir = 1
-	},
-/obj/effect/turf_decal/box/corners{
-	dir = 4
-	},
-/obj/effect/turf_decal/box/corners,
+/obj/effect/turf_decal/siding/dark,
+/obj/effect/turf_decal/trimline/white/warning,
 /obj/structure/ore_box,
 /turf/open/floor/plating/lavaland_atmos,
 /area/xenoarch/lavaland/public)
@@ -12223,11 +12220,9 @@
 /turf/open/floor/wood/tile,
 /area/lavaland/underground/xenoarch/donut_factory)
 "iyo" = (
-/obj/item/flashlight/lantern{
-	anchored = 1;
-	icon_state = "lantern-on";
-	pixel_x = -6;
-	pixel_y = -1
+/obj/item/flashlight/lantern/on{
+	pixel_x = -7;
+	pixel_y = 0
 	},
 /turf/open/misc/dirt/dark/jungle,
 /area/lavaland/underground)
@@ -13587,6 +13582,16 @@
 /obj/item/bedsheet/hos/double,
 /turf/open/floor/carpet/red,
 /area/lavaland/underground/xenoarch/caloriteresearch)
+"jBi" = (
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/siding/dark{
+	dir = 5
+	},
+/obj/effect/turf_decal/trimline/yellow/warning{
+	dir = 5
+	},
+/turf/open/floor/plating/lavaland_atmos,
+/area/xenoarch/lavaland/public)
 "jBq" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 2
@@ -14664,6 +14669,7 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/xenoarch/lavaland/public)
 "kmA" = (
@@ -16097,6 +16103,15 @@
 /obj/machinery/computer/security/telescreen/entertainment/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/xenoarch/lavaland/gym)
+"lpd" = (
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wideplating_new/dark/corner{
+	dir = 8
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
 "lpD" = (
 /obj/structure/closet/wardrobe/black,
 /obj/effect/turf_decal/trimline/dark_red/line{
@@ -16576,6 +16591,7 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/xenoarch/lavaland/public)
 "lCV" = (
@@ -16797,6 +16813,16 @@
 	},
 /turf/open/floor/iron/white/small,
 /area/lavaland/underground/xenoarch/caloriteresearch)
+"lIr" = (
+/obj/effect/turf_decal/siding/dark{
+	dir = 6
+	},
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/trimline/yellow/warning{
+	dir = 6
+	},
+/turf/open/floor/plating/lavaland_atmos,
+/area/xenoarch/lavaland/public)
 "lID" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -18394,6 +18420,7 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/xenoarch/lavaland/public)
 "mPa" = (
@@ -18652,17 +18679,16 @@
 /turf/open/floor/plating,
 /area/xenoarch/lavaland/maint_west)
 "mWp" = (
-/obj/effect/turf_decal/box/corners{
-	dir = 1
+/obj/effect/turf_decal/siding/dark,
+/obj/effect/turf_decal/trimline/white/warning,
+/obj/structure/closet/crate/engineering,
+/obj/item/stack/conveyor{
+	amount = 15
 	},
-/obj/effect/turf_decal/box/corners{
-	dir = 4
-	},
-/obj/effect/turf_decal/box/corners,
-/obj/effect/turf_decal/box/corners{
-	dir = 8
-	},
-/obj/structure/ore_box,
+/obj/item/conveyor_switch_construct,
+/obj/item/circuitboard/machine/big_manipulator,
+/obj/item/stack/cable_coil/thirty,
+/obj/item/circuitboard/machine/recycler,
 /turf/open/floor/plating/lavaland_atmos,
 /area/xenoarch/lavaland/public)
 "mWu" = (
@@ -19928,6 +19954,7 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/xenoarch/lavaland/public)
 "nOv" = (
@@ -20127,6 +20154,14 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/lavaland/gym)
+"nTX" = (
+/obj/structure/railing/corner/end{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wideplating_new,
+/obj/effect/turf_decal/siding/wideplating_new/dark/corner,
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
 "nTY" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 28
@@ -20777,6 +20812,10 @@
 /obj/item/reagent_containers/condiment/sugar,
 /turf/open/floor/iron/white/smooth_large,
 /area/lavaland/underground/xenoarch/donut_factory)
+"ons" = (
+/obj/effect/turf_decal/trimline/white/warning,
+/turf/open/floor/plating/lavaland_atmos,
+/area/xenoarch/lavaland/public)
 "onD" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -21082,6 +21121,11 @@
 	},
 /turf/open/floor/sandstone,
 /area/lavaland/underground/xenoarch/donut_factory)
+"oxh" = (
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/structure/railing,
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
 "oxt" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -25400,6 +25444,7 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/xenoarch/lavaland/public)
 "rAo" = (
@@ -25877,6 +25922,7 @@
 /obj/effect/turf_decal/trimline/white/warning{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/plating/lavaland_atmos,
 /area/xenoarch/lavaland/public)
 "rUf" = (
@@ -25929,9 +25975,6 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 8
 	},
-/obj/effect/turf_decal/trimline/yellow/warning{
-	dir = 8
-	},
 /obj/structure/railing/corner{
 	dir = 4
 	},
@@ -25940,6 +25983,9 @@
 	},
 /obj/effect/turf_decal/siding/dark/corner{
 	dir = 4
+	},
+/obj/effect/turf_decal/trimline/white/warning{
+	dir = 8
 	},
 /turf/open/floor/plating/lavaland_atmos,
 /area/xenoarch/lavaland/public)
@@ -27620,6 +27666,18 @@
 /obj/effect/turf_decal/siding/wideplating_new/dark,
 /turf/open/floor/iron/edge,
 /area/lavaland/underground/xenoarch/caloriteresearch)
+"tet" = (
+/obj/structure/railing/corner/end/flip{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wideplating_new/dark/corner{
+	dir = 4
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
 "tey" = (
 /obj/item/ammo_casing/pepperball{
 	pixel_x = 1;
@@ -27997,6 +28055,12 @@
 	dir = 1;
 	icon_state = "siding_plain_end"
 	},
+/obj/structure/closet/crate/miningcar,
+/obj/item/flashlight,
+/obj/item/clothing/glasses/meson,
+/obj/item/mining_scanner,
+/obj/item/pickaxe/drill,
+/obj/item/storage/bag/ore,
 /turf/open/floor/plating/lavaland_atmos,
 /area/xenoarch/lavaland/public)
 "tuF" = (
@@ -31194,6 +31258,18 @@
 	},
 /turf/open/floor/iron,
 /area/xenoarch/lavaland/lowerlevel)
+"vtp" = (
+/obj/structure/railing/corner/end{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wideplating_new/dark/corner{
+	dir = 1
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
 "vtG" = (
 /obj/effect/decal/cleanable/vomit/old,
 /turf/open/floor/plating,
@@ -31404,15 +31480,14 @@
 /area/lavaland/underground/xenoarch/calorite_temple)
 "vCX" = (
 /obj/machinery/light/floor,
-/obj/effect/turf_decal/trimline/yellow/warning{
-	dir = 5
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/turf_decal/siding/dark{
-	dir = 1;
-	icon_state = "siding_plain_end"
+/obj/effect/turf_decal/siding/dark/inner_corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/white/warning{
+	dir = 1
 	},
 /turf/open/floor/plating/lavaland_atmos,
 /area/xenoarch/lavaland/public)
@@ -31562,10 +31637,10 @@
 /turf/open/floor/plating,
 /area/lavaland/underground/xenoarch/caloriteresearch)
 "vJW" = (
-/obj/effect/turf_decal/siding/wideplating_new/dark/corner{
+/obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 1
 	},
-/obj/structure/railing/corner/end/flip{
+/obj/structure/railing{
 	dir = 1
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
@@ -31761,6 +31836,16 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/underground)
+"vQe" = (
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/siding/dark,
+/obj/effect/turf_decal/trimline/white/warning,
+/obj/structure/railing/corner{
+	pixel_x = 0;
+	pixel_y = -4
+	},
+/turf/open/floor/plating/lavaland_atmos,
+/area/xenoarch/lavaland/public)
 "vQi" = (
 /obj/structure/fans/tiny/invisible,
 /obj/structure/barricade/wooden,
@@ -32241,14 +32326,12 @@
 /area/lavaland/underground/xenoarch/donut_factory)
 "wdS" = (
 /obj/structure/railing,
-/obj/item/flashlight/lantern{
-	anchored = 1;
-	icon_state = "lantern-on";
-	pixel_x = 7;
-	pixel_y = -1
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 6
+	},
+/obj/item/flashlight/lantern/on{
+	pixel_x = 7;
+	pixel_y = 3
 	},
 /turf/open/floor/wood,
 /area/lavaland/underground)
@@ -32647,6 +32730,12 @@
 "wrZ" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/cobweb,
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/underground)
+"wsh" = (
+/obj/structure/railing/corner{
+	dir = 1
+	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/underground)
 "wsC" = (
@@ -33212,11 +33301,9 @@
 /area/lavaland/underground/xenoarch/caloriteresearch)
 "wOz" = (
 /obj/structure/flora/grass/jungle/b/style_random,
-/obj/item/flashlight/lantern{
-	anchored = 1;
-	icon_state = "lantern-on";
-	pixel_x = 7;
-	pixel_y = -1
+/obj/item/flashlight/lantern/on{
+	pixel_x = 8;
+	pixel_y = 1
 	},
 /turf/open/misc/dirt/dark/jungle,
 /area/lavaland/underground)
@@ -33559,6 +33646,7 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/xenoarch/lavaland/public)
 "xez" = (
@@ -34339,6 +34427,15 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/lavaland/construction)
+"xHb" = (
+/obj/effect/turf_decal/siding/dark{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/white/warning{
+	dir = 1
+	},
+/turf/open/floor/plating/lavaland_atmos,
+/area/xenoarch/lavaland/public)
 "xHc" = (
 /obj/effect/turf_decal/siding/wideplating_new/terracotta{
 	dir = 1
@@ -113685,7 +113782,7 @@ kHZ
 cay
 iEY
 otT
-vZJ
+bRz
 hMi
 rHw
 rHw
@@ -113943,8 +114040,8 @@ kHZ
 cay
 iEY
 otT
-vZJ
-mWp
+bRz
+hMi
 rHw
 iik
 vmN
@@ -114201,7 +114298,7 @@ kHZ
 cay
 iEY
 otT
-vZJ
+bRz
 mWp
 rHw
 kjz
@@ -114460,7 +114557,7 @@ cay
 uoF
 otT
 vZJ
-avK
+hMi
 rHw
 qzB
 wvO
@@ -114717,8 +114814,8 @@ kHZ
 cay
 vCX
 fii
-eSj
-nht
+vZJ
+vQe
 rHw
 rHw
 rHw
@@ -114972,11 +115069,11 @@ kHZ
 kHZ
 kHZ
 kHZ
-lFQ
-fJF
-bOt
-bOt
-bCd
+oxh
+xHb
+vZJ
+vZJ
+avK
 vJW
 nZt
 kHZ
@@ -115230,12 +115327,12 @@ kHZ
 kHZ
 kHZ
 kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
+heP
+xHb
+vZJ
+vZJ
+avK
+vtp
 kHZ
 kHZ
 kHZ
@@ -115488,12 +115585,12 @@ kHZ
 kHZ
 kHZ
 kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
+nTX
+xHb
+vZJ
+vZJ
+avK
+tet
 kHZ
 kHZ
 kHZ
@@ -115746,12 +115843,12 @@ kHZ
 kHZ
 kHZ
 kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
+oxh
+xHb
+vZJ
+vZJ
+ons
+vJW
 kHZ
 kHZ
 kHZ
@@ -116004,12 +116101,12 @@ kHZ
 kHZ
 kHZ
 kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
+cay
+jBi
+eSj
+eSj
+lIr
+vJW
 kHZ
 kHZ
 kHZ
@@ -116262,12 +116359,12 @@ kHZ
 kHZ
 kHZ
 kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
-kHZ
+lFQ
+fJF
+dtw
+lpd
+bCd
+wsh
 kHZ
 kHZ
 kHZ
@@ -118068,7 +118165,7 @@ nEf
 nEf
 nEf
 nEf
-kHZ
+nZt
 kHZ
 kHZ
 kHZ
@@ -118584,7 +118681,7 @@ nEf
 nEf
 nEf
 nEf
-nEf
+kHZ
 kHZ
 kHZ
 kHZ
@@ -118842,7 +118939,7 @@ nEf
 nEf
 nEf
 nEf
-nEf
+kHZ
 kHZ
 kHZ
 kHZ
@@ -119100,13 +119197,13 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
-nEf
 kHZ
 kHZ
 kHZ
+kHZ
+kHZ
+kHZ
+xoW
 nEf
 nEf
 nEf
@@ -119358,13 +119455,13 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
-nEf
-nEf
 kHZ
 kHZ
+kHZ
+kHZ
+kHZ
+nZt
+nZt
 nEf
 nEf
 nEf
@@ -119616,11 +119713,11 @@ nEf
 nEf
 xzO
 nEf
-nEf
-nEf
-nEf
-nEf
-nEf
+kHZ
+kHZ
+kHZ
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -119874,11 +119971,11 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
-nEf
-nEf
+nZt
+kHZ
+kHZ
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -120132,11 +120229,11 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
-nEf
-nEf
+kHZ
+kHZ
+kHZ
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -120390,18 +120487,18 @@ nEf
 nEf
 nEf
 nEf
+kHZ
+kHZ
+kHZ
+kHZ
+kHZ
 nEf
 nEf
 nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
-nEf
-nEf
-rmY
+duU
 kHZ
 kHZ
 nEf
@@ -120648,9 +120745,9 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
+kHZ
+kHZ
+kHZ
 kHZ
 kHZ
 jzg
@@ -120905,9 +121002,9 @@ nEf
 nEf
 nEf
 kHZ
+xoW
 kHZ
 kHZ
-msl
 kHZ
 qNm
 kHZ
@@ -121165,8 +121262,8 @@ nEf
 nEf
 nEf
 nEf
-nEf
-xoW
+kHZ
+kHZ
 kHZ
 kHZ
 jzg
@@ -121423,10 +121520,10 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
-nEf
+kHZ
+kHZ
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -121681,10 +121778,10 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
-nEf
+msl
+kHZ
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -121940,9 +122037,9 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
+kHZ
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -122198,9 +122295,9 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
-nEf
+kHZ
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -122457,8 +122554,8 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -122715,8 +122812,8 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -122973,8 +123070,8 @@ nEf
 nEf
 nEf
 nEf
-nEf
-nEf
+kHZ
+kHZ
 nEf
 nEf
 nEf
@@ -123499,7 +123596,7 @@ nEf
 nEf
 kHZ
 kHZ
-rmY
+duU
 nEf
 nEf
 nEf
