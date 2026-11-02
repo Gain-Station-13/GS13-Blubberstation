@@ -96,6 +96,13 @@
 	//SKYRAT EDIT ADDITION END
 	// If you are incapped, you probably can't brace yourself
 	var/can_help_themselves = !INCAPACITATED_IGNORING(src, INCAPABLE_RESTRAINTS)
+	// GS13 EDIT START - if you are fat enough, you cause screen shake when falling
+	var/shake_camera = FALSE
+	if (iscarbon(src))
+		var/mob/living/carbon/carbon_src = src
+		shake_camera = carbon_src.fatness >= FATNESS_LEVEL_IMMOBILE
+		can_help_themselves = can_help_themselves && !shake_camera	// if we're fat enough to cause an impact, don't avoid damage
+	// GS13 EDIT END
 	if(levels <= 1 && can_help_themselves)
 		var/obj/item/organ/wings/gliders = get_organ_by_type(/obj/item/organ/wings)
 		if(HAS_TRAIT(src, TRAIT_FREERUNNING) || gliders?.can_soften_fall()) // the power of parkour or wings allows falling short distances unscathed
@@ -147,6 +154,13 @@
 
 	if(!skip_knockdown)
 		Knockdown(levels * 5 SECONDS)
+	// GS13 EDIT START - - if you are fat enough, you cause screen shake when falling
+	if (shake_camera)
+		playsound(src, 'sound/effects/meteorimpact.ogg', 40, TRUE)
+		for(var/mob/mob in urange(10, src))
+			if(!IS_UNCONSCIOUS_OR_CRIT(mob))
+				shake_camera(mob, 3, 1)
+	// GS13 EDIT END
 	return .
 
 /// Modifier for mobs landing on their feet after a fall
