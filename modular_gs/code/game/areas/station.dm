@@ -11,6 +11,11 @@
 	name = "Medical outpost 2"
 	icon_state = "medbay_outpost_two"
 
+/area/station/medical/bariatric_ward	//healthplay room
+	name = "Bariatric Ward"
+	icon = 'modular_gs/icons/turf/areas.dmi'
+	icon_state = "bariatric_ward"
+
 /area/station/engineering/outpost
 	name = "Engineering outpost"
 	icon = 'modular_gs/icons/turf/areas.dmi'
@@ -26,3 +31,8 @@
 
 /area/shuttle/snowtaxi
 	name = "Snow Taxi"
+
+/area/station/maintenance/feeder_room
+	name = "Abandoned Torture Room"
+	icon = 'modular_gs/icons/turf/areas.dmi'
+	icon_state = "feeder_room"
