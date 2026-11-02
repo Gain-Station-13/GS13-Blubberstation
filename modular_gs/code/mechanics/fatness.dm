@@ -371,3 +371,10 @@
 		apply_perma_fatness_damage(damage)
 
 	. = ..()
+
+/mob/living/carbon/proc/get_climbing_slowdown_from_fatness()
+	var/minimum_penalty_weight = FATNESS_LEVEL_VERYFAT
+	var/maximum_penalty_weight = FATNESS_LEVEL_BLOB - minimum_penalty_weight
+	var/effective_fatness = fatness - minimum_penalty_weight // anyone that's less than very fat should be ignored
+	
+	return clamp(1 + effective_fatness / maximum_penalty_weight, 1, 2)
