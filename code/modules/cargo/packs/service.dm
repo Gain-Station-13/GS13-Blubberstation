@@ -189,11 +189,11 @@
 		/obj/item/bouquet/poppy,
 		/obj/item/reagent_containers/cup/glass/bottle/champagne,
 		/obj/item/clothing/under/dress/wedding_dress,
-		/obj/item/clothing/under/dress/wedding_dress/paradise,
-		/obj/item/clothing/under/dress/wedding_dress/paradise/orange,
-		/obj/item/clothing/under/dress/wedding_dress/paradise/purple,
-		/obj/item/clothing/under/dress/wedding_dress/paradise/blue,
-		/obj/item/clothing/under/dress/wedding_dress/paradise/red,
+		/obj/item/clothing/under/dress/wedding_dress/paradise, //GS13 EDIT, adds the Paradise wedding dresses to the crate.
+		/obj/item/clothing/under/dress/wedding_dress/paradise/orange, //GS13 EDIT, adds the Paradise wedding dresses to the crate times two.
+		/obj/item/clothing/under/dress/wedding_dress/paradise/purple, //GS13 EDIT, adds the Paradise wedding dresses to the crate times three.
+		/obj/item/clothing/under/dress/wedding_dress/paradise/blue, //GS13 EDIT, adds the Paradise wedding dresses to the crate times four.
+		/obj/item/clothing/under/dress/wedding_dress/paradise/red, //GS13 EDIT, adds the Paradise wedding dresses to the crate times five.
 	)
 	crate_name = "wedding crate"
 
