@@ -93,6 +93,7 @@
 			"icon" = initial(quirk.icon),
 			"name" = quirk_name,
 			"value" = initial(quirk.value),
+			"overwrite_wg_prefs" = initial(quirk.overwrite_wg_prefs), //GS13 Edit
 			"customizable" = constant_data?.is_customizable(),
 			"customization_options" = customization_options,
 		)

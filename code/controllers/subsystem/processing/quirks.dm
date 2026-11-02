@@ -57,6 +57,21 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	list(/datum/quirk/weak_legs, /datum/quirk/strong_legs),
 	list(/datum/quirk/helplessness/immobile, /datum/quirk/strong_legs),
 	list(/datum/quirk/helplessness/chair_breakage, /datum/quirk/helplessness/no_buckle),
+	/// Hardcore fatty
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/weak_legs),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/strong_legs),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/big_cheeks),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/immobile),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/immobile_arms),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/chair_breakage),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/stuckage),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/thick_neck),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/belts),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/clothing_back),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/no_buckle),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/helplessness/clumsy),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/lipolicide_tolerance),
+	list(/datum/quirk/helplessness/hardcore_fatty,/datum/quirk/macerinic_tolerance),
 	// GS13 END EDIT
 ))
 
@@ -235,9 +250,6 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 	for (var/quirk_name in quirks)
 		var/datum/quirk/quirk = all_quirks[quirk_name]
 		if (isnull(quirk))
-			continue
-
-		if ((initial(quirk.quirk_flags) & QUIRK_MOODLET_BASED) && CONFIG_GET(flag/disable_human_mood))
 			continue
 
 		var/blacklisted = FALSE

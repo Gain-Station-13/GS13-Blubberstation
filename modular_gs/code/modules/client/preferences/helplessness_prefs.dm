@@ -100,6 +100,11 @@
 	category = HELPLESSNESS_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "lisp"
+
+/datum/preference/numeric/helplessness/stomping
+	category = HELPLESSNESS_PREFERENCES
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "stomping"
 /*
 /datum/preference/numeric/helplessness/weak_lungs
 	category = HELPLESSNESS_PREFERENCES

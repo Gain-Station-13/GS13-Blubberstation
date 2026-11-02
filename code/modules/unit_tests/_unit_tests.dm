@@ -222,6 +222,7 @@
 #include "interaction_silicon.dm"
 #include "interaction_structures.dm"
 #include "job_display_order.dm"
+#include "job_icons.dm"
 #include "json_savefile_importing.dm"
 #include "keybinding_init.dm"
 #include "kinetic_crusher.dm"
@@ -230,6 +231,7 @@
 #include "language_transfer.dm"
 #include "leash.dm"
 #include "lesserform.dm"
+#include "light_replacer.dm"
 #include "limbsanity.dm"
 #include "ling_decap.dm"
 #include "liver.dm"
@@ -374,6 +376,9 @@
 #include "washing.dm"
 #include "weird_food.dm"
 #include "wizard_loadout.dm"
+// GS13 EDIT
+#include "~gs\helplessness.dm"
+// GS13 END EDIT
 // SKYRAT EDIT START
 #include "~skyrat\automapper.dm"
 #include "~skyrat\digitigrade_sprites.dm"

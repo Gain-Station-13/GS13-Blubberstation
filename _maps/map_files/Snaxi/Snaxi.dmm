@@ -806,7 +806,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/orange/hidden,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "aop" = (
 /obj/effect/turf_decal/trimline/dark_red/filled/line{
@@ -1472,7 +1472,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/dark_red/filled/warning,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "aBh" = (
 /obj/machinery/light,
@@ -1635,7 +1635,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "aDV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/yellow/visible{
@@ -1841,7 +1841,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta/corner{
 	dir = 1
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "aIy" = (
 /obj/effect/turf_decal/siding/wood,
@@ -1892,7 +1892,7 @@
 /area/station/cargo/warehouse)
 "aJI" = (
 /obj/effect/turf_decal/siding/wideplating/terracotta,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "aJJ" = (
 /obj/structure/cable,
@@ -2379,7 +2379,6 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/machinery/light/directional/north,
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "aUd" = (
@@ -3442,7 +3441,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/orange/hidden{
 	dir = 10
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "bpd" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
@@ -5326,7 +5325,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "caE" = (
 /obj/structure/disposalpipe/segment{
@@ -6273,7 +6272,7 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/on{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "cpq" = (
 /obj/effect/turf_decal/tile/red{
@@ -7267,7 +7266,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/orange/hidden{
 	dir = 6
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "cIT" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
@@ -7527,7 +7526,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "cOM" = (
 /obj/structure/sign/warning/gato/docking,
@@ -7741,7 +7740,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "cTh" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
@@ -8538,7 +8537,7 @@
 	dir = 8
 	},
 /obj/machinery/light/dim/directional/east,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "djE" = (
 /turf/open/floor/engine/airless,
@@ -10872,7 +10871,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 6
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "ecr" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
@@ -11667,7 +11666,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "eqG" = (
 /obj/machinery/door/airlock/engineering/glass{
@@ -14365,7 +14364,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "fqn" = (
 /obj/structure/table/wood,
@@ -14606,7 +14605,6 @@
 /area/station/command/heads_quarters/qm)
 "fuJ" = (
 /obj/machinery/power/apc/auto_name/directional/south,
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "fuQ" = (
@@ -15223,7 +15221,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer2{
 	dir = 1
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "fGD" = (
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible{
@@ -15879,7 +15877,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta/corner{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "fTz" = (
 /obj/effect/turf_decal/trimline/tram/filled/line{
@@ -16311,7 +16309,7 @@
 	dir = 4
 	},
 /obj/machinery/light/dim/directional/west,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "gbt" = (
 /obj/structure/window/spawner/directional/south,
@@ -17505,7 +17503,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/orange/hidden{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "gwo" = (
 /obj/structure/disposalpipe/segment,
@@ -18263,7 +18261,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/orange/hidden{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "gKj" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
@@ -19162,7 +19160,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "has" = (
 /obj/machinery/airalarm/directional/west,
@@ -20620,7 +20618,6 @@
 	pixel_x = -3;
 	pixel_y = 7
 	},
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "hDF" = (
@@ -20745,7 +20742,6 @@
 	pixel_x = 9;
 	pixel_y = 5
 	},
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "hGL" = (
@@ -21495,7 +21491,7 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/on{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "hVh" = (
 /obj/machinery/door/airlock/public/glass,
@@ -21781,7 +21777,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "iaC" = (
 /obj/effect/landmark/start/clown,
@@ -22788,9 +22784,9 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "itf" = (
 /obj/structure/table,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
+/obj/item/brain_processor/organic,
+/obj/item/brain_processor/organic,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
 	dir = 4;
@@ -23579,7 +23575,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "iIc" = (
 /obj/machinery/computer/aifixer{
@@ -23658,7 +23654,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "iJx" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
@@ -23816,8 +23812,6 @@
 /area/station/maintenance/aft)
 "iMo" = (
 /obj/machinery/vending/cigarette,
-/turf/open/space/basic,
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "iMr" = (
@@ -24877,7 +24871,7 @@
 	dir = 4
 	},
 /obj/machinery/light/dim/directional/east,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "jgW" = (
 /obj/structure/disposalpipe/segment,
@@ -25324,7 +25318,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 10
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "jnT" = (
 /obj/machinery/light{
@@ -25410,7 +25404,7 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/siding/wideplating/terracotta,
 /obj/machinery/status_display/evac/directional/south,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "joR" = (
 /turf/open/floor/wood,
@@ -28507,7 +28501,6 @@
 "ktD" = (
 /obj/structure/chair/stool/directional/north,
 /obj/effect/landmark/start/shaft_miner,
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "ktE" = (
@@ -28951,7 +28944,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "kBr" = (
 /obj/machinery/status_display/door_timer{
@@ -29122,7 +29115,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/structure/cable,
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "kEp" = (
@@ -29134,7 +29126,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "kEv" = (
 /obj/machinery/light,
@@ -29772,7 +29764,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "kSf" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
@@ -30984,7 +30976,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "lqc" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
@@ -33131,7 +33123,7 @@
 "mcZ" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/dark_red/filled/warning,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "mdB" = (
 /obj/machinery/firealarm/directional/north,
@@ -33231,7 +33223,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 9
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "mgO" = (
 /obj/effect/landmark/event_spawn,
@@ -33549,7 +33541,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 5
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "mlT" = (
 /obj/structure/closet/emcloset,
@@ -33815,7 +33807,7 @@
 	dir = 4;
 	name = "air supply pipe"
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "mqk" = (
 /obj/machinery/light,
@@ -35054,7 +35046,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "mMB" = (
 /obj/machinery/light{
@@ -35659,7 +35651,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/central)
 "mYp" = (
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "mYq" = (
@@ -36295,7 +36286,7 @@
 	dir = 8;
 	color = "#ab875c"
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "nhF" = (
 /obj/structure/window/spawner/directional/west,
@@ -36749,7 +36740,6 @@
 "nsx" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "nsA" = (
@@ -38073,7 +38063,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "nRF" = (
 /obj/machinery/vending/wallmed{
@@ -38846,7 +38836,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "ofe" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
@@ -40992,7 +40982,7 @@
 /obj/effect/landmark/navigate_destination/sauna,
 /obj/effect/turf_decal/siding/wideplating/terracotta,
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "oVC" = (
 /obj/effect/turf_decal/siding/wood{
@@ -41283,7 +41273,7 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "pbQ" = (
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -41937,7 +41927,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "prL" = (
 /obj/structure/cable,
@@ -43833,7 +43823,7 @@
 /turf/open/floor/iron/dark,
 /area/station/command/eva)
 "qbO" = (
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "qcx" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
@@ -44364,7 +44354,6 @@
 /obj/item/food/sosjerky,
 /obj/item/food/sosjerky,
 /obj/item/food/sosjerky,
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "qmb" = (
@@ -46735,7 +46724,7 @@
 	dir = 1
 	},
 /obj/machinery/light/dim/directional/west,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "reu" = (
 /obj/item/radio/intercom{
@@ -47741,7 +47730,6 @@
 /obj/machinery/microwave{
 	pixel_y = 6
 	},
-/turf/open/floor/iron,
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "rwF" = (
@@ -48037,7 +48025,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "rEF" = (
 /obj/structure/disposalpipe/segment{
@@ -48798,7 +48786,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 6
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "rXp" = (
 /obj/structure/cable,
@@ -48850,7 +48838,7 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "rXV" = (
 /obj/structure/railing{
@@ -51970,7 +51958,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 5
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "tgr" = (
 /obj/structure/cable,
@@ -52014,7 +52002,7 @@
 "tgK" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/siding/wideplating/terracotta,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "tgR" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
@@ -52631,7 +52619,7 @@
 	dir = 9
 	},
 /obj/effect/mapping_helpers/airalarm/all_access,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "ttp" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -55706,7 +55694,7 @@
 	dir = 4;
 	color = "#ab875c"
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "uAt" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -56806,7 +56794,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "uTn" = (
 /obj/machinery/computer/pandemic,
@@ -56995,7 +56983,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "uXD" = (
 /turf/closed/wall/r_wall,
@@ -57944,7 +57932,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "vll" = (
 /obj/machinery/firealarm/directional/south,
@@ -59882,7 +59870,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "vXO" = (
 /obj/structure/table,
@@ -61161,7 +61149,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "wwS" = (
 /turf/closed/wall/mineral/wood,
@@ -61212,7 +61200,7 @@
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/dark_red/filled/warning,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "wyg" = (
 /obj/structure/cable,
@@ -61763,7 +61751,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 1
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "wIi" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -63247,7 +63235,7 @@
 /obj/machinery/firealarm/directional/south,
 /obj/structure/cable,
 /obj/effect/turf_decal/siding/wideplating/terracotta,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "xlw" = (
 /obj/effect/turf_decal/siding/wood,
@@ -63534,7 +63522,7 @@
 "xqm" = (
 /obj/effect/turf_decal/siding/wideplating/terracotta,
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "xqo" = (
 /obj/effect/turf_decal/siding/wood{
@@ -63745,7 +63733,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/orange/hidden,
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "xuD" = (
 /obj/structure/cable,
@@ -63873,7 +63861,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 4
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "xxj" = (
 /obj/structure/closet/emcloset,
@@ -64270,7 +64258,7 @@
 /obj/effect/turf_decal/siding/wideplating/terracotta{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "xDW" = (
 /obj/structure/cable,
@@ -64901,7 +64889,7 @@
 	},
 /obj/effect/turf_decal/siding/wideplating/terracotta/corner,
 /obj/structure/cable,
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "xQA" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
@@ -65046,7 +65034,7 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 8
 	},
-/turf/open/floor/mineral/sandstone_floor,
+/turf/open/floor/sandstone,
 /area/station/common/pool)
 "xTK" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{

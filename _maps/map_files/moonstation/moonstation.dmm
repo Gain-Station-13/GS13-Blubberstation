@@ -339,7 +339,7 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "aeG" = (
@@ -13556,7 +13556,7 @@
 /area/station/security/corrections_officer)
 "dIt" = (
 /obj/structure/table,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
 /obj/item/pai_card,
 /obj/item/storage/box/bodybags,
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -17394,7 +17394,7 @@
 /obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/machinery/camera/autoname/directional/west,
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron/showroomfloor,
 /area/station/common/pool)
 "eKs" = (
@@ -19048,7 +19048,7 @@
 /turf/open/floor/engine/plasma,
 /area/station/engineering/atmos)
 "fgw" = (
-/obj/item/relic,
+/obj/item/assembly/relic,
 /obj/effect/decal/cleanable/greenglow/filled,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
@@ -39426,7 +39426,7 @@
 "kCV" = (
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/spawner/random/trash/mess,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "kCY" = (
@@ -47168,7 +47168,7 @@
 /area/station/command/heads_quarters/ce)
 "mFg" = (
 /obj/effect/decal/cleanable/greenglow/filled,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "mFk" = (
@@ -55089,7 +55089,7 @@
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/north,
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "oKI" = (
@@ -55152,7 +55152,7 @@
 /area/station/engineering/atmos/control_center)
 "oLA" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
-/obj/structure/scale,
+/obj/structure/scale/breaking_scale,
 /turf/open/floor/iron/dark/corner,
 /area/station/common/wrestling/arena)
 "oLC" = (
@@ -69818,7 +69818,7 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/broken_floor,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "sJj" = (
@@ -71452,7 +71452,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "tgm" = (
@@ -89378,7 +89378,7 @@
 /area/station/maintenance/department/crew_quarters/bar)
 "xXH" = (
 /obj/structure/cable,
-/obj/item/relic,
+/obj/item/assembly/relic,
 /obj/structure/sign/poster/random/directional/north,
 /obj/structure/disposalpipe/segment{
 	dir = 10

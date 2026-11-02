@@ -111,8 +111,8 @@
 /datum/storage/bag/tray
 	max_specific_storage = WEIGHT_CLASS_BULKY //Plates are required bulky to keep them out of backpacks
 	insert_preposition = "on"
-	max_slots = 8
-	max_total_storage = 16
+	max_slots = 20 // GS13 EDIT 8 -> 20
+	max_total_storage = 40 //GS13 EDIT 16 -> 40
 
 /datum/storage/bag/tray/New(atom/parent, max_slots, max_specific_storage, max_total_storage, rustle_sound, remove_rustle_sound)
 	. = ..()

@@ -92,7 +92,7 @@
 		<h2>GATO Laws, SOPs and other:</h2>
 		<p>You start skimming through the manual...</p>
 		<br></br>
-		<link>(https://github.com/sheepishgoat/GS13-Blubberstation/wiki/GATO_Laws)</link>
+		<link>(https://github.com/Gain-Station-13/GS13-Blubberstation/wiki/GATO_Laws)</link>
 		</body>
 		</html>"}
 

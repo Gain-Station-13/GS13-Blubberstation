@@ -1,14 +1,5 @@
-// /datum/design/infrared_emitter
-// 	name = "Fatness Infrared Emitter"
-// 	id = "fatness_infrared_emitter"
-// 	build_type = AUTOLATHE
-// 	materials = list(/datum/material/iron = 1000, /datum/material/glass = 500)
-// 	build_path = /obj/item/assembly/infra/fat
-// 	category = list("initial", "Misc")
-
 /datum/design/small_cup
 	name = "Small Gulp Cup"
-	id = "Small_Gulp"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 0.2)
 	build_path = /obj/item/reagent_containers/cup/paper_cup/small
@@ -16,7 +7,6 @@
 
 /datum/design/medium_cup
 	name = "Medium Gulp Cup"
-	id = "Medium_Gulp"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 0.4)
 	build_path = /obj/item/reagent_containers/cup/paper_cup/medium
@@ -24,7 +14,6 @@
 
 /datum/design/big_cup
 	name = "Big Gulp Cup"
-	id = "Big_Gulp"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 0.6)
 	build_path = /obj/item/reagent_containers/cup/paper_cup/big
@@ -32,7 +21,6 @@
 
 /datum/design/extra_big_cup
 	name = "Extra Big Gulp Cup"
-	id = "Extra_Big_Gulp"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 0.8)
 	build_path = /obj/item/reagent_containers/cup/paper_cup/extra_big
@@ -40,7 +28,6 @@
 
 /datum/design/super_extra_big_cup
 	name = "Super Extra Big Gulp Cup"
-	id = "Super_Extra_Big_Gulp"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/reagent_containers/cup/paper_cup/super_extra_big

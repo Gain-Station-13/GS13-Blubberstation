@@ -111,11 +111,9 @@
 	build_path = /obj/machinery/treadmill
 	req_components = list(/obj/item/stock_parts/servo = 1)
 
-/datum/design/treadmill
+/datum/design/board/treadmill
 	name = "Treadmill Board"
-	id = "treadmill"
 	build_type = AUTOLATHE | PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/circuitboard/machine/treadmill
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SERVICE
 	category = list(
@@ -125,17 +123,7 @@
 
 /datum/design/dumbbell
 	name = "Dumbbell"
-	id = "dumbbell"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT / 10)
 	build_path = /obj/item/dumbbell
 	category = list("initial", "Tools")
-/*
-/datum/design/treadmill
-	name = "Treadmill"
-	id = "treadmill"
-	build_type = AUTOLATHE
-	materials = list(/datum/material/iron = 5000)
-	build_path = /obj/item/conveyor_construct/treadmill
-	category = list("initial", "Construction")
-*/
