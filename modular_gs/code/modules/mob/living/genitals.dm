@@ -11,13 +11,13 @@
 
 /obj/item/organ/genital/belly/update_size_from_weight(size_change)
 	if (owner.inflation_stage > size_change)
-		// setup_bodypart_overlay(/datum/sprite_accessory/genital/belly/round)
 		simple_change_sprite(/datum/sprite_accessory/genital/belly/round)
 		genital_type = /datum/sprite_accessory/genital/belly/round::icon_state
 	else
-		// setup_bodypart_overlay(/datum/sprite_accessory/genital/belly/normal_gs)
-		simple_change_sprite(/datum/sprite_accessory/genital/belly/normal_gs)
-		genital_type = /datum/sprite_accessory/genital/belly/normal_gs::icon_state
+		var/belly_name = owner.client.prefs.read_preference(/datum/preference/choiced/genital/belly)
+		var/datum/sprite_accessory/genital/belly/belly_type = SSaccessories.sprite_accessories["belly"][belly_name]
+		simple_change_sprite(belly_type)
+		genital_type = belly_type.icon_state
 	var/desired_size = set_genital_size + size_change + owner.inflation_stage
 	if (max_genital_size > 0 && desired_size >= max_genital_size)
 		set_size(max_genital_size)

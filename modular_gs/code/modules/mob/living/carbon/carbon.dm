@@ -11,3 +11,11 @@
 /mob/living/carbon/Life(seconds_per_tick = SSMOBS_DT)
 	. = ..()
 	handle_inflation()
+
+/mob/living/carbon/return_air()
+	RETURN_TYPE(/datum/gas_mixture)
+	return air
+
+/mob/living/carbon/return_analyzable_air()
+	RETURN_TYPE(/datum/gas_mixture)
+	return return_air()

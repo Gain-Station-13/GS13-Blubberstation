@@ -6,7 +6,11 @@
 		return
 	
 	var/pressure_difference = air.return_pressure() - environment.return_pressure()
-	inflation_stage = round(pressure_difference / ONE_ATMOSPHERE, 1)
+	var/new_inflation_stage = round(pressure_difference / ONE_ATMOSPHERE, 1)
+	if (inflation_stage == new_inflation_stage)
+		return
+
+	inflation_stage = new_inflation_stage
 
 	var/obj/item/organ/genital/belly/belly = get_organ_slot(ORGAN_SLOT_BELLY)
 
