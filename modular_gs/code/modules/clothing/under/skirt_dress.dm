@@ -1,8 +1,9 @@
 // Wedding dresses ported from Paradise Station.
+
 /obj/item/clothing/under/dress/wedding_dress/paradise
 	name = "white wedding dress"
 	desc = "A white wedding gown made from the finest silk."
-	icon = 'modular_gs/icons/mob/clothing/under/paradise_dresses.dmi'
+	icon = 'modular_gs/icons/obj/clothing/under/paradise_dresses.dmi'
 	worn_icon = 'modular_gs/icons/mob/clothing/under/paradise_dresses.dmi'
 	icon_state = "bride_white"
 
