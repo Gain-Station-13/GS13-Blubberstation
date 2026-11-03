@@ -177,24 +177,18 @@
 /datum/supply_pack/service/wedding
 	name = "Wedding Crate"
 	desc = "Everything you need to host a wedding! Now you just need an officiant. \
-		Contains six wedding dresses, tuxedo, cummerbund, wedding veil, three bouquets, \
+		Contains a wedding dress, tuxedo, cummerbund, wedding veil, three bouquets, \
 		and a bottle of champagne."
 	cost = CARGO_CRATE_VALUE * 3
-	contains = list(
-		/obj/item/clothing/under/suit/tuxedo,
-		/obj/item/storage/belt/fannypack/cummerbund,
-		/obj/item/clothing/head/costume/weddingveil,
-		/obj/item/bouquet,
-		/obj/item/bouquet/sunflower,
-		/obj/item/bouquet/poppy,
-		/obj/item/reagent_containers/cup/glass/bottle/champagne,
-		/obj/item/clothing/under/dress/wedding_dress,
-		/obj/item/clothing/under/dress/wedding_dress/paradise, //GS13 EDIT, adds the Paradise wedding dresses to the crate.
-		/obj/item/clothing/under/dress/wedding_dress/paradise/orange, //GS13 EDIT, adds the Paradise wedding dresses to the crate times two.
-		/obj/item/clothing/under/dress/wedding_dress/paradise/purple, //GS13 EDIT, adds the Paradise wedding dresses to the crate times three.
-		/obj/item/clothing/under/dress/wedding_dress/paradise/blue, //GS13 EDIT, adds the Paradise wedding dresses to the crate times four.
-		/obj/item/clothing/under/dress/wedding_dress/paradise/red, //GS13 EDIT, adds the Paradise wedding dresses to the crate times five.
-	)
+	contains = list(/obj/item/clothing/under/dress/wedding_dress,
+					/obj/item/clothing/under/suit/tuxedo,
+					/obj/item/storage/belt/fannypack/cummerbund,
+					/obj/item/clothing/head/costume/weddingveil,
+					/obj/item/bouquet,
+					/obj/item/bouquet/sunflower,
+					/obj/item/bouquet/poppy,
+					/obj/item/reagent_containers/cup/glass/bottle/champagne,
+				)
 	crate_name = "wedding crate"
 
 /// Box of 7 grey IDs.
