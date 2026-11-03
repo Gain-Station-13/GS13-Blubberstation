@@ -156,3 +156,63 @@
 				'modular_gs/sound/effects/inflation/creaking/Creak2.ogg',
 				'modular_gs/sound/effects/inflation/creaking/Creak3.ogg',
 				'modular_gs/sound/effects/inflation/creaking/Creak4.ogg')
+
+/datum/emote/living/inhale/run_emote(mob/user, params, type_override, intentional)
+	. = ..()
+	if (!iscarbon(user))
+		return
+
+	// don't do this shit if we were made to breathe manually
+	if (user.GetComponent(/datum/component/manual_breathing))
+		return
+	
+	var/mob/living/carbon/inflatee = user
+
+	var/datum/gas_mixture/breath = inflatee.get_breath_from_internal(STOMACH_VOLUME)
+
+	if(isnull(breath)) //in case of 0 pressure internals
+		if(isobj(inflatee.loc)) //Breathe from loc as object
+			var/obj/loc_as_obj = inflatee.loc
+			breath = loc_as_obj.handle_internal_lifeform(src, STOMACH_VOLUME)
+		else if(isturf(inflatee.loc)) //Breathe from loc as turf
+			var/breath_moles = 0
+			var/datum/gas_mixture/environment = inflatee.loc.return_air()
+			if(environment)
+				breath_moles = environment.total_moles()*INHALE_PERCENTAGE
+			breath = inflatee.loc.remove_air(breath_moles)
+	else //Breathe from loc as obj again
+		if(isobj(inflatee.loc))
+			var/obj/loc_as_obj = inflatee.loc
+			loc_as_obj.handle_internal_lifeform(src,0)
+	
+	inflatee.air.merge(breath)
+
+/datum/emote/living/exhale/run_emote(mob/user, params, type_override, intentional)
+	. = ..()
+	if (!iscarbon(user))
+		return
+
+	// don't do this shit if we were made to breathe manually
+	if (user.GetComponent(/datum/component/manual_breathing))
+		return
+	
+	var/mob/living/carbon/deflatee = user
+
+	var/datum/gas_mixture/breath = deflatee.get_breath_from_internal(STOMACH_VOLUME)
+
+	if(isnull(breath)) //in case of 0 pressure internals
+		if(isobj(deflatee.loc)) //Breathe from loc as object
+			var/obj/loc_as_obj = deflatee.loc
+			breath = loc_as_obj.handle_internal_lifeform(src, STOMACH_VOLUME)
+		else if(isturf(deflatee.loc)) //Breathe from loc as turf
+			var/breath_moles = 0
+			var/datum/gas_mixture/environment = deflatee.loc.return_air()
+			if(environment)
+				breath_moles = environment.total_moles()*INHALE_PERCENTAGE
+			breath = deflatee.loc.remove_air(breath_moles)
+	else //Breathe from loc as obj again
+		if(isobj(deflatee.loc))
+			var/obj/loc_as_obj = deflatee.loc
+			loc_as_obj.handle_internal_lifeform(src,0)
+	
+	deflatee.air.merge(breath)

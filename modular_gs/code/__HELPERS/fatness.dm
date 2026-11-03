@@ -79,3 +79,26 @@
 			return (input_fatness - FATNESS_LEVEL_FAT)
 
 	return input_fatness
+
+/proc/get_fatness_to_stage(input_fatness)
+	switch(input_fatness)
+		if (FATNESS_LEVEL_NONE to FATNESS_LEVEL_FAT)
+			return 0
+		if (FATNESS_LEVEL_FAT to FATNESS_LEVEL_FATTER)
+			return 1
+		if (FATNESS_LEVEL_FATTER to FATNESS_LEVEL_VERYFAT)
+			return 2
+		if (FATNESS_LEVEL_VERYFAT to FATNESS_LEVEL_OBESE)
+			return 3
+		if (FATNESS_LEVEL_OBESE to FATNESS_LEVEL_MORBIDLY_OBESE)
+			return 4
+		if (FATNESS_LEVEL_MORBIDLY_OBESE to FATNESS_LEVEL_EXTREMELY_OBESE)
+			return 5
+		if (FATNESS_LEVEL_EXTREMELY_OBESE to FATNESS_LEVEL_BARELYMOBILE)
+			return 6
+		if (FATNESS_LEVEL_BARELYMOBILE to FATNESS_LEVEL_IMMOBILE)
+			return 7
+		if (FATNESS_LEVEL_IMMOBILE to FATNESS_LEVEL_BLOB)
+			return 8
+		if (FATNESS_LEVEL_BLOB to INFINITY)
+			return 9

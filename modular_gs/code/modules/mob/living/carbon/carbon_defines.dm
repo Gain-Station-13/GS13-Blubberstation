@@ -66,3 +66,8 @@
 	var/perma_loss_time_stored = 0
 	/// How much perma fatness is the mob able to put off?
 	var/perma_fatness_loss_stored = 0
+
+	/// represents air held inside of the carbon, used for inflation content. Starts empty by default.
+	var/datum/gas_mixture/air
+	/// how inflated with gas someone is
+	var/inflation_stage = 0
