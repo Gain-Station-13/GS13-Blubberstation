@@ -1,5 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "Falling down a Z-level when you're fat enough now causes screen shake, identical to the mini-meteor"
-  - rscadd: "Climbing via ladders, climbing ropes and tables is now slower the fatter you are"
