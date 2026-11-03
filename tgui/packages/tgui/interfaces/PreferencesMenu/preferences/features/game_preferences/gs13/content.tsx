@@ -1,5 +1,7 @@
 import { CheckboxInput, type FeatureToggle, type Feature, FeatureSliderInput } from '../../base';
 
+// #region weight gain types
+
 export const weight_gain_food: FeatureToggle = {
   name: 'Weight gain from food',
   category: 'WG Sources',
@@ -69,6 +71,8 @@ export const weight_gain_mutations: FeatureToggle = {
   component: CheckboxInput,
 };
 
+// #endregion
+
 export const blueberry_inflation: FeatureToggle = {
   name: 'Blueberryfication',
   description: 'Toggle whether you want to be affected by blueberry inflation mechanics.',
@@ -122,3 +126,14 @@ export const sound_bursting: Feature<number> = {
   description: 'Volume of the sounds associated with bursting.',
   component: FeatureSliderInput,
 };
+
+// #region inflation
+
+export const inflation: FeatureToggle = {
+  name: 'Inflation',
+  description: 'Toggle whether you want to be able to be inflated and deflated with air/gasses.',
+  category: 'WG Sources',
+  component: CheckboxInput,
+};
+
+// #endregion

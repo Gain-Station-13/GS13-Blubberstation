@@ -38,7 +38,10 @@
 	// don't do this shit if we were made to breathe manually
 	if (user.GetComponent(/datum/component/manual_breathing))
 		return
-	
+
+	if (!user.client?.prefs?.read_preference(/datum/preference/toggle/inflation))
+		return
+
 	var/mob/living/carbon/deflatee = user
 	var/datum/gas_mixture/air = deflatee.air
 
@@ -185,7 +188,10 @@
 	// don't do this shit if we were made to breathe manually
 	if (user.GetComponent(/datum/component/manual_breathing))
 		return
-	
+
+	if (!user.client?.prefs?.read_preference(/datum/preference/toggle/inflation))
+		return
+
 	var/mob/living/carbon/inflatee = user
 
 	var/datum/gas_mixture/breath = inflatee.get_breath_from_internal(STOMACH_VOLUME)
@@ -215,7 +221,10 @@
 	// don't do this shit if we were made to breathe manually
 	if (user.GetComponent(/datum/component/manual_breathing))
 		return
-	
+
+	if (!user.client?.prefs?.read_preference(/datum/preference/toggle/inflation))
+		return
+
 	var/mob/living/carbon/deflatee = user
 	var/datum/gas_mixture/air = deflatee.air
 

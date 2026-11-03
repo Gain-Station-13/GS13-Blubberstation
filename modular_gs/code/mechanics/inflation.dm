@@ -1,4 +1,7 @@
 /mob/living/carbon/proc/handle_inflation()
+	if (!client?.prefs?.read_preference(/datum/preference/toggle/inflation))
+		return
+
 	var/datum/gas_mixture/environment = loc.return_air()
 
 	// outside is more pressurized than inside, let's not crunch us
