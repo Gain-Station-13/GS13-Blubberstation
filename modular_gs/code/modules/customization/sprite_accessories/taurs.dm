@@ -34,3 +34,24 @@
 	icon = 'modular_gs/icons/customization/taur.dmi'
 	taur_mode = STYLE_TAUR_HOOF
 	can_lay_down = FALSE
+
+/datum/sprite_accessory/taur/mermaid
+	name = "Mermaid"
+	icon_state = "mermaid"
+	icon = 'modular_gs/icons/customization/taur.dmi'
+	taur_mode = STYLE_TAUR_SNAKE
+	can_lay_down = FALSE
+
+/datum/sprite_accessory/taur/mermaidkoi
+	name = "Mermaid (Koi Fish)"
+	icon_state = "mermaidkoi"
+	icon = 'modular_gs/icons/customization/taur.dmi'
+	taur_mode = STYLE_TAUR_SNAKE
+	can_lay_down = FALSE
+
+/datum/sprite_accessory/taur/mermaidorca
+	name = "Mermaid (Orca)"
+	icon_state = "mermaidorca"
+	icon = 'modular_gs/icons/customization/taur.dmi'
+	taur_mode = STYLE_TAUR_SNAKE
+	can_lay_down = FALSE
