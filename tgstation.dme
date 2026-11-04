@@ -7539,6 +7539,7 @@
 #include "modular_gs\code\modules\client\preferences\size.dm"
 #include "modular_gs\code\modules\client\preferences\verbs.dm"
 #include "modular_gs\code\modules\client\preferences\wg_source_preferences.dm"
+#include "modular_gs\code\modules\clothing\suits\jacket.dm"
 #include "modular_gs\code\modules\clothing\under\bunny_suit.dm"
 #include "modular_gs\code\modules\clothing\under\button_up.dm"
 #include "modular_gs\code\modules\clothing\under\dual_tone_jumpsuit.dm"
