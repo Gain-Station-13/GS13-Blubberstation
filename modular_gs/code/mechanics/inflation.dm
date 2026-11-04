@@ -18,5 +18,26 @@
 	var/obj/item/organ/genital/belly/belly = get_organ_slot(ORGAN_SLOT_BELLY)
 
 	if(belly)
-		belly.update_size_from_weight(get_fatness_to_stage(fatness))
+		var/fatness_stage = get_fatness_to_stage(fatness)
+		belly.update_size_from_weight(fatness_stage)
 		update_body()
+		if (belly.set_genital_size + fatness_stage + inflation_stage > belly.max_genital_size)
+			inflation_resize()
+
+/mob/living/carbon/proc/inflation_resize()
+	var/datum/component/temporary_size/existing_size_component = GetComponent(/datum/component/temporary_size)
+	if (!ishuman(src))
+		return FALSE
+
+	if(isnull(existing_size_component) && !QDELETED(src))
+		AddComponent(/datum/component/temporary_size/xwg/inflation)
+
+	return TRUE
+
+// I have no clue if this will work well
+/datum/component/temporary_size/xwg/inflation/Initialize(size_to_apply)
+	. = ..()
+	if (. == COMPONENT_INCOMPATIBLE)
+		return .
+
+	UnregisterSignal(parent, COMSIG_WEIGHT_ADJUSTED)
