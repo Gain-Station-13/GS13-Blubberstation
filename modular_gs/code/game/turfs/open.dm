@@ -70,6 +70,18 @@
 /turf/open/floor/iron/recharge_floor/lavaland_atmos
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 
+/turf/open/floor/mineral/basaltstone_floor/lavaland_atmos
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
+/turf/open/floor/mineral/plastitanium/red/lavaland_atmos
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
+/turf/open/floor/circuit/red/lavaland_atmos
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
+/turf/open/floor/carpet/black/lavaland_atmos
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
 // #region snaxi open turfs
 
 /turf/open/misc/asteroid/snow/snaxi

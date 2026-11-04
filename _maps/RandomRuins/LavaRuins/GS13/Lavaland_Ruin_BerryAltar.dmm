@@ -68,9 +68,7 @@
 	pixel_x = 5;
 	pixel_y = 4
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "gt" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
@@ -121,18 +119,14 @@
 	color = "0000FF"
 	},
 /obj/effect/decal/cleanable/shreds,
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "iK" = (
 /obj/item/food/grown/berries/blueberry{
 	pixel_x = -3;
 	pixel_y = 1
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "lc" = (
 /obj/structure/fans/tiny/invisible,
@@ -140,9 +134,7 @@
 /obj/structure/mineral_door/sandstone{
 	color = "#3D2412"
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "lK" = (
 /obj/structure/stone_tile/block{
@@ -162,9 +154,7 @@
 	pixel_x = 13;
 	pixel_y = 14
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "my" = (
 /obj/structure/stone_tile/slab,
@@ -180,9 +170,7 @@
 	pixel_x = -3;
 	pixel_y = 2
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "ol" = (
 /obj/structure/railing/corner/end{
@@ -193,9 +181,7 @@
 	color = "#895129";
 	dir = 4
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "oJ" = (
 /obj/structure/stone_tile/surrounding/cracked{
@@ -230,9 +216,7 @@
 	color = "0000FF"
 	},
 /obj/effect/decal/cleanable/shreds,
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "sq" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
@@ -316,9 +300,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile/slab,
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "wd" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark,
@@ -371,9 +353,7 @@
 /area/ruin/unpowered)
 "yE" = (
 /obj/structure/stone_tile/slab,
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "zb" = (
 /obj/structure/stone_tile/cracked{
@@ -436,15 +416,11 @@
 /turf/open/water/jungle,
 /area/ruin/unpowered)
 "AF" = (
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "Bl" = (
 /obj/item/flashlight/lantern/on,
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "Cl" = (
 /turf/closed/mineral/volcanic/lava_land_surface,
@@ -460,9 +436,7 @@
 	pixel_x = 10;
 	pixel_y = -15
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "EN" = (
 /obj/structure/stone_tile{
@@ -688,9 +662,7 @@
 	pixel_x = -2;
 	pixel_y = 16
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "NU" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
@@ -762,9 +734,7 @@
 	pixel_x = -3;
 	pixel_y = 2
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 "Ta" = (
 /obj/structure/stone_tile/surrounding/cracked{
@@ -884,9 +854,7 @@
 	color = "#895129";
 	dir = 8
 	},
-/turf/open/floor/engine/cult{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
+/turf/open/floor/engine/cult,
 /area/ruin/unpowered)
 
 (1,1,1) = {"

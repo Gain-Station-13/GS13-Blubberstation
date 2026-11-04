@@ -263,6 +263,11 @@
 	if(istype(potential_spine))
 		misc_multiplier *= potential_spine.athletics_boost_multiplier
 
+	// GS13 EDIT START - slower ladder climbing from weight
+	if (iscarbon(user))
+		var/mob/living/carbon/fatty = user
+		misc_multiplier *= fatty.get_climbing_slowdown_from_fatness()
+	// GS13 EDIT END
 	var/final_travel_time = (travel_time - fitness_level) * misc_multiplier
 
 	if(do_after(user, final_travel_time, target = src, interaction_key = DOAFTER_SOURCE_CLIMBING_LADDER))

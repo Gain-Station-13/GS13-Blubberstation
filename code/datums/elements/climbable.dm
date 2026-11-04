@@ -88,6 +88,11 @@
 		adjusted_climb_time *= 1.5
 		adjusted_climb_stun *= 1.5
 	LAZYADDASSOCLIST(current_climbers, climbed_thing, user)
+	// GS13 EDIT START - slower table climbing from weight
+	if (iscarbon(user))
+		var/mob/living/carbon/fatty = user
+		adjusted_climb_time *= fatty.get_climbing_slowdown_from_fatness()
+	// GS13 EDIT END
 	if(do_after(user, adjusted_climb_time, climbed_thing))
 		if(QDELETED(climbed_thing)) //Checking if structure has been destroyed
 			return
