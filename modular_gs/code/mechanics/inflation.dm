@@ -9,11 +9,14 @@
 		return
 	
 	var/pressure_difference = air.return_pressure() - environment.return_pressure()
-	var/new_inflation_stage = round(pressure_difference / ONE_ATMOSPHERE, 1)
+	inflation_value = pressure_difference / ONE_ATMOSPHERE
+	var/new_inflation_stage = round(inflation_value, 1)
 	if (inflation_stage == new_inflation_stage)
+		SEND_SIGNAL(src, COMSIG_INFLATION_CHANGED)
 		return
 
 	inflation_stage = new_inflation_stage
+	SEND_SIGNAL(src, COMSIG_INFLATION_CHANGED)
 
 	var/obj/item/organ/genital/belly/belly = get_organ_slot(ORGAN_SLOT_BELLY)
 
@@ -30,14 +33,6 @@
 		return FALSE
 
 	if(isnull(existing_size_component) && !QDELETED(src))
-		AddComponent(/datum/component/temporary_size/xwg/inflation)
+		AddComponent(/datum/component/temporary_size/xwg)
 
 	return TRUE
-
-// I have no clue if this will work well
-/datum/component/temporary_size/xwg/inflation/Initialize(size_to_apply)
-	. = ..()
-	if (. == COMPONENT_INCOMPATIBLE)
-		return .
-
-	UnregisterSignal(parent, COMSIG_WEIGHT_ADJUSTED)

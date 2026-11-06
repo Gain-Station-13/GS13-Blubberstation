@@ -136,4 +136,11 @@ export const inflation: FeatureToggle = {
   component: CheckboxInput,
 };
 
+export const inflation_size_scaling: FeatureToggle = {
+  name: 'Scale sprite size with inflation',
+  category: 'Size',
+  component: CheckboxInput,
+  description: 'Toggle whether you want to be able to be inflated and deflated with air/gasses.',
+};
+
 // #endregion

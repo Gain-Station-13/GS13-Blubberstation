@@ -70,4 +70,6 @@
 	/// represents air held inside of the carbon, used for inflation content. Starts empty by default.
 	var/datum/gas_mixture/air
 	/// how inflated with gas someone is
+	var/inflation_value = 0
+	/// how inflated with gas someone is, rounded to the nearest integer
 	var/inflation_stage = 0
