@@ -66,9 +66,6 @@
 "abF" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/disposalpipe/segment,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "abH" = (
@@ -3217,6 +3214,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/hallway/primary/aft)
 "bef" = (
@@ -8658,9 +8656,6 @@
 /area/station/maintenance/disposal/incinerator)
 "dcF" = (
 /obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 10
-	},
 /obj/machinery/door/airlock/external/glass,
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/delivery,
@@ -11517,7 +11512,7 @@
 /area/station/engineering/atmos)
 "ebO" = (
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	req_access_txt = list("security")
+	req_access = list("security")
 	},
 /obj/effect/turf_decal/vg_decals/numbers/two,
 /obj/machinery/door/poddoor/preopen{
@@ -27318,15 +27313,9 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "jrY" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage"
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/glass/reinforced,
+/area/station/hallway/primary/aft)
 "jse" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -30048,6 +30037,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "kon" = (
@@ -30689,7 +30679,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/brigdoor/right/directional/south{
-	req_access_txt = list("hop")
+	req_access = list("hop")
 	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/hop)
@@ -31012,12 +31002,12 @@
 /turf/open/floor/iron,
 /area/station/medical/exam_room)
 "kFe" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron,
+/area/station/hallway/primary/aft)
 "kFh" = (
 /obj/machinery/door/poddoor/massdriver_ordnance,
 /obj/structure/fans/tiny,
@@ -32712,6 +32702,7 @@
 "llX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/smooth,
 /area/station/hallway/primary/aft)
 "lmc" = (
@@ -38014,7 +38005,6 @@
 	id = "Secure Brig Control";
 	name = "Brig Shutters"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron/dark,
 /area/station/security/warden)
 "nbo" = (
@@ -45296,11 +45286,18 @@
 /turf/open/floor/plating/snowed/smoothed/snaxi,
 /area/icemoon/surface/outdoors)
 "pDo" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/effect/turf_decal/trimline/tram/filled/line,
+/obj/effect/turf_decal/trimline/tram/filled/line{
+	dir = 1
 	},
-/turf/closed/wall,
-/area/station/maintenance/disposal)
+/obj/effect/turf_decal/trimline/tram/filled/mid_joiner{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron/edge{
+	dir = 1
+	},
+/area/station/hallway/primary/aft)
 "pDv" = (
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
@@ -50575,13 +50572,6 @@
 /obj/structure/window/reinforced/fulltile/ice,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/greater)
-"rsm" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/disposalpipe/segment{
-	dir = 6
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
 "rsr" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -54787,7 +54777,7 @@
 /area/station/commons/storage/tools)
 "sSD" = (
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	req_access_txt = list("security")
+	req_access = list("security")
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "Secure Gate";
@@ -55176,6 +55166,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/smooth,
 /area/station/hallway/primary/aft)
 "sZy" = (
@@ -55861,7 +55852,7 @@
 /area/station/maintenance/fore)
 "toH" = (
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	req_access_txt = list("security")
+	req_access = list("security")
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
@@ -57658,6 +57649,7 @@
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/stripes,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white/corner{
 	dir = 8
 	},
@@ -58572,6 +58564,7 @@
 /area/station/common/cryopods)
 "ume" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/smooth,
 /area/station/hallway/primary/aft)
 "umi" = (
@@ -64563,6 +64556,7 @@
 /area/station/cargo/miningdock)
 "wio" = (
 /obj/effect/landmark/event_spawn,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "wiA" = (
@@ -244441,8 +244435,8 @@ otb
 otb
 otb
 nhp
-rsm
-jrY
+miE
+vLy
 dbm
 scC
 gFr
@@ -244698,7 +244692,7 @@ rIA
 rIA
 otb
 nhp
-kFe
+miE
 vLy
 vpI
 aPi
@@ -244955,7 +244949,7 @@ nhp
 rIA
 otb
 nhp
-kFe
+miE
 vLy
 fCU
 wcR
@@ -245212,7 +245206,7 @@ nhp
 rIA
 otb
 nhp
-kFe
+miE
 vLy
 vLy
 wcR
@@ -245469,7 +245463,7 @@ nhp
 rIA
 otb
 nhp
-kFe
+miE
 ogy
 vLy
 llv
@@ -245726,7 +245720,7 @@ nhp
 nhp
 otb
 nhp
-kFe
+miE
 vLy
 vLy
 wcR
@@ -245983,7 +245977,7 @@ nhp
 nhp
 otb
 nhp
-kFe
+miE
 vLy
 vLy
 aOa
@@ -246240,7 +246234,7 @@ nhp
 nhp
 otb
 nhp
-kFe
+miE
 vLy
 vLy
 mWZ
@@ -246497,7 +246491,7 @@ nhp
 nhp
 otb
 nhp
-kFe
+miE
 vLy
 vLy
 pAy
@@ -246754,7 +246748,7 @@ aGM
 eKi
 otb
 nhp
-pDo
+vpI
 fdc
 kRQ
 oST
@@ -247011,7 +247005,7 @@ aGM
 nhp
 otb
 nhp
-kFe
+miE
 cPP
 vpI
 cLL
@@ -248067,19 +248061,19 @@ nzL
 sac
 bef
 upr
-tBV
+pDo
+jrY
+jrY
+jrY
+jrY
 uzf
-uzf
-uzf
-uzf
-uzf
-uzf
-uzf
-uzf
-uzf
+jrY
+jrY
+jrY
+jrY
 kof
 wio
-fSl
+kFe
 tVw
 bed
 sZs
