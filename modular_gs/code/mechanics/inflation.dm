@@ -10,6 +10,7 @@
 	
 	var/pressure_difference = air.return_pressure() - environment.return_pressure()
 	inflation_value = pressure_difference / ONE_ATMOSPHERE
+	refresh_gravity()
 	var/new_inflation_stage = round(inflation_value, 1)
 	if (inflation_stage == new_inflation_stage)
 		SEND_SIGNAL(src, COMSIG_INFLATION_CHANGED)
@@ -26,6 +27,12 @@
 		update_body()
 		if (belly.set_genital_size + fatness_stage + inflation_stage > belly.max_genital_size)
 			inflation_resize()
+
+/mob/living/carbon/has_gravity()
+	if (inflation_value > INFLATION_STAGE_NO_GRAVITY)
+		return FALSE
+
+	return ..()
 
 /mob/living/carbon/proc/inflation_resize()
 	var/datum/component/temporary_size/existing_size_component = GetComponent(/datum/component/temporary_size)
