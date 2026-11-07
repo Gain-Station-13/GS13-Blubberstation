@@ -325,20 +325,16 @@ TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/trimline/neutral)
 
 TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/trimline/tram)
 
-//GS13 EDIT - these messed up with a lot of decals, idk why it isn't a seperate prefab
+// These two tram decals specifically have its own color
+/obj/effect/turf_decal/trimline/tram/filled/corner
+	color = "#ffc875"
 
-// // These two tram decals specifically have its own color
-// /obj/effect/turf_decal/trimline/tram/filled/corner
-// 	color = "#ffc875"
+/obj/effect/turf_decal/trimline/tram/filled/line
+	color = "#ffc875"
 
-// /obj/effect/turf_decal/trimline/tram/filled/line
-// 	color = "#ffc875"
-
-// /// Dark trimlines
-// /obj/effect/turf_decal/trimline/dark
-// 	color = "#0e0f0f"
-
-//GS13 EDIT END
+/// Dark trimlines
+/obj/effect/turf_decal/trimline/dark
+	color = "#0e0f0f"
 
 TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/trimline/dark)
 

@@ -36,3 +36,7 @@
 	name = "Abandoned Torture Room"
 	icon = 'modular_gs/icons/turf/areas.dmi'
 	icon_state = "feeder_room"
+
+/area/station/maintenance/disposal/sorting_shed
+	name = "Sorting shed"
+	icon_state = "disposal"
