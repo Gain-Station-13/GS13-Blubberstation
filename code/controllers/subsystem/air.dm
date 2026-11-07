@@ -775,8 +775,8 @@ GLOBAL_LIST_EMPTY(colored_images)
 		var/datum/atmosphere/atmostype = T
 		atmos_gen[initial(atmostype.id)] = new atmostype
 		// GS13 EDIT START - this is really filthy but it's the only way I can make it so
-		// we don't have problems with icemoon type (spawned by like every other ruin)
-		// air doesn't mix with snaxi air
+		// that we don't have problems with icemoon type (spawned by like every other ruin)
+		// air mixing with snaxi air
 		if (SSmapping.current_map.map_name == "Snow Taxi" && atmostype == /datum/atmosphere/snaxi)
 			atmos_gen[ICEMOON_DEFAULT_ATMOS] = atmos_gen[initial(atmostype.id)]
 		// GS13 EDIT END
