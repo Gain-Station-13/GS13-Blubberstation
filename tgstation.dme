@@ -7540,6 +7540,7 @@
 #include "modular_gs\code\modules\client\preferences\verbs.dm"
 #include "modular_gs\code\modules\client\preferences\wg_source_preferences.dm"
 #include "modular_gs\code\modules\clothing\glasses\glasses.dm"
+#include "modular_gs\code\modules\clothing\head\witch_hats.dm"
 #include "modular_gs\code\modules\clothing\suits\jacket.dm"
 #include "modular_gs\code\modules\clothing\under\bunny_suit.dm"
 #include "modular_gs\code\modules\clothing\under\button_up.dm"

@@ -79,6 +79,7 @@
 	greyscale_colors = "#343640#e0cab8#e0cab8"
 	flags_1 = IS_PLAYER_COLORABLE_1
 	dog_fashion = null
+	hair_mask = /datum/hair_mask/standard_hat_middle // GS13 EDIT Stops witch hats from clipping as bad
 
 /obj/item/clothing/head/wizard/tape
 	name = "tape hat"

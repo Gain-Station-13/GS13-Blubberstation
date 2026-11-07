@@ -111,3 +111,19 @@
 	item_path = /obj/item/clothing/head/utility/hardhat/pumpkinhead
 
 // #endregion
+
+/datum/loadout_item/head/wizard/marisa/fake/old
+	name = "Old Witch Hat"
+	item_path = /obj/item/clothing/head/wizard/marisa/fake/old
+
+/datum/loadout_item/head/wizard/marisa/fake/classic
+	name = "Classic Witch Hat"
+	item_path = /obj/item/clothing/head/wizard/marisa/fake/classic
+
+/datum/loadout_item/head/wizard/marisa/fake/shy
+	name = "Shy Witch Hat"
+	item_path = /obj/item/clothing/head/wizard/marisa/fake/shy
+
+/datum/loadout_item/head/wizard/marisa/fake/scholar
+	name = "Scholar's Witch Hat"
+	item_path = /obj/item/clothing/head/wizard/marisa/fake/scholar
