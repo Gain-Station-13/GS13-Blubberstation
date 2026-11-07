@@ -1581,6 +1581,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	worn_icon = 'modular_skyrat/master_files/icons/donator/mob/clothing/head.dmi'
 	worn_icon_teshari = 'modular_skyrat/master_files/icons/donator/mob/clothing/head_teshari.dmi'
 	icon_state = "strigihat"
+	hair_mask = /datum/hair_mask/standard_hat_middle //GS13 EDIT Makes hair not clip through witch hats
 
 //Donation reward for Razurath
 /obj/item/clothing/head/razurathhat
