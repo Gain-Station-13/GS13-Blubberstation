@@ -17,7 +17,7 @@
 	var/reduction_min = 50 //adjusted because "fullness reduction" happens at a rate of 15 every 2 seconds, and emotes can only reduce it every 5
 	var/reduction_max = 70
 	var/noise_pref = /datum/preference/numeric/volume/burping_noises
-	var/percentage_of_air_released = 10
+	var/percentage_of_air_released = 0.1
 
 /datum/emote/living/burp/proc/get_sound_gs13()
 	return pick('modular_gs/sound/voice/burp1.ogg')
@@ -86,7 +86,7 @@
 	//god hates me for this -Metha
 	reduction_min = 60
 	reduction_max = 80
-	percentage_of_air_released = 30
+	percentage_of_air_released = 0.3
 
 /datum/emote/living/burp/belch/get_sound_gs13()
 	return pick('modular_gs/sound/voice/belch1.ogg', 'modular_gs/sound/voice/belch2.ogg',

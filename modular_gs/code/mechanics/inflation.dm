@@ -3,12 +3,9 @@
 		return
 
 	var/datum/gas_mixture/environment = loc.return_air()
-
-	// outside is more pressurized than inside, let's not crunch us
-	if (environment.return_pressure() >= air.return_pressure())
-		return
 	
 	var/pressure_difference = air.return_pressure() - environment.return_pressure()
+	pressure_difference = max(pressure_difference, 0)	// don't go negative
 	inflation_value = pressure_difference / ONE_ATMOSPHERE
 	refresh_gravity()
 	var/new_inflation_stage = round(inflation_value, 1)
