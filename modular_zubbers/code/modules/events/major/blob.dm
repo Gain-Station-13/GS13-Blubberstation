@@ -66,9 +66,14 @@
 		if(!possible_fatty_turf || !is_station_level(possible_fatty_turf.z))
 			continue
 
+		/* GS13 EDIT START - makes this proc work with fatness
 		var/possible_fatty_score = possible_fatty.nutrition
 		if(possible_fatty.has_quirk(/datum/quirk/overweight))
 			possible_fatty_score = possible_fatty_score * 1.5 + 1000
+		*/
+		var/possible_fatty_score = possible_fatty.fatness_real
+		possible_fatty_score += possible_fatty.fatness_perma * 1.5
+		// GS13 EDIT END
 
 		if(possible_fatty_score > unlucky_victim_fatty_score)
 			unlucky_victim = "[possible_fatty]" //We don't use .name here because we want "The" to be affixed to it if needed.
@@ -76,6 +81,6 @@
 
 	priority_announce(
 		"It appears that the level 5 biohazard aboard [station_name()] was a false alarm, as our sensors appeared to have mistakenly labeled [unlucky_victim] as a level 5 biohazard. \
-		All crewmembers are reminded to practice healthy eating habbits as part of Nanotrasen's Safe and Healthy Eating program.",
+		All crewmembers are reminded to practice healthy eating habbits as part of GATO Safe and Healthy Eating program.",	// GS13 EDIT - change `Nanotrasen's` to `GATO`
 		"Biohazard Alert"
 	)
