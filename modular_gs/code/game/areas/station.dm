@@ -40,3 +40,23 @@
 /area/station/maintenance/disposal/sorting_shed
 	name = "Sorting shed"
 	icon_state = "disposal"
+
+/area/station/maintenance/abandoned_hot_springs
+	name = "Hot springs"
+	icon = 'modular_gs/icons/turf/areas.dmi'
+	icon_state = "hot_spring"
+
+/area/station/maintenance/abandoned_shack
+	name = "Abandoned shack"
+	icon = 'modular_gs/icons/turf/areas.dmi'
+	icon_state = "abandoned_shack"
+
+/area/station/maintenance/abandoned_shack/secondary
+	name = "Second Abandoned shack"
+	icon = 'modular_gs/icons/turf/areas.dmi'
+	icon_state = "abandoned_shack"
+
+/area/station/maintenance/abandoned_shack/ternary
+	name = "Third Abandoned shack"
+	icon = 'modular_gs/icons/turf/areas.dmi'
+	icon_state = "abandoned_shack"
