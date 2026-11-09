@@ -12,3 +12,11 @@
 	savefile_identifier = PREFERENCE_PLAYER
 	savefile_key = "inflation_size_scaling"
 	default_value = FALSE
+
+/datum/preference/numeric/helplessness/inflation_bursting
+	category = BURSTING_PREFERENCES
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "inflation_bursting"
+
+/datum/preference/numeric/helplessness/inflation_bursting/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+	return

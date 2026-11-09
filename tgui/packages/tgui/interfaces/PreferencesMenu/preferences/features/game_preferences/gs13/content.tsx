@@ -1,4 +1,11 @@
-import { CheckboxInput, type FeatureToggle, type Feature, FeatureSliderInput } from '../../base';
+import { 
+  CheckboxInput,
+  FeatureNumberInput,
+  type FeatureToggle,
+  type FeatureNumeric,
+  type Feature,
+  FeatureSliderInput
+} from '../../base';
 
 // #region weight gain types
 
@@ -141,6 +148,12 @@ export const inflation_size_scaling: FeatureToggle = {
   category: 'Size',
   component: CheckboxInput,
   description: 'Toggle whether you want to be able to be inflated and deflated with air/gasses.',
+};
+
+export const inflation_bursting: FeatureNumeric = {
+  name: 'Bursting inflation',
+  description: 'Assuming 101 KPa pressure around you, how many times higher must your internal pressure be than the outside to burst.',
+  component: FeatureNumberInput,
 };
 
 // #endregion

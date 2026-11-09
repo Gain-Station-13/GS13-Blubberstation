@@ -548,7 +548,7 @@ export function MainPage(props: MainPageProps) {
     ...data.character_preferences.blueberry_prefs,
   };
   const GluttonBurstingPreferences = {
-    ...data.character_preferences.glutton_bursting_contents,
+    ...data.character_preferences.bursting_contents,
   };
   const GSExaminePreferences = {
     ...data.character_preferences.gs13_examine_prefs,
@@ -573,7 +573,7 @@ export function MainPage(props: MainPageProps) {
   let BFI_stages; // GS13 EDIT
   let helplessness_contents; // GS13 EDIT
   let blueberry_contents; // GS13 EDIT
-  let glutton_bursting_contents //GS13 EDIT
+  let bursting_contents //GS13 EDIT
   switch (currentPrefPage) {
     case PrefPage.CharBasics:
       prefPageContents = (
@@ -762,15 +762,15 @@ export function MainPage(props: MainPageProps) {
         />
         </Section>
       );
-      glutton_bursting_contents = (
+      bursting_contents = (
         <Section>
-        <b>Fullness and fatness bursting preferences</b>
+        <b>Bursting preferences</b>
         <Divider />
         <BlockQuote>
           These preferences will allow you to customize whether and how
-          fatness and fullness bursting mechanics will affect you. Setting your
-          bursting type to disabled and leaving your respective fullness and
-          fatness settings will let you still have the sounds and messages.
+          bursting mechanics will affect you. Setting your
+          bursting type to disabled and leaving your thresholds
+          settings will let you still have the sounds and messages.
         </BlockQuote>
         <PreferenceList
           randomizations={getRandomization(
@@ -1024,7 +1024,7 @@ export function MainPage(props: MainPageProps) {
               <Stack.Item>{prefPageContents}</Stack.Item>
               <Stack.Item>{helplessness_contents}</Stack.Item>
               <Stack.Item>{blueberry_contents}</Stack.Item>
-              <Stack.Item>{glutton_bursting_contents}</Stack.Item>
+              <Stack.Item>{bursting_contents}</Stack.Item>
               {/* GS13 END EDIT */}
             </Stack>
             </Stack.Item>
