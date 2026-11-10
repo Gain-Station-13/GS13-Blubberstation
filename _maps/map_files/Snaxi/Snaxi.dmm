@@ -36925,10 +36925,6 @@
 /obj/effect/spawner/random/trash/moisture_trap,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/chemistry)
-"mwT" = (
-/obj/structure/cable,
-/turf/closed/wall,
-/area/station/medical/chem_storage)
 "mwY" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 4
@@ -223846,7 +223842,7 @@ oaE
 mYO
 wIC
 wIC
-mwT
+wIC
 wIC
 tMP
 hOm
