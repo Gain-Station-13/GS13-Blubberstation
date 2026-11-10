@@ -7385,6 +7385,7 @@
 #include "modular_gs\code\_globalvars\powerator.dm"
 #include "modular_gs\code\_globalvars\lists\fatness.dm"
 #include "modular_gs\code\_globalvars\lists\quirks.dm"
+#include "modular_gs\code\_globalvars\lists\strings.dm"
 #include "modular_gs\code\clothing\accessory.dm"
 #include "modular_gs\code\clothing\bluespace_collar.dm"
 #include "modular_gs\code\clothing\calorite_collar.dm"
