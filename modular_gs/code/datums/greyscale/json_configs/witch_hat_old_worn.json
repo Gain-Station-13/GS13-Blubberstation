@@ -1,0 +1,22 @@
+{
+	"witch_fake_old": [
+		{
+			"type": "icon_state",
+			"icon_state": "witch_fake_old_base",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "witch_fake_old_ribbon",
+			"blend_mode": "overlay",
+			"color_ids": [2]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "witch_fake_old_charms",
+			"blend_mode": "overlay",
+			"color_ids": [3]
+		}
+	]
+}

@@ -12,6 +12,17 @@
 				/obj/item/clothing/under/dual_tone/swimwear = 5,
 				),
 			),
+
+		list(
+			"name" = "Accessories",
+			"icon" = "glasses",
+			"products" = list(
+				/obj/item/clothing/glasses/regular/color = 3,
+				/obj/item/clothing/glasses/regular/transparent = 3,
+				/obj/item/clothing/glasses/regular/circle/transparent= 3,
+				/obj/item/clothing/glasses/regular/thin/transparent = 3,
+				),
+			),
 	)
 
 /obj/machinery/vending/wardrobe/sec_wardrobe
