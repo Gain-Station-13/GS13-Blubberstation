@@ -102,7 +102,7 @@
 	by hooking up a tank with a wrench to the connector port. \
 	Afterwards, heat up the steam with the heater next to it. \
 	Once it's heated (please don't raise it to a boiling temperature), \
-	you can turn on the valve pump labelled 'gas to bathhouse' \
+	you can turn on the valve labelled 'gas to bathhouse' \
 	to get it pumping inside the main room. Voila! \
 	P.S.: A tank of steam will usually be enough for the main hall. \
 	Don't overpressurize or heat the room too much."
