@@ -364,10 +364,7 @@
 /obj/machinery/vending/wallmed{
 	pixel_y = -28
 	},
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
+/obj/structure/sink/directional/west,
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/iron/white/small,
 /area/station/medical/surgery)
@@ -3204,6 +3201,7 @@
 	name = "scrubbers pipe"
 	},
 /obj/effect/landmark/navigate_destination/autoname,
+/obj/effect/mapping_helpers/airlock/access/all/supply/vault,
 /turf/open/floor/iron/dark,
 /area/station/command/vault)
 "bdm" = (
@@ -3337,6 +3335,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/autoname,
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/access/all/supply/qm,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
 "bfF" = (
@@ -4732,12 +4731,14 @@
 /turf/open/floor/plating,
 /area/mine/maintenance/living/north)
 "bJg" = (
-/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 6;
 	name = "air supply pipe"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/components/binary/pressure_valve/on{
+	name = "Output Release"
+	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "bJy" = (
@@ -8281,6 +8282,11 @@
 /obj/item/folder/blue,
 /obj/item/folder/blue,
 /obj/item/reagent_containers/dropper,
+/obj/item/paper_bin{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/pen,
 /turf/open/floor/iron/white/smooth_corner,
 /area/station/medical/chemistry)
 "cSK" = (
@@ -9736,7 +9742,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "dtr" = (
-/obj/structure/sink/directional/south,
 /obj/machinery/camera/autoname/medbay/directional/north,
 /obj/machinery/smartfridge/organ,
 /obj/effect/turf_decal/stripes,
@@ -12354,11 +12359,11 @@
 /area/station/engineering/storage/tech)
 "emB" = (
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/plumbing/receiver,
-/obj/effect/turf_decal/siding/yellow/end{
-	dir = 8
+/obj/machinery/chem_mass_spec,
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "emC" = (
 /obj/structure/closet/secure_closet/nanotrasen_consultant,
@@ -12778,9 +12783,7 @@
 	},
 /obj/machinery/light/directional/north,
 /obj/machinery/plumbing/receiver,
-/obj/effect/turf_decal/siding/yellow/end{
-	dir = 4
-	},
+/obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plating,
 /area/station/medical/pharmacy)
 "esP" = (
@@ -22205,6 +22208,12 @@
 /obj/effect/turf_decal/tile/neutral/full,
 /turf/open/floor/iron/large,
 /area/station/hallway/primary/port)
+"hzq" = (
+/obj/machinery/atmospherics/components/unary/passive_vent{
+	dir = 8
+	},
+/turf/open/misc/asteroid/snow/snaxi,
+/area/icemoon/surface/outdoors)
 "hzr" = (
 /obj/structure/gs13_fluff/brokenhose/scraps1,
 /turf/open/floor/plating,
@@ -29528,13 +29537,8 @@
 /turf/open/floor/plating,
 /area/station/maintenance/disposal/sorting_shed)
 "jWM" = (
-/obj/structure/table/reinforced,
-/obj/item/paper_bin{
-	pixel_x = -2;
-	pixel_y = 5
-	},
-/obj/item/pen,
 /obj/structure/sign/poster/official/safety_eye_protection/directional/west,
+/obj/machinery/chem_mass_spec,
 /turf/open/floor/iron/white/smooth_edge{
 	dir = 8
 	},
@@ -30178,17 +30182,6 @@
 "kgp" = (
 /turf/open/floor/engine/airless,
 /area/station/science/ordnance/office)
-"kgu" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 5;
-	height = 7;
-	shuttle_id = "supply_home";
-	name = "Cargo Bay";
-	width = 12
-	},
-/turf/open/floor/plating/snowed/smoothed/snaxi,
-/area/icemoon/surface/outdoors)
 "kgA" = (
 /obj/effect/turf_decal/stripes/corner,
 /obj/item/stack/marker_beacon{
@@ -32254,6 +32247,15 @@
 	},
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
+"kRk" = (
+/obj/machinery/door/window/left/directional/north{
+	req_access = list("hydroponics")
+	},
+/obj/machinery/door/window/right/directional/south,
+/obj/machinery/vending/custom,
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/station/service/hydroponics)
 "kRm" = (
 /obj/structure/fence,
 /turf/open/misc/asteroid/snow/snaxi,
@@ -38168,7 +38170,6 @@
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "mRz" = (
-/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
@@ -38177,6 +38178,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "mRB" = (
@@ -42904,6 +42906,7 @@
 /obj/machinery/door/airlock/qm{
 	name = "Quartermaster's Quarters"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/qm,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
 "otJ" = (
@@ -43176,7 +43179,7 @@
 /turf/open/floor/plating/snowed/smoothed/snaxi,
 /area/icemoon/underground/explored)
 "oAe" = (
-/obj/machinery/chem_heater,
+/obj/machinery/chem_heater/withbuffer,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
 	dir = 9;
@@ -47043,7 +47046,7 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/station/service/hydroponics)
 "pVE" = (
-/obj/machinery/chem_heater,
+/obj/machinery/chem_heater/withbuffer,
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron/white/smooth_edge{
 	dir = 8
@@ -47225,6 +47228,7 @@
 	dir = 6;
 	name = "scrubbers pipe"
 	},
+/obj/machinery/meter,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "pYC" = (
@@ -68962,10 +68966,15 @@
 /turf/open/floor/iron/dark/telecomms,
 /area/station/tcommsat/server)
 "xmC" = (
-/obj/machinery/atmospherics/components/unary/passive_vent{
-	dir = 8
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 5;
+	height = 7;
+	shuttle_id = "cargo_home";
+	name = "Cargo Bay";
+	width = 12
 	},
-/turf/open/misc/asteroid/snow/snaxi,
+/turf/open/floor/plating/snowed/smoothed/snaxi,
 /area/icemoon/surface/outdoors)
 "xmG" = (
 /obj/structure/closet/secure_closet/chemical,
@@ -69826,15 +69835,6 @@
 /obj/machinery/camera/autoname/engineering/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/hfr_room)
-"xAh" = (
-/obj/machinery/door/window/left/directional/north{
-	req_access = list("hydroponics")
-	},
-/obj/machinery/door/window/right/directional/south,
-/obj/machinery/vending/custom,
-/obj/machinery/door/firedoor,
-/turf/open/floor/plating,
-/area/station/service/hydroponics)
 "xAk" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -71750,9 +71750,13 @@
 /turf/open/floor/iron/smooth,
 /area/mine/eva)
 "yfy" = (
-/obj/machinery/elevator_control_panel/directional/east,
-/turf/open/openspace,
-/area/station/hallway/primary/port)
+/obj/structure/transport/linear/public,
+/obj/machinery/elevator_control_panel/directional/east{
+	preset_destination_names = list("2"="Floor -1","3"="Floor 0");
+	linked_elevator_id = "medical_elevator"
+	},
+/turf/open/floor/plating/elevatorshaft,
+/area/station/medical/medbay/aft)
 "yfO" = (
 /turf/open/floor/plastic,
 /area/station/service/kitchen)
@@ -152340,7 +152344,7 @@ hjW
 eao
 kfG
 peX
-uTP
+yfy
 yjr
 ryS
 qOj
@@ -217876,7 +217880,7 @@ kZE
 fJU
 gjd
 tft
-yfy
+kcu
 kcu
 sMx
 mZK
@@ -243828,8 +243832,8 @@ rIA
 rIA
 iWV
 iWV
+iWV
 peV
-nhp
 dIn
 aNx
 rIA
@@ -244085,8 +244089,8 @@ rIA
 rIA
 rIA
 rIA
+rIA
 iWV
-nhp
 eCQ
 aNx
 rIA
@@ -244342,8 +244346,8 @@ rIA
 rIA
 rIA
 rIA
+rIA
 iWV
-nhp
 dIn
 aNx
 rIA
@@ -244570,7 +244574,7 @@ jkT
 pmS
 oBB
 nQT
-xAh
+kRk
 xQQ
 sLQ
 jKp
@@ -245370,8 +245374,8 @@ rIA
 rIA
 rIA
 rIA
+rIA
 iWV
-nhp
 dIn
 aNx
 rIA
@@ -245621,14 +245625,14 @@ daI
 uST
 oxf
 unr
+xmC
 rIA
 rIA
-kgu
+rIA
 rIA
 rIA
 rIA
 iWV
-nhp
 eCQ
 aNx
 rIA
@@ -245884,8 +245888,8 @@ rIA
 rIA
 rIA
 rIA
+rIA
 peV
-nhp
 dIn
 aNx
 rIA
@@ -246141,8 +246145,8 @@ rIA
 rIA
 rIA
 rIA
+rIA
 iWV
-nhp
 dIn
 aNx
 rIA
@@ -246398,8 +246402,8 @@ rIA
 rIA
 rIA
 rIA
+rIA
 iWV
-nhp
 dIn
 aNx
 rIA
@@ -247426,8 +247430,8 @@ qYv
 qYv
 qYv
 iWV
+iWV
 aDO
-nhp
 fGc
 aNx
 rIA
@@ -262062,7 +262066,7 @@ loi
 iNd
 jKi
 nhp
-xmC
+hzq
 nhp
 nhp
 nhp
