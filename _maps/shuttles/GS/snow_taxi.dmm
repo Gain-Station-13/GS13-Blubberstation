@@ -12,7 +12,7 @@
 /area/shuttle/snowtaxi)
 "c" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Mining Shuttle Airlock"
+	name = "Snow Taxi"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/structure/fans/tiny,
@@ -33,7 +33,7 @@
 /area/shuttle/snowtaxi)
 "g" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Mining Shuttle Airlock"
+	name = "Snow Taxi"
 	},
 /obj/docking_port/mobile{
 	callTime = 5;

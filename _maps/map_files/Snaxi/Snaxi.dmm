@@ -1639,7 +1639,9 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/right/directional/south,
-/obj/machinery/door/window/right/directional/north,
+/obj/machinery/door/window/left/directional/north{
+	req_access = list("hydroponics")
+	},
 /turf/open/floor/plating,
 /area/station/service/hydroponics)
 "aCs" = (
@@ -5398,7 +5400,7 @@
 /obj/machinery/quantumpad{
 	map_pad_id = "4";
 	map_pad_link_id = "3";
-	name = "Northwest Sector Pad"
+	name = "Med/Sci Sector Pad"
 	},
 /obj/structure/sign/directions/snaxi/north_west/directional/north,
 /obj/effect/turf_decal/bot,
@@ -8191,10 +8193,12 @@
 /turf/closed/wall/r_wall,
 /area/station/security/brig)
 "cRa" = (
-/obj/machinery/door/window/right/directional/north,
+/obj/machinery/door/window/right/directional/north{
+	req_access = list("hydroponics")
+	},
 /obj/machinery/door/window/right/directional/south,
-/obj/machinery/vending/custom,
 /obj/machinery/door/firedoor,
+/obj/machinery/biogenerator,
 /turf/open/floor/plating,
 /area/station/service/hydroponics)
 "cRd" = (
@@ -10497,6 +10501,7 @@
 /obj/structure/disposaloutlet{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "dGQ" = (
@@ -14753,8 +14758,9 @@
 	dwidth = 3;
 	height = 4;
 	shuttle_id = "snaxi_s";
-	name = "South Taxi Port";
-	width = 6
+	name = "Sec/CMD Port";
+	width = 6;
+	roundstart_template = /datum/map_template/shuttle/snow_taxi
 	},
 /turf/open/floor/plating/airless,
 /area/icemoon/surface/outdoors)
@@ -19881,10 +19887,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
-"gLj" = (
-/obj/machinery/elevator_control_panel/directional/east,
-/turf/open/openspace,
-/area/station/hallway/primary/port)
 "gLn" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -23226,7 +23228,9 @@
 /area/mine/eva)
 "hTN" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/right/directional/north,
+/obj/machinery/door/window/right/directional/north{
+	req_access = list("hydroponics")
+	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/right/directional/south,
 /turf/open/floor/iron,
@@ -23270,7 +23274,7 @@
 	dwidth = 3;
 	height = 4;
 	shuttle_id = "snaxi_ne";
-	name = "Northeast Taxi Port";
+	name = "Eng/Car/Serv Port";
 	width = 6
 	},
 /turf/open/floor/plating/snowed/smoothed/snaxi,
@@ -23470,12 +23474,6 @@
 "hXh" = (
 /turf/closed/wall,
 /area/station/science/explab)
-"hXu" = (
-/obj/structure/reagent_dispensers/watertank/high,
-/obj/item/reagent_containers/cup/bucket,
-/obj/item/reagent_containers/cup/bucket,
-/turf/open/floor/iron/dark/textured_large,
-/area/station/service/hydroponics)
 "hXB" = (
 /obj/machinery/shower/directional/west,
 /obj/effect/turf_decal/siding/wideplating/light{
@@ -35202,7 +35200,7 @@
 /obj/machinery/quantumpad{
 	map_pad_id = "1";
 	map_pad_link_id = "2";
-	name = "Northwest Sector Pad"
+	name = "Med/Sci Sector Pad"
 	},
 /obj/structure/sign/directions/snaxi/north_west/directional/north,
 /obj/structure/sign/directions/medical/directional/west{
@@ -44855,7 +44853,7 @@
 /obj/machinery/quantumpad{
 	map_pad_id = "5";
 	map_pad_link_id = "6";
-	name = "South Sector Pad"
+	name = "Sec/CMD Sector Pad"
 	},
 /obj/structure/sign/directions/snaxi/south/directional/north,
 /obj/effect/turf_decal/bot,
@@ -55486,7 +55484,7 @@
 /obj/machinery/quantumpad{
 	map_pad_id = "6";
 	map_pad_link_id = "5";
-	name = "Northeast Sector Pad"
+	name = "Eng/Car/Serv Sector Pad"
 	},
 /obj/structure/sign/directions/snaxi/north_east/directional/north,
 /obj/effect/turf_decal/arrows/red{
@@ -57860,7 +57858,10 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/greater)
 "tGt" = (
-/obj/machinery/biogenerator,
+/obj/structure/reagent_dispensers/watertank/high,
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/reagent_containers/cup/watering_can,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/service/hydroponics)
 "tGw" = (
@@ -58996,11 +58997,9 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "ubz" = (
-/obj/structure/transit_tube/station/reverse/flipped{
-	dir = 4;
-	name = "TO BATHHOUSE"
+/obj/structure/transit_tube/station/dispenser/reverse/flipped{
+	dir = 4
 	},
-/obj/structure/transit_tube_pod,
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "ubJ" = (
@@ -65307,9 +65306,8 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "wbr" = (
-/obj/structure/transit_tube/station/reverse/flipped{
-	dir = 1;
-	name = "TO STATION"
+/obj/structure/transit_tube/station/dispenser/reverse/flipped{
+	dir = 1
 	},
 /turf/open/floor/iron,
 /area/station/commons/fitness/locker_room)
@@ -66519,7 +66517,7 @@
 /obj/machinery/quantumpad{
 	map_pad_id = "3";
 	map_pad_link_id = "4";
-	name = "Northeast Sector Pad"
+	name = "Eng/Car/Serv Sector Pad"
 	},
 /obj/structure/sign/directions/snaxi/north_east/directional/north,
 /obj/machinery/camera/autoname/directional/north,
@@ -68435,7 +68433,7 @@
 /obj/machinery/quantumpad{
 	map_pad_id = "2";
 	map_pad_link_id = "1";
-	name = "South Sector Pad"
+	name = "Sec/CMD Sector Pad"
 	},
 /obj/structure/sign/directions/snaxi/south/directional/south,
 /obj/effect/turf_decal/bot,
@@ -69371,9 +69369,8 @@
 	dwidth = 3;
 	height = 4;
 	shuttle_id = "snaxi_nw";
-	name = "Northwest Taxi Port";
-	width = 6;
-	roundstart_template = /datum/map_template/shuttle/snow_taxi
+	name = "Med/Sci Port";
+	width = 6
 	},
 /turf/open/floor/plating/snowed/smoothed/snaxi,
 /area/icemoon/surface/outdoors)
@@ -69829,6 +69826,15 @@
 /obj/machinery/camera/autoname/engineering/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/hfr_room)
+"xAh" = (
+/obj/machinery/door/window/left/directional/north{
+	req_access = list("hydroponics")
+	},
+/obj/machinery/door/window/right/directional/south,
+/obj/machinery/vending/custom,
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/station/service/hydroponics)
 "xAk" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -71743,6 +71749,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron/smooth,
 /area/mine/eva)
+"yfy" = (
+/obj/machinery/elevator_control_panel/directional/east,
+/turf/open/openspace,
+/area/station/hallway/primary/port)
 "yfO" = (
 /turf/open/floor/plastic,
 /area/station/service/kitchen)
@@ -217866,7 +217876,7 @@ kZE
 fJU
 gjd
 tft
-gLj
+yfy
 kcu
 sMx
 mZK
@@ -244560,7 +244570,7 @@ jkT
 pmS
 oBB
 nQT
-cRa
+xAh
 xQQ
 sLQ
 jKp
@@ -246095,7 +246105,7 @@ cSD
 cSL
 iye
 tGt
-hXu
+oPl
 woC
 usc
 iSF
