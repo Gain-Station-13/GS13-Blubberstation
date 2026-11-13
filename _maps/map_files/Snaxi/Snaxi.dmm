@@ -518,7 +518,6 @@
 /turf/open/floor/engine,
 /area/station/maintenance/disposal/incinerator)
 "ajb" = (
-/obj/structure/cable,
 /obj/effect/turf_decal/siding/wideplating_new/dark/corner{
 	dir = 1
 	},
@@ -10917,7 +10916,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "dQf" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 4
@@ -13929,7 +13927,6 @@
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "ePU" = (
-/obj/structure/cable,
 /turf/open/floor/circuit,
 /area/station/ai/upload/chamber)
 "ePV" = (
@@ -25187,7 +25184,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/upper)
 "izo" = (
-/obj/structure/cable,
 /obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/siding/wideplating_new/dark/end{
 	dir = 8
@@ -30681,6 +30677,7 @@
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/ai/upload/chamber)
 "kpp" = (
@@ -41232,6 +41229,7 @@
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 10
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/foyer)
 "nRK" = (
@@ -43711,7 +43709,8 @@
 /obj/machinery/turretid{
 	name = "AI Chamber turret control";
 	pixel_x = -27;
-	pixel_y = 0
+	pixel_y = 0;
+	control_area = "/area/station/ai/upload/chamber"
 	},
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 8
@@ -45238,7 +45237,6 @@
 /turf/open/floor/plating,
 /area/station/construction/storage_wing)
 "poJ" = (
-/obj/structure/cable,
 /obj/machinery/flasher{
 	id = "AI";
 	pixel_x = -26;
@@ -49498,7 +49496,6 @@
 /obj/effect/spawner/random/aimodule/harmless,
 /obj/effect/spawner/random/aimodule/neutral,
 /obj/machinery/camera/autoname/aiupload/directional/south,
-/obj/structure/cable,
 /obj/item/ai_module/law/core/full/custom,
 /obj/item/ai_module/law/core/full/crewsimov,
 /obj/item/ai_module/law/core/full/asimov,
@@ -49942,6 +49939,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/command/ai_upload,
 /obj/effect/mapping_helpers/airlock/access/any/command/minisat,
 /obj/effect/landmark/navigate_destination/autoname,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/ai/upload/chamber)
 "qTN" = (
@@ -57680,16 +57678,11 @@
 /turf/open/floor/wood,
 /area/station/maintenance/abandon_cafeteria)
 "tDs" = (
-/obj/machinery/button/door/directional/east{
-	normaldoorcontrol = 1;
-	specialfunctions = 4;
-	name = "Cabin Bolt Control";
-	id = "Dorm4"
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 8
 	},
-/turf/open/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/station/holodeck/rec_center)
+/turf/open/floor/iron/dark/smooth_large,
+/area/station/ai/upload/chamber)
 "tDu" = (
 /obj/structure/table/reinforced,
 /obj/item/assembly/prox_sensor{
@@ -212220,10 +212213,10 @@ rAL
 ioo
 oNM
 iyn
-oNM
+tDs
 ajb
 ePU
-iAb
+wjr
 gHM
 ckp
 svN
@@ -237620,7 +237613,7 @@ qIg
 qIg
 qIg
 qIg
-tDs
+qIg
 qIg
 qIg
 rXE
