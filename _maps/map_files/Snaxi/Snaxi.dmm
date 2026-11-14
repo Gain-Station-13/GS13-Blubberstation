@@ -462,15 +462,14 @@
 /area/station/maintenance/starboard/lesser)
 "aio" = (
 /obj/structure/cable,
-/obj/machinery/light/directional/west,
 /obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/showcase/machinery/tv{
-	dir = 1;
-	pixel_x = 2;
-	pixel_y = 3
+/obj/item/banner/gato,
+/obj/effect/turf_decal/siding/wideplating_new/dark/end{
+	dir = 8
 	},
-/obj/structure/table/wood,
-/turf/open/floor/carpet,
+/obj/machinery/door/window/left/directional/north,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "aip" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
@@ -1142,11 +1141,8 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/paramedic,
-/obj/item/storage/belt/medical{
-	pixel_y = 2
-	},
-/obj/item/clothing/glasses/hud/health,
+/obj/structure/closet/secure_closet/medical3,
+/obj/item/weaponcell/medical/utility/temperature,
 /turf/open/floor/iron/white,
 /area/station/medical/outpost/two)
 "atS" = (
@@ -1707,7 +1703,12 @@
 /turf/open/floor/carpet/green,
 /area/station/service/library)
 "aDl" = (
-/turf/open/floor/iron/dark/textured,
+/obj/effect/turf_decal/arrows{
+	dir = 1;
+	pixel_x = 12;
+	pixel_y = -7
+	},
+/turf/open/floor/iron/smooth,
 /area/station/medical/paramedic)
 "aDn" = (
 /obj/structure/cable,
@@ -1954,13 +1955,25 @@
 /area/station/command/heads_quarters/captain)
 "aGU" = (
 /obj/structure/table/glass,
-/obj/machinery/computer/records/medical/laptop{
-	dir = 8;
-	pixel_y = 4
-	},
 /obj/effect/turf_decal/tile/dark_blue/half/contrasted{
 	dir = 4
 	},
+/obj/structure/closet/secure_closet/personal/wall{
+	pixel_x = 28;
+	pixel_y = 1
+	},
+/obj/item/storage/box/bodybags,
+/obj/item/storage/medkit/regular,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/healthanalyzer{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/cup/bottle/multiver{
+	pixel_x = 9;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/syringe,
 /turf/open/floor/iron/white/small_edge{
 	dir = 4
 	},
@@ -4066,6 +4079,7 @@
 	},
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/structure/sink/directional/east,
 /turf/open/floor/iron/large,
 /area/station/medical/surgery)
 "bvP" = (
@@ -4333,13 +4347,8 @@
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	name = "air supply pipe"
 	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
-	},
-/turf/open/floor/wood,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "bAP" = (
 /obj/structure/cable,
@@ -5424,9 +5433,13 @@
 /turf/open/floor/iron,
 /area/station/maintenance/aft/greater)
 "bVe" = (
-/obj/machinery/light/directional/east,
-/obj/item/banner/gato,
-/turf/open/floor/carpet,
+/obj/structure/window/spawner/directional/north,
+/obj/structure/table/wood,
+/obj/structure/showcase/machinery/tv,
+/obj/effect/turf_decal/siding/wideplating_new/dark/end{
+	dir = 4
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "bVg" = (
 /obj/machinery/light/directional/north,
@@ -7183,11 +7196,9 @@
 	dir = 10;
 	name = "air supply pipe"
 	},
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/wood,
+/obj/machinery/holopad,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "cvA" = (
 /obj/machinery/computer/records/security{
@@ -7579,6 +7590,9 @@
 	pixel_x = -4;
 	pixel_y = 0
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "cDx" = (
@@ -7780,6 +7794,9 @@
 /obj/item/emergency_bed{
 	pixel_x = 0;
 	pixel_y = 15
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
 	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
@@ -14910,8 +14927,10 @@
 	name = "Nanotrasen Lazarus Injector"
 	},
 /obj/machinery/door/window/left/directional/south,
-/obj/structure/window/spawner/directional/east,
-/turf/open/floor/carpet,
+/obj/effect/turf_decal/siding/wideplating_new/dark/end{
+	dir = 8
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "feF" = (
 /obj/effect/turf_decal/box,
@@ -15328,9 +15347,13 @@
 /area/mine/eva)
 "fkV" = (
 /obj/machinery/airalarm/directional/east,
-/obj/structure/showcase/cyborg/old,
 /obj/structure/sign/gato/directional/north,
-/turf/open/floor/carpet,
+/obj/structure/window/spawner/directional/south,
+/obj/structure/showcase/mecha/ripley,
+/obj/effect/turf_decal/siding/wideplating_new/dark/end{
+	dir = 4
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "fkW" = (
 /obj/structure/cable,
@@ -15635,11 +15658,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/wood,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "fps" = (
 /obj/machinery/treadmill{
@@ -15676,16 +15696,31 @@
 /area/station/maintenance/department/medical/chemistry)
 "fqn" = (
 /obj/structure/table/wood,
-/obj/item/clothing/head/collectable/captain,
+/obj/item/clothing/head/collectable/captain{
+	pixel_x = -8;
+	pixel_y = -7
+	},
 /obj/item/toy/talking/ai{
 	name = "GATO-brand toy AI";
-	pixel_y = 6
+	pixel_y = 5;
+	pixel_x = 18
 	},
 /obj/item/clothing/head/collectable/hos{
-	name = "novelty HoS hat"
+	name = "novelty HoS hat";
+	pixel_x = 3;
+	pixel_y = -5
 	},
-/obj/item/toy/gun,
-/turf/open/floor/carpet,
+/obj/item/toy/gun{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/obj/structure/window/spawner/directional/north,
+/obj/structure/sign/poster/official/fatorays/directional/south,
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 1
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "fqs" = (
 /obj/structure/table,
@@ -15943,11 +15978,20 @@
 /turf/open/floor/iron/checker,
 /area/mine/lobby)
 "fuQ" = (
-/obj/structure/showcase/mecha/ripley,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
-/turf/open/floor/carpet,
+/obj/structure/window/spawner/directional/north,
+/obj/structure/window/spawner/directional/west,
+/obj/structure/table/wood,
+/obj/item/pai_card{
+	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
+	name = "Nanotrasen-brand personal AI device exhibit"
+	},
+/obj/effect/turf_decal/siding/wideplating_new/dark/end{
+	dir = 8
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "fvc" = (
 /obj/structure/bed/pillow_large{
@@ -17099,11 +17143,8 @@
 /area/station/maintenance/solars/starboard/aft)
 "fPt" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/wood,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "fPx" = (
 /obj/structure/table/wood,
@@ -18088,11 +18129,9 @@
 	dir = 4;
 	name = "air supply pipe"
 	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/wood,
-/turf/open/floor/wood,
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "gfh" = (
 /turf/closed/wall/r_wall,
@@ -18410,11 +18449,8 @@
 	dir = 4;
 	name = "air supply pipe"
 	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/wood,
-/turf/open/floor/wood,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "glN" = (
 /obj/structure/table/glass,
@@ -19826,6 +19862,7 @@
 /obj/effect/turf_decal/box,
 /obj/machinery/shower/directional/north,
 /obj/effect/turf_decal/tile/dark_blue/half/contrasted,
+/obj/structure/closet/secure_closet/personal/wall,
 /turf/open/floor/iron/white/small_edge,
 /area/station/security/medical)
 "gIm" = (
@@ -23807,10 +23844,6 @@
 /area/station/commons/fitness/locker_room)
 "ibc" = (
 /obj/structure/closet/secure_closet/medical3,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -24
-	},
 /obj/item/gun/syringe,
 /obj/item/storage/belt/medical{
 	pixel_y = 2
@@ -24522,6 +24555,12 @@
 /area/station/security/courtroom)
 "inZ" = (
 /obj/structure/table/wood,
+/obj/item/gun/ballistic/shotgun/toy/crossbow{
+	name = "Toy Fatoray";
+	desc = "A toy stylized after the NutriTech Fatoray laser pistol.";
+	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi';
+	icon_state = "fatoray_weak"
+	},
 /turf/open/floor/wood/large,
 /area/station/maintenance/abandon_diner)
 "ioc" = (
@@ -28509,6 +28548,9 @@
 /area/station/security/office)
 "jAB" = (
 /obj/machinery/recharge_station,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "jAF" = (
@@ -28643,7 +28685,12 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/turf_decal/arrows{
+	dir = 1;
+	pixel_x = 12;
+	pixel_y = -7
+	},
+/turf/open/floor/iron/smooth,
 /area/station/medical/paramedic)
 "jDI" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -31204,6 +31251,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -32366,6 +32414,9 @@
 	},
 /turf/open/floor/carpet/green,
 /area/station/service/library)
+"kPm" = (
+/turf/open/floor/iron/smooth,
+/area/station/medical/paramedic)
 "kPp" = (
 /obj/effect/landmark/start/coroner,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
@@ -32852,7 +32903,7 @@
 	pixel_x = 5;
 	pixel_y = -37
 	},
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/smooth,
 /area/station/medical/paramedic)
 "lah" = (
 /obj/structure/table/reinforced/plastitaniumglass,
@@ -37050,6 +37101,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "mtG" = (
@@ -39349,24 +39403,11 @@
 /turf/open/floor/iron/large,
 /area/station/engineering/main)
 "nfl" = (
-/obj/structure/table/glass,
-/obj/item/healthanalyzer{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/cup/bottle/multiver{
-	pixel_x = 9;
-	pixel_y = 1
-	},
-/obj/item/reagent_containers/syringe{
-	name = "steel point";
-	pixel_x = -2;
-	pixel_y = -13
-	},
 /obj/effect/turf_decal/tile/dark_blue/anticorner/contrasted{
 	dir = 4
 	},
 /obj/machinery/airalarm/directional/east,
+/obj/structure/closet/secure_closet/security_medic,
 /turf/open/floor/iron/white/small_corner{
 	dir = 8
 	},
@@ -39468,12 +39509,17 @@
 /area/station/commons/storage/art)
 "nhn" = (
 /obj/structure/table/wood,
-/obj/structure/showcase/machinery/tv{
-	dir = 1;
-	pixel_x = 2;
-	pixel_y = 3
+/obj/structure/window/spawner/directional/south,
+/obj/item/storage/card_binder,
+/obj/item/tcgcard_deck{
+	pixel_x = -4;
+	pixel_y = 8
 	},
-/turf/open/floor/carpet,
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 1
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "nhp" = (
 /turf/open/misc/asteroid/snow/snaxi,
@@ -39949,8 +39995,16 @@
 /area/station/command/bridge)
 "nrJ" = (
 /obj/structure/table/wood,
-/obj/item/toy/plush/skyrat/medihound,
-/turf/open/floor/carpet,
+/obj/item/toy/plush/skyrat/cat/tux{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/obj/structure/window/spawner/directional/north,
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 1
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "nrR" = (
 /obj/structure/cable,
@@ -40270,6 +40324,9 @@
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/bin,
 /obj/machinery/firealarm/directional/west,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "nxr" = (
@@ -40954,12 +41011,12 @@
 /area/station/service/chapel/office)
 "nHM" = (
 /obj/structure/table/glass,
-/obj/item/storage/medkit/regular,
-/obj/item/storage/medkit/regular,
-/obj/item/reagent_containers/spray/cleaner,
-/obj/item/storage/box/bodybags,
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/dark_blue/anticorner/contrasted,
+/obj/machinery/computer/records/medical/laptop{
+	dir = 8;
+	pixel_y = 4
+	},
 /turf/open/floor/iron/white/small_corner{
 	dir = 1
 	},
@@ -42228,7 +42285,7 @@
 "oex" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/smooth,
 /area/station/medical/paramedic)
 "oey" = (
 /obj/structure/cable,
@@ -46883,12 +46940,13 @@
 /turf/open/floor/carpet,
 /area/station/service/bar)
 "pOd" = (
-/obj/structure/table/wood,
-/obj/item/pai_card{
-	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
-	name = "Nanotrasen-brand personal AI device exhibit"
+/obj/structure/window/spawner/directional/south,
+/obj/structure/showcase/perfect_employee,
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 1
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "pOn" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
@@ -46923,11 +46981,8 @@
 "pOI" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/half/contrasted,
-/obj/structure/closet/secure_closet/paramedic,
-/obj/item/storage/belt/medical{
-	pixel_y = 2
-	},
-/obj/item/clothing/glasses/hud/health,
+/obj/structure/closet/secure_closet/medical3,
+/obj/item/weaponcell/medical/utility/temperature,
 /turf/open/floor/iron/white,
 /area/station/medical/outpost/one)
 "pOJ" = (
@@ -47447,6 +47502,7 @@
 "pXe" = (
 /obj/structure/closet/secure_closet/paramedic,
 /obj/effect/turf_decal/trimline/blue/filled/line,
+/obj/item/weaponcell/medical/utility/temperature,
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "pXm" = (
@@ -49461,12 +49517,21 @@
 	},
 /area/station/cargo/sorting)
 "qGt" = (
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
 /obj/machinery/camera/autoname/directional/north,
-/obj/structure/showcase/mecha/marauder,
-/turf/open/floor/carpet,
+/obj/structure/table/wood,
+/obj/structure/window/spawner/directional/south,
+/obj/structure/sign/poster/official/fatorays/directional/north,
+/obj/item/gun/ballistic/shotgun/toy/crossbow{
+	name = "Toy Fatoray";
+	desc = "A toy stylized after the NutriTech Fatoray laser pistol.";
+	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi';
+	icon_state = "fatoray_weak"
+	},
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 1
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "qGu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/yellow/visible{
@@ -51495,17 +51560,8 @@
 	name = "scrubbers pipe"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
-/obj/effect/turf_decal/siding/wood/corner,
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 4
-	},
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 8
-	},
-/turf/open/floor/wood,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "roL" = (
 /obj/effect/landmark/event_spawn,
@@ -55720,7 +55776,13 @@
 /area/station/commons/fitness)
 "sOn" = (
 /obj/structure/showcase/machinery/implanter,
-/turf/open/floor/carpet,
+/obj/structure/window/spawner/directional/east,
+/obj/structure/window/spawner/directional/north,
+/obj/effect/turf_decal/siding/wideplating_new/dark/end{
+	dir = 4
+	},
+/obj/machinery/airalarm/directional/south,
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "sOs" = (
 /obj/structure/chair/stool/bar/directional/west,
@@ -59202,13 +59264,13 @@
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge)
 "tZA" = (
-/obj/structure/table/wood,
-/obj/item/storage/card_binder,
-/obj/item/tcgcard_deck{
-	pixel_x = -4;
-	pixel_y = 8
+/obj/structure/showcase/mecha/marauder,
+/obj/structure/window/spawner/directional/south,
+/obj/structure/window/spawner/directional/west,
+/obj/effect/turf_decal/siding/wideplating_new/dark/end{
+	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "tZB" = (
 /obj/structure/cable,
@@ -61000,6 +61062,9 @@
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/suit/hooded/wintercoat/medical/paramedic,
 /obj/item/clothing/suit/hooded/wintercoat/medical/paramedic,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "uCV" = (
@@ -61237,11 +61302,8 @@
 	dir = 4;
 	name = "scrubbers pipe"
 	},
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/wood,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "uGq" = (
 /obj/structure/window/spawner/directional/south,
@@ -62565,7 +62627,12 @@
 /area/station/command/heads_quarters/captain)
 "vaE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/turf_decal/arrows{
+	dir = 1;
+	pixel_x = 12;
+	pixel_y = -7
+	},
+/turf/open/floor/iron/smooth,
 /area/station/medical/paramedic)
 "vaL" = (
 /obj/structure/cable,
@@ -63570,7 +63637,12 @@
 /obj/structure/table/wood,
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/power_store/cell/crap/empty,
-/turf/open/floor/carpet,
+/obj/structure/window/spawner/directional/north,
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 1
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "voL" = (
 /obj/item/emergency_bed,
@@ -64182,12 +64254,9 @@
 /area/station/engineering/atmos)
 "vzQ" = (
 /obj/structure/cable,
-/obj/machinery/holopad,
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/wood,
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "vAf" = (
 /obj/item/radio/intercom{
@@ -66000,6 +66069,13 @@
 /obj/vehicle/ridden/atv/snowmobile{
 	dir = 4
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "loadingarea"
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "wgc" = (
@@ -66942,6 +67018,13 @@
 /obj/vehicle/ridden/atv/snowmobile{
 	dir = 4
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "loadingarea"
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "wwW" = (
@@ -66996,14 +67079,9 @@
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	name = "air supply pipe"
 	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
-	},
 /obj/effect/mapping_helpers/mail_sorting/service/hop_office,
-/turf/open/floor/wood,
+/obj/effect/turf_decal/tile/purple/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
 /area/station/command/corporate_showroom)
 "wyv" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -70039,7 +70117,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
 	},
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/smooth,
 /area/station/medical/paramedic)
 "xyV" = (
 /obj/structure/closet/secure_closet/personal/wall{
@@ -72084,10 +72162,15 @@
 /obj/machinery/nuclearbomb/beer{
 	desc = "One of the more successful achievements of the GATO Corporate Warfare Division, their nuclear fission explosives are renowned for being cheap to produce and devastatingly effective. Signs explain that though this particular device has been decommissioned, every GATO station is equipped with an equivalent one, just in case. All Captains carefully guard the disk needed to detonate them - at least, the sign says they do. There seems to be a tap on the back.";
 	name = "GATO-brand nuclear fission explosive";
-	pixel_x = 2;
-	pixel_y = 6
+	pixel_x = -3;
+	pixel_y = 0
 	},
-/turf/open/floor/carpet,
+/obj/structure/window/spawner/directional/east,
+/obj/structure/window/spawner/directional/south,
+/obj/effect/turf_decal/siding/wideplating_new/dark/end{
+	dir = 4
+	},
+/turf/open/floor/carpet/gato,
 /area/station/command/corporate_showroom)
 "yfp" = (
 /obj/effect/turf_decal/stripes/line{
@@ -225617,11 +225700,11 @@ djs
 djs
 djs
 djs
-djs
-djs
-djs
-djs
 tGI
+djs
+djs
+djs
+djs
 djs
 djs
 eCQ
@@ -227483,7 +227566,7 @@ jTj
 gPN
 aXD
 wFV
-aDl
+kPm
 oex
 xyT
 kZL
