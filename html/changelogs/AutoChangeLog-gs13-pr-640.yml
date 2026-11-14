@@ -1,8 +1,0 @@
-author: "Icepick200"
-delete-after: True
-changes:
-  - rscadd: "Adds a manner of bug abdomens, and two shark tails to the character creator"
-  - rscadd: "Added shadekin eyes and snouts to the character creator, as well as dragonfly snouts"
-  - rscadd: "Added mermaid and orca taurs to the character creator"
-  - rscadd: "Added the Replica Parade Jacket to the loadout, its got no armor whatsoever loser!"
-  - bugfix: "fixed a sprite issue on the fat drake taur where it was displaced on the north facing sprite"

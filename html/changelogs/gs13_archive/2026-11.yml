@@ -5,3 +5,17 @@
   - rscadd: Climbing via ladders, climbing ropes and tables is now slower the fatter
       you are
   - map: fixes some broken piping, lighting and abstract pizzas on box station
+2026-11-05:
+  Icepick200:
+  - rscadd: Adds a manner of bug abdomens, and two shark tails to the character creator
+  - rscadd: Added shadekin eyes and snouts to the character creator, as well as dragonfly
+      snouts
+  - rscadd: Added mermaid and orca taurs to the character creator
+  - rscadd: Added the Replica Parade Jacket to the loadout, its got no armor whatsoever
+      loser!
+  - bugfix: fixed a sprite issue on the fat drake taur where it was displaced on the
+      north facing sprite
+2026-11-11:
+  evilew:
+  - map: Expanded Xenoarch's foyer as to allow more comfortable ant farms, as well
+      as adding a few items to make that easier
