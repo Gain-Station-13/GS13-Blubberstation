@@ -219,7 +219,7 @@ export type CharacterPreferencesData = {
   helplessness_prefs: Record<string, unknown>;
   blueberry_prefs: Record<string, unknown>;
   gs13_examine_prefs: Record<string, unknown>;
-  glutton_bursting_contents: Record<string, unknown>;
+  bursting_contents: Record<string, unknown>;
   // GS13 END EDIT
 
   names: Record<string, string>;

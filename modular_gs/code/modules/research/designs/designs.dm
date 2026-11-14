@@ -43,3 +43,12 @@
 	category = list(
 		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_SERVICE
 	)
+
+/datum/design/board/inflation_pump
+	name = "Compressor Pump Board"
+	desc = "Used to build a compressor pump."
+	build_path = /obj/item/circuitboard/machine/inflation_pump
+	category = list(
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_ATMOS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING

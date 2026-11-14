@@ -18,6 +18,7 @@
 		return .
 
 	RegisterSignal(parent, COMSIG_WEIGHT_ADJUSTED, PROC_REF(calculate_weight_size))
+	RegisterSignal(parent, COMSIG_INFLATION_CHANGED, PROC_REF(calculate_weight_size))
 
 /datum/component/temporary_size/xwg/proc/calculate_weight_size()
 	SIGNAL_HANDLER
@@ -27,17 +28,14 @@
 		return
 
 	var/weight_scaling_pref = human_parent?.client?.prefs.read_preference(/datum/preference/toggle/weight_size_scaling)
-	var/fatness_size_modifier = sqrt(human_parent.fatness / FATNESS_LEVEL_BLOB)
-
-	if (!weight_scaling_pref)
-		// in case someone disabled XWG while being large, make sure to reset
-		if (target_size != original_size)
-			target_size = original_size
-			apply_size(original_size)
-		return
+	var/inflation_scaling_pref = human_parent?.client?.prefs.read_preference(/datum/preference/toggle/inflation_size_scaling)
+	var/fatness_size_modifier = sqrt(human_parent.fatness / FATNESS_LEVEL_BLOB) * weight_scaling_pref
+	var/inflation_size_modifier = sqrt(human_parent.inflation_value / 10) * inflation_scaling_pref
+	var/size_modifier = max(fatness_size_modifier, inflation_size_modifier)
 
 	// if this is true then applying would shrink us which makes no sense
-	if (fatness_size_modifier <= 1)
+	// this will also be true if both size prefs are off
+	if (size_modifier <= 1)
 		// if this is true, then that means we just lost weight and we've fallen
 		// below the threshold for xwg. Apply default size
 		if (target_size != original_size)
@@ -49,15 +47,15 @@
 	if(human_parent?.client?.prefs.read_preference(/datum/preference/toggle/size_xwg))
 		max_size = RESIZE_MACRO
 
-	fatness_size_modifier *= original_size
-	fatness_size_modifier = max(fatness_size_modifier, original_size)
-	fatness_size_modifier = min(fatness_size_modifier, max_size)
+	size_modifier *= original_size
+	size_modifier = max(size_modifier, original_size)
+	size_modifier = min(size_modifier, max_size)
 
 	// don't change if we're at the target size already
-	if (fatness_size_modifier == target_size)
+	if (size_modifier == target_size)
 		return
 
-	target_size = fatness_size_modifier
+	target_size = size_modifier
 
 	check_area()
 

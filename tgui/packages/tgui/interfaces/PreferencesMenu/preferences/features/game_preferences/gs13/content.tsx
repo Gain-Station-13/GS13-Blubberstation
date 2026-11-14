@@ -1,4 +1,13 @@
-import { CheckboxInput, type FeatureToggle, type Feature, FeatureSliderInput } from '../../base';
+import { 
+  CheckboxInput,
+  FeatureNumberInput,
+  type FeatureToggle,
+  type FeatureNumeric,
+  type Feature,
+  FeatureSliderInput
+} from '../../base';
+
+// #region weight gain types
 
 export const weight_gain_food: FeatureToggle = {
   name: 'Weight gain from food',
@@ -69,6 +78,8 @@ export const weight_gain_mutations: FeatureToggle = {
   component: CheckboxInput,
 };
 
+// #endregion
+
 export const blueberry_inflation: FeatureToggle = {
   name: 'Blueberryfication',
   description: 'Toggle whether you want to be affected by blueberry inflation mechanics.',
@@ -122,3 +133,27 @@ export const sound_bursting: Feature<number> = {
   description: 'Volume of the sounds associated with bursting.',
   component: FeatureSliderInput,
 };
+
+// #region inflation
+
+export const inflation: FeatureToggle = {
+  name: 'Inflation',
+  description: 'Toggle whether you want to be able to be inflated and deflated with air/gasses.',
+  category: 'WG Sources',
+  component: CheckboxInput,
+};
+
+export const inflation_size_scaling: FeatureToggle = {
+  name: 'Scale sprite size with inflation',
+  category: 'Size',
+  component: CheckboxInput,
+  description: 'Toggle whether you want to be able to be inflated and deflated with air/gasses.',
+};
+
+export const inflation_bursting: FeatureNumeric = {
+  name: 'Bursting inflation',
+  description: 'Assuming 101 KPa pressure around you, how many times higher must your internal pressure be than the outside to burst.',
+  component: FeatureNumberInput,
+};
+
+// #endregion

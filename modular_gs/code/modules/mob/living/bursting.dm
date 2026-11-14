@@ -21,6 +21,11 @@
 #define BURSTING_PREF_FATAL 4
 #define BURSTING_PREF_PERMA_FATAL 5
 
+// bursting types
+#define BURSTING_TYPE_FULLNESS "full"
+#define BURSTING_TYPE_FATNESS "fat"
+#define BURSTING_TYPE_INFLATION "inflated"
+
 //Sounds
 #define BURSTING_SOUND_RATIO 0.3 ///The relative ratio between fatness and fullness between eachother for sounds to play
 #define BURSTING_SOUND_VOLUME 45 ///Sound volume for all the sounds
@@ -164,9 +169,11 @@
 	//Get prefs
 	var/fullness_bursting_pref = client?.prefs?.read_preference(/datum/preference/numeric/helplessness/glutton_fullness_before_burst)
 	var/fatness_bursting_pref = client?.prefs?.read_preference(/datum/preference/numeric/helplessness/glutton_fatness_before_burst)
+	var/inflation_bursting_pref = client?.prefs?.read_preference(/datum/preference/numeric/helplessness/inflation_bursting)
 	var/bursting_type_pref = get_bursting_pref()
 
-	if (!fullness_bursting_pref && !fatness_bursting_pref) //If both fatness and fullness bursting is disabled, then return false and set to disabled values
+	if (!fullness_bursting_pref && !fatness_bursting_pref && !inflation_bursting_pref)
+		// disable them
 		bursting_capacity_fullness = -1
 		bursting_capacity_fatness = -1
 		bursting_capacity_percentage = -1
@@ -180,8 +187,9 @@
 	//Capacity percentages
 	bursting_capacity_fullness = fullness_bursting_pref != 0 ? relative_fullness / fullness_bursting_pref  : -1 ///Our glutton's fullness percentage, -1 flag if disabled
 	bursting_capacity_fatness = fatness_bursting_pref != 0 ? relative_fatness / relative_fatness_threshold : -1 ///Our glutton's fatness percentage, -1 flag if disabled
-	bursting_capacity_percentage = max(bursting_capacity_fullness, bursting_capacity_fatness) ///Use the greater percentage to determine if our glutton should burst, -1 if bursting types are disabled
-	var/burst_type_fullness = bursting_capacity_fullness >= bursting_capacity_fatness
+	var/bursting_capacity_inflation = inflation_bursting_pref != 0 ? inflation_value / inflation_bursting_pref : -1
+	bursting_capacity_percentage = max(bursting_capacity_fullness, bursting_capacity_fatness, bursting_capacity_inflation) ///Use the greater percentage to determine if our glutton should burst, -1 if bursting types are disabled
+	var/burst_type_fullness = bursting_capacity_fullness >= bursting_capacity_fatness || bursting_capacity_inflation >= bursting_capacity_fatness
 
 
 	if (bursting_capacity_percentage <= 0)
@@ -233,7 +241,8 @@
 	if (HAS_TRAIT(src, BURSTING_ABOUT_TO_BURST))
 		return FALSE
 
-	trigger_glutton_burst(burst_type_fullness, bursting_type_pref)
+	var/bursting_type = get_bursting_type(bursting_capacity_fullness, bursting_capacity_fatness, bursting_capacity_inflation)
+	trigger_glutton_burst(bursting_type, bursting_type_pref)
 	return TRUE
 
 ///Opens the tgui popup for deciding wether to burst or delay
@@ -244,7 +253,7 @@
 	//TGUI popup to confirm bursting
 	var/burst_choice = tgui_alert(
 		src,
-		"You've exceeded your capacity and gotten too [burst_type ? "full" : "fat"]. You're now on the verge of bursting, but you might be able to hold together a bit longer... Click '[BURSTING_CONFIRM]' if you wish to burst, you will explode after a short delay[bursting_type_pref >= BURSTING_PREF_CRIT ? ", which will kill you since you have safe bursting disabled." : "."] Otherwise, click '[BURSTING_DENY]' which will delay bursting for bit if you're still over capacity.",
+		"You've exceeded your capacity and gotten too [burst_type]. You're now on the verge of bursting, but you might be able to hold together a bit longer... Click '[BURSTING_CONFIRM]' if you wish to burst, you will explode after a short delay[bursting_type_pref >= BURSTING_PREF_CRIT ? ", which will kill you since you have safe bursting disabled." : "."] Otherwise, click '[BURSTING_DENY]' which will delay bursting for bit if you're still over capacity.",
 		"You're about to burst!",
 		list(BURSTING_CONFIRM, BURSTING_DENY)
 	)
@@ -270,7 +279,15 @@
 	//No saving them now, they're gonna burst!
 	addtimer(TRAIT_CALLBACK_REMOVE(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT), BURSTING_DELAY_BURST_SECONDS SECONDS)
 	SEND_SIGNAL(src, COMSIG_LIVING_BURSTING_TRANSFORM_SIGNAL) //send signal that the bursting code is doing transforms, might be handy
-	visible_message(span_warning("[src] begins to swell as they're overwhelmed by their [burst_type ? "fullness" : "fatness"]!"), span_warning("Your body begins to swell as your [burst_type ? "fullness" : "fatness"] overwhelms you!"))
+
+	// we want to transform it to reuse it. This could be done in a million different ways. I chose the worst one.
+	// And yes, inflation being bundled together with fullness is intentional.
+	if (burst_type == BURSTING_TYPE_FATNESS)
+		burst_type = "fatness"
+	else
+		burst_type = "fullness"
+
+	visible_message(span_warning("[src] begins to swell as they're overwhelmed by their [burst_type]!"), span_warning("Your body begins to swell as your [burst_type] overwhelms you!"))
 	addtimer(CALLBACK(src, PROC_REF(burst_glutton)), BURSTING_ANIMATE_TIME SECONDS) //Bursts the character
 	var/matrix/scale_transform = matrix()
 	scale_transform.Scale(
@@ -318,6 +335,8 @@
 				if (fatness > weight_target) //Check if that was enough then start removing perma fatness
 					adjust_perma(-(fatness - weight_target), FATTENING_TYPE_ALMIGHTY, TRUE)
 
+		handle_inflation_burst(client?.prefs?.read_preference(/datum/preference/numeric/helplessness/inflation_bursting))
+
 		switch(bursting_pref) //Get the bursting pref again incase the person changes their mind about how they'd like to burst
 			if (BURSTING_PREF_FATAL)
 				blueberry_gib(client?.prefs?.read_preference(/datum/preference/toggle/glutton_leave_gibs))
@@ -353,6 +372,12 @@
 
 					if (bursting_capacity_fullness > 1)
 						adjust_organ_loss(ORGAN_SLOT_STOMACH, bursting_stomach_damage) //Wreck the stomach if they were too full
+					
+					var/inflation_bursting_pref = client?.prefs?.read_preference(/datum/preference/numeric/helplessness/inflation_bursting)
+					var/bursting_capacity_inflation = inflation_bursting_pref != 0 ? inflation_value / inflation_bursting_pref : -1
+
+					if (bursting_capacity_inflation > 1)
+						adjust_organ_loss(ORGAN_SLOT_STOMACH, bursting_stomach_damage)
 
 
 				Unconscious(5 SECONDS, TRUE) //Bursting is intense, knock the player out for a bit
@@ -361,6 +386,26 @@
 	SEND_SIGNAL(src, COMSIG_LIVING_BURSTING_BURST) //send signal that player burst to remove pixel shifts
 	var/matrix/original_transform = matrix(current_size, 0, 0, 0, current_size, 16 * current_size - 16)
 	animate(src, time = 1 SECONDS, transform = original_transform * matrix(lying_angle, MATRIX_ROTATE), easing = SINE_EASING)
+
+/mob/living/carbon/human/proc/get_bursting_type(fullness_threshold, fatness_threshold, inflation_threshold)
+	if (fullness_threshold >= fatness_threshold && fullness_threshold >= inflation_threshold)
+		return BURSTING_TYPE_FULLNESS
+	if (fatness_threshold >= fullness_threshold && fatness_threshold >= inflation_threshold)
+		return BURSTING_TYPE_FATNESS
+	
+	return BURSTING_TYPE_INFLATION
+
+/mob/living/carbon/human/proc/handle_inflation_burst(inflation_bursting_pref)
+	if (inflation_bursting_pref <= 0)
+		return
+	
+	var/expulsion_percentage = min(inflation_value / inflation_bursting_pref, 1)
+
+	var/moles_to_release = air.total_moles() * expulsion_percentage
+
+	var/datum/gas_mixture/release = air.remove(moles_to_release)
+
+	src.loc.assume_air(release)
 
 //The smoke used for bursting
 /obj/effect/particle_effect/fluid/smoke/burst_smoke
@@ -405,6 +450,10 @@
 #undef BURSTING_FLAVOR_STUFFED
 #undef BURSTING_FLAVOR_OVERSTUFFED
 #undef BURSTING_FLAVOR_NEARBURST
+
+#undef BURSTING_TYPE_FULLNESS
+#undef BURSTING_TYPE_FATNESS
+#undef BURSTING_TYPE_INFLATION
 
 #undef BURSTING_FLAVOR_VERYFAT
 #undef BURSTING_FLAVOR_SUPEROBESE

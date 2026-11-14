@@ -17,6 +17,7 @@
 	var/reduction_min = 50 //adjusted because "fullness reduction" happens at a rate of 15 every 2 seconds, and emotes can only reduce it every 5
 	var/reduction_max = 70
 	var/noise_pref = /datum/preference/numeric/volume/burping_noises
+	var/percentage_of_air_released = 0.1
 
 /datum/emote/living/burp/proc/get_sound_gs13()
 	return pick('modular_gs/sound/voice/burp1.ogg')
@@ -28,6 +29,27 @@
 
 	var/mob/living/carbon/carbon_user = user
 	carbon_user.reduce_fullness(rand(reduction_min,reduction_max))
+	release_air(user)
+
+/datum/emote/living/burp/proc/release_air(mob/living/user)
+	if (!iscarbon(user))
+		return
+
+	// don't do this shit if we were made to breathe manually
+	if (user.GetComponent(/datum/component/manual_breathing))
+		return
+
+	if (!user.client?.prefs?.read_preference(/datum/preference/toggle/inflation))
+		return
+
+	var/mob/living/carbon/deflatee = user
+	var/datum/gas_mixture/air = deflatee.air
+
+	var/moles_to_release = air.total_moles() * percentage_of_air_released
+
+	var/datum/gas_mixture/release = air.remove(moles_to_release)
+
+	deflatee.loc.assume_air(release)
 
 /datum/emote/living/burp/fart //Butt burp.
 	key = "fart"
@@ -64,6 +86,7 @@
 	//god hates me for this -Metha
 	reduction_min = 60
 	reduction_max = 80
+	percentage_of_air_released = 0.3
 
 /datum/emote/living/burp/belch/get_sound_gs13()
 	return pick('modular_gs/sound/voice/belch1.ogg', 'modular_gs/sound/voice/belch2.ogg',
@@ -156,3 +179,57 @@
 				'modular_gs/sound/effects/inflation/creaking/Creak2.ogg',
 				'modular_gs/sound/effects/inflation/creaking/Creak3.ogg',
 				'modular_gs/sound/effects/inflation/creaking/Creak4.ogg')
+
+/datum/emote/living/inhale/run_emote(mob/user, params, type_override, intentional)
+	. = ..()
+	if (!iscarbon(user))
+		return
+
+	// don't do this shit if we were made to breathe manually
+	if (user.GetComponent(/datum/component/manual_breathing))
+		return
+
+	if (!user.client?.prefs?.read_preference(/datum/preference/toggle/inflation))
+		return
+
+	var/mob/living/carbon/inflatee = user
+
+	var/datum/gas_mixture/breath = inflatee.get_breath_from_internal(STOMACH_VOLUME)
+
+	if(isnull(breath)) //in case of 0 pressure internals
+		if(isobj(inflatee.loc)) //Breathe from loc as object
+			var/obj/loc_as_obj = inflatee.loc
+			breath = loc_as_obj.handle_internal_lifeform(src, STOMACH_VOLUME)
+		else if(isturf(inflatee.loc)) //Breathe from loc as turf
+			var/breath_moles = 0
+			var/datum/gas_mixture/environment = inflatee.loc.return_air()
+			if(environment)
+				breath_moles = environment.total_moles()*INHALE_PERCENTAGE
+			breath = inflatee.loc.remove_air(breath_moles)
+	else //Breathe from loc as obj again
+		if(isobj(inflatee.loc))
+			var/obj/loc_as_obj = inflatee.loc
+			loc_as_obj.handle_internal_lifeform(src,0)
+	
+	inflatee.air.merge(breath)
+
+/datum/emote/living/exhale/run_emote(mob/user, params, type_override, intentional)
+	. = ..()
+	if (!iscarbon(user))
+		return
+
+	// don't do this shit if we were made to breathe manually
+	if (user.GetComponent(/datum/component/manual_breathing))
+		return
+
+	if (!user.client?.prefs?.read_preference(/datum/preference/toggle/inflation))
+		return
+
+	var/mob/living/carbon/deflatee = user
+	var/datum/gas_mixture/air = deflatee.air
+
+	var/moles_to_release = ONE_ATMOSPHERE * STOMACH_VOLUME / (R_IDEAL_GAS_EQUATION * air.return_temperature())
+
+	var/datum/gas_mixture/release = air.remove(moles_to_release)
+
+	deflatee.loc.assume_air(release)
