@@ -233,3 +233,21 @@
 	var/datum/gas_mixture/release = air.remove(moles_to_release)
 
 	deflatee.loc.assume_air(release)
+
+// it's a kiss, but not really related to the kiss, It's inflation thing, you see
+/datum/emote/living/puff_kiss
+	key = "puffkiss"
+	key_third_person = null
+	cooldown = 3 SECONDS
+
+/datum/emote/living/puff_kiss/run_emote(mob/living/user, params, type_override, intentional)
+	. = ..()
+	var/kiss_type = /obj/item/hand_item/kisser/inflation
+
+	var/obj/item/kiss_blower = new kiss_type(user)
+	if(user.put_in_hands(kiss_blower))
+		to_chat(user, span_notice("You ready your kiss-blowing hand."))
+		return
+
+	qdel(kiss_blower)
+	to_chat(user, span_warning("You're incapable of blowing a kiss in your current state."))
