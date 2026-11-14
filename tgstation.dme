@@ -7455,6 +7455,7 @@
 #include "modular_gs\code\game\objects\items\AI_modules.dm"
 #include "modular_gs\code\game\objects\items\cards_ids.dm"
 #include "modular_gs\code\game\objects\items\choice_beacon.dm"
+#include "modular_gs\code\game\objects\items\circuitboards.dm"
 #include "modular_gs\code\game\objects\items\fat_plushies.dm"
 #include "modular_gs\code\game\objects\items\holosign_creator.dm"
 #include "modular_gs\code\game\objects\items\plushes.dm"

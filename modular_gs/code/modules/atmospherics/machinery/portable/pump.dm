@@ -1,7 +1,8 @@
 /obj/machinery/portable_atmospherics/inflation_pump
-	name = "portable personnal pump"
+	name = "compressor pump"
 	desc = "Pump with a cable attached to it. Used to inflate mattresses and... other things."
-	icon_state = "siphon"
+	icon = 'modular_gs/icons/obj/atmos.dmi'
+	icon_state = "compressor"
 	density = TRUE
 	max_integrity = 250
 	volume = 100
@@ -30,9 +31,9 @@
 /obj/machinery/portable_atmospherics/inflation_pump/update_overlays()
 	. = ..()
 	if(holding)
-		. += "siphon-open"
+		. += "[icon_state]-open"
 	if(connected_port)
-		. += "siphon-connector"
+		. += "[icon_state]-connector"
 
 /obj/machinery/portable_atmospherics/inflation_pump/process_atmos(seconds_per_tick)
 	if(take_atmos_damage())
@@ -48,8 +49,6 @@
 	excited = TRUE
 
 	var/mob/living/carbon/inflatee = attachment.attached_to
-
-
 	var/datum/gas_mixture/sending
 	var/datum/gas_mixture/receiving
 
@@ -75,6 +74,17 @@
 	// sending.pump_gas_to(receiving, target_pressure)
 
 	return ..()
+
+/obj/machinery/portable_atmospherics/inflation_pump/process(seconds_per_tick)
+	if(!attachment)
+		return PROCESS_KILL
+
+	var/mob/living/carbon/attached_mob = attachment.attached_to
+
+	if(!(get_dist(src, attached_mob) <= 1 && isturf(attached_mob.loc)))
+		to_chat(attached_mob, span_notice("The tube detaches from you."))
+		detach_pump()
+		return PROCESS_KILL
 
 /obj/machinery/portable_atmospherics/inflation_pump/mouse_drop_dragged(atom/over, mob/user, src_location, over_location, params)
 	if(!isliving(user) || !iscarbon(over))
@@ -108,6 +118,7 @@
 	attachment = new(src, target)
 
 	SSair.start_processing_machine(src)
+	START_PROCESSING(SSmachines, src)
 	update_appearance(UPDATE_ICON)
 
 	// SEND_SIGNAL(src, COMSIG_IV_ATTACH, target)
@@ -116,6 +127,7 @@
 	if(attachment)
 		visible_message(span_notice("[attachment.attached_to] is detached from [src]."))
 	QDEL_NULL(attachment)
+	STOP_PROCESSING(SSmachines, src)
 
 /obj/machinery/portable_atmospherics/inflation_pump/attack_hand_secondary(mob/user, list/modifiers)
 	..()
