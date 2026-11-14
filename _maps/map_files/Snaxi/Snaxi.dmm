@@ -1231,6 +1231,7 @@
 	},
 /area/station/security/prison)
 "auR" = (
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron/edge,
 /area/station/hallway/primary/port)
 "avp" = (
@@ -1268,6 +1269,7 @@
 "avz" = (
 /obj/machinery/vending/boozeomat,
 /obj/machinery/light/dim/directional/north,
+/obj/machinery/computer/security/telescreen/entertainment/directional/north,
 /turf/open/floor/iron/terracotta/small,
 /area/station/common/pool)
 "avL" = (
@@ -6611,6 +6613,20 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
+"cmm" = (
+/obj/structure/rack/shelf,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/effect/turf_decal/delivery,
+/obj/item/tank/internals/emergency_oxygen,
+/obj/item/tank/internals/emergency_oxygen,
+/obj/machinery/status_display/evac/directional/east,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/exit/departure_lounge)
 "cmp" = (
 /obj/structure/railing/corner{
 	dir = 8
@@ -8099,6 +8115,7 @@
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 4
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -8624,6 +8641,12 @@
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
+"cZa" = (
+/obj/structure/closet/emcloset,
+/obj/effect/turf_decal/bot,
+/obj/machinery/status_display/ai/directional/east,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/exit/departure_lounge)
 "dap" = (
 /obj/machinery/computer/crew,
 /obj/effect/turf_decal/tile/blue{
@@ -10036,6 +10059,10 @@
 /obj/machinery/light/small/dim/directional/north,
 /turf/open/floor/plating,
 /area/station/commons/fitness/locker_room)
+"dxr" = (
+/obj/structure/sign/warning/gato/docking,
+/turf/closed/wall,
+/area/station/hallway/secondary/exit/departure_lounge)
 "dxz" = (
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron,
@@ -22394,6 +22421,7 @@
 /obj/structure/chair/comfy/black{
 	dir = 8
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/station/maintenance/aft)
 "hCN" = (
@@ -22711,6 +22739,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 1
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -23111,6 +23140,7 @@
 /area/station/hallway/primary/central)
 "hRu" = (
 /obj/machinery/light/directional/west,
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "hRB" = (
@@ -24979,6 +25009,16 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/chemistry)
+"iwA" = (
+/obj/machinery/light/floor,
+/obj/effect/spawner/liquids_spawner/shoulders,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/dark_red,
+/obj/machinery/status_display/ai/directional/west,
+/turf/open/floor/iron/pool,
+/area/station/common/pool)
 "iwZ" = (
 /obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plating,
@@ -31786,7 +31826,7 @@
 /obj/machinery/door/airlock/research{
 	name = "Chemical Storage"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/medical/psychology,
+/obj/effect/mapping_helpers/airlock/access/any/medical/pharmacy,
 /obj/effect/landmark/navigate_destination/autoname,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
@@ -33241,6 +33281,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /turf/open/floor/wood,
 /area/station/commons/dorms)
+"lkM" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/machinery/status_display/ai/directional/west,
+/turf/open/floor/iron,
+/area/station/maintenance/aft)
 "llg" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 4;
@@ -44364,6 +44411,7 @@
 /obj/effect/landmark/navigate_destination/sauna,
 /obj/effect/turf_decal/siding/wideplating/terracotta,
 /obj/structure/cable,
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/sandstone,
 /area/station/common/pool)
 "oVC" = (
@@ -50932,7 +50980,7 @@
 "rkC" = (
 /obj/item/reagent_containers/cup/glass/shaker,
 /obj/structure/table/bronze,
-/obj/machinery/computer/security/telescreen/entertainment/directional/north,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/terracotta/small,
 /area/station/common/pool)
 "rkG" = (
@@ -51636,6 +51684,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/trimline/dark_red,
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron/pool,
 /area/station/common/pool)
 "ruY" = (
@@ -57129,6 +57178,16 @@
 	},
 /turf/open/floor/wood/large,
 /area/station/maintenance/abandoned_shack/secondary)
+"ttw" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/chair{
+	dir = 8
+	},
+/obj/machinery/status_display/evac/directional/east,
+/turf/open/floor/iron/edge{
+	dir = 4
+	},
+/area/station/hallway/primary/port)
 "ttP" = (
 /obj/effect/turf_decal/stripes{
 	dir = 1
@@ -58457,6 +58516,13 @@
 /obj/effect/turf_decal/vg_decals/atmos/nitrogen,
 /turf/open/floor/engine/n2,
 /area/station/engineering/atmos)
+"tQE" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/machinery/status_display/ai/directional/east,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
 "tQM" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
@@ -63364,6 +63430,11 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/station/service/chapel)
+"vrb" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/status_display/ai/directional/west,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/exit/departure_lounge)
 "vrc" = (
 /obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
@@ -64972,6 +65043,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "vUU" = (
@@ -217104,7 +217176,7 @@ vux
 vag
 wUC
 ntS
-gSs
+ttw
 kvW
 gSs
 dqa
@@ -233323,7 +233395,7 @@ ljX
 lIB
 gUQ
 iml
-hOp
+dxr
 tbQ
 cVH
 tbQ
@@ -233334,7 +233406,7 @@ nhp
 tbQ
 tbQ
 kjQ
-bik
+fYi
 nhp
 nhp
 rFB
@@ -233591,7 +233663,7 @@ nhp
 tbQ
 mcS
 bKF
-bik
+fYi
 nhp
 nhp
 rFB
@@ -233803,7 +233875,7 @@ itF
 xsl
 uve
 uve
-ooq
+iwA
 uve
 uve
 ooq
@@ -233848,7 +233920,7 @@ nhp
 tbQ
 lHZ
 mtL
-bik
+fYi
 nhp
 nhp
 rFB
@@ -234105,7 +234177,7 @@ nhp
 tbQ
 dxj
 cKf
-bik
+fYi
 nhp
 nhp
 rFB
@@ -234355,16 +234427,16 @@ ldf
 tbQ
 sQs
 tbQ
-bik
-bik
-bik
-bik
+fYi
+fYi
+fYi
+fYi
 tbQ
 tbQ
 fee
-bik
-bik
-bik
+fYi
+fYi
+fYi
 rFB
 jrw
 jrw
@@ -234612,7 +234684,7 @@ qOa
 mSW
 mrn
 vNm
-hRu
+vrb
 ncq
 qPN
 hRu
@@ -235167,7 +235239,7 @@ wyE
 xEM
 jFv
 oFk
-tOP
+lkM
 tOP
 kUi
 kda
@@ -236697,7 +236769,7 @@ bJy
 krx
 hCf
 whn
-xBl
+tQE
 xBl
 xzq
 epp
@@ -239234,9 +239306,9 @@ gZa
 lbX
 gZa
 tIa
+cmm
 qba
-qba
-wdF
+cZa
 tbQ
 gZa
 fYi
@@ -239491,9 +239563,9 @@ sYC
 tbQ
 sYC
 tbQ
-tbQ
-tbQ
-tbQ
+fYi
+fYi
+fYi
 tbQ
 sYC
 tbQ
