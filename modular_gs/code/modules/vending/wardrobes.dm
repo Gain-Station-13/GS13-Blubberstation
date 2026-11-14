@@ -25,6 +25,20 @@
 			),
 	)
 
+/obj/machinery/vending/autodrobe
+	gs_product_categories = list(
+		list(
+			"name" = "Supernatural",
+			"icon" = "hand-sparkles",
+			"products" = list(
+				/obj/item/clothing/head/wizard/marisa/fake/old = 3,
+				/obj/item/clothing/head/wizard/marisa/fake/classic = 3,
+				/obj/item/clothing/head/wizard/marisa/fake/shy = 3,
+				/obj/item/clothing/head/wizard/marisa/fake/scholar = 3,
+				),
+			),
+	)
+
 /obj/machinery/vending/wardrobe/sec_wardrobe
 	gs_product_categories = list(
 		list(
