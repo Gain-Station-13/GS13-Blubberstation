@@ -549,7 +549,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "aki" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -889,7 +889,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "anr" = (
 /obj/item/toy/beach_ball,
 /turf/open/misc/beach/sand,
@@ -986,7 +986,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "aoA" = (
 /obj/machinery/vending/autodrobe,
 /turf/open/indestructible/hotelwood,
@@ -1069,7 +1069,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "apu" = (
 /obj/item/knife{
 	pixel_x = 10;
@@ -1626,7 +1626,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "awB" = (
 /obj/machinery/smartfridge,
 /turf/open/indestructible/hotelwood,
@@ -1818,7 +1818,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "axY" = (
 /obj/structure/flora/tree/palm,
 /turf/open/misc/beach/coast/corner{
@@ -3753,7 +3753,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "aSn" = (
 /obj/structure/table,
 /obj/machinery/light/directional/west{
@@ -5168,6 +5168,9 @@
 	icon_state = "floor"
 	},
 /area/centcom/holding/cafe/park)
+"bOJ" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/centcom/holding/cafe/shuttle)
 "bON" = (
 /obj/structure/chair/sofa/bench/corner{
 	dir = 1
@@ -6067,7 +6070,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "cOu" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "ghostcafecabin1";
@@ -9390,6 +9393,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/interlink)
+"hIc" = (
+/obj/structure/window/reinforced/plasma/plastitanium,
+/turf/open/indestructible/hoteltile{
+	icon_state = "plating"
+	},
+/area/centcom/holding/cafe/shuttle)
 "hIn" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/indestructible/hoteltile{
@@ -10164,6 +10173,14 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding/cafe)
+"iyn" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/indestructible/hoteltile{
+	icon_state = "darkfull"
+	},
+/area/centcom/holding/cafe/shuttle)
 "izj" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 4
@@ -10556,15 +10573,15 @@
 	pixel_y = 8
 	},
 /obj/structure/sign/poster/contraband/pwr_game/directional/north,
-/obj/item/reagent_containers/cup/soda_cans/skyrat/welding_fizz{
+/obj/item/reagent_containers/cup/soda_cans/bubber/welding_fizz{
 	pixel_x = 14;
 	pixel_y = 12
 	},
-/obj/item/reagent_containers/cup/soda_cans/skyrat/welding_fizz{
+/obj/item/reagent_containers/cup/soda_cans/bubber/welding_fizz{
 	pixel_x = 14;
 	pixel_y = 6
 	},
-/obj/item/reagent_containers/cup/soda_cans/skyrat/welding_fizz{
+/obj/item/reagent_containers/cup/soda_cans/bubber/welding_fizz{
 	pixel_x = 14
 	},
 /obj/effect/turf_decal/siding/wood,
@@ -11326,17 +11343,10 @@
 /turf/open/floor/iron/stairs,
 /area/centcom/holding/cafe)
 "klI" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 25;
-	height = 50;
-	json_key = "emergency";
-	name = "CentCom Emergency Shuttle Dock";
-	shuttle_id = "emergency_away";
-	width = 50
+/turf/open/indestructible/hoteltile{
+	icon_state = "darkfull"
 	},
-/turf/open/space/basic,
-/area/space)
+/area/centcom/holding/cafe/shuttle)
 "kmD" = (
 /turf/closed/indestructible/fakedoor{
 	desc = "Why would you want to go back, you just got here!";
@@ -13563,7 +13573,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "mYy" = (
 /obj/structure/railing/corner{
 	dir = 8
@@ -17232,7 +17242,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "rng" = (
 /obj/effect/turf_decal/weather/dirt,
 /obj/structure/flora/bush/flowers_yw/style_random,
@@ -17350,7 +17360,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "rxx" = (
 /obj/structure/chair/comfy/brown{
 	dir = 8;
@@ -17435,7 +17445,7 @@
 "rEq" = (
 /obj/structure/sign/gato,
 /turf/closed/wall/mineral/plastitanium,
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "rEG" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/indestructible/wood,
@@ -19931,7 +19941,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "uCw" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line,
@@ -21155,7 +21165,7 @@
 /turf/open/floor/iron,
 /area/centcom/interlink)
 "wnj" = (
-/obj/structure/reagent_water_basin,
+/obj/structure/reagent_dispensers/reagent_smithing_basin,
 /turf/open/misc/dirt/planet,
 /area/centcom/holding/cafe/park)
 "wns" = (
@@ -21522,7 +21532,7 @@
 /turf/open/indestructible/hoteltile{
 	icon_state = "darkfull"
 	},
-/area/centcom/holding/cafe)
+/area/centcom/holding/cafe/shuttle)
 "wPb" = (
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
@@ -21990,6 +22000,10 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/carpet/black,
 /area/centcom/holding/cafe)
+"xtb" = (
+/obj/effect/light_emitter/interlink,
+/turf/closed/wall/mineral/plastitanium,
+/area/centcom/holding/cafe/shuttle)
 "xtm" = (
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/delivery,
@@ -22369,8 +22383,8 @@
 /obj/item/food/grown/garlic,
 /obj/item/food/grown/onion,
 /obj/item/food/grown/onion,
-/obj/item/food/grown/parsnip,
-/obj/item/food/grown/parsnip,
+/obj/item/food/grown/carrotlike/parsnip,
+/obj/item/food/grown/carrotlike/parsnip,
 /obj/item/food/grown/melonlike/watermelon,
 /obj/item/food/grown/melonlike/watermelon,
 /obj/item/food/grown/whitebeet,
@@ -72134,11 +72148,11 @@ agU
 gtO
 aIr
 aIr
-aDC
+bOJ
 rEq
 aSi
 rEq
-aDC
+bOJ
 aIr
 oja
 aIr
@@ -72391,9 +72405,9 @@ veh
 gtO
 aIr
 aIr
-aDC
+bOJ
 axT
-aGL
+klI
 rne
 mYg
 aGC
@@ -72648,11 +72662,11 @@ agU
 gtO
 auH
 aDC
-aDC
+bOJ
 akf
 wOT
 awA
-aDC
+bOJ
 aDC
 aVk
 aIr
@@ -72905,11 +72919,11 @@ agU
 gtO
 rXY
 rXY
-rXY
+xtb
 aox
-aGL
+klI
 apn
-rXY
+xtb
 rXY
 rXY
 aGR
@@ -73162,11 +73176,11 @@ agU
 gtO
 aCs
 aCs
-rXY
+xtb
 akf
-aGL
+klI
 awA
-rXY
+xtb
 aCs
 aCs
 aIr
@@ -73419,11 +73433,11 @@ agU
 gtO
 aPU
 aMR
-rXY
+xtb
 ani
-aGL
+klI
 rvC
-rXY
+xtb
 aPU
 aMR
 aIr
@@ -73676,11 +73690,11 @@ agU
 gtO
 wfN
 wfN
-rXY
+xtb
 uBL
-aNy
+iyn
 cNV
-rXY
+xtb
 wfN
 wfN
 aIr
@@ -73933,11 +73947,11 @@ agU
 gtO
 aIr
 aIr
-aDC
-aDC
-aIg
-aDC
-aDC
+bOJ
+bOJ
+hIc
+bOJ
+bOJ
 aIr
 aIr
 aIr
