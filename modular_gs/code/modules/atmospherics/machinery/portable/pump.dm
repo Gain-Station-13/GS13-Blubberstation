@@ -49,6 +49,9 @@
 	excited = TRUE
 
 	var/mob/living/carbon/inflatee = attachment.attached_to
+	if (!inflatee.client?.prefs?.read_preference(/datum/preference/toggle/inflation))
+		return
+
 	var/datum/gas_mixture/sending
 	var/datum/gas_mixture/receiving
 
