@@ -109,10 +109,12 @@ GLOBAL_LIST_INIT(autodrobe_supernatural_items, list(
 	/obj/item/clothing/head/costume/shrine_wig = 1,
 	/obj/item/clothing/suit/costume/shrine_maiden = 1,
 	/obj/item/gohei = 3,
-	/obj/item/clothing/head/wizard/marisa/fake/old = 3, //GS13 EDIT START
+	//GS13 EDIT START
+	/obj/item/clothing/head/wizard/marisa/fake/old = 3,
 	/obj/item/clothing/head/wizard/marisa/fake/classic = 3,
 	/obj/item/clothing/head/wizard/marisa/fake/shy = 3,
-	/obj/item/clothing/head/wizard/marisa/fake/scholar = 3, //GS13 EDIT END
+	/obj/item/clothing/head/wizard/marisa/fake/scholar = 3,
+	//GS13 EDIT END
 ))
 
 GLOBAL_LIST_INIT(autodrobe_entretainers_items, list(

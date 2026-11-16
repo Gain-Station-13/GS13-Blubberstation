@@ -2,7 +2,7 @@
 
 /obj/item/clothing/glasses/regular/color
 	worn_icon = 'modular_gs/icons/mob/clothing/glasses/glasses_worn.dmi'
-	icon = 'modular_gs/icons/mob/clothing/glasses/glasses.dmi'
+	icon = 'modular_gs/icons/obj/clothing/glasses/glasses.dmi'
 	icon_state = "/obj/item/clothing/glasses/regular/color"
 	post_init_icon_state = "glasses_regular_color"
 	greyscale_config = /datum/greyscale_config/glasses_regular_color
@@ -13,7 +13,7 @@
 // transparent variety of three prescription glasses
 /obj/item/clothing/glasses/regular/transparent
 	worn_icon = 'modular_gs/icons/mob/clothing/glasses/glasses_worn.dmi'
-	icon = 'modular_gs/icons/mob/clothing/glasses/glasses.dmi'
+	icon = 'modular_gs/icons/obj/clothing/glasses/glasses.dmi'
 	icon_state = "/obj/item/clothing/glasses/regular/transparent"
 	post_init_icon_state = "glasses_transparent_regular_color"
 	greyscale_config = /datum/greyscale_config/glasses_transparent_regular_color
@@ -23,7 +23,7 @@
 
 /obj/item/clothing/glasses/regular/circle/transparent
 	worn_icon = 'modular_gs/icons/mob/clothing/glasses/glasses_worn.dmi'
-	icon = 'modular_gs/icons/mob/clothing/glasses/glasses.dmi'
+	icon = 'modular_gs/icons/obj/clothing/glasses/glasses.dmi'
 	icon_state = "/obj/item/clothing/glasses/regular/circle/transparent"
 	post_init_icon_state = "glasses_transparent_circle_color"
 	greyscale_config = /datum/greyscale_config/glasses_transparent_circle_color
@@ -33,7 +33,7 @@
 
 /obj/item/clothing/glasses/regular/thin/transparent
 	worn_icon = 'modular_gs/icons/mob/clothing/glasses/glasses_worn.dmi'
-	icon = 'modular_gs/icons/mob/clothing/glasses/glasses.dmi'
+	icon = 'modular_gs/icons/obj/clothing/glasses/glasses.dmi'
 	icon_state = "/obj/item/clothing/glasses/regular/thin/transparent"
 	post_init_icon_state = "glasses_transparent_thin_color"
 	greyscale_config = /datum/greyscale_config/glasses_transparent_thin_color
@@ -43,7 +43,7 @@
 
 /datum/greyscale_config/glasses_regular_color
 	name = "Glasses"
-	icon_file = 'modular_gs/icons/mob/clothing/glasses/glasses.dmi'
+	icon_file = 'modular_gs/icons/obj/clothing/glasses/glasses.dmi'
 	json_config = 'modular_gs/code/datums/greyscale/json_configs/glasses_regular_color.json'
 
 /datum/greyscale_config/glasses_regular_color/worn
@@ -53,7 +53,7 @@
 
 /datum/greyscale_config/glasses_transparent_regular_color
 	name = "Glasses"
-	icon_file = 'modular_gs/icons/mob/clothing/glasses/glasses.dmi'
+	icon_file = 'modular_gs/icons/obj/clothing/glasses/glasses.dmi'
 	json_config = 'modular_gs/code/datums/greyscale/json_configs/glasses_transparent_regular_color.json'
 
 /datum/greyscale_config/glasses_transparent_regular_color/worn
@@ -64,7 +64,7 @@
 
 /datum/greyscale_config/glasses_transparent_thin_color
 	name = "Thin Glasses"
-	icon_file = 'modular_gs/icons/mob/clothing/glasses/glasses.dmi'
+	icon_file = 'modular_gs/icons/obj/clothing/glasses/glasses.dmi'
 	json_config = 'modular_gs/code/datums/greyscale/json_configs/glasses_transparent_thin_color.json'
 
 /datum/greyscale_config/glasses_transparent_thin_color/worn
@@ -74,7 +74,7 @@
 
 /datum/greyscale_config/glasses_transparent_circle_color
 	name = "Circle Glasses"
-	icon_file = 'modular_gs/icons/mob/clothing/glasses/glasses.dmi'
+	icon_file = 'modular_gs/icons/obj/clothing/glasses/glasses.dmi'
 	json_config = 'modular_gs/code/datums/greyscale/json_configs/glasses_transparent_circle_color.json'
 
 /datum/greyscale_config/glasses_transparent_circle_color/worn
