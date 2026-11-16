@@ -1,0 +1,6 @@
+author: "Icepick200"
+delete-after: True
+changes:
+  - rscadd: "Adds 4 new sets of glasses to the loadout and clothesmate, three of them being transparent"
+  - rscadd: "Added 4 new witch hats to the loadout"
+  - qol: "Made it so that witch hats will hide the top of your hair when wearing them, to prevent clipping."
