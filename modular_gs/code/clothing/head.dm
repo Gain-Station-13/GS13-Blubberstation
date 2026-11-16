@@ -124,23 +124,7 @@
 	json_config = 'modular_gs/code/datums/greyscale/json_configs/witch_hat_scholar_worn.json'
 
 /obj/item/clothing/head/wizard/marisa
-	name = "witch hat"
-	desc = "Strange-looking hat-wear. Makes you want to cast fireballs."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
-	icon_state = "/obj/item/clothing/head/wizard/marisa"
-	post_init_icon_state = "witch_hat"
-	greyscale_config = /datum/greyscale_config/witch_hat
-	greyscale_config_worn = /datum/greyscale_config/witch_hat/worn
-	greyscale_colors = "#343640#e0cab8#e0cab8"
-	flags_1 = IS_PLAYER_COLORABLE_1
-	dog_fashion = null
-	hair_mask = /datum/hair_mask/standard_hat_middle // GS13 EDIT Stops witch hats from clipping as bad
+	hair_mask = /datum/hair_mask/standard_hat_middle // Stops witch hats from clipping as bad with hair
 
 /obj/item/clothing/head/costume/strigihat
-	name = "starry witch hat"
-	desc = "A cute witch hat typically worn by an owl-like teshari."
-	icon = 'modular_skyrat/master_files/icons/donator/obj/clothing/hats.dmi'
-	worn_icon = 'modular_skyrat/master_files/icons/donator/mob/clothing/head.dmi'
-	worn_icon_teshari = 'modular_skyrat/master_files/icons/donator/mob/clothing/head_teshari.dmi'
-	icon_state = "strigihat"
-	hair_mask = /datum/hair_mask/standard_hat_middle //GS13 EDIT Makes hair not clip through witch hats
+	hair_mask = /datum/hair_mask/standard_hat_middle // Stops witch hats from clipping as bad with hair
