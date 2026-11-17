@@ -1648,6 +1648,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/command/minisat,
 /obj/effect/landmark/navigate_destination/autoname,
+/obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/iron,
 /area/station/ai/satellite/chamber)
 "aBN" = (
@@ -10280,7 +10281,6 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/command/bridge)
 "dyl" = (
-/obj/machinery/teleport/hub,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -10289,6 +10289,7 @@
 	dir = 8;
 	name = "blue line"
 	},
+/obj/machinery/computer/teleporter,
 /turf/open/floor/engine/hull/reinforced/air,
 /area/station/command/teleporter)
 "dyw" = (
@@ -11173,7 +11174,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
 	name = "scrubbers pipe"
 	},
-/obj/machinery/computer/teleporter,
+/obj/machinery/teleport/station,
 /turf/open/floor/engine/hull/reinforced/air,
 /area/station/command/teleporter)
 "dQd" = (
@@ -11562,6 +11563,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/command/teleporter,
 /obj/effect/mapping_helpers/airlock/access/any/command/gateway,
 /obj/effect/landmark/navigate_destination/autoname,
+/obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/iron/dark,
 /area/station/command/teleporter)
 "dWc" = (
@@ -12604,6 +12606,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/ai_upload,
 /obj/effect/landmark/navigate_destination/autoname,
+/obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/iron,
 /area/station/ai/satellite/service)
 "elZ" = (
@@ -15572,6 +15575,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/structure/cable,
 /obj/effect/landmark/navigate_destination/autoname,
+/obj/effect/mapping_helpers/airlock/access/all/command/eva,
 /turf/open/floor/iron/dark,
 /area/station/command/eva)
 "flA" = (
@@ -16173,6 +16177,9 @@
 "fuB" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
+	},
+/obj/structure/chair/office{
+	dir = 4
 	},
 /turf/open/floor/iron/dark/small,
 /area/station/command/heads_quarters/qm)
@@ -19588,13 +19595,14 @@
 	picked_color = "Burgundy"
 	},
 /obj/machinery/button/door/directional/north{
-	id = "snaxi_rescue"
+	id = "snaxi_rescue";
+	req_access = list("eva")
 	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
 /turf/open/floor/plating/snowed/smoothed/snaxi,
-/area/icemoon/surface/outdoors)
+/area/station/command/eva)
 "gBo" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/iron/edge{
@@ -20052,7 +20060,6 @@
 /obj/machinery/door/airlock/external{
 	name = "External Access"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/engineering/external,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
 /area/station/hallway/primary/port)
@@ -20236,7 +20243,8 @@
 /area/station/service/library)
 "gKk" = (
 /obj/machinery/button/door/directional/south{
-	id = "snaxi_rescue"
+	id = "snaxi_rescue";
+	req_access = list("eva")
 	},
 /obj/effect/turf_decal/stripes/corner,
 /obj/vehicle/ridden/atv/snowmobile{
@@ -20515,9 +20523,6 @@
 /area/station/hallway/primary/port)
 "gQk" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/left/directional/south{
-	req_access = list("medical")
-	},
 /obj/item/reagent_containers/cup/bottle/epinephrine{
 	pixel_x = 16;
 	pixel_y = 7
@@ -20533,6 +20538,9 @@
 	pixel_y = 7
 	},
 /obj/effect/turf_decal/siding/wideplating_new,
+/obj/machinery/door/window/right/directional/south{
+	req_access = list("medical")
+	},
 /turf/open/floor/iron/large,
 /area/station/medical/medbay/lobby)
 "gQn" = (
@@ -23114,6 +23122,7 @@
 	name = "Atmospherics Maintenance"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/science/maintenance,
+/obj/effect/mapping_helpers/airlock/access/any/engineering/atmos,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "hJl" = (
@@ -23938,6 +23947,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/tcoms,
 /obj/effect/landmark/navigate_destination/autoname,
+/obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/iron,
 /area/station/tcommsat/computer)
 "hWD" = (
@@ -33411,27 +33421,6 @@
 /turf/open/floor/iron/smooth,
 /area/station/medical/paramedic)
 "lah" = (
-/obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/folder/yellow{
-	pixel_x = -6;
-	pixel_y = 0
-	},
-/obj/item/folder/yellow{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/stamp/head/qm{
-	pixel_x = 8;
-	pixel_y = 9
-	},
-/obj/item/stamp/granted{
-	pixel_x = 8;
-	pixel_y = 3
-	},
-/obj/item/stamp/denied{
-	pixel_x = 8;
-	pixel_y = -2
-	},
 /obj/effect/turf_decal/siding/dark{
 	dir = 1
 	},
@@ -41458,9 +41447,6 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "nGa" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
 	},
@@ -42240,7 +42226,7 @@
 /obj/effect/turf_decal/siding/wideplating_new/light{
 	dir = 1
 	},
-/obj/machinery/door/window/right/directional/north{
+/obj/machinery/door/window/left/directional/north{
 	req_access = list("medical")
 	},
 /turf/open/floor/iron/large,
@@ -47317,7 +47303,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "pGI" = (
-/obj/machinery/computer/arcade,
+/obj/machinery/computer/arcade/minesweeper,
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
 /turf/open/floor/iron/grimy,
 /area/station/commons/fitness/recreation)
@@ -48760,7 +48746,7 @@
 /turf/open/floor/iron/edge,
 /area/station/commons/lounge)
 "qgJ" = (
-/obj/machinery/computer/arcade{
+/obj/machinery/computer/arcade/orion_trail{
 	dir = 4
 	},
 /obj/structure/light_construct/small,
@@ -50267,12 +50253,12 @@
 /obj/item/reagent_containers/cup/glass/mug/britcup{
 	desc = "Kingston's personal cup."
 	},
-/obj/machinery/door/window/right/directional/south{
-	req_access = list("medical")
-	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/turf_decal/tile/blue/full,
 /obj/effect/turf_decal/siding/wideplating_new,
+/obj/machinery/door/window/left/directional/south{
+	req_access = list("medical")
+	},
 /turf/open/floor/iron/large,
 /area/station/medical/medbay/lobby)
 "qIg" = (
@@ -50410,11 +50396,29 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "qJT" = (
-/obj/machinery/computer/security/qm{
-	dir = 8
-	},
 /obj/effect/turf_decal/siding/dark{
 	dir = 5
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/stamp/denied{
+	pixel_x = 8;
+	pixel_y = -2
+	},
+/obj/item/stamp/granted{
+	pixel_x = 8;
+	pixel_y = 3
+	},
+/obj/item/stamp/head/qm{
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/obj/item/folder/yellow{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/folder/yellow{
+	pixel_x = -6;
+	pixel_y = 0
 	},
 /turf/open/floor/iron/dark/herringbone,
 /area/station/command/heads_quarters/qm)
@@ -50924,6 +50928,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/command/minisat,
 /obj/effect/landmark/navigate_destination/autoname,
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/iron,
 /area/station/ai/upload/chamber)
 "qTN" = (
@@ -50940,6 +50945,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/station/maintenance/aft/greater)
+"qTX" = (
+/obj/machinery/computer/shuttle/arrivals/recall{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/station/hallway/secondary/exit/departure_lounge)
 "qTY" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
 	name = "scrubbers pipe"
@@ -62343,7 +62354,6 @@
 /obj/machinery/door/airlock/external{
 	name = "External Access"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/engineering/external,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
 /area/station/hallway/primary/port)
@@ -64857,6 +64867,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/command/ai_upload,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/tcoms,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/iron,
 /area/station/ai/upload/foyer)
 "vvZ" = (
@@ -71342,7 +71353,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/station/ai/satellite/service)
 "xDw" = (
-/obj/machinery/teleport/station,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -71351,6 +71361,7 @@
 	dir = 4;
 	name = "blue line"
 	},
+/obj/machinery/teleport/hub,
 /turf/open/floor/engine/hull/reinforced/air,
 /area/station/command/teleporter)
 "xDD" = (
@@ -72085,7 +72096,7 @@
 /obj/effect/turf_decal/siding/wideplating_new/light{
 	dir = 1
 	},
-/obj/machinery/door/window/left/directional/north{
+/obj/machinery/door/window/right/directional/north{
 	req_access = list("medical")
 	},
 /turf/open/floor/iron/large,
@@ -235954,7 +235965,7 @@ mSW
 mrn
 vNm
 vrb
-ncq
+qTX
 qPN
 hRu
 ncq
