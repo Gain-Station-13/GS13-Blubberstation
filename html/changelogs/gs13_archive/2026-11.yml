@@ -19,3 +19,11 @@
   evilew:
   - map: Expanded Xenoarch's foyer as to allow more comfortable ant farms, as well
       as adding a few items to make that easier
+2026-11-19:
+  Icepick200:
+  - bugfix: fixed the sloog bobbers and spinda (tall) ears
+  - rscadd: Adds 4 new sets of glasses to the loadout and clothesmate, three of them
+      being transparent
+  - rscadd: Added 4 new witch hats to the loadout
+  - qol: Made it so that witch hats will hide the top of your hair when wearing them,
+      to prevent clipping.

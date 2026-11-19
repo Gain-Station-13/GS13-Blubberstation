@@ -1,0 +1,10 @@
+{
+	"witch_fake_classic": [
+		{
+			"type": "icon_state",
+			"icon_state": "witch_fake_classic_base",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		}
+	]
+}
