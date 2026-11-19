@@ -1,0 +1,9 @@
+// Instructions for Sound Assets:
+// The following files must be placed in sound/effects/inflation/
+// 1. inflate.ogg: Soft air intake sound, similar to a balloon pump.
+// 2. creak.ogg: Strained rubber/latex creaking sound for high inflation stages.
+// 3. deflate.ogg: Air escaping sound, slightly lower pitch than inflation.
+
+// Sound Design Principles applied:
+// - Volume: 40-50% to remain non-intrusive.
+// - Variation: Random probability (prob) used in code to prevent auditory fatigue.
