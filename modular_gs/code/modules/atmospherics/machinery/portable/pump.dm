@@ -12,6 +12,8 @@
 	var/direction = PUMP_OUT
 	///Player configurable, sets what's the release pressure
 	var/target_pressure = ONE_ATMOSPHERE
+	/// Maximum KPa injected per second
+	var/pressure_transfer = 150
 
 	var/datum/inflation_pump_attachment/attachment
 
@@ -65,8 +67,7 @@
 	if (receiving.return_pressure() > target_pressure)
 		return
 
-	// let's say we want 500 KPa max per tick
-	var/pressure_to_move = min(500 * seconds_per_tick, target_pressure - receiving.return_pressure())
+	var/pressure_to_move = min(pressure_transfer * seconds_per_tick, target_pressure - receiving.return_pressure())
 	var/moles_to_remove = pressure_to_move * STOMACH_VOLUME / (R_IDEAL_GAS_EQUATION * sending.return_temperature())
 	var/datum/gas_mixture/removed = sending.remove(moles_to_remove)
 
@@ -178,7 +179,7 @@
 	data["targetPressure"] = round(target_pressure ? target_pressure : 0)
 	data["defaultPressure"] = round(PUMP_DEFAULT_PRESSURE)
 	data["minPressure"] = round(PUMP_MIN_PRESSURE)
-	data["maxPressure"] = round(PUMP_MAX_PRESSURE)
+	data["maxPressure"] = round(VOLUME_PUMP_MAX_OUTPUT_PRESSURE)	// clueless
 	data["hasHypernobCrystal"] = !!nob_crystal_inserted
 	data["reactionSuppressionEnabled"] = !!suppress_reactions
 
