@@ -2604,8 +2604,8 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/obj/structure/cable,
 /obj/machinery/light/small/directional/east,
+/obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/solars/starboard/aft)
 "aVk" = (
@@ -4088,9 +4088,13 @@
 "bwa" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/right/directional/west{
-	req_access = list("robotics")
+	name = "Robotics Desk"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/window/right/directional/east{
+	name = "Robotics Desk";
+	req_access = list("robotics")
+	},
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "bwg" = (
@@ -21621,7 +21625,9 @@
 /area/station/hallway/primary/central)
 "hgM" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/left/directional/north,
+/obj/machinery/door/window/left/directional/north{
+	req_access = list("pharmacy")
+	},
 /obj/machinery/door/window/left/directional/south,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
@@ -24107,6 +24113,7 @@
 /obj/structure/rack,
 /obj/item/clothing/mask/gas,
 /obj/item/multitool,
+/obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/solars/starboard/fore)
 "hZN" = (
@@ -50060,9 +50067,9 @@
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "qBH" = (
-/obj/structure/cable,
 /obj/machinery/power/terminal,
 /obj/machinery/light/small/directional/east,
+/obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/solars/port/fore)
 "qBN" = (
@@ -54798,6 +54805,10 @@
 	},
 /turf/open/floor/iron/textured,
 /area/station/science/robotics/mechbay)
+"sje" = (
+/obj/machinery/air_sensor/incinerator_tank,
+/turf/open/floor/engine,
+/area/station/maintenance/disposal/incinerator)
 "sjg" = (
 /obj/effect/landmark/event_spawn,
 /obj/effect/spawner/structure/window/reinforced,
@@ -65628,7 +65639,9 @@
 /turf/open/floor/iron,
 /area/station/service/library)
 "vJI" = (
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer/layer4,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/layer4{
+	dir = 1
+	},
 /turf/open/floor/catwalk_floor/iron_white,
 /area/station/science/ordnance/testlab)
 "vJK" = (
@@ -69608,6 +69621,9 @@
 	},
 /turf/open/floor/plating,
 /area/station/hallway/primary/port)
+"xdk" = (
+/turf/open/floor/catwalk_floor,
+/area/station/maintenance/solars/starboard/fore)
 "xdl" = (
 /obj/item/cigbutt{
 	pixel_x = 4;
@@ -183461,7 +183477,7 @@ tYi
 puk
 sHz
 nTL
-qFB
+sje
 nit
 vrl
 aFl
@@ -212246,7 +212262,7 @@ gTB
 aMC
 fOG
 aMC
-aMC
+rQo
 aMC
 awz
 otb
@@ -212502,7 +212518,7 @@ aBh
 cCe
 cCe
 cCe
-rQo
+aMC
 qBH
 fZz
 qMM
@@ -218258,7 +218274,7 @@ cju
 paj
 rIA
 sLm
-fiu
+cJs
 cJs
 lrB
 sLm
@@ -218516,7 +218532,7 @@ paj
 rIA
 sLm
 yia
-cJs
+fiu
 fiu
 sLm
 aGM
@@ -244603,7 +244619,7 @@ cBf
 uyP
 blM
 uyP
-uyP
+xdk
 uyP
 jiE
 otb
@@ -257566,7 +257582,7 @@ otb
 otb
 jix
 gaz
-gaz
+fNs
 gaz
 ogr
 gaz
@@ -257824,7 +257840,7 @@ bdI
 igu
 cYD
 aUB
-fNs
+gaz
 vGi
 vGi
 vGi
