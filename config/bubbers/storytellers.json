@@ -33,7 +33,7 @@
 		}],
 		"tag_multipliers":[{
 			"combat": 0.6,
-			"destruction": 0.6,
+			"destructive": 0.6,
 			"chaotic": 0.6
 		}],
 		"storyteller_type": 0
@@ -42,6 +42,14 @@
 		"name": "Default Andy (Normal Event/Antag Rolls)",
 		"desc": "This is the default Storyteller, and the comparison point for every other Storyteller. It's a midpoint between the other event storytellers. Best for an average, varied experience.",
 		"welcome_text": "If I chopped you up in a meat grinder...",
+		"event_repetition_multiplier": 0.6,
+		"starting_point_multipliers":[{
+			"Mundane": 1,
+			"Moderate": 1,
+			"Major": 1,
+			"Crewset": 1,
+			"Ghostset": 1
+		}],
 		"track_data":[{
 			"Mundane": 1200,
 			"Moderate": 1800,
@@ -49,9 +57,17 @@
 			"Crewset": 2400,
 			"Ghostset": 6000
 		}],
+		"roundstart_points_variance": 30,
 		"tag_multipliers":[{
 			"chaotic": 0.7
 		}],
+		"cost_variance": 30,
+		"guarantees_roundstart_crewset": 1,
+		"disable_distribution": 0,
+		"votable": 1,
+		"population_min": 0,
+		"population_max": 0,
+		"antag_divisor": 8,
 		"storyteller_type": 0
 	},
 	"bomb": {
