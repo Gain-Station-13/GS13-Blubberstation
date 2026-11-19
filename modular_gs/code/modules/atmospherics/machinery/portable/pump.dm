@@ -33,9 +33,9 @@
 /obj/machinery/portable_atmospherics/inflation_pump/update_overlays()
 	. = ..()
 	if(holding)
-		. += "[icon_state]-open"
+		. += "compressor-open"
 	if(connected_port)
-		. += "[icon_state]-connector"
+		. += "compressor-connector"
 
 /obj/machinery/portable_atmospherics/inflation_pump/process_atmos(seconds_per_tick)
 	if(take_atmos_damage())

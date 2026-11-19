@@ -50,7 +50,10 @@ GLOBAL_LIST_EMPTY_TYPED(helplessness_mechanics, /datum/helplessness)
 
 	var/effective_fatness = fatty.calculate_effective_fatness()
 
-	if (forced_weight && effective_fatness >= forced_weight)
+	/// "weight" because we convert inflation stage to approx bfi value
+	var/inflation_weight = get_fatness_stage(fatty.inflation_stage)
+
+	if (forced_weight && (effective_fatness >= forced_weight || inflation_weight >= forced_weight))	// the inflation one should never happen. but.
 		var/area/current_area = get_area(fatty)
 		if (!is_type_in_list(current_area, SIZE_WHITELISTED_AREAS))
 			return apply_helplessness(fatty, trigger_weight, effective_fatness)
@@ -59,7 +62,7 @@ GLOBAL_LIST_EMPTY_TYPED(helplessness_mechanics, /datum/helplessness)
 		disable_helplessness(fatty)
 		return FALSE
 	
-	if (effective_fatness < trigger_weight)
+	if (effective_fatness < trigger_weight && inflation_weight < trigger_weight)
 		disable_helplessness(fatty)
 		return FALSE
 
