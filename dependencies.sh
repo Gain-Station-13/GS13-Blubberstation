@@ -5,9 +5,9 @@
 
 # byond version. Also must be updated in .tgs.yml
 export BYOND_MAJOR=516
-# GS13 EDIT: minimum compiler version is 1687
+# GS13 EDIT: minimum compiler version is 1689
 # export BYOND_MINOR=1685
-export BYOND_MINOR=1687
+export BYOND_MINOR=1689
 # GS13 END EDIT
 
 #rust_g git tag
