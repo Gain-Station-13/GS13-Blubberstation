@@ -250,8 +250,6 @@
 	if(spatial_grid_key)
 		SSspatial_grid.force_remove_from_grid(src)
 
-	LAZYNULL(client_mobs_in_contents)
-
 	. = ..()
 
 	for(var/movable_content in contents)
