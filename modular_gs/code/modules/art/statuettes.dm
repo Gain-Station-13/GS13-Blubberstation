@@ -1,3 +1,5 @@
+// Code ported from Maplestation! (awesome and cool)
+
 //Copied mostly from statues.dm with edits to apply for an item
 /obj/item/statue/custom
 	name = "custom statue"
