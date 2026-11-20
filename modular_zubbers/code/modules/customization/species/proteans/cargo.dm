@@ -1,9 +1,13 @@
 /datum/supply_pack/science/protean_organs
 	name = "Protean Organs"
 	desc = "Contains three sets of organs for Protean crewmembers."
-	contains = list(/obj/item/organ/stomach/protean = 3, /obj/item/organ/heart/protean = 3) //GS13 EDIT, changes the contents of the crate from two to three of each.
+	contains = list(/obj/item/organ/stomach/protean = 3, /obj/item/organ/heart/protean = 3)
 	crate_name = "\improper Protean organs"
-	crate_type = /obj/structure/closet/crate //GS13 EDIT, Changes the crate type to a normal crate that can be opened by anyone, instead of a locked crate.
+	/* GS13 EDIT START
+	access = ACCESS_ROBOTICS
+	access_view = ACCESS_ROBOTICS
+	*/ GS13 EDIT END
+	crate_type = /obj/structure/closet/crate/secure/science/robo
 
 /datum/supply_pack/science/protean_vessel
 	name = "Protean Vessel"
@@ -11,4 +15,8 @@
 	cost = CARGO_CRATE_VALUE * 5 // Not expensive but not the cheapest
 	contains = list(/mob/living/carbon/human/species/protean/empty = 1)
 	crate_name = "\improper Protean vessel"
-	crate_type = /obj/structure/closet/crate //GS13 EDIT, Changes the crate type to a normal crate that can be opened by anyone, instead of a locked crate.
+	/* GS13 EDIT START
+	access = ACCESS_ROBOTICS
+	access_view = ACCESS_ROBOTICS
+	*/ GS13 EDIT END
+	crate_type = /obj/structure/closet/crate/secure/science/robo
