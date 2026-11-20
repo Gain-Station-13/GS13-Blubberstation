@@ -7627,6 +7627,7 @@
 #include "modular_gs\code\modules\mob\living\carbon\human\human_defines.dm"
 #include "modular_gs\code\modules\mob\living\carbon\human\stomp_helpless.dm"
 #include "modular_gs\code\modules\mob\living\carbon\human\species_types\mootant.dm"
+#include "modular_gs\code\modules\mob\living\silicon\ai.dm"
 #include "modular_gs\code\modules\mod\mod_clothes.dm"
 #include "modular_gs\code\modules\mod\mod_exoskeleton.dm"
 #include "modular_gs\code\modules\mod\modules\modules_fat.dm"
