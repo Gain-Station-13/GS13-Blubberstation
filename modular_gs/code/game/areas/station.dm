@@ -60,3 +60,17 @@
 	name = "Third Abandoned shack"
 	icon = 'modular_gs/icons/turf/areas.dmi'
 	icon_state = "abandoned_shack"
+
+/area/station/maintenance/snow_shelter
+	name = "Primary Snow Shelter"
+	icon = 'modular_gs/icons/turf/areas.dmi'
+	icon_state = "snow_shelter"
+
+/area/station/maintenance/snow_shelter/two
+	name = "Secondary Snow Shelter"
+
+/area/station/maintenance/snow_shelter/three
+	name = "Tertiary Snow Shelter"
+
+/area/station/maintenance/snow_shelter/four
+	name = "Quartenary Snow Shelter"
