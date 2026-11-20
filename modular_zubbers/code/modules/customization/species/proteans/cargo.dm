@@ -1,6 +1,6 @@
 /datum/supply_pack/science/protean_organs
 	name = "Protean Organs"
-	desc = "Contains three sets of organs for Protean crewmembers."
+	desc = "Contains three sets of organs for Protean crewmembers." //GS13 EDIT, Made it 3 instead of 2.
 	contains = list(/obj/item/organ/stomach/protean = 3, /obj/item/organ/heart/protean = 3)
 	crate_name = "\improper Protean organs"
 	/* GS13 EDIT START
