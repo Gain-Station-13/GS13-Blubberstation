@@ -5,7 +5,7 @@ version: 1
 # Must be interpreted as a string, keep quoted
 # GS13 EDIT: we have too many types (AND VARS!!!), so we have to be on 516.1689 or above
 # byond: "516.1685"
-byond: "516.1689"
+byond: "516.1688"
 # GS13 END EDIT
 # Folders to create in "<instance_path>/Configuration/GameStaticFiles/"
 static_files:
