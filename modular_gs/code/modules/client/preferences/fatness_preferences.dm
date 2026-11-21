@@ -148,21 +148,21 @@
 	maximum = INFINITY
 
 /datum/preference/numeric/helplessness/glutton_fullness_before_burst
-	category = GLUTTON_BURSTING_PREFRENCES
+	category = BURSTING_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "glutton_fullness_before_burst"
 	minimum = 0
 	maximum = INFINITY
 
 /datum/preference/numeric/helplessness/glutton_fatness_before_burst
-	category = GLUTTON_BURSTING_PREFRENCES
+	category = BURSTING_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "glutton_fatness_before_burst"
 	minimum = 0
 	maximum = INFINITY
 
 /datum/preference/choiced/glutton_bursting_type
-	category = GLUTTON_BURSTING_PREFRENCES
+	category = BURSTING_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "glutton_bursting_type"
 
@@ -183,7 +183,7 @@
 	return
 
 /datum/preference/toggle/glutton_see_bursting
-	category = GLUTTON_BURSTING_PREFRENCES
+	category = BURSTING_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "glutton_see_bursting"
 	default_value = FALSE
@@ -192,7 +192,7 @@
 	return
 
 /datum/preference/toggle/glutton_leave_gibs
-	category = GLUTTON_BURSTING_PREFRENCES
+	category = BURSTING_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "glutton_leave_gibs"
 	default_value = FALSE
@@ -201,7 +201,7 @@
 	return
 
 /datum/preference/toggle/glutton_enable_messages
-	category = GLUTTON_BURSTING_PREFRENCES
+	category = BURSTING_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "glutton_enable_messages"
 	default_value = FALSE
@@ -210,7 +210,7 @@
 	return
 
 /datum/preference/toggle/glutton_enable_sounds
-	category = GLUTTON_BURSTING_PREFRENCES
+	category = BURSTING_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "glutton_enable_sounds"
 	default_value = FALSE

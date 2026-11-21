@@ -687,7 +687,7 @@
 	. = "[genital_type]_[floor(genital_size)]"
 	if(uses_skintones)
 		. += "_s"
-
+/* GS13 EDIT START - we have a better one
 /obj/item/organ/genital/belly/set_size(size)
 	var/old_size = genital_size
 	. = ..()
@@ -695,7 +695,7 @@
 		to_chat(owner, span_warning("Your guts [pick("swell up to", "gurgle into", "expand into", "plump up into", "grow eagerly into", "fatten up into", "distend into")] a larger midsection."))
 	else
 		to_chat(owner, span_warning("Your guts [pick("shrink down to", "decrease into", "wobble down into", "diminish into", "deflate into", "contracts into")] a smaller midsection."))
-
+GS13 EDIT END */
 /obj/item/organ/genital/belly/build_from_dna(datum/dna/DNA, associated_key)
 	uses_skin_color = DNA.features["belly_uses_skincolor"]
 	set_size(DNA.features["belly_size"])
