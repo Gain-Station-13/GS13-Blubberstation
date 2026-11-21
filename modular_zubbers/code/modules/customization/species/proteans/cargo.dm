@@ -1,12 +1,12 @@
 /datum/supply_pack/science/protean_organs
 	name = "Protean Organs"
 	desc = "Contains three sets of organs for Protean crewmembers." //GS13 EDIT, Made it 3 instead of 2.
-	contains = list(/obj/item/organ/stomach/protean = 3, /obj/item/organ/heart/protean = 3)
+	contains = list(/obj/item/organ/stomach/protean = 3, /obj/item/organ/heart/protean = 3) //GS13 EDIT, Made it 3 instead of 2.
 	crate_name = "\improper Protean organs"
 /* GS13 EDIT START
 	access = ACCESS_ROBOTICS
 	access_view = ACCESS_ROBOTICS
-*/ GS13 EDIT END
+GS13 EDIT END */
 	crate_type = /obj/structure/closet/crate/secure/science/robo
 
 /datum/supply_pack/science/protean_vessel
@@ -18,5 +18,5 @@
 /* GS13 EDIT START
 	access = ACCESS_ROBOTICS
 	access_view = ACCESS_ROBOTICS
-*/ GS13 EDIT END
+GS13 EDIT END */
 	crate_type = /obj/structure/closet/crate/secure/science/robo
