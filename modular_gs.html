@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="dmdoc.css"><title>modular_gs/readme.md - /tg/ Station 13</title></head><body><header><a href="index.html">/tg/ Station 13</a> - <a href="index.html#modules">Modules</a> - <a href="index.html#types">Types</a></header><main><h1>modular_gs/readme.md <a href="https://github.com/Gain-Station-13/GS13-Blubberstation/blob/7c2385453c30f925f06184bbd99296151d4c0150/modular_gs/readme.md"><img src="git.png" width="16" height="16" title="modular_gs/readme.md"></a></h1><table class="summary" cellspacing="0"><tr><td colspan="2"><p><strong>The modularization handbook - Gain Station style</strong></p>
+<p><strong>Failure to follow this guide will result in you being asked to change your PR.</strong></p>
+<h1 id="introduction">Introduction</h1>
+<p>Given that we are in similar situation to our upstream, bubberstation, for most intents and purposes their modularization guide (located in <code>modular_zubbers/readme.md</code>) is to be followed, unless something is specified in this document.</p>
+<h1 id="comments"><code>GS13 EDIT</code> comments</h1>
+<p>Whenever you have to modify content outside of the <code>modular_gs/</code> folder, you are required to mark your changes with <code>GS13 EDIT</code> comments (exactly as specified, all caps). Depending on how you change your code, you will make them single or multi line.</p>
+<h3 id="single-line-edits">Single line edits</h3>
+<p>If your code is modifying only a single (or in general, small amounts of) line of code, you are only required to append a <code>GS13 EDIT</code> comment at the end, additionally describing why the change was made. Additionaly you may (but are not always be required to) add the original value of that line of code. An example is listed below:</p>
+<pre><code class="language-diff">- something = 5
++ something = 10	// GS13 EDIT, doubles the value, original: 5
+</code></pre>
+<p>Whether you separate the reason and original value via commas <code>,</code>, hyphens <code>-</code> or whatever else is up to you. We only require them to be present.</p>
+<h3 id="multi-line-edits">Multi line edits</h3>
+<p>If you are required to comment out, change or add a large amounts of code to non modular folders, you should use multi line <code>GS13 EDIT</code> comments. These take the following format:</p>
+<ul>
+<li>use <code>GS13 EDIT START</code> to mark the beginning of your change. List the reason for the change here.</li>
+<li>change the code under it</li>
+<li>use <code>GS13 EDIT END</code> to mark the end of your changes</li>
+</ul>
+<p>If possible, try to keep the original code commented out. However, this may not always be possible, in which case it's fine to change it without preserving it, as long as the <code>GS13 EDIT</code> comments are present. Additionaly, if you are adding large amounts of code to non modular files, consider instead creating a new file within the <code>modular_gs/</code> folder holding a proc which will do the things you want (for example, the <code>handle_gaining_weight()</code> proc in <code>modular_gs/code/modules/surgery/organs/internal/stomach/_stomach.dm</code>, called from <code>code/modules/surgery/organs/internal/stomach/_stomach.dm:200</code>).</p>
+<p>For example:</p>
+<!-- yes, we use C++ here because the syntax is the most similar to DM -->
+<pre><code class="language-C++">// GS13 EDIT START - stop message spam with nutripump turbo. Had to move it one tab to the right
+if(send_messages)
+	var/feed_text = &quot;You feel less hungry...&quot;
+	if(owner.nutrition &gt;= NUTRITION_LEVEL_FED)
+		feed_text = &quot;You feel very full...&quot;
+	to_chat(owner, span_notice(feed_text))
+// GS13 EDIT END
+</code></pre>
+<pre><code class="language-C++">/* GS13 EDIT START reworks lipoplasty for our fat system
+if(!HAS_TRAIT_FROM(limb.owner, TRAIT_FAT, OBESITY) || limb.owner.nutrition &lt; NUTRITION_LEVEL_WELL_FED)
+	return FALSE
+*/
+if(limb.owner.fatness_real &lt;= FATNESS_LEVEL_FATTER || HAS_TRAIT(limb.owner, TRAIT_WEIGHT_LOSS_IMMUNE))
+	return FALSE
+// GS13 EDIT END
+</code></pre>
+<pre><code class="language-C++">/* GS13 EDIT START getting rid of quadborgs
+&quot;K1-T7Y&quot; = list(
+	SKIN_ICON_STATE = &quot;jani&quot;,
+	SKIN_ICON = CYBORG_ICON_JANI_KITTYBORG,
+	SKIN_FEATURES = list(TRAIT_R_UNIQUEWRECK, TRAIT_R_WIDE, TRAIT_R_SMALL),
+),
+&quot;Myomer&quot; = list(
+	SKIN_ICON_STATE = &quot;myomer-jani&quot;,
+	SKIN_ICON = CYBORG_ICON_JANI_MYOMER,
+	SKIN_FEATURES = list(TRAIT_R_UNIQUEPANEL, TRAIT_R_WIDE, TRAIT_R_HAS_UNIQUE_RESTING_LIGHTS),
+	MYOMER_HAT_OFFSET
+),
+GS13 EDIT END */
+</code></pre></td></tr></table></main><footer>tgstation.dme <a href="https://github.com/Gain-Station-13/GS13-Blubberstation/tree/7c2385453c30f925f06184bbd99296151d4c0150">7c23854</a> (master) — <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.11.0</a></footer></body></html>
