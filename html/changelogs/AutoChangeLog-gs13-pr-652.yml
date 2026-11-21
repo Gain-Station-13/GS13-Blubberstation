@@ -1,4 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "Gives the AI a button which allows it to see certain weight related statistics of crewmembers aboard"

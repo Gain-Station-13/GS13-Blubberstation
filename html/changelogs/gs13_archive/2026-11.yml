@@ -27,3 +27,9 @@
   - rscadd: Added 4 new witch hats to the loadout
   - qol: Made it so that witch hats will hide the top of your hair when wearing them,
       to prevent clipping.
+2026-11-21:
+  Icepick200:
+  - rscadd: Added statuettes, crafted with 2 plastic via a modeling block.
+  Swan:
+  - rscadd: Gives the AI a button which allows it to see certain weight related statistics
+      of crewmembers aboard
