@@ -239,7 +239,9 @@
 							/area/lavaland/underground/xenoarch/candyland,
 							/area/lavaland/underground/xenoarch/caloriteresearch,
 							/area/lavaland/underground/xenoarch/calorite_temple,
-							/area/lavaland/underground/xenoarch/donut_factory
+							/area/lavaland/underground/xenoarch/donut_factory,
+							/area/snaxi/underground,
+							/area/snaxi/surface,
 							//gs13 edit end
 						)
 

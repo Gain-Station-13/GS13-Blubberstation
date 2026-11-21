@@ -11,6 +11,8 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3)
 	/// Component responsible for scale behavior
 	var/datum/component/weight_scale/scale_component
+	/// value which the scale will display as its last reading before someone steps on it
+	var/preset_last_reading = null
 
 /obj/structure/scale/wrench_act_secondary(mob/living/user, obj/item/tool)
 	..()
@@ -25,6 +27,8 @@
 /obj/structure/scale/Initialize(mapload)
 	. = ..()
 	scale_component = AddComponent(/datum/component/weight_scale)
+	if (preset_last_reading)
+		scale_component.last_reading = preset_last_reading
 
 /obj/structure/scale/Destroy(force)
 	if(scale_component)
