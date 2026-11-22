@@ -1,0 +1,5 @@
+author: "bobatochaps"
+delete-after: True
+changes:
+  - rscadd: "Added the dresses from Paradise to GS13"
+  - balance: "Rebalanced the protean organ and vessel crates to no longer require science to open them"
