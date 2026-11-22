@@ -33,3 +33,8 @@
   Swan:
   - rscadd: Gives the AI a button which allows it to see certain weight related statistics
       of crewmembers aboard
+2026-11-22:
+  bobatochaps:
+  - rscadd: Added the dresses from Paradise to GS13
+  - balance: Rebalanced the protean organ and vessel crates to no longer require science
+      to open them
