@@ -24009,7 +24009,7 @@
 /turf/open/misc/asteroid/snow/snaxi,
 /area/icemoon/surface/outdoors)
 "hOD" = (
-/obj/machinery/atmospherics/components/trinary/filter{
+/obj/machinery/atmospherics/components/trinary/filter/critical{
 	filter_type = list(/datum/gas/nitrogen)
 	},
 /turf/open/floor/engine,
