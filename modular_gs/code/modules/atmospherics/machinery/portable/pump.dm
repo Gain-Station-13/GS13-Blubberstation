@@ -58,8 +58,8 @@
 	var/datum/gas_mixture/receiving
 
 	if (holding) //Work with tank when inserted, otherwise - with area
-		sending = (direction == PUMP_IN ? holding.return_air() : air_contents)
-		receiving = (direction == PUMP_IN ? air_contents : holding.return_air())
+		sending = (direction == PUMP_IN ? holding.return_air() : inflatee.air)
+		receiving = (direction == PUMP_IN ? inflatee.air : holding.return_air())
 	else
 		sending = (direction == PUMP_IN ? inflatee.air : air_contents)
 		receiving = (direction == PUMP_IN ? air_contents : inflatee.air)
@@ -75,7 +75,6 @@
 		return
 
 	receiving.merge(removed)
-	// sending.pump_gas_to(receiving, target_pressure)
 
 	return ..()
 
@@ -113,10 +112,7 @@
 		return
 
 	usr.visible_message(span_warning("[usr] attaches [src] to [target]."), span_notice("You attach [src] to [target]."))
-	// var/datum/reagents/container = get_reagents()
-	// log_combat(usr, target, "attached", src, "containing: ([container.get_reagent_log_string()])")
 	add_fingerprint(usr)
-	// target.throw_alert(ALERT_IV_CONNECTED, alert_type)
 
 	qdel(attachment)
 	attachment = new(src, target)
@@ -125,13 +121,13 @@
 	START_PROCESSING(SSmachines, src)
 	update_appearance(UPDATE_ICON)
 
-	// SEND_SIGNAL(src, COMSIG_IV_ATTACH, target)
-
 /obj/machinery/portable_atmospherics/inflation_pump/proc/detach_pump()
 	if(attachment)
 		visible_message(span_notice("[attachment.attached_to] is detached from [src]."))
 	QDEL_NULL(attachment)
 	STOP_PROCESSING(SSmachines, src)
+	on = FALSE
+	update_appearance()
 
 /obj/machinery/portable_atmospherics/inflation_pump/attack_hand_secondary(mob/user, list/modifiers)
 	..()
@@ -198,6 +194,9 @@
 		return
 	switch(action)
 		if("power")
+			if (isnull(attachment))
+				balloon_alert(usr, "Nobody attached to the compressor!")
+				return
 			on = !on
 			if(on)
 				SSair.start_processing_machine(src)
@@ -227,13 +226,13 @@
 				pressure = PUMP_MIN_PRESSURE
 				. = TRUE
 			else if(pressure == "max")
-				pressure = PUMP_MAX_PRESSURE
+				pressure = VOLUME_PUMP_MAX_OUTPUT_PRESSURE
 				. = TRUE
 			else if(text2num(pressure) != null)
 				pressure = text2num(pressure)
 				. = TRUE
 			if(.)
-				target_pressure = clamp(pressure, PUMP_MIN_PRESSURE, PUMP_MAX_PRESSURE)
+				target_pressure = clamp(pressure, PUMP_MIN_PRESSURE, VOLUME_PUMP_MAX_OUTPUT_PRESSURE)
 				investigate_log("was set to [target_pressure] kPa by [key_name(usr)].", INVESTIGATE_ATMOS)
 		if("eject")
 			if(holding)

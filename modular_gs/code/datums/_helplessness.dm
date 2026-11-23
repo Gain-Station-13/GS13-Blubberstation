@@ -51,7 +51,7 @@ GLOBAL_LIST_EMPTY_TYPED(helplessness_mechanics, /datum/helplessness)
 	var/effective_fatness = fatty.calculate_effective_fatness()
 
 	/// "weight" because we convert inflation stage to approx bfi value
-	var/inflation_weight = get_fatness_stage(fatty.inflation_stage)
+	var/inflation_weight = get_inflation_weight(fatty)
 
 	if (forced_weight && (effective_fatness >= forced_weight || inflation_weight >= forced_weight))	// the inflation one should never happen. but.
 		var/area/current_area = get_area(fatty)
@@ -113,6 +113,28 @@ GLOBAL_LIST_EMPTY_TYPED(helplessness_mechanics, /datum/helplessness)
 		trigger_weight = default_trigger_weight
 
 	return trigger_weight
+
+#define WEIGHT_PER_INFLATION_STAGE 1000
+
+/**
+ * Calculates the "weight" we have for inflation. This is done to have some way of converting inflation 
+ * into BFI numbers we can work with.
+ * 
+ * `fatty` is the mob we want to check
+ * 
+ * returns the BFI value corresponding to our inflation
+ */
+/datum/helplessness/proc/get_inflation_weight(mob/living/carbon/human/fatty)
+	PROTECTED_PROC(TRUE)
+
+	var/inflation_weight = get_fatness_stage(fatty.inflation_stage)
+
+	if (fatty.inflation_stage > 9)
+		inflation_weight += WEIGHT_PER_INFLATION_STAGE * (fatty.inflation_stage - 9)
+	
+	return inflation_weight
+
+#undef WEIGHT_PER_INFLATION_STAGE
 
 /**
  * Applies helplessness trait(s). Basically, if you're here, means that you can apply the trait,
