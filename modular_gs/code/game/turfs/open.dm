@@ -122,6 +122,9 @@
 /turf/open/floor/plating/snowed/smoothed/standard_air
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 
+/turf/open/floor/iron/dark/textured_large/snaxi
+	initial_gas_mix = SNAXI_DEFAULT_ATMOS
+
 /turf/open/lava/plasma/snaxi
 	initial_gas_mix = SNAXI_DEFAULT_ATMOS
 	baseturfs = /turf/open/lava/plasma/snaxi

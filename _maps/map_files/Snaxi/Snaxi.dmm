@@ -22933,7 +22933,10 @@
 /area/station/hallway/primary/fore)
 "htj" = (
 /obj/structure/transport/linear/public,
-/obj/machinery/elevator_control_panel/directional/north,
+/obj/machinery/elevator_control_panel/directional/north{
+	linked_elevator_id = "mining_elevator";
+	preset_destination_names = list("2" = "Floor -2", "3"="Floor -1","4"="Floor 0")
+	},
 /turf/open/floor/plating/elevatorshaft,
 /area/station/maintenance/snow_shelter)
 "htn" = (
@@ -51021,7 +51024,7 @@
 /area/station/engineering/atmos/storage)
 "qxA" = (
 /obj/structure/fluff/bus/dense,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/dark/textured_large/snaxi,
 /area/icemoon/surface/outdoors)
 "qxO" = (
 /obj/machinery/computer/prisoner/management{
@@ -74025,6 +74028,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/wood/large,
 /area/station/cargo/blacksmith)
 "xRL" = (
@@ -74956,7 +74960,7 @@
 "yfy" = (
 /obj/structure/transport/linear/public,
 /obj/machinery/elevator_control_panel/directional/east{
-	preset_destination_names = list("2"="Floor -1","3"="Floor 0");
+	preset_destination_names = list("3"="Floor -1","4"="Floor 0");
 	linked_elevator_id = "medical_elevator"
 	},
 /turf/open/floor/plating/elevatorshaft,
