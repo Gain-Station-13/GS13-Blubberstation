@@ -195,7 +195,7 @@
 	switch(action)
 		if("power")
 			if (isnull(attachment))
-				balloon_alert(usr, "Nobody attached to the compressor!")
+				balloon_alert(usr, "nobody attached to the compressor!")
 				return
 			on = !on
 			if(on)
