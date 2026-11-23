@@ -32721,7 +32721,6 @@
 /obj/item/reagent_containers/condiment/sugar,
 /obj/effect/turf_decal/bot_white,
 /obj/structure/closet/mini_fridge,
-/obj/structure/closet/secure_closet/freezer/fridge/all_access,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/station/command/bridge)
 "kfV" = (
@@ -62168,7 +62167,6 @@
 	name = "Chapel Hall"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/service/chapel/monastery)
 "twD" = (
@@ -65987,9 +65985,6 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/station/hallway/primary/aft)
-"uGW" = (
-/turf/open/openspace,
-/area/icemoon/surface/outdoors)
 "uGY" = (
 /obj/effect/turf_decal/siding/white{
 	color = "#8b8b8b";
@@ -255673,9 +255668,9 @@ aGM
 nhp
 nhp
 rGj
-uGW
-uGW
-uGW
+uTU
+uTU
+uTU
 lJL
 nhp
 nhp
@@ -255930,9 +255925,9 @@ aGM
 nhp
 nhp
 rGj
-uGW
-uGW
-uGW
+uTU
+uTU
+uTU
 lJL
 nhp
 nhp
@@ -256187,9 +256182,9 @@ aGM
 nhp
 nhp
 rGj
-uGW
-uGW
-uGW
+uTU
+uTU
+uTU
 lJL
 nhp
 nhp
