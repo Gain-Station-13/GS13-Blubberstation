@@ -28,7 +28,6 @@
 			do_ass_slap_animation(target)
 			if(target.fullness >= FULLNESS_LEVEL_BLOATED)
 				target.emote(pick("belch", "burp", "bubelch"))
-			else
 			playsound(target.loc, 'sound/items/weapons/slap.ogg', 50, TRUE, GUT_SLAP_EXTRA_RANGE)
 			visible_message("<span class='danger'>[src] slaps [target] right on the gut!</span>",\
 				"<span class='notice'>You slap [target] on the gut.</span>",\
