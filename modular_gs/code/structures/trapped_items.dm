@@ -47,7 +47,10 @@
 		fat_to_add = FATNESS_LEVEL_BLOB // If someone is a blob, just add the amount of fatness needed to be a blob in the first place.
 	fat_to_add += 25 // a little buffer so they don't instantly burn it off.
 	looker.adjust_fatness(fat_to_add, FATTENING_TYPE_MAGIC, TRUE)
-	to_chat(looker, span_warning("You take a look in the mirror. Have you been getting fatter lately?"))
+	if(looker.fatness > FATNESS_LEVEL_OBESE)
+		to_chat(looker, span_warning("You take a look in the mirror. Have you been getting fatter lately?"))
+	else
+		to_chat(looker, span_notice("You take a look in the mirror. Have you been getting fatter lately?"))
 	playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 
 	// mirror cooldown section

@@ -1,4 +1,4 @@
-// Calorite gas mask, makes you fatter when you wear it, technically can count as trapped?
+// Calorite gas mask, makes you fatter when you wear it.
 
 /obj/item/clothing/mask/gas/fattening
 	name = "drone mask"
@@ -7,23 +7,23 @@
 	worn_icon = 'modular_gs/icons/mob/mask.dmi'
 	icon_state = "fat_mask"
 
-	var/weight_time = 60 SECONDS
-
 /obj/item/clothing/mask/gas/fattening/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_MASK)
-		weight_add()
+		START_PROCESSING(SSobj, src)
 
-/obj/item/clothing/mask/gas/fattening/proc/weight_add()
+/obj/item/clothing/mask/gas/fattening/process(seconds_per_tick)
 	if(QDELETED(src))
+		STOP_PROCESSING(SSobj, src)
 		return
 	var/mob/living/carbon/wearer = loc
 	if(!istype(wearer))
+		STOP_PROCESSING(SSobj, src)
 		return
 	if(wearer.get_item_by_slot(ITEM_SLOT_MASK) != src)
+		STOP_PROCESSING(SSobj, src)
 		return
-	wearer.adjust_fatness(2, FATTENING_TYPE_ITEM)
-	addtimer(CALLBACK(src, PROC_REF(weight_add)), weight_time)
+	wearer.adjust_fatness(2 * (seconds_per_tick), FATTENING_TYPE_ITEM)
 
 /datum/crafting_recipe/fatgasmask
 	name = "Drone Mask"
