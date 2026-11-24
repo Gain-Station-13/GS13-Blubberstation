@@ -6,6 +6,7 @@
 	icon = 'modular_gs/icons/obj/clothing/fat_mask.dmi'
 	worn_icon = 'modular_gs/icons/mob/mask.dmi'
 	icon_state = "fat_mask"
+	custom_materials = list(/datum/material/calorite = 1)
 
 /obj/item/clothing/mask/gas/fattening/equipped(mob/user, slot)
 	. = ..()
