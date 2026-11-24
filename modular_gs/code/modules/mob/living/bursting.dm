@@ -144,15 +144,15 @@
 		else
 			return BURSTING_PREF_DISABLED
 
-/** 
+/**
  * Handles bursting for either eating too much or having too high of a BFI. It checks
- * for preferences, handles bursting capacity, sound and messages. Also responsible for 
- * triggering the bursting prompt. Returns a bool for whether or not the character 
+ * for preferences, handles bursting capacity, sound and messages. Also responsible for
+ * triggering the bursting prompt. Returns a bool for whether or not the character
  * burst or is in the process of doing so.
- * 
+ *
  * The proc on carbon is for compatibility reasons; the real magic happens in the one
  * defined a few lines below on `/mob/living/carbon/human`.
- * 
+ *
  * Returns TRUE if the character has burst or is in the process of bursting
  * Returns FALSE otherwise
  */
@@ -271,18 +271,18 @@
 	addtimer(TRAIT_CALLBACK_REMOVE(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT), BURSTING_DELAY_BURST_SECONDS SECONDS)
 	SEND_SIGNAL(src, COMSIG_LIVING_BURSTING_TRANSFORM_SIGNAL) //send signal that the bursting code is doing transforms, might be handy
 	visible_message(span_warning("[src] begins to swell as they're overwhelmed by their [burst_type ? "fullness" : "fatness"]!"), span_warning("Your body begins to swell as your [burst_type ? "fullness" : "fatness"] overwhelms you!"))
-	addtimer(CALLBACK(src, PROC_REF(burst_glutton)), BURSTING_ANIMATE_TIME SECONDS) //Bursts the character
 	var/matrix/scale_transform = matrix()
 	scale_transform.Scale(
 		abs(BURSTING_ANIMATE_SCALE_X * cos(lying_angle) + BURSTING_ANIMATE_SCALE_Y * sin(lying_angle)),
 		abs(BURSTING_ANIMATE_SCALE_Y * cos(lying_angle) + BURSTING_ANIMATE_SCALE_X * sin(lying_angle))
 	)
+	addtimer(CALLBACK(src, PROC_REF(burst_glutton), scale_transform), BURSTING_ANIMATE_TIME SECONDS) //Bursts the character
 	playsound(src.loc, BURSTING_CRESCENDO, BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
 	animate(src, time = BURSTING_ANIMATE_TIME SECONDS, transform = transform * scale_transform, easing = SINE_EASING, flags = ANIMATION_PARALLEL)
 	Stun(BURSTING_ANIMATE_TIME SECONDS, TRUE)
 
-///Makes our glutton explode, using the character's original transform to restore their shape if there's safe bursting
-/mob/living/carbon/human/proc/burst_glutton()
+///Makes our glutton explode, and reverses the scale transform that was applied as the character was bursting
+/mob/living/carbon/human/proc/burst_glutton(scale_transform)
 	//Check surrounding area if anyone will see them explode who would not want to, delay for a moment
 	if (!check_prefs_in_view(/datum/preference/toggle/glutton_see_bursting, src.loc))
 		visible_message(
@@ -290,8 +290,12 @@
 			span_warning("You make a loud creak as the swelling momentarily stops as you struggle to hold together... (Someone with bursting prefs disabled is in view!)")
 		)
 		playsound(src.loc, BURSTING_CRESCENDO_DELAY, BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
-		addtimer(CALLBACK(src, PROC_REF(burst_glutton)), 8.4 SECONDS) //Delay for the duration of the sound
+		addtimer(CALLBACK(src, PROC_REF(burst_glutton), scale_transform), 8.4 SECONDS) //Delay for the duration of the sound
 		return
+
+	//Return their transform back to normal with a short animation
+	SEND_SIGNAL(src, COMSIG_LIVING_BURSTING_BURST) //send signal that player burst to remove pixel shifts
+	animate(src, time = 1 SECONDS, transform = transform * matrix(scale_transform, MATRIX_INVERT), easing = SINE_EASING)
 
 	var/bursting_pref = get_bursting_pref()
 	if (bursting_pref != BURSTING_PREF_DISABLED) //Do one last check to make sure the player actually wanted it
@@ -356,11 +360,6 @@
 
 
 				Unconscious(5 SECONDS, TRUE) //Bursting is intense, knock the player out for a bit
-
-	//Return their transform back to normal with a short animation
-	SEND_SIGNAL(src, COMSIG_LIVING_BURSTING_BURST) //send signal that player burst to remove pixel shifts
-	var/matrix/original_transform = matrix(current_size, 0, 0, 0, current_size, 16 * current_size - 16)
-	animate(src, time = 1 SECONDS, transform = original_transform * matrix(lying_angle, MATRIX_ROTATE), easing = SINE_EASING)
 
 //The smoke used for bursting
 /obj/effect/particle_effect/fluid/smoke/burst_smoke
