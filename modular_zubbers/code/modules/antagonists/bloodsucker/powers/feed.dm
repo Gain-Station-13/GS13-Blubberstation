@@ -282,11 +282,13 @@
 
 	if(feed_target.reagents && feed_target.reagents.total_volume)
 		feed_target.reagents.trans_to(owner, INGEST, 1) // Run transfer of 1 unit of reagent from them to me.
+	// GS13 EDIT START - less blood lost if ur fat
 	if (iscarbon(feed_target))
 		var/mob/living/carbon/carbon_feedee = feed_target
 		carbon_feedee.blood_volume = max(0, feed_target.blood_volume - (blood_eatable * carbon_feedee.get_bloodsuck_reduction()))
 	else
 		feed_target.blood_volume = max(0, feed_target.blood_volume - blood_eatable)
+	// GS13 EDIT END
 
 	if(owner_blood_volume > 0)
 		owner.bodytemperature = ((owner_blood_volume * owner.bodytemperature) + (blood_eatable * feed_target.bodytemperature)) / (owner_blood_volume + blood_eatable)
