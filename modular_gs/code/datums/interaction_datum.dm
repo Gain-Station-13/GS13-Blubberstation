@@ -111,7 +111,7 @@
 
 /datum/interaction/belly_rub_self/act(mob/living/carbon/human/user, mob/living/carbon/human/target, obj/body_relay)
 	. = ..()
-	target.reduce_fullness(20)
+	user.reduce_fullness(20)
 
 /datum/interaction/belly_rub_other
 	name = "Belly rub"
@@ -127,21 +127,5 @@
 	color = "green"
 
 /datum/interaction/belly_rub_other/act(mob/living/carbon/human/user, mob/living/carbon/human/target, obj/body_relay)
-	. = ..()
-	target.reduce_fullness(20)
-
-/datum/interaction/belly_rub_from_other
-	name = "Belly rub"
-	description = "Rub their belly."
-	user_messages = list("You grab onto %TARGET% belly and rub it softly.")
-	target_messages = list("%USER% gently rubs your belly.")
-	message = list("rubs %TARGET%'s belly.")
-	category = "Romance"
-	usage = INTERACTION_OTHER
-	lewd = FALSE
-	interaction_requires = list(INTERACTION_REQUIRE_SELF_HAND)
-	color = "green"
-
-/datum/interaction/belly_rub_from_other/act(mob/living/carbon/human/user, mob/living/carbon/human/target, obj/body_relay)
 	. = ..()
 	target.reduce_fullness(20)

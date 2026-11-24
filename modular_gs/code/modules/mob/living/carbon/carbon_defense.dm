@@ -1,14 +1,9 @@
 #define PERSONAL_SPACE_DAMAGE 2
 #define GUT_SLAP_EXTRA_RANGE -1
 
-// Emotes
 /mob/living/carbon/disarm(mob/living/carbon/target)
-	//GS13 EDIT Fix Non-Human Disarm
 	if(!istype(target))
 		return ..()
-
-	//GS13 EDIT - Adipohazard and adipoluri effect
-	disarm_fatten(target)
 
 	if(zone_selected == BODY_ZONE_PRECISE_GROIN && get_dir(target, src) == target.dir)
 		if(HAS_TRAIT(target, TRAIT_PERSONALSPACE) && (!IS_UNCONSCIOUS_OR_CRIT(target)) && (!target.handcuffed)) //You need to be conscious and uncuffed to use Personal Space
@@ -17,8 +12,8 @@
 				if(affecting?.receive_damage(PERSONAL_SPACE_DAMAGE))
 					src.update_damage_overlays()
 				visible_message(span_danger("[src] tried slapping [target]'s gut, but they were slapped instead!"),
-				span_danger("You tried slapping [target]'s gut, but they hit you back, ouch!"),
-				"You hear a slap.", ignored_mobs = list(target))
+					span_danger("You tried slapping [target]'s gut, but they hit you back, ouch!"),
+					"You hear a slap.", ignored_mobs = list(target))
 				playsound(target.loc, 'sound/effects/snap.ogg', 50, TRUE, GUT_SLAP_EXTRA_RANGE)
 				to_chat(target, span_danger("[src] tried slapping your gut, but you hit them back!"))
 				return
@@ -30,13 +25,15 @@
 				to_chat(target, span_danger("[src] tried slapping your gut, but you blocked them!"))
 				return
 		else
-			do_gut_slap_animation(target)
-			target.emote(pick("belch", "burp", "bubelch"))
+			do_ass_slap_animation(target)
+			if(target.fullness >= FULLNESS_LEVEL_BLOATED)
+				target.emote(pick("belch", "burp", "bubelch"))
+			else
 			playsound(target.loc, 'sound/items/weapons/slap.ogg', 50, TRUE, GUT_SLAP_EXTRA_RANGE)
-			visible_message("<span class='danger'>[src] slaps [target] right on the gut, forcing them to burp!</span>",\
-				"<span class='notice'>You slap [target] on the gut forcing them to burp.</span>",\
+			visible_message("<span class='danger'>[src] slaps [target] right on the gut!</span>",\
+				"<span class='notice'>You slap [target] on the gut.</span>",\
 				"You hear a slap.", ignored_mobs = list(target))
-			to_chat(target, "<span class='danger'>[src] slaps your gut, forcing the air out of it!")
+			to_chat(target, "<span class='danger'>[src] slaps your gut!")
 			return
 	return ..()
 
