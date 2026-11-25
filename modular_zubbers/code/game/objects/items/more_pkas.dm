@@ -234,7 +234,7 @@
 							/area/lavaland/surface/outdoors/explored,
 							/area/ocean/generated,
 							/area/ruin/,
-							//gs13 edit
+							// GS13 EDIT START
 							/area/lavaland/underground,
 							/area/lavaland/underground/xenoarch/candyland,
 							/area/lavaland/underground/xenoarch/caloriteresearch,
@@ -242,7 +242,7 @@
 							/area/lavaland/underground/xenoarch/donut_factory,
 							/area/snaxi/underground,
 							/area/snaxi/surface,
-							//gs13 edit end
+							// GS13 EDIT END
 						)
 
 /obj/item/firing_pin/wastes/pin_auth(mob/living/user)
