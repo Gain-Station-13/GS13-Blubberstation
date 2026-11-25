@@ -300,7 +300,7 @@ GLOBAL_LIST_INIT(blueberry_about_to_blow_flavour, list(
 		spread_bodyparts(DROP_ALL_REMAINS & ~DROP_BRAIN)
 
 	// We are stuffing them in the fucking vore cryopod.
-	buckled.unbuckle_mob(src) //Unbuckle the player before attempting to move them to vore cryo
+	buckled.unbuckle_mob(src) //Players need to be unbuckled before being put in vore cryo to avoid issues with leaving a body behind
 	remove_player_from_round_safely(src)
 
 
