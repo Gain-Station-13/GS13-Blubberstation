@@ -5972,7 +5972,7 @@
 	pixel_y = 31
 	},
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "bXo" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -6011,10 +6011,8 @@
 	},
 /area/station/service/chapel/monastery)
 "bXY" = (
-/obj/effect/turf_decal/bot,
-/obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/engine/hull/reinforced/air,
-/area/station/science/explab)
+/turf/closed/wall/r_wall,
+/area/station/maintenance/department/security)
 "bYn" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -10710,7 +10708,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
-/obj/effect/turf_decal/siding/purple,
 /obj/machinery/camera/autoname/science/directional/east,
 /turf/open/floor/iron/white/small_edge{
 	dir = 1
@@ -10946,7 +10943,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "dxZ" = (
 /obj/structure/gs13_fluff/brokenhose/scraps3{
 	pixel_x = 13;
@@ -17547,6 +17544,7 @@
 /obj/structure/chair/comfy/black,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/obj/effect/landmark/start/head_of_security,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/command/heads_quarters/hos)
 "fzb" = (
@@ -20660,7 +20658,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "gww" = (
 /obj/machinery/computer/records/security,
 /obj/effect/turf_decal/stripes/line,
@@ -22819,7 +22817,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 9
 	},
-/obj/effect/turf_decal/siding/purple/corner,
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
@@ -30803,6 +30800,11 @@
 /area/station/science/ordnance/office)
 "jBR" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "gene_desk_shutters";
+	name = "Genetics Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/science/genetics)
 "jBY" = (
@@ -31021,7 +31023,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "jFB" = (
 /obj/structure/transit_tube/horizontal,
 /obj/effect/spawner/structure/window/reinforced,
@@ -34010,7 +34012,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "kBD" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -37608,7 +37610,6 @@
 "lLm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
-/obj/machinery/airalarm/directional/west,
 /obj/effect/turf_decal/siding/purple{
 	dir = 8
 	},
@@ -38887,7 +38888,7 @@
 /obj/machinery/door/airlock/external,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "mfB" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line,
 /obj/effect/turf_decal/trimline/tram/filled/mid_joiner,
@@ -40008,7 +40009,6 @@
 /turf/open/floor/iron/edge,
 /area/station/hallway/primary/aft)
 "mvq" = (
-/obj/machinery/firealarm/directional/west,
 /obj/structure/table,
 /obj/item/storage/box/disks{
 	pixel_x = 6;
@@ -42538,7 +42538,6 @@
 /turf/open/floor/plating,
 /area/station/hallway/primary/central)
 "nin" = (
-/obj/effect/landmark/start/head_of_security,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/command/heads_quarters/hos)
 "nit" = (
@@ -47197,6 +47196,16 @@
 	dir = 8
 	},
 /obj/machinery/camera/autoname/science/directional/west,
+/obj/machinery/firealarm/directional/west{
+	pixel_x = -25;
+	pixel_y = -9
+	},
+/obj/machinery/button/door/directional/west{
+	id = "gene_desk_shutters";
+	name = "Genetics Desk Shutters";
+	pixel_y = 6;
+	req_access = list("genetics")
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/science/genetics)
 "oFR" = (
@@ -51185,7 +51194,7 @@
 "pZF" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "pZP" = (
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/plating/snowed/smoothed/snaxi,
@@ -51897,7 +51906,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "qiE" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -55321,7 +55330,7 @@
 /obj/structure/cable,
 /obj/structure/sign/warning/gato/pods/directional/west,
 /turf/open/floor/plating,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "rlL" = (
 /turf/closed/wall,
 /area/station/medical/exam_room)
@@ -62103,6 +62112,7 @@
 /obj/effect/turf_decal/siding/purple{
 	dir = 10
 	},
+/obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark/textured,
 /area/station/science/genetics)
 "tvM" = (
@@ -73553,6 +73563,16 @@
 	dir = 4
 	},
 /area/station/hallway/primary/port)
+"wUW" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/purple/corner,
+/turf/open/floor/iron/white/small_edge{
+	dir = 8
+	},
+/area/station/science/explab)
 "wVj" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -73875,6 +73895,22 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/chemistry)
+"xcD" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/right/directional/east{
+	req_access = list("genetics");
+	name = "Genetics Desk"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "gene_desk_shutters";
+	name = "Genetics Shutters"
+	},
+/obj/item/paper,
+/obj/item/pen,
+/turf/open/floor/plating,
+/area/station/science/genetics)
 "xcH" = (
 /turf/closed/wall,
 /area/station/medical/medbay/aft)
@@ -74537,7 +74573,7 @@
 /area/station/common/pool)
 "xlq" = (
 /turf/open/floor/iron/smooth,
-/area/icemoon/surface/outdoors)
+/area/station/maintenance/department/security)
 "xlw" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/turf_decal/siding/wood/corner{
@@ -75218,6 +75254,9 @@
 	},
 /turf/open/floor/wood,
 /area/station/service/bar)
+"xvk" = (
+/turf/open/floor/plating,
+/area/station/maintenance/department/security)
 "xvp" = (
 /obj/structure/cable,
 /obj/effect/landmark/event_spawn,
@@ -222482,7 +222521,7 @@ tLH
 dnz
 fsa
 hdV
-fke
+wUW
 rZF
 fke
 fke
@@ -222739,7 +222778,7 @@ qiK
 dnz
 ipF
 duC
-bXY
+cmY
 lUz
 qop
 aPp
@@ -222996,9 +223035,9 @@ ixG
 dnz
 wPP
 iib
-iib
-iib
-iib
+xcD
+jBR
+jBR
 jBR
 iib
 iib
@@ -238211,11 +238250,11 @@ oqU
 yfW
 yfW
 mkS
-iWV
+bXY
 mfA
-iWV
-iWV
-iWV
+bXY
+bXY
+bXY
 rIA
 nhp
 nhp
@@ -238468,8 +238507,8 @@ rWd
 iPp
 cFp
 mkS
-gbG
-gbG
+xvk
+xvk
 dxY
 xlq
 qiD
@@ -238725,8 +238764,8 @@ aPG
 iPp
 iPp
 mkS
-gbG
-iWV
+xvk
+bXY
 mxx
 mxx
 mxx
@@ -238983,7 +239022,7 @@ icl
 jUZ
 mkS
 bXi
-iWV
+bXY
 rui
 nqZ
 prS
@@ -239239,8 +239278,8 @@ gFX
 lks
 nSQ
 mkS
-gbG
-iWV
+xvk
+bXY
 qpV
 uxC
 ucv
@@ -239496,8 +239535,8 @@ mqL
 fNL
 nSQ
 mkS
-gbG
-iWV
+xvk
+bXY
 mNt
 kLl
 osE
@@ -239753,8 +239792,8 @@ uFy
 uFy
 nSQ
 mkS
-gbG
-iWV
+xvk
+bXY
 dcM
 cGa
 hEz
@@ -240010,8 +240049,8 @@ mkS
 nfl
 mkS
 mkS
-gbG
-iWV
+xvk
+bXY
 fPx
 ctx
 fjv
@@ -240268,7 +240307,7 @@ kBr
 pZF
 rlx
 gwt
-iWV
+bXY
 mnQ
 vQP
 mxm
