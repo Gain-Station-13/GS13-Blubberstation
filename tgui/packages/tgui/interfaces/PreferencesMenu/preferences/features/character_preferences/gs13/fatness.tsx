@@ -142,3 +142,17 @@ export const glutton_enable_sounds: FeatureToggle = {
   description: 'Toggle if you would like bursting related sounds to play',
   component: CheckboxInput,
 };
+
+export const glutton_enable_creaking_sounds: FeatureToggle = {
+  name: 'Enable bursting creaking sounds',
+  description:
+    'Toggle if you would like the near bursting creaking sounds to play',
+  component: CheckboxInput,
+};
+
+export const glutton_uncontrolled_burst: FeatureToggle = {
+  name: 'Uncontrolled bursting',
+  description:
+    "Toggles if you'd like to automatically burst once your limit is met. USE WITH CAUTION!!",
+  component: CheckboxInput,
+};

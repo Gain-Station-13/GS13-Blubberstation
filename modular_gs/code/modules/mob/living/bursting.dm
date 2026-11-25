@@ -198,10 +198,32 @@
 	if (bursting_capacity_percentage <= 0)
 		return FALSE
 
-	//The chance for a message or sound to play based on the player's current capacity percentage adjusted between min and max values
+	do_bursting_flavor(burst_type_fullness)
+
+	if (!client?.prefs?.read_preference(/datum/preference/toggle/glutton_see_bursting))
+		return FALSE
+
+	if (bursting_type_pref == BURSTING_PREF_DISABLED)
+		return FALSE
+
+	if (bursting_capacity_percentage < 1)
+		return FALSE
+
+	if (HAS_TRAIT(src, BURSTING_ABOUT_TO_BURST))
+		return FALSE
+
+	trigger_glutton_burst(burst_type_fullness, bursting_type_pref)
+	return TRUE
+
+/**
+ * Handles the sounds and flavor text that appears while
+ * the player approaches their bursting threshold
+ */
+/mob/living/carbon/human/proc/do_bursting_flavor(burst_type_fullness)
+	//The chance for a message and sound to play based on the player's current capacity percentage adjusted between min and max values
 	var/flavor_message_chance = clamp((BURSTING_FLAVOR_PROB_MAX - BURSTING_FLAVOR_PROB_MIN) * bursting_capacity_percentage + BURSTING_FLAVOR_PROB_MIN, BURSTING_FLAVOR_PROB_MIN, BURSTING_FLAVOR_PROB_MAX)
 	if (prob(flavor_message_chance * 100))
-		//Pick a random message based on if we're too fat or full and select based on how much
+
 		var/message_content = ""
 		var/message_stage = clamp(round(bursting_capacity_percentage * 3.5 + 1), 1, 4) //Takes the capacity percentage and converts it into four equaly sized whole number 'stages' to be used as an index for selecting messages
 
@@ -231,23 +253,8 @@
 			if ((bursting_capacity_fatness > bursting_capacity_fullness * BURSTING_SOUND_RATIO)) //Do fatness sounds
 				playsound(src.loc, pick(BURSTING_FAT_SLOSH_SOUNDS), BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
 
-			if (message_stage == 4)
-				playsound(src.loc, pick(BURSTING_CREAK_SOUNDS), BURSTING_SOUND_VOLUME * 8, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
-
-	if (!client?.prefs?.read_preference(/datum/preference/toggle/glutton_see_bursting))
-		return FALSE
-
-	if (bursting_type_pref == BURSTING_PREF_DISABLED)
-		return FALSE
-
-	if (bursting_capacity_percentage < 1)
-		return FALSE
-
-	if (HAS_TRAIT(src, BURSTING_ABOUT_TO_BURST))
-		return FALSE
-
-	trigger_glutton_burst(burst_type_fullness, bursting_type_pref)
-	return TRUE
+		if (message_stage == 4 && client?.prefs?.read_preference(/datum/preference/toggle/glutton_enable_creaking_sounds))
+			playsound(src.loc, pick(BURSTING_CREAK_SOUNDS), BURSTING_SOUND_VOLUME * 8, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
 
 /**
  * Handles the popup to confirm bursting or delay. Will
@@ -255,34 +262,38 @@
  * Stuns the charater to avoid issues with the transform.
  */
 /mob/living/carbon/human/proc/trigger_glutton_burst(burst_type, bursting_type_pref)
+	if (!check_prefs_in_view(/datum/preference/toggle/glutton_see_bursting, src.loc))
+		return
+
 	//Add self removing trait so that bursting doesn't repeatedly trigger, dual purpose as our delay if the delay button is pressed and a cooldown to delay repeated bursting
 	ADD_TRAIT(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT)
 
-	//TGUI popup to confirm bursting
-	var/burst_choice = tgui_alert(
-		src,
-		"You've exceeded your capacity and gotten too [burst_type ? "full" : "fat"]. You're now on the verge of bursting, but you might be able to hold together a bit longer... Click '[BURSTING_CONFIRM]' if you wish to burst, you will explode after a short delay[bursting_type_pref >= BURSTING_PREF_CRIT ? ", which will kill you since you have safe bursting disabled." : "."] Otherwise, click '[BURSTING_DENY]' which will delay bursting for bit if you're still over capacity.",
-		"You're about to burst!",
-		list(BURSTING_CONFIRM, BURSTING_DENY)
-	)
-	if (burst_choice == BURSTING_CONFIRM)
-		burst_choice = tgui_alert(
+	//Quick little pref check that bypasses the TGUI confirmation for uncontrolled bursting
+	if (!client?.prefs?.read_preference(/datum/preference/toggle/glutton_uncontrolled_burst))
+		var/burst_choice = tgui_alert(
 			src,
-			"Last chance to change your mind, please confirm that you wish to burst",
+			"You've exceeded your capacity and gotten too [burst_type ? "full" : "fat"]. You're now on the verge of bursting, but you might be able to hold together a bit longer... Click '[BURSTING_CONFIRM]' if you wish to burst, you will explode after a short delay[bursting_type_pref >= BURSTING_PREF_CRIT ? ", which will kill you since you have safe bursting disabled." : "."] Otherwise, click '[BURSTING_DENY]' which will delay bursting for bit if you're still over capacity.",
 			"You're about to burst!",
 			list(BURSTING_CONFIRM, BURSTING_DENY)
 		)
+		if (burst_choice == BURSTING_CONFIRM)
+			burst_choice = tgui_alert(
+				src,
+				"Last chance to change your mind, please confirm that you wish to burst",
+				"You're about to burst!",
+				list(BURSTING_CONFIRM, BURSTING_DENY)
+			)
 
-	if (burst_choice != BURSTING_CONFIRM) //They either closed the window or clicked delay, so delay for the normal delay
-		addtimer(TRAIT_CALLBACK_REMOVE(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT), BURSTING_DELAY_BURST_SECONDS SECONDS)
-		return
+		if (burst_choice != BURSTING_CONFIRM) //They either closed the window or clicked delay, so delay for the normal delay
+			addtimer(TRAIT_CALLBACK_REMOVE(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT), BURSTING_DELAY_BURST_SECONDS SECONDS)
+			return
 
-	//Start the burst if confirm is clicked, which will animate our character swelling and start a callback for our bursting function
-	visible_message(span_warning("[src]'s body lets out a rumble, they're about to burst!"), span_warning("Your body rumbles, you're about to burst!"))
-	if(!do_after(src, 5 SECONDS, src)) //Delay for just a moment to make sure they want it, but delay the TGUI popup for a shorter time incase bursting got inturupted
-		visible_message(span_warning("[src] manages to hold themselves together for now..."), span_warning("Your able to hold yourself together... for now"))
-		addtimer(TRAIT_CALLBACK_REMOVE(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT), BURSTING_DELAY_BURST_SECONDS_SHORT SECONDS)
-		return
+		//Start the burst if confirm is clicked, which will animate our character swelling and start a callback for our bursting function
+		visible_message(span_warning("[src]'s body lets out a rumble, they're about to burst!"), span_warning("Your body rumbles, you're about to burst!"))
+		if(!do_after(src, 5 SECONDS, src)) //Delay for just a moment to make sure they want it, but delay the TGUI popup for a shorter time incase bursting got inturupted
+			visible_message(span_warning("[src] manages to hold themselves together for now..."), span_warning("Your able to hold yourself together... for now"))
+			addtimer(TRAIT_CALLBACK_REMOVE(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT), BURSTING_DELAY_BURST_SECONDS_SHORT SECONDS)
+			return
 
 	//No saving them now, they're gonna burst!
 	addtimer(TRAIT_CALLBACK_REMOVE(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT), BURSTING_DELAY_BURST_SECONDS SECONDS)

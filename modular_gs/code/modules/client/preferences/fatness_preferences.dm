@@ -217,3 +217,21 @@
 
 /datum/preference/toggle/glutton_enable_sounds/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return
+
+/datum/preference/toggle/glutton_enable_creaking_sounds
+	category = GLUTTON_BURSTING_PREFRENCES
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "glutton_enable_creaking_sounds"
+	default_value = FALSE
+
+/datum/preference/toggle/glutton_enable_creaking_sounds/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+	return
+
+/datum/preference/toggle/glutton_uncontrolled_burst
+	category = GLUTTON_BURSTING_PREFRENCES
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "glutton_uncontrolled_burst"
+	default_value = FALSE
+
+/datum/preference/toggle/glutton_uncontrolled_burst/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+	return
