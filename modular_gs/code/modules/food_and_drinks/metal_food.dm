@@ -39,24 +39,26 @@
 
 /obj/item/metal_food/mburger
 	name = "Metal Burger"
+	desc = "A bunch of metal clumped together, vaguely resembling a burger. Synthetics would likely find this yummy."
 	icon_state = "mburger"
 	crunch_value = 15
 
 /obj/item/metal_food/mburger_calorite
 	name = "Calorite Burger"
+	desc = "A bunch of metal clumped together, vaguely resembling a burger. Synthetics would likely find this yummy."
 	icon_state = "mburger_calorite"
 	crunch_value = 35
 
 /obj/item/metal_food/mram
 	name = "Old RAM module"
-	desc = "It's an obsolete RAM module. You can see some dust on it and spoiled electronics"
+	desc = "It's an obsolete RAM module. You can see some dust on it and spoiled electronics. Synthetics would likely find this yummy!"
 	icon_state = "mRAM"
 	crunch_value = 1
 	crunch_left = 4
 
 /obj/item/metal_food/mfries
 	name = "Fried rods"
-	desc = "It looks like fries, but made out of metal. Can we call it french rods?"
+	desc = "It looks like fries, but made out of metal. Can we call it french rods? Synthetics would likely find this yummy!"
 	icon_state = "mfrench_rods"
 	crunch_value = 1
 	crunch_left = 9
