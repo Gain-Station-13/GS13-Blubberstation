@@ -1,0 +1,7 @@
+author: "Icepick200"
+delete-after: True
+changes:
+  - rscadd: "Adds the Calorite Laced Mirror to the crafting menu"
+  - rscadd: "Added the Drone mask to the crafting menu"
+  - rscadd: "Added Belly Rubbing to the interactions menu"
+  - rscadd: "Added Belly Slapping, triggered by targeting the groin and right clicking the front of a character."
