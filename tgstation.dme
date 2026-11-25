@@ -7512,7 +7512,6 @@
 #include "modular_gs\code\mechanics\fatness\weight_gain_rate.dm"
 #include "modular_gs\code\mechanics\transformation\new_tf_item.dm"
 #include "modular_gs\code\mobs\chocoslime.dm"
-#include "modular_gs\code\modules\antagonists\bloodsucker\life.dm"
 #include "modular_gs\code\modules\art\statues.dm"
 #include "modular_gs\code\modules\art\statuettes.dm"
 #include "modular_gs\code\modules\atmospherics\gasmixtures\gas_types.dm"

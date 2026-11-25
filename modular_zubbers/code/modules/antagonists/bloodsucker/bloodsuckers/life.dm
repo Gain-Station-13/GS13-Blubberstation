@@ -119,7 +119,7 @@
 	// Checks if you're in a coffin here, additionally checks for Torpor right below it.
 	var/amInCoffin = is_valid_coffin()
 	if (blood_over_cap > 0)
-		gain_weight_from_blood(user, seconds_per_tick)	// GS13 EDIT
+		user.adjust_fatness(seconds_per_tick, FATTENING_TYPE_FOOD)	// GS13 EDIT
 		costMult += round(blood_over_cap / 1000, 0.1) // effectively 1 (normal) + 0.1 for every 100 blood you are over cap
 	if(amInCoffin && is_in_torpor())
 		if(HAS_TRAIT(owner.current, TRAIT_MASQUERADE) && (COOLDOWN_FINISHED(src, bloodsucker_spam_healing)))
