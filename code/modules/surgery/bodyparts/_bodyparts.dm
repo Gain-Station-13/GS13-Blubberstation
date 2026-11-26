@@ -1236,7 +1236,7 @@
 	if(limb_alpha_key in human_owner.dna.features)
 		limb_alpha = human_owner.dna.features[limb_alpha_key]
 		markings_alpha = human_owner.dna.features[limb_alpha_key] //GS13 EDIT: Added here so that markings are not fully opaque
-		alpha = human_owner.dna.features[limb_alpha_key]
+		alpha = human_owner.dna.features[limb_alpha_key] //GS13 EDIT: Seems to make other bodyparts like tails, muzzles, belly parts, etc. more relyably transparent/opaque
 
 	if(body_zone in owner_species.body_markings)
 		markings = LAZYCOPY(owner_species.body_markings[body_zone])
