@@ -30,10 +30,10 @@
 	var/old_storyteller = SSgamemode.storyteller
 	SSgamemode.set_storyteller(voted_storyteller)
 	SSgamemode.cap_storyteller_thresholds()
-	var/new_storyteller = SSgamemode.storyteller
+	var/datum/storyteller/new_storyteller = SSgamemode.storyteller
 	if (old_storyteller != new_storyteller)
 		for(var/channel_tag in CONFIG_GET(str_list/channel_announce_new_game))
 			send2chat(
-				new /datum/tgs_message_content("The storyteller has been changed to [voted_storyteller::name]!"),
+				new /datum/tgs_message_content("The storyteller has been changed to [new_storyteller.name]!"),
 				channel_tag,
 			)
