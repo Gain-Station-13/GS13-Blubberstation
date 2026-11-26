@@ -31,7 +31,7 @@
 /obj/item/clothing/head/lipomancers_hat
 	name = "Lipomancer Witch Hat"
 	desc = "A large brimmed blue witch hat that used to belong to some ancient lipomancer, who knows if it is genuine or a reproduction, makes you look like a fancy magic caster either way!"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = 'modular_gs/icons/obj/clothing/head/hat.dmi'
 	worn_icon = 'modular_gs/icons/mob/clothing/head/hat.dmi'
 	icon_state = "lipomancer_hat"
 
