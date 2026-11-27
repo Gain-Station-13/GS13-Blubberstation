@@ -10,4 +10,4 @@
 /mob/living/carbon/proc/get_bloodsuck_reduction()
 	/// how much fat you really have, so without any hiders that may increase the virtual weight
 	var/realish_fatness = fatness_real + fatness_perma
-	return clamp((FATNESS_LEVEL_IMMOBILE - realish_fatness) / FATNESS_LEVEL_IMMOBILE, 0.2, 1)
+	return clamp((FATNESS_LEVEL_IMMOBILE - realish_fatness) / FATNESS_LEVEL_IMMOBILE, 0.35, 1)
