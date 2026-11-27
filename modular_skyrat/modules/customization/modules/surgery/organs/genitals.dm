@@ -458,7 +458,7 @@
 	drop_when_organ_spilling = FALSE
 	bodypart_overlay = /datum/bodypart_overlay/mutant/genital/anus
 
-// /datum/bodypart_overlay/mutant/genital/anus			GS13 EDIT, to add donuts I think I have to comment these out. cause they get defined elsewhere I think. Look it just works ok.
+// /datum/bodypart_overlay/mutant/genital/anus	GS13 EDIT, to add donuts I think I have to comment these out. cause they get defined elsewhere I think. Look it just works ok.
 // 	feature_key = ORGAN_SLOT_ANUS
 // 	layers = list(EXTERNAL_FRONT = BODY_FRONT_LAYER)
 // 	layer_offset = ANUS_LAYER_OFFSET

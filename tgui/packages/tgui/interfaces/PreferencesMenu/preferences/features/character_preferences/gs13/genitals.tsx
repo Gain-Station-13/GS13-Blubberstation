@@ -107,21 +107,6 @@ export const breast_produce: FeatureChoiced = {
   component: FeatureDropdownInput,
 }
 
-export const max_belly_size: FeatureNumeric = {
-  name: 'Belly max size',
-  component: FeatureNumberInput,
-};
-
-export const max_breast_size: FeatureNumeric = {
-  name: 'Breasts max size',
-  component: FeatureNumberInput,
-};
-
-export const max_butt_size: FeatureNumeric = {
-  name: 'Butt max size',
-  component: FeatureNumberInput,
-};
-
 export const feature_anus: Feature<string> = {
   name: 'Anus Choice',
   component: (
@@ -133,11 +118,6 @@ export const feature_anus: Feature<string> = {
 
 export const anus_size: FeatureNumeric = {
   name: 'Anus Size',
-  component: FeatureNumberInput,
-};
-
-export const max_anus_size: FeatureNumeric = {
-  name: 'Anus max size',
   component: FeatureNumberInput,
 };
 
@@ -160,4 +140,25 @@ export const anus_emissive: Feature<boolean[]> = {
   name: 'Anus Emissives',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
+};
+
+
+export const max_belly_size: FeatureNumeric = {
+  name: 'Belly max size',
+  component: FeatureNumberInput,
+};
+
+export const max_breast_size: FeatureNumeric = {
+  name: 'Breasts max size',
+  component: FeatureNumberInput,
+};
+
+export const max_butt_size: FeatureNumeric = {
+  name: 'Butt max size',
+  component: FeatureNumberInput,
+};
+
+export const max_anus_size: FeatureNumeric = {
+  name: 'Anus max size',
+  component: FeatureNumberInput,
 };

@@ -14,7 +14,6 @@
 /obj/item/organ/genital/anus/build_from_dna(datum/dna/DNA, associated_key)
 	uses_skin_color = DNA.features["anus_uses_skincolor"]
 	set_size(DNA.features["anus_size"])
-
 	return ..()
 
 /obj/item/organ/genital/anus/build_from_accessory(datum/sprite_accessory/genital/accessory, datum/dna/DNA)
