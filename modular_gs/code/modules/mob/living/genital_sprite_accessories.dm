@@ -64,3 +64,32 @@
 	icon = 'modular_gs/icons/mob/human/genitals/teshbutt.dmi'
 	icon_state = "teshbutt"
 	name = "Teshari Butt (Teshari Only)"
+
+// Anus
+/datum/sprite_accessory/genital/anus
+	icon = 'modular_zubbers/icons/mob/sprite_accesory/genitals/anus_onmob.dmi'
+	organ_type = /obj/item/organ/genital/anus
+	associated_organ_slot = ORGAN_SLOT_ANUS
+	key = ORGAN_SLOT_ANUS
+	color_src = USE_ONE_COLOR
+	always_color_customizable = TRUE
+	has_skintone_shading = TRUE
+	relevent_layers = list(EXTERNAL_ADJACENT, EXTERNAL_FRONT)
+
+/datum/sprite_accessory/genital/anus/none
+	icon_state = "none"
+	name = SPRITE_ACCESSORY_NONE
+	factual = FALSE
+	color_src = null
+
+/datum/sprite_accessory/genital/anus/normal
+	icon_state = "normal"
+	name = "Anus"
+
+/datum/sprite_accessory/genital/anus/donut
+	icon_state = "donut"
+	name = "Donut"
+
+/datum/sprite_accessory/genital/anus/squished
+	icon_state = "squished"
+	name = "Squished"

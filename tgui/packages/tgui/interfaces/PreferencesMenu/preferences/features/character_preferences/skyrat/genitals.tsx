@@ -198,46 +198,6 @@ export const breasts_size: Feature<string> = {
   },
 };
 
-export const feature_anus: Feature<string> = {
-  name: 'Anus Choice',
-  component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
-  ) => {
-    return <FeatureDropdownInput buttons {...props} />;
-  },
-};
-
-export const anus_size: FeatureNumeric = {
-  name: 'Anus Size',
-  component: FeatureNumberInput,
-};
-
-export const max_anus_size: FeatureNumeric = {
-  name: 'Anus max size',
-  component: FeatureNumberInput,
-};
-
-export const anus_skin_tone: FeatureToggle = {
-  name: 'Anus uses Skin Tone',
-  component: CheckboxInput,
-};
-
-export const anus_skin_color: FeatureToggle = {
-  name: 'Anus uses Skin Color',
-  component: CheckboxInput,
-};
-
-export const anus_color: Feature<string[]> = {
-  name: 'Anus Color',
-  component: FeatureTriColorInput,
-};
-
-export const anus_emissive: Feature<boolean[]> = {
-  name: 'Anus Emissives',
-  description: 'Emissive parts glow in the dark.',
-  component: FeatureTriBoolInput,
-};
-
 export const feature_butt: Feature<string> = {
   name: 'Butt Choice',
   component: (
