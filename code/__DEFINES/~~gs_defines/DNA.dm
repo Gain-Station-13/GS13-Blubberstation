@@ -5,5 +5,5 @@
 // #define ORGAN_SLOT_BUTT "butt"
 // #define ORGAN_SLOT_BELLY "belly"
 
-   #define ANUS_MIN_SIZE 0
-   #define ANUS_MAX_SIZE 10
+#define ANUS_MIN_SIZE 0
+#define ANUS_MAX_SIZE 10
