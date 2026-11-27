@@ -14,7 +14,7 @@
 	user_arousal = 2
 	interaction_requires = list(INTERACTION_REQUIRE_SELF_HAND)
 	color = "pink"
-	// sexuality = 
+	// sexuality =
 
 /datum/interaction/breast_feed_self/act(mob/living/carbon/human/user, mob/living/carbon/human/target, obj/body_relay)
 	. = ..()
@@ -47,7 +47,7 @@
 	target_arousal = 2
 	interaction_requires = list(INTERACTION_REQUIRE_SELF_HAND)
 	color = "pink"
-	// sexuality = 
+	// sexuality =
 
 /datum/interaction/breast_feed_other/act(mob/living/carbon/human/user, mob/living/carbon/human/target, obj/body_relay)
 	. = ..()
@@ -78,7 +78,7 @@
 	user_arousal = 2
 	interaction_requires = list(INTERACTION_REQUIRE_SELF_HAND)
 	color = "pink"
-	// sexuality = 
+	// sexuality =
 
 /datum/interaction/breast_feed_from_other/act(mob/living/carbon/human/user, mob/living/carbon/human/target, obj/body_relay)
 	. = ..()
@@ -94,3 +94,38 @@
 	breasts.reagents.trans_to(user, 5, transferred_by = target, methods = INGEST)
 	to_chat(user, "You begin sucking on [target]'s breasts, feeling their produce hit your tongue...")
 	to_chat(target, "[user] puts their mouth against your breasts, and you can feel your produce flowing out...")
+
+/datum/interaction/belly_rub_self
+	name = "Belly rub (Self)"
+	description = "Rub your own belly."
+	user_messages = list(
+		"You rub your belly softly.",
+		"You gently rub your belly."
+		)
+	message = list("rubs their belly.")
+	category = "Romance"
+	usage = INTERACTION_ONLY_SELF
+	lewd = FALSE	// truth obliteration
+	interaction_requires = list(INTERACTION_REQUIRE_SELF_HAND)
+	color = "green"
+
+/datum/interaction/belly_rub_self/act(mob/living/carbon/human/user, mob/living/carbon/human/target, obj/body_relay)
+	. = ..()
+	user.reduce_fullness(20)
+
+/datum/interaction/belly_rub_other
+	name = "Belly rub"
+	description = "Rub their belly."
+	user_messages = list("You gently rub %TARGET% 's belly.")
+	target_messages = list("%USER% puts their arms onto your belly and starts rubbing it.")
+	message = list("rubs %TARGET% 's belly.")
+	category = "Romance"
+	usage = INTERACTION_OTHER
+	lewd = FALSE
+	target_required_parts
+	interaction_requires = list(INTERACTION_REQUIRE_SELF_HAND)
+	color = "green"
+
+/datum/interaction/belly_rub_other/act(mob/living/carbon/human/user, mob/living/carbon/human/target, obj/body_relay)
+	. = ..()
+	target.reduce_fullness(20)

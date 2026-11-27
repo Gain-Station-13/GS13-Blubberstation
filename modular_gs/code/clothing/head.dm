@@ -39,7 +39,7 @@
 	name = "old witch hat"
 	desc = "Strange-looking hat-wear. Makes you think of old times."
 	worn_icon = 'modular_gs/icons/mob/clothing/head/witch_hats_worn.dmi'
-	icon = 'modular_gs/icons/obj/clothing/head/witch_hats.dmi'
+	icon = 'icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/wizard/marisa/fake/old"
 	post_init_icon_state = "witch_fake_old"
 	greyscale_config = /datum/greyscale_config/witch_hat_old
@@ -51,7 +51,7 @@
 	name = "classic witch hat"
 	desc = "Strange-looking hat-wear. Makes you want to cook potions in a hut."
 	worn_icon = 'modular_gs/icons/mob/clothing/head/witch_hats_worn.dmi'
-	icon = 'modular_gs/icons/obj/clothing/head/witch_hats.dmi'
+	icon = 'icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/wizard/marisa/fake/classic"
 	post_init_icon_state = "witch_fake_classic"
 	greyscale_config = /datum/greyscale_config/witch_hat_classic
@@ -63,7 +63,7 @@
 	name = "shy witch hat"
 	desc = "Strange-looking hat-wear. Hey! I cant see!"
 	worn_icon = 'modular_gs/icons/mob/clothing/head/witch_hats_worn.dmi'
-	icon = 'modular_gs/icons/obj/clothing/head/witch_hats.dmi'
+	icon = 'icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/wizard/marisa/fake/shy"
 	post_init_icon_state = "witch_fake_shy"
 	greyscale_config = /datum/greyscale_config/witch_hat_shy
@@ -75,7 +75,7 @@
 	name = "scholar's witch hat"
 	desc = "Strange-looking hat-wear. Makes you want to put your nose into a good book."
 	worn_icon = 'modular_gs/icons/mob/clothing/head/witch_hats_worn.dmi'
-	icon = 'modular_gs/icons/obj/clothing/head/witch_hats.dmi'
+	icon = 'icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/wizard/marisa/fake/scholar"
 	post_init_icon_state = "witch_fake_scholar"
 	greyscale_config = /datum/greyscale_config/witch_hat_scholar

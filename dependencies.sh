@@ -5,9 +5,9 @@
 
 # byond version. Also must be updated in .tgs.yml
 export BYOND_MAJOR=516
-# GS13 EDIT: minimum compiler version is 1687
+# GS13 EDIT: minimum compiler version is 1689
 # export BYOND_MINOR=1685
-export BYOND_MINOR=1687
+export BYOND_MINOR=1689
 # GS13 END EDIT
 
 #rust_g git tag
@@ -26,7 +26,7 @@ export PYTHON_VERSION=3.11.0
 export DREAMLUAU_REPO="tgstation/dreamluau"
 
 #dreamluau git tag
-export DREAMLUAU_VERSION=0.1.2
+export DREAMLUAU_VERSION=0.2.1
 
 #hypnagogic repo
 export CUTTER_REPO=spacestation13/hypnagogic

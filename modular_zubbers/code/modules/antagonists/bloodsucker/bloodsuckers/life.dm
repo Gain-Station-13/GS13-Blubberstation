@@ -10,7 +10,7 @@
 	life_always()
 	var/is_head = is_head(owner.current)
 	if(!is_head && owner.current.get_organ_slot(ORGAN_SLOT_HEART) && !am_staked())
-		INVOKE_ASYNC(src, PROC_REF(life_active), is_head)
+		INVOKE_ASYNC(src, PROC_REF(life_active), is_head, seconds_per_tick)	// GS13 EDIT adds seconds_per_tick to the proc call
 
 	SEND_SIGNAL(src, COMSIG_BLOODSUCKER_ON_LIFETICK, seconds_per_tick, times_fired)
 
@@ -22,8 +22,8 @@
 	if(!IS_UNCONSCIOUS_OR_CRIT(owner.current) && !HAS_TRAIT(owner.current, TRAIT_IMMOBILIZED) && !is_in_torpor())
 		INVOKE_ASYNC(src, PROC_REF(AdjustBloodVolume), -BLOODSUCKER_PASSIVE_BLOOD_DRAIN) // -.1 currently
 
-/datum/antagonist/bloodsucker/proc/life_active()
-	if(HandleHealing())
+/datum/antagonist/bloodsucker/proc/life_active(seconds_per_tick)	// GS13 EDIT adds seconds_per_tick
+	if(HandleHealing(1, seconds_per_tick))	// GS13 EDIT adds seconds_per_tick
 		if((COOLDOWN_FINISHED(src, bloodsucker_spam_healing)) && bloodsucker_blood_volume > 0)
 			to_chat(owner.current, span_notice("The power of your blood begins knitting your wounds..."))
 			COOLDOWN_START(src, bloodsucker_spam_healing, BLOODSUCKER_SPAM_HEALING)
@@ -99,7 +99,7 @@
  */
 
 /// Constantly runs on Bloodsucker's LifeTick, and is increased by being in Torpor/Coffins
-/datum/antagonist/bloodsucker/proc/HandleHealing(mult = 1)
+/datum/antagonist/bloodsucker/proc/HandleHealing(mult = 1, seconds_per_tick)	// GS13 EDIT - adds seconds per tick
 	// Don't heal if I'm staked or on Masquerade.
 	var/actual_regen = bloodsucker_regen_rate + additional_regen
 	if(owner.current.am_staked() || (HAS_TRAIT(owner.current, TRAIT_MASQUERADE)))
@@ -119,6 +119,7 @@
 	// Checks if you're in a coffin here, additionally checks for Torpor right below it.
 	var/amInCoffin = is_valid_coffin()
 	if (blood_over_cap > 0)
+		user.adjust_fatness(seconds_per_tick, FATTENING_TYPE_FOOD)	// GS13 EDIT
 		costMult += round(blood_over_cap / 1000, 0.1) // effectively 1 (normal) + 0.1 for every 100 blood you are over cap
 	if(amInCoffin && is_in_torpor())
 		if(HAS_TRAIT(owner.current, TRAIT_MASQUERADE) && (COOLDOWN_FINISHED(src, bloodsucker_spam_healing)))
