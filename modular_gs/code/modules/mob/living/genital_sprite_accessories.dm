@@ -85,7 +85,7 @@
 /datum/sprite_accessory/genital/anus/normal
 	icon_state = "normal"
 	name = "Anus"
-
+// Donut and Squished sprites taken from SPLURT station.
 /datum/sprite_accessory/genital/anus/donut
 	icon_state = "donut"
 	name = "Donut"
