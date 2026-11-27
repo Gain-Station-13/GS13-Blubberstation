@@ -3,14 +3,6 @@
 	if(uses_skintones)
 		. += "_s"
 
-/obj/item/organ/genital/anus/set_size(size)
-	var/old_size = genital_size
-	. = ..()
-	if(size > old_size)
-		to_chat(owner, span_warning("Your guts [pick("swell up to", "gurgle into", "expand into", "plump up into", "grow eagerly into", "fatten up into", "distend into")] a larger midsection."))
-	else
-		to_chat(owner, span_warning("Your guts [pick("shrink down to", "decrease into", "wobble down into", "diminish into", "deflate into", "contracts into")] a smaller midsection."))
-
 /obj/item/organ/genital/anus/build_from_dna(datum/dna/DNA, associated_key)
 	uses_skin_color = DNA.features["anus_uses_skincolor"]
 	set_size(DNA.features["anus_size"])
