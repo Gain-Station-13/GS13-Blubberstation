@@ -458,6 +458,11 @@
 	drop_when_organ_spilling = FALSE
 	bodypart_overlay = /datum/bodypart_overlay/mutant/genital/anus
 
+// /datum/bodypart_overlay/mutant/genital/anus			GS13 EDIT, to add donuts I think I have to comment these out. cause they get defined elsewhere I think. Look it just works ok.
+// 	feature_key = ORGAN_SLOT_ANUS
+// 	layers = list(EXTERNAL_FRONT = BODY_FRONT_LAYER)
+// 	layer_offset = ANUS_LAYER_OFFSET
+
 /obj/item/organ/genital/anus/get_description_string(datum/sprite_accessory/genital/gas)
 	var/returned_string = "You see an [LOWER_TEXT(genital_name)]."
 	if(aroused == AROUSAL_PARTIAL)
@@ -465,6 +470,9 @@
 	if(aroused == AROUSAL_FULL)
 		returned_string += " It looks very tight."
 	return returned_string
+
+// /datum/bodypart_overlay/mutant/genital/anus/get_global_feature_list() GS13 EDIT, same reason as comment above on line 461.
+//	return SSaccessories.sprite_accessories[ORGAN_SLOT_ANUS]
 
 /datum/bodypart_overlay/mutant/genital/anus
 	feature_key = ORGAN_SLOT_ANUS
