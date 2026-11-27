@@ -304,7 +304,7 @@
 		abs(BURSTING_ANIMATE_SCALE_X * cos(lying_angle) + BURSTING_ANIMATE_SCALE_Y * sin(lying_angle)),
 		abs(BURSTING_ANIMATE_SCALE_Y * cos(lying_angle) + BURSTING_ANIMATE_SCALE_X * sin(lying_angle))
 	)
-	addtimer(CALLBACK(src, PROC_REF(burst_glutton), scale_transform), BURSTING_ANIMATE_TIME SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(burst_glutton)), BURSTING_ANIMATE_TIME SECONDS)
 	playsound(src.loc, BURSTING_CRESCENDO, BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
 	animate(src, time = BURSTING_ANIMATE_TIME SECONDS, transform = transform * scale_transform, easing = SINE_EASING, flags = ANIMATION_PARALLEL)
 	Stun(BURSTING_ANIMATE_TIME SECONDS, TRUE)
@@ -315,7 +315,7 @@
  * until they pass. Handles removing the scale transformation applied
  * to the character durring bursting.
  */
-/mob/living/carbon/human/proc/burst_glutton(scale_transform)
+/mob/living/carbon/human/proc/burst_glutton()
 	//Check surrounding area if anyone will see them explode who would not want to, delay for a moment
 	if (!check_prefs_in_view(/datum/preference/toggle/glutton_see_bursting, src.loc))
 		visible_message(
@@ -323,10 +323,15 @@
 			span_warning("You make a loud creak as the swelling momentarily stops as you struggle to hold together... (Someone with bursting prefs disabled is in view!)")
 		)
 		playsound(src.loc, BURSTING_CRESCENDO_DELAY, BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
-		addtimer(CALLBACK(src, PROC_REF(burst_glutton), scale_transform), 8.4 SECONDS) //Delay for the duration of the sound
+		addtimer(CALLBACK(src, PROC_REF(burst_glutton)), 8.4 SECONDS) //Delay for the duration of the sound
 		return
 
 	SEND_SIGNAL(src, COMSIG_LIVING_BURSTING_BURST)
+	var/matrix/scale_transform = matrix()
+	scale_transform.Scale(
+		abs(BURSTING_ANIMATE_SCALE_X * cos(lying_angle) + BURSTING_ANIMATE_SCALE_Y * sin(lying_angle)),
+		abs(BURSTING_ANIMATE_SCALE_Y * cos(lying_angle) + BURSTING_ANIMATE_SCALE_X * sin(lying_angle))
+	)
 	animate(src, time = 1 SECONDS, transform = transform * matrix(scale_transform, MATRIX_INVERT), easing = SINE_EASING)
 
 	var/bursting_pref = get_bursting_pref()
