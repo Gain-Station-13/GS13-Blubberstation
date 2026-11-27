@@ -474,12 +474,6 @@
 // /datum/bodypart_overlay/mutant/genital/anus/get_global_feature_list() GS13 EDIT, same reason as comment above on line 461.
 //	return SSaccessories.sprite_accessories[ORGAN_SLOT_ANUS]
 
-/datum/bodypart_overlay/mutant/genital/anus
-	feature_key = ORGAN_SLOT_ANUS
-	layers = list(EXTERNAL_ADJACENT = BODY_ADJ_LAYER, EXTERNAL_FRONT = ANUS_LAYER_FRONT)
-	layer_offset = ANUS_LAYER_OFFSET
-	offset_location = ENTIRE_BODY
-
 /obj/item/organ/genital/breasts
 	name = "breasts"
 	desc = "Female milk producing organs."

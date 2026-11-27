@@ -67,7 +67,7 @@
 
 // Anus
 /datum/sprite_accessory/genital/anus
-	icon = 'modular_zubbers/icons/mob/sprite_accesory/genitals/anus_onmob.dmi'
+	icon = 'modular_gs/icons/obj/genitals/anus_onmob.dmi'
 	organ_type = /obj/item/organ/genital/anus
 	associated_organ_slot = ORGAN_SLOT_ANUS
 	key = ORGAN_SLOT_ANUS
