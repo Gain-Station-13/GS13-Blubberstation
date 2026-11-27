@@ -1230,13 +1230,15 @@
 	// preference (stored in dna.features) overrides it for this specific zone if present over species alpha
 	limb_alpha = owner_species?.specific_alpha || 255
 
-	//GS13 EDIT: Moved this here as a fallback if there's no limb alpha set
-	markings_alpha = owner_species.markings_alpha // Has no default, and a null alpha renders nothing
+	markings_alpha = owner_species.markings_alpha // Has no default, and a null alpha renders nothing //GS13 EDIT: Moved this here as a fallback if there's no limb alpha set
 	var/limb_alpha_key = "limb_alpha_[body_zone]"
 	if(limb_alpha_key in human_owner.dna.features)
 		limb_alpha = human_owner.dna.features[limb_alpha_key]
+
 		markings_alpha = human_owner.dna.features[limb_alpha_key] //GS13 EDIT: Added here so that markings are not fully opaque
 		alpha = human_owner.dna.features[limb_alpha_key] //GS13 EDIT: Seems to make other bodyparts like tails, muzzles, belly parts, etc. more relyably transparent/opaque
+
+	//ORIGINAL: markings_alpha = owner_species.markings_alpha // Has no default, and a null alpha renders nothing //GS13 EDIT: Moved above to serve as a fallback
 
 	if(body_zone in owner_species.body_markings)
 		markings = LAZYCOPY(owner_species.body_markings[body_zone])
