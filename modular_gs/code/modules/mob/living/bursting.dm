@@ -132,9 +132,6 @@
 	"Your rolls squeeze together and creak as growing fat swells them tight"\
 )
 
-///Returns true if the capacity percentage is above a certain percentage of the other
-#define BURSTING_MACRO_CHECK_THRESHOLD(percentageA, percentageB) (percentageA > percentageB * BURSTING_SOUND_RATIO)
-
 ///Gets the players bursting type pref, returns a number coresponding to said pref
 /mob/living/carbon/human/proc/get_bursting_pref()
 	switch(client?.prefs?.read_preference(/datum/preference/choiced/glutton_bursting_type))
@@ -179,9 +176,9 @@
 	var/bursting_type_pref = get_bursting_pref()
 
 	if (!fullness_bursting_pref && !fatness_bursting_pref) //If both fatness and fullness bursting is disabled, then return false and set to disabled values
-		bursting_capacity_fullness = -1
-		bursting_capacity_fatness = -1
-		bursting_capacity_percentage = -1
+		bursting_capacity_fullness = BURSTING_PREF_DISABLED
+		bursting_capacity_fatness = BURSTING_PREF_DISABLED
+		bursting_capacity_percentage = BURSTING_PREF_DISABLED
 		return FALSE
 
 	//Adjust the thresholds to be relative to our minimum values so that the code doesn't run below a certain point
@@ -189,8 +186,8 @@
 	var/relative_fullness = max(fullness - BURSTING_FULLNESS_MIN_THRESHOLD, 0)
 	var/relative_fatness = max(fatness - fatness_bursting_pref  * (1 - BURSTING_FATNESS_MIN_THRESHOLD), 0)
 
-	bursting_capacity_fullness = fullness_bursting_pref != 0 ? relative_fullness / fullness_bursting_pref  : -1 ///Our glutton's fullness percentage, -1 flag if disabled
-	bursting_capacity_fatness = fatness_bursting_pref != 0 ? relative_fatness / relative_fatness_threshold : -1 ///Our glutton's fatness percentage, -1 flag if disabled
+	bursting_capacity_fullness = fullness_bursting_pref != 0 ? relative_fullness / fullness_bursting_pref  : BURSTING_PREF_DISABLED ///Our glutton's fullness percentage, -1 flag if disabled
+	bursting_capacity_fatness = fatness_bursting_pref != 0 ? relative_fatness / relative_fatness_threshold : BURSTING_PREF_DISABLED ///Our glutton's fatness percentage, -1 flag if disabled
 	bursting_capacity_percentage = max(bursting_capacity_fullness, bursting_capacity_fatness) ///Use the greater percentage to determine if our glutton should burst, -1 if bursting types are disabled
 	var/burst_type_fullness = bursting_capacity_fullness >= bursting_capacity_fatness
 
@@ -200,7 +197,7 @@
 
 	do_bursting_flavor(burst_type_fullness)
 
-	if (!client?.prefs?.read_preference(/datum/preference/toggle/glutton_see_bursting))
+	if (!client?.prefs?.read_preference(/datum/preference/toggle/see_bursting))
 		return FALSE
 
 	if (bursting_type_pref == BURSTING_PREF_DISABLED)
@@ -220,41 +217,42 @@
  * the player approaches their bursting threshold
  */
 /mob/living/carbon/human/proc/do_bursting_flavor(burst_type_fullness)
-	//The chance for a message and sound to play based on the player's current capacity percentage adjusted between min and max values
+	//Message chance interpolated between a min and max value based on the percentage of our threshold
 	var/flavor_message_chance = clamp((BURSTING_FLAVOR_PROB_MAX - BURSTING_FLAVOR_PROB_MIN) * bursting_capacity_percentage + BURSTING_FLAVOR_PROB_MIN, BURSTING_FLAVOR_PROB_MIN, BURSTING_FLAVOR_PROB_MAX)
-	if (prob(flavor_message_chance * 100))
+	if (!prob(flavor_message_chance * 100))
+		return
 
-		var/message_content = ""
-		var/message_stage = clamp(round(bursting_capacity_percentage * 3.5 + 1), 1, 4) //Takes the capacity percentage and converts it into four equaly sized whole number 'stages' to be used as an index for selecting messages
+	var/message_content = ""
+	var/message_stage = clamp(round(bursting_capacity_percentage * 3.5 + 1), 1, 4) //Makes four equally sized "stages" to be used as indexes for message content
 
-		if (burst_type_fullness)
-			message_content = pick(list(
-				BURSTING_FLAVOR_FULL,
-				BURSTING_FLAVOR_STUFFED,
-				BURSTING_FLAVOR_OVERSTUFFED,
-				BURSTING_FLAVOR_NEARBURST
-			)[message_stage])
-		else
-			message_content = pick(list(
-				BURSTING_FLAVOR_VERYFAT,
-				BURSTING_FLAVOR_SUPEROBESE,
-				BURSTING_FLAVOR_EXTREMELYDOUGHY,
-				BURSTING_FLAVOR_OVERWHELMING_FATNESS
-			)[message_stage])
+	if (burst_type_fullness)
+		message_content = pick(list(
+			BURSTING_FLAVOR_FULL,
+			BURSTING_FLAVOR_STUFFED,
+			BURSTING_FLAVOR_OVERSTUFFED,
+			BURSTING_FLAVOR_NEARBURST
+		)[message_stage])
+	else
+		message_content = pick(list(
+			BURSTING_FLAVOR_VERYFAT,
+			BURSTING_FLAVOR_SUPEROBESE,
+			BURSTING_FLAVOR_EXTREMELYDOUGHY,
+			BURSTING_FLAVOR_OVERWHELMING_FATNESS
+		)[message_stage])
 
-		if (client?.prefs?.read_preference(/datum/preference/toggle/glutton_enable_messages)) //Check if the player wants messages
-			to_chat(src, span_warning(message_content))
+	if (client?.prefs?.read_preference(/datum/preference/toggle/glutton_enable_messages))
+		to_chat(src, span_warning(message_content))
 
-		if (client?.prefs?.read_preference(/datum/preference/toggle/glutton_enable_sounds))
-			//We compare the percentages to eachother with a threshold so that we can play sounds, we don't want sounds from one if it's only a tiny percentage of the other
-			if ((bursting_capacity_fullness > bursting_capacity_fatness * BURSTING_SOUND_RATIO)) //Do fullness sounds
-				playsound(src.loc, pick(BURSTING_GURGLE_SOUNDS), BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
+	if (client?.prefs?.read_preference(/datum/preference/toggle/glutton_enable_sounds))
+		//We're comparing the two so that both don't play if one's just a tiny amount compared to the other
+		if ((bursting_capacity_fullness > bursting_capacity_fatness * BURSTING_SOUND_RATIO)) //Do fullness sounds
+			playsound(src.loc, pick(BURSTING_GURGLE_SOUNDS), BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
 
-			if ((bursting_capacity_fatness > bursting_capacity_fullness * BURSTING_SOUND_RATIO)) //Do fatness sounds
-				playsound(src.loc, pick(BURSTING_FAT_SLOSH_SOUNDS), BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
+		if ((bursting_capacity_fatness > bursting_capacity_fullness * BURSTING_SOUND_RATIO)) //Do fatness sounds
+			playsound(src.loc, pick(BURSTING_FAT_SLOSH_SOUNDS), BURSTING_SOUND_VOLUME, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
 
-		if (message_stage == 4 && client?.prefs?.read_preference(/datum/preference/toggle/glutton_enable_creaking_sounds))
-			playsound(src.loc, pick(BURSTING_CREAK_SOUNDS), BURSTING_SOUND_VOLUME * 8, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
+	if (message_stage == 4 && client?.prefs?.read_preference(/datum/preference/toggle/bursting_enable_creaking_sounds))
+		playsound(src.loc, pick(BURSTING_CREAK_SOUNDS), BURSTING_SOUND_VOLUME * 8, 1, 1, 1.2, ignore_walls = FALSE, volume_preference = /datum/preference/numeric/volume/sound_bursting)
 
 /**
  * Handles the popup to confirm bursting or delay. Will
@@ -262,10 +260,15 @@
  * Stuns the charater to avoid issues with the transform.
  */
 /mob/living/carbon/human/proc/trigger_glutton_burst(burst_type, bursting_type_pref)
-	if (!check_prefs_in_view(/datum/preference/toggle/glutton_see_bursting, src.loc))
+	if (!check_prefs_in_view(/datum/preference/toggle/see_bursting, src.loc))
+		if (prob(BURSTING_FLAVOR_PROB_MIN * 100))
+			visible_message(
+				span_warning("[src] makes a loud creak as the swelling stops on the verge of bursting, they seem to be holding together for now... (People with bursting prefs disabled are in view!)"),
+				span_warning("You make a loud creak as the swelling momentarily stops as you struggle to hold together... (Someone with bursting prefs disabled is in view!)")
+			)
 		return
 
-	//Add self removing trait so that bursting doesn't repeatedly trigger, dual purpose as our delay if the delay button is pressed and a cooldown to delay repeated bursting
+	//Self removing trait that is both the delay and block for the popup
 	ADD_TRAIT(src, BURSTING_ABOUT_TO_BURST, TRAUMA_TRAIT)
 
 	//Quick little pref check that bypasses the TGUI confirmation for uncontrolled bursting
@@ -317,7 +320,7 @@
  */
 /mob/living/carbon/human/proc/burst_glutton()
 	//Check surrounding area if anyone will see them explode who would not want to, delay for a moment
-	if (!check_prefs_in_view(/datum/preference/toggle/glutton_see_bursting, src.loc))
+	if (!check_prefs_in_view(/datum/preference/toggle/see_bursting, src.loc))
 		visible_message(
 			span_warning("[src] makes a loud creak as the swelling stops on the verge of bursting, they seem to be holding together for now... (People with bursting prefs disabled are in view!)"),
 			span_warning("You make a loud creak as the swelling momentarily stops as you struggle to hold together... (Someone with bursting prefs disabled is in view!)")
@@ -340,7 +343,7 @@
 		visible_message(span_warning("[src]'s body lets out a final creak before bursting!"), span_warning("You feel your body let out a creak as the pressure becomes too much before bursting!"))
 
 		bursting_handle_weight_reduction()
-		do_burst()
+		do_burst(bursting_pref)
 
 /**
  * Handles the weight reduction of the player during bursting.
@@ -349,34 +352,35 @@
  */
 /mob/living/carbon/human/proc/bursting_handle_weight_reduction()
 	var/fatness_bursting_pref = client?.prefs?.read_preference(/datum/preference/numeric/helplessness/glutton_fatness_before_burst)
-	if (fatness_bursting_pref > 0)
-		//Clear some fat hiders
-		for (var/hider in fat_hiders)
-			if (istype(hider, /datum/reagent/water))
-				hider_remove(hider)
-			if (istype(hider, /datum/reagent/blueberry_juice))
-				hider_remove(hider)
+	if (fatness_bursting_pref < 1)
+		return
 
-		//Call the functions used to update fatness and hiders, since hider apply on its own wont update fatness if the hiders are removed
-		calculate_fatness()
+	//Clear some fat hiders
+	for (var/hider in fat_hiders)
+		if (istype(hider, /datum/reagent/water))
+			hider_remove(hider)
+		if (istype(hider, /datum/reagent/blueberry_juice))
+			hider_remove(hider)
 
-		//Start removing weight if needed
-		var/weight_target = fatness_bursting_pref * (1 - BURSTING_FATNESS_MIN_THRESHOLD) - BURSTING_BUFFER_REDUCTION
-		if (fatness > weight_target) //Check to see if just removing specific hiders was enough, otherwise do further reductions
-			adjust_fatness(-(fatness - weight_target), FATTENING_TYPE_ALMIGHTY, TRUE) //Use almighty to bypass pref check since they've already consented to burst
-			if (fatness > weight_target)
-				adjust_perma(-(fatness - weight_target), FATTENING_TYPE_ALMIGHTY, TRUE)
+	//We need to call this because hider_remove doesn't update fatness
+	calculate_fatness()
+
+	//Start removing weight if needed
+	var/weight_target = fatness_bursting_pref * (1 - BURSTING_FATNESS_MIN_THRESHOLD) - BURSTING_BUFFER_REDUCTION
+	if (fatness > weight_target) //Check to see if just removing specific hiders was enough, otherwise do further reductions
+		adjust_fatness(-(fatness - weight_target), FATTENING_TYPE_ALMIGHTY, TRUE) //Use almighty to bypass pref check since they've already consented to burst
+		if (fatness > weight_target)
+			adjust_perma(-(fatness - weight_target), FATTENING_TYPE_ALMIGHTY, TRUE)
 
 /**
  * Handles the finalization of bursting, slecting
  * which mode of burst to use based on the person's prefs,
  * and the effects related to which pref is selected.
  */
-/mob/living/carbon/human/proc/do_burst()
-	var/bursting_pref = get_bursting_pref()
+/mob/living/carbon/human/proc/do_burst(bursting_pref)
 	switch(bursting_pref)
 		if (BURSTING_PREF_FATAL)
-			blueberry_gib(client?.prefs?.read_preference(/datum/preference/toggle/glutton_leave_gibs))
+			blueberry_gib(client?.prefs?.read_preference(/datum/preference/toggle/bursting_leave_gibs))
 			return
 
 		if (BURSTING_PREF_PERMA_FATAL)
@@ -387,28 +391,38 @@
 			var/datum/effect_system/fluid_spread/smoke/burst_smoke/bursting_smoke = new(range = 2, holder = src, location = src)
 			bursting_smoke.start()
 
-			//Reagents need to be removed to be sure that player is not still in a bursting state afterwards
-			organs_slot["stomach"]?:reagents?:reagent_list = list()
-			reagents.reagent_list = list()
+			if (bursting_capacity_fullness > 1) //Blood and stomach reagents should be cleared if fullness would make them burst
+				organs_slot["stomach"]?:reagents?:reagent_list = list()
+				reagents.reagent_list = list()
 
-			//Injure modes
-			if (bursting_pref == BURSTING_PREF_INJURE || bursting_pref == BURSTING_PREF_CRIT)
-				var/bursting_chest_damage = bursting_pref == BURSTING_PREF_INJURE ? 40 : 110 ///40 damage if in injure, 110 if in crit mode
-				var/bursting_limb_damage = bursting_pref == BURSTING_PREF_INJURE ? 5 : 10 ///How much damage to do to the limbs if fatness bursting
-				var/bursting_stomach_damage = bursting_pref == BURSTING_PREF_INJURE ? 30 : 100 ///How much damage to do to the stomach when fullness bursting
+			do_burst_damage(bursting_pref)
 
-				apply_damage(bursting_chest_damage, BRUTE, BODY_ZONE_CHEST, forced = TRUE) //Apply brunt of damage to the chest
-
-				if (bursting_capacity_fatness > 1) //The whole body usually gets fat, if they burst from being too big also damage everything else
-					apply_damage(bursting_limb_damage, BRUTE, BODY_ZONE_L_ARM, forced = TRUE)
-					apply_damage(bursting_limb_damage, BRUTE, BODY_ZONE_R_ARM, forced = TRUE)
-					apply_damage(bursting_limb_damage, BRUTE, BODY_ZONE_L_LEG, forced = TRUE)
-					apply_damage(bursting_limb_damage, BRUTE, BODY_ZONE_R_LEG, forced = TRUE)
-
-				if (bursting_capacity_fullness > 1) //Wreck the stomach if they were too full
-					adjust_organ_loss(ORGAN_SLOT_STOMACH, bursting_stomach_damage)
 
 	Unconscious(5 SECONDS, TRUE) //Bursting is intense, knock the player out for a bit
+
+//Handles if damage should be applied to the player during bursting, if set to safe, does returns doing nothing
+/mob/living/carbon/human/proc/do_burst_damage(bursting_pref)
+	if (bursting_pref != BURSTING_PREF_INJURE && bursting_pref != BURSTING_PREF_CRIT)
+		return
+
+	var/bursting_chest_damage = 40
+	var/bursting_limb_damage =  5
+	var/bursting_stomach_damage = 30
+	if (bursting_pref == BURSTING_PREF_CRIT)
+		bursting_chest_damage = 110
+		bursting_limb_damage = 10
+		bursting_stomach_damage = 100
+
+	apply_damage(bursting_chest_damage, BRUTE, BODY_ZONE_CHEST, forced = TRUE) //Apply brunt of damage to the chest
+
+	if (bursting_capacity_fatness > 1) //The whole body usually gets fat, if they burst from being too big also damage everything else
+		apply_damage(bursting_limb_damage, BRUTE, BODY_ZONE_L_ARM, forced = TRUE)
+		apply_damage(bursting_limb_damage, BRUTE, BODY_ZONE_R_ARM, forced = TRUE)
+		apply_damage(bursting_limb_damage, BRUTE, BODY_ZONE_L_LEG, forced = TRUE)
+		apply_damage(bursting_limb_damage, BRUTE, BODY_ZONE_R_LEG, forced = TRUE)
+
+	if (bursting_capacity_fullness > 1) //Wreck the stomach if they were too full
+		adjust_organ_loss(ORGAN_SLOT_STOMACH, bursting_stomach_damage)
 
 //The smoke used for bursting
 /obj/effect/particle_effect/fluid/smoke/burst_smoke
@@ -448,6 +462,7 @@
 #undef BURSTING_BURST
 #undef BURSTING_GURGLE_SOUNDS
 #undef BURSTING_FAT_SLOSH_SOUNDS
+#undef BURSTING_CREAK_SOUNDS
 
 #undef BURSTING_FLAVOR_FULL
 #undef BURSTING_FLAVOR_STUFFED
@@ -458,5 +473,3 @@
 #undef BURSTING_FLAVOR_SUPEROBESE
 #undef BURSTING_FLAVOR_EXTREMELYDOUGHY
 #undef BURSTING_FLAVOR_OVERWHELMING_FATNESS
-
-#undef BURSTING_MACRO_CHECK_THRESHOLD

@@ -68,26 +68,6 @@ export const safe_bursting: FeatureToggle = {
   component: CheckboxInput,
 };
 
-export const see_bursting: FeatureToggle = {
-  name: 'See bursting',
-  description: 'Toggle if you want to see people bursting by inflation.',
-  component: CheckboxInput,
-};
-
-export const bursting_leave_gibs: FeatureToggle = {
-  name: 'Leave gibs on Bursting',
-  description:
-    'Toggle if you want to leave gibs on bursting. You will still leave items and berry juice regardless',
-  component: CheckboxInput,
-};
-
-export const automatic_bursting: FeatureToggle = {
-  name: 'Uncontrollable Bursting',
-  description:
-    'Toggles your control over bursting. If safe bursting is disabled, this can lead to accidental premature ends for RPs. Use with caution.',
-  component: CheckboxInput,
-};
-
 export const blueberry_lives: Feature<number> = {
   name: 'Bursts before becoming unsafe.',
   description:
@@ -116,17 +96,16 @@ export const glutton_bursting_type: FeatureChoiced = {
   component: FeatureDropdownInput,
 };
 
-export const glutton_see_bursting: FeatureToggle = {
+export const see_bursting: FeatureToggle = {
   name: 'See bursting',
-  description:
-    'Toggle if you want to see people bursting by being too fat or full.',
+  description: 'Toggle if you want to see people bursting',
   component: CheckboxInput,
 };
 
-export const glutton_leave_gibs: FeatureToggle = {
+export const bursting_leave_gibs: FeatureToggle = {
   name: 'Leave gibs on bursting',
   description:
-    'Toggle if you want to leave gibs on bursting, using perma-fatal bursting will still drop gibs. You will still leave items regardless',
+    'Toggle if you want to leave gibs on bursting, using perma-fatal bursting will still drop gibs. You will still leave items regardless. Also applies to blueberry bursting.',
   component: CheckboxInput,
 };
 
@@ -143,7 +122,7 @@ export const glutton_enable_sounds: FeatureToggle = {
   component: CheckboxInput,
 };
 
-export const glutton_enable_creaking_sounds: FeatureToggle = {
+export const bursting_enable_creaking_sounds: FeatureToggle = {
   name: 'Enable bursting creaking sounds',
   description:
     'Toggle if you would like the near bursting creaking sounds to play',
@@ -153,6 +132,6 @@ export const glutton_enable_creaking_sounds: FeatureToggle = {
 export const glutton_uncontrolled_burst: FeatureToggle = {
   name: 'Uncontrolled bursting',
   description:
-    "Toggles if you'd like to automatically burst once your limit is met. USE WITH CAUTION!!",
+    "Toggles if you'd like to automatically burst once your limit is met. Can lead to premature ends to RP, USE WITH CAUTION NOT IN SAFE MODE!! Applies for ALL forms of bursting.",
   component: CheckboxInput,
 };

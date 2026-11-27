@@ -217,7 +217,7 @@ GLOBAL_LIST_INIT(blueberry_about_to_blow_flavour, list(
  * Initiates the burst popup. Giving the player the choice between bursting or delaying.
  */
 /mob/living/carbon/proc/trigger_burst()
-	if(client?.prefs?.read_preference(/datum/preference/toggle/automatic_burst)) // This is on you.
+	if(client?.prefs?.read_preference(/datum/preference/toggle/glutton_uncontrolled_burst)) // This is on you.
 		burst()
 		return
 
