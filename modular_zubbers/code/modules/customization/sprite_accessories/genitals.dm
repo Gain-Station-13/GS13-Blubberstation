@@ -134,9 +134,13 @@
 	color_src = null
 
 /datum/sprite_accessory/genital/anus/normal
-	icon_state = "pair" //????
+	icon_state = "normal"
 	name = "Anus"
 
 /datum/sprite_accessory/genital/anus/donut
-	icon_state = "donut" //????
+	icon_state = "donut"
 	name = "Donut"
+
+/datum/sprite_accessory/genital/anus/squished
+	icon_state = "squished"
+	name = "Squished"
