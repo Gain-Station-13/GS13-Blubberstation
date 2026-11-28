@@ -1,5 +1,0 @@
-author: "Phantastic-Swan"
-delete-after: True
-changes:
-  - rscadd: "bloodsuckers will now gain weight if they have overfed on blood"
-  - rscadd: "being fat makes it so you lose less blood when a vampire drinks from you (the vampire still gains the same amount)"
