@@ -79,3 +79,61 @@
 			return (input_fatness - FATNESS_LEVEL_FAT)
 
 	return input_fatness
+
+/// for a given fatness, returns its stage
+/// can handle any positive number
+/// will runtime for negative numbers
+/proc/get_fatness_to_stage(input_fatness)
+	if (input_fatness < 0)
+		stack_trace("get_fatness_to_stage called with a negative fatness value of: [input_fatness];")
+		return 0
+	switch(input_fatness)
+		if (FATNESS_LEVEL_NONE to FATNESS_LEVEL_FAT)
+			return 0
+		if (FATNESS_LEVEL_FAT to FATNESS_LEVEL_FATTER)
+			return 1
+		if (FATNESS_LEVEL_FATTER to FATNESS_LEVEL_VERYFAT)
+			return 2
+		if (FATNESS_LEVEL_VERYFAT to FATNESS_LEVEL_OBESE)
+			return 3
+		if (FATNESS_LEVEL_OBESE to FATNESS_LEVEL_MORBIDLY_OBESE)
+			return 4
+		if (FATNESS_LEVEL_MORBIDLY_OBESE to FATNESS_LEVEL_EXTREMELY_OBESE)
+			return 5
+		if (FATNESS_LEVEL_EXTREMELY_OBESE to FATNESS_LEVEL_BARELYMOBILE)
+			return 6
+		if (FATNESS_LEVEL_BARELYMOBILE to FATNESS_LEVEL_IMMOBILE)
+			return 7
+		if (FATNESS_LEVEL_IMMOBILE to FATNESS_LEVEL_BLOB)
+			return 8
+		if (FATNESS_LEVEL_BLOB to INFINITY)
+			return 9
+
+/// for a given integer, gives the corresponding fatness stage.
+/// Will return the highest weight stage for any number byond max weight stages.
+/// Will runtime when stage < 0
+/proc/get_fatness_stage(stage)
+	if (stage < 0)
+		stack_trace("get_fatness_stage called with a negative stage value of: [stage];")
+		return FATNESS_LEVEL_NONE
+	switch(stage)
+		if (0)
+			return FATNESS_LEVEL_NONE
+		if (1)
+			return FATNESS_LEVEL_FAT
+		if (2)
+			return FATNESS_LEVEL_FATTER
+		if (3)
+			return FATNESS_LEVEL_VERYFAT
+		if (4)
+			return FATNESS_LEVEL_OBESE
+		if (5)
+			return FATNESS_LEVEL_MORBIDLY_OBESE
+		if (6)
+			return FATNESS_LEVEL_EXTREMELY_OBESE
+		if (7)
+			return FATNESS_LEVEL_BARELYMOBILE
+		if (8)
+			return FATNESS_LEVEL_IMMOBILE
+		if (9 to INFINITY)
+			return FATNESS_LEVEL_BLOB

@@ -40,6 +40,7 @@
 		/datum/design/atmos_thermal,
 		/datum/design/pneumatic_seal,
 		/datum/design/large_welding_tool,
+		/datum/design/board/inflation_pump,	// GS13 EDIT adds inflation pump
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	experiments_to_unlock = list(

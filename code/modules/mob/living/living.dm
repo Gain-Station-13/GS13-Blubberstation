@@ -98,15 +98,17 @@
 	var/can_help_themselves = !INCAPACITATED_IGNORING(src, INCAPABLE_RESTRAINTS)
 	// GS13 EDIT START - if you are fat enough, you cause screen shake when falling
 	var/shake_camera = FALSE
+	var/graceful_inflation_landing = FALSE
 	if (iscarbon(src))
 		var/mob/living/carbon/carbon_src = src
-		shake_camera = carbon_src.fatness >= FATNESS_LEVEL_IMMOBILE
+		graceful_inflation_landing = carbon_src.inflation_value >= INFLATION_STAGE_NO_GRAVITY / 2
+		shake_camera = (carbon_src.fatness >= FATNESS_LEVEL_IMMOBILE && !graceful_inflation_landing)
 		can_help_themselves = can_help_themselves && !shake_camera	// if we're fat enough to cause an impact, don't avoid damage
 	// GS13 EDIT END
 	if(levels <= 1 && can_help_themselves)
 		var/obj/item/organ/wings/gliders = get_organ_by_type(/obj/item/organ/wings)
 		if(HAS_TRAIT(src, TRAIT_FREERUNNING) || gliders?.can_soften_fall()) // the power of parkour or wings allows falling short distances unscathed
-			var/graceful_landing = HAS_TRAIT(src, TRAIT_CATLIKE_INSTINCT)
+			var/graceful_landing = HAS_TRAIT(src, TRAIT_CATLIKE_INSTINCT) || graceful_inflation_landing	// GS13 EDIT makes it so being inflated can negate fall damage
 
 			if(graceful_landing)
 				add_movespeed_modifier(/datum/movespeed_modifier/landed_on_feet)
