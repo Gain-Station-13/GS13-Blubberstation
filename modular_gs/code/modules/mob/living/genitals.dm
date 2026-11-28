@@ -87,12 +87,7 @@
 // 	if(uses_skintones)
 // 		. += "_s"
 
-/obj/item/organ/genital/belly/set_size(size) // The commented text under this is already defined by modular_skyrat/modules/customization/modules/surgery/organs/genitals.dm so our messages were doubling
-//	var/old_size = genital_size
-//	if(size > old_size)
-//		to_chat(owner, span_warning("Your guts [pick("swell up to", "gurgle into", "expand into", "plump up into", "grow eagerly into", "fatten up into", "distend into")] a larger midsection."))
-//	else if (size < old_size)
-//		to_chat(owner, span_warning("Your guts [pick("shrink down to", "decrease into", "wobble down into", "diminish into", "deflate into", "contracts into")] a smaller midsection."))
+/obj/item/organ/genital/belly/set_size(size)
 
 	genital_size = max(size, set_genital_size)
 	genital_size = min(genital_size, max_genital_size, BELLY_MAX_SIZE)

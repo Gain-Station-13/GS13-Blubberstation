@@ -12,9 +12,3 @@
 	if(DNA.features["anus_uses_skintones"])
 		uses_skintones = accessory.has_skintone_shading
 	return ..()
-
-/datum/bodypart_overlay/mutant/genital/anus
-	feature_key = ORGAN_SLOT_ANUS
-	layers = list(EXTERNAL_ADJACENT = BODY_ADJ_LAYER, EXTERNAL_FRONT = ANUS_LAYER_FRONT)
-	layer_offset = ANUS_LAYER_OFFSET
-	offset_location = ENTIRE_BODY

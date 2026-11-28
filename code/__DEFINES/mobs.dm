@@ -913,7 +913,7 @@ GLOBAL_ALIST_INIT(human_heights_to_offsets, alist(
 #define ID_LAYER 20	// GS13 EDIT, original: 18
 // BUBBER EDIT ADDITION BEGIN
 #define BANDAGE_LAYER 21	// GS13 EDIT, original: 19
-#define ANUS_LAYER_FRONT 21.8 // GS13 ADDITION, modular donut genitals
+#define ANUS_LAYER_FRONT 21.8 // GS13 EDIT
 #define ASS_LAYER_FRONT 21.9	// GS13 EDIT, original: 19.9
 #define NIPPLES_LAYER 22	// GS13 EDIT, original: 20
 #define PENIS_LAYER 23	// GS13 EDIT, original: 21
