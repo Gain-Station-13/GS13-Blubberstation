@@ -106,33 +106,6 @@
 /datum/preference/toggle/safe_bursting/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return
 
-/datum/preference/toggle/see_bursting
-	category = BLUEBERRY_PREFERENCES
-	savefile_identifier = PREFERENCE_CHARACTER
-	savefile_key = "see_bursting"
-	default_value = FALSE
-
-/datum/preference/toggle/see_bursting/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
-	return
-
-/datum/preference/toggle/bursting_leave_gibs
-	category = BLUEBERRY_PREFERENCES
-	savefile_identifier = PREFERENCE_CHARACTER
-	savefile_key = "bursting_leave_gibs"
-	default_value = FALSE
-
-/datum/preference/toggle/bursting_leave_gibs/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
-	return
-
-/datum/preference/toggle/automatic_burst
-	category = BLUEBERRY_PREFERENCES
-	savefile_identifier = PREFERENCE_CHARACTER
-	savefile_key = "automatic_bursting"
-	default_value = FALSE
-
-/datum/preference/toggle/automatic_burst/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
-	return
-
 /datum/preference/numeric/helplessness/blueberry_max_before_burst
 	category = BLUEBERRY_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
@@ -182,22 +155,22 @@
 /datum/preference/choiced/glutton_bursting_type/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return
 
-/datum/preference/toggle/glutton_see_bursting
+/datum/preference/toggle/see_bursting
 	category = GLUTTON_BURSTING_PREFRENCES
 	savefile_identifier = PREFERENCE_CHARACTER
-	savefile_key = "glutton_see_bursting"
+	savefile_key = "see_bursting"
 	default_value = FALSE
 
-/datum/preference/toggle/glutton_see_bursting/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+/datum/preference/toggle/see_bursting/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return
 
-/datum/preference/toggle/glutton_leave_gibs
+/datum/preference/toggle/bursting_leave_gibs
 	category = GLUTTON_BURSTING_PREFRENCES
 	savefile_identifier = PREFERENCE_CHARACTER
-	savefile_key = "glutton_leave_gibs"
+	savefile_key = "bursting_leave_gibs"
 	default_value = FALSE
 
-/datum/preference/toggle/glutton_leave_gibs/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+/datum/preference/toggle/bursting_leave_gibs/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return
 
 /datum/preference/toggle/glutton_enable_messages
@@ -216,4 +189,22 @@
 	default_value = FALSE
 
 /datum/preference/toggle/glutton_enable_sounds/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+	return
+
+/datum/preference/toggle/bursting_enable_creaking_sounds
+	category = GLUTTON_BURSTING_PREFRENCES
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "bursting_enable_creaking_sounds"
+	default_value = FALSE
+
+/datum/preference/toggle/bursting_enable_creaking_sounds/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+	return
+
+/datum/preference/toggle/glutton_uncontrolled_burst
+	category = GLUTTON_BURSTING_PREFRENCES
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "glutton_uncontrolled_burst"
+	default_value = FALSE
+
+/datum/preference/toggle/glutton_uncontrolled_burst/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return
