@@ -460,8 +460,9 @@
 
 /datum/bodypart_overlay/mutant/genital/anus
 	feature_key = ORGAN_SLOT_ANUS
-	layers = list(EXTERNAL_FRONT = BODY_FRONT_LAYER)
+	layers = list(EXTERNAL_ADJACENT = BODY_ADJ_LAYER, EXTERNAL_FRONT = ANUS_LAYER_FRONT) // GS13 EDIT
 	layer_offset = ANUS_LAYER_OFFSET
+	offset_location = ENTIRE_BODY // GS13 EDIT
 
 /obj/item/organ/genital/anus/get_description_string(datum/sprite_accessory/genital/gas)
 	var/returned_string = "You see an [LOWER_TEXT(genital_name)]."
@@ -471,8 +472,8 @@
 		returned_string += " It looks very tight."
 	return returned_string
 
-/datum/bodypart_overlay/mutant/genital/anus/get_global_feature_list()
-	return SSaccessories.sprite_accessories[ORGAN_SLOT_ANUS]
+// /datum/bodypart_overlay/mutant/genital/anus/get_global_feature_list() GS13 EDIT, Pretty sure this makes the anus invisible no matter what so lets get rid of it
+//	return SSaccessories.sprite_accessories[ORGAN_SLOT_ANUS]			 GS13 EDIT  Commented out for the above
 
 /obj/item/organ/genital/breasts
 	name = "breasts"

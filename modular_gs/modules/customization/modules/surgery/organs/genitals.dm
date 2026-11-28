@@ -1,0 +1,14 @@
+/obj/item/organ/genital/anus/get_sprite_size_string()
+	. = "[genital_type]_[floor(genital_size)]"
+	if(uses_skintones)
+		. += "_s"
+
+/obj/item/organ/genital/anus/build_from_dna(datum/dna/DNA, associated_key)
+	uses_skin_color = DNA.features["anus_uses_skincolor"]
+	set_size(DNA.features["anus_size"])
+	return ..()
+
+/obj/item/organ/genital/anus/build_from_accessory(datum/sprite_accessory/genital/accessory, datum/dna/DNA)
+	if(DNA.features["anus_uses_skintones"])
+		uses_skintones = accessory.has_skintone_shading
+	return ..()
