@@ -123263,7 +123263,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/station/command/heads_quarters/qm)
 "xnK" = (
-/mob/living/carbon/human/species/monkey/punpun,
+/mob/living/basic/mothroach/bar,
 /obj/machinery/holopad,
 /obj/effect/turf_decal/tile/bar/opposingcorners{
 	dir = 1
