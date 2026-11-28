@@ -4112,6 +4112,7 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/machinery/camera/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -76995,12 +76996,14 @@
 /obj/machinery/button/door/directional/south{
 	pixel_x = -8;
 	id = "QMLoaddoor2";
-	name = "Loading Bay Doors"
+	name = "Loading Bay Doors";
+	req_access = list("cargo")
 	},
 /obj/machinery/button/door/directional/south{
 	pixel_x = 8;
 	name = "Loading Bay Doors";
-	id = "QMLoaddoor"
+	id = "QMLoaddoor";
+	req_access = list("cargo")
 	},
 /obj/structure/table,
 /obj/item/stamp/granted{
