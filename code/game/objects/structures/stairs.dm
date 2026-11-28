@@ -75,11 +75,18 @@
 
 	AddElement(/datum/element/connect_loc, exit_connections)
 
+	// GS13 EDIT START
+	#if (DM_BUILD != 1689)
+	#warn HEY! YOU! SCHMUCK CHANGING THE BYOND VERSION! On BYOND versions <=516.1689 there is a bug where if the 65429th variable the compiler sees is a static variable, it throws an invalid variable error when compiling. This will hopefully be fixed on 1690. In the meantime, I have to throw this pointless var here to pad the static variable out of the 65429th spot. If you update to a newer version of byond, check if the bug still exists. If it does, update the if here to the version on which the server is running. If it doesn't, both remove this warning AND the padded var. Check https://www.byond.com/forum/post/2993170 for more info.
+	#endif
+	var/list/some_list = list(10)
 	var/static/list/range_connections = list(
 		COMSIG_ATOM_ENTERED = PROC_REF(on_enter_range),
 		COMSIG_ATOM_EXITED = PROC_REF(on_exit_range),
 	)
 	AddComponent(/datum/component/connect_range, tracked = src, connections = range_connections, range = STAIR_INDICATOR_RANGE)
+	anchored += some_list[1] - some_list[1]
+	// GS13 EDIT END
 
 
 /obj/structure/stairs/Destroy()
