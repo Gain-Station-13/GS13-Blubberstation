@@ -32713,7 +32713,6 @@
 /obj/item/reagent_containers/condiment/sugar,
 /obj/effect/turf_decal/bot_white,
 /obj/structure/closet/mini_fridge,
-/obj/structure/closet/secure_closet/freezer/fridge/all_access,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/station/command/bridge)
 "kfV" = (
