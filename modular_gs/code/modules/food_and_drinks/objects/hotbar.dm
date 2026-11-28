@@ -16,12 +16,12 @@
 		/obj/item/grown,
 		/obj/item/graft,
 	)
-	
+
 	if(weapon.w_class >= WEIGHT_CLASS_BULKY)
 		return FALSE
 	if(IS_EDIBLE(weapon))
 		return TRUE
 	if(istype(weapon, /obj/item/reagent_containers/cup/bowl) && weapon.reagents?.total_volume > 0)
 		return TRUE
-		
+
 	return is_type_in_list(weapon, plant_stuffs)

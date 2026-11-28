@@ -1,5 +1,43 @@
-// this has been ported from CHOMP/Virgo, but I've decided to adjust the recipe a bit
+//GS13 BIG FOODS
+//these usually need specifically a crafting menu recipe, they also have way bigger sprites
+//recipes are found in the subfolder
 
+/obj/item/food/cake/hugecookiecream
+	name = "GlucoBomb Cookies and Cream Cakeshake"
+	desc = "Are you out of your fucking mind? It's good that this doesn't have a nutritional label, otherwise you'd have a stroke reading it."
+	icon = 'modular_gs/icons/obj/food/food64x64.dmi'
+	icon_state = "hugecakeshake"
+	max_volume = 700
+	bite_consumption = 7
+	pixel_x = -16
+	pixel_y = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	food_reagents = list(/datum/reagent/consumable/nutriment = 200, /datum/reagent/consumable/sugar = 100, /datum/reagent/consumable/milk = 50)
+	tastes = list("sugar" = 1, "sugar shock" = 1, "syrup" = 1, "slop" = 1, "overwhelming surge of calories" = 10)
+	foodtypes = GRAIN | DAIRY | SUGAR
+	venue_value = FOOD_PRICE_NORMAL
+	crafting_complexity = FOOD_COMPLEXITY_3
+
+/obj/item/food/burger/hoardburger
+	name = "Hoardburger"
+	desc = "A monument to greed. There are rumors that some can eat this in one bite."
+	icon = 'modular_gs/icons/obj/food/food96x32.dmi'
+	icon_state = "hoardburger"
+	max_volume = 700
+	bite_consumption = 7
+//	pixel_x = -16
+	pixel_y = -32
+	inhand_x_dimension = 128
+	inhand_y_dimension = 32
+	food_reagents = list(/datum/reagent/consumable/nutriment = 200, /datum/reagent/consumable/nutriment/vitamin = 20)
+	tastes = list("meat" = 1, "veggies" = 1, "grease" = 1, "bun" = 1, , "overwhelming surge of calories" = 10)
+	foodtypes = GRAIN | DAIRY | MEAT | VEGETABLES
+	venue_value = FOOD_PRICE_NORMAL
+	crafting_complexity = FOOD_COMPLEXITY_3
+
+
+// this has been ported from CHOMP/Virgo, but I've decided to adjust the recipe a bit
 // ourgh I need a big pizzuh...
 
 /obj/item/food/pizza/framewrecker
@@ -11,7 +49,7 @@
 	pixel_y = -16
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
-	food_reagents = list(/datum/reagent/consumable/nutriment = 200, /datum/reagent/consumable/tomatojuice = 5, /datum/reagent/consumable/nutriment/vitamin = 20)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 200, /datum/reagent/consumable/tomatojuice = 10, /datum/reagent/consumable/nutriment/vitamin = 30)
 	max_volume = 500
 	bite_consumption = 5
 	tastes = list("crust" = 1, "tomato" = 1, "cheese" = 1, "meat" = 1, "overwhelming surge of calories" = 10)

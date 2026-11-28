@@ -59,9 +59,6 @@
 				/obj/item/reagent_containers/cup/bigbottle/starkist = 6,
 				/obj/item/reagent_containers/cup/bigbottle/cola = 6,
 				/obj/item/reagent_containers/cup/bigbottle/spaceup = 6,
-				/obj/item/reagent_containers/cup/glass/bottle/orangejuice = 10,
-	            ///obj/item/reagent_containers/cup/glass/bottle/pineapplejuice = 10,
-	            ///obj/item/reagent_containers/cup/glass/bottle/strawberryjuice = 10,
 				)
 	contraband = list(
 				/obj/item/organ/ears/cat = 2,

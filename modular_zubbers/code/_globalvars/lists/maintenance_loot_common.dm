@@ -983,9 +983,13 @@ GLOBAL_LIST_INIT(common_loot, list( //common: basic items
 	) = 50,
 	//GS13 EDIT MAINT - LOOT
 	list(
-		/obj/item/trash/fatoray_scrap1 = 1,
-		/obj/item/trash/fatoray_scrap2 = 1,
-	) = 500,
+		/obj/item/trash/fatoray_scrap1 = 2,
+		/obj/item/trash/fatoray_scrap2 = 2,
+		/obj/item/metal_food/mfries = 1,
+		/obj/item/metal_food/mram = 1,
+		/obj/item/metal_food/mburger_calorite = 1,
+		/obj/item/metal_food/mburger = 1,
+	) = 200,
 	//GS13 EDIT END
 	/obj/item/rack_parts = 75
 ))
