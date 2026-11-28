@@ -7347,7 +7347,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 28
 	},
-/obj/structure/safe,
+/obj/structure/safe/vault,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/command/vault)
 "coh" = (
@@ -17138,6 +17138,7 @@
 	id = "bs_office";
 	name = "curtain"
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/blueshield)
 "fsV" = (
@@ -22849,7 +22850,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/aft)
 "heJ" = (
-/obj/item/surgery_tray,
+/obj/item/surgery_tray/deployed,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
@@ -43528,6 +43529,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/mid_joiner{
 	dir = 1
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark/smooth_corner,
 /area/station/maintenance/aft)
 "nAl" = (
@@ -62175,7 +62177,6 @@
 	name = "Chapel Hall"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/cable,
 /obj/effect/landmark/navigate_destination/autoname,
 /turf/open/floor/iron,
 /area/station/service/chapel/monastery)
@@ -65972,7 +65973,6 @@
 /turf/open/floor/glass/reinforced,
 /area/station/hallway/primary/port)
 "uGu" = (
-/obj/machinery/light/directional/west,
 /obj/effect/turf_decal/siding/dark/corner{
 	dir = 4
 	},
