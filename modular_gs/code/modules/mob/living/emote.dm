@@ -204,7 +204,7 @@
 			var/breath_moles = 0
 			var/datum/gas_mixture/environment = inflatee.loc.return_air()
 			if(environment)
-				breath_moles = environment.total_moles()*INHALE_PERCENTAGE
+				breath_moles = environment.total_moles() * INHALE_PERCENTAGE
 			breath = inflatee.loc.remove_air(breath_moles)
 	else //Breathe from loc as obj again
 		if(isobj(inflatee.loc))

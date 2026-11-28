@@ -7460,6 +7460,7 @@
 #include "modular_gs\code\game\objects\items\circuitboards.dm"
 #include "modular_gs\code\game\objects\items\fat_plushies.dm"
 #include "modular_gs\code\game\objects\items\hand_items.dm"
+#include "modular_gs\code\game\objects\items\handpump.dm"
 #include "modular_gs\code\game\objects\items\holosign_creator.dm"
 #include "modular_gs\code\game\objects\items\plushes.dm"
 #include "modular_gs\code\game\objects\items\reagent_containers.dm"
