@@ -45,3 +45,8 @@
   - rscadd: Added Belly Rubbing to the interactions menu
   - rscadd: Added Belly Slapping, triggered by targeting the groin and right clicking
       the front of a character.
+2026-11-28:
+  Phantastic-Swan:
+  - rscadd: bloodsuckers will now gain weight if they have overfed on blood
+  - rscadd: being fat makes it so you lose less blood when a vampire drinks from you
+      (the vampire still gains the same amount)
