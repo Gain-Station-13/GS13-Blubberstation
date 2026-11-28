@@ -1229,7 +1229,6 @@
 	// BUBBER EDIT ADDITION START - per-limb alpha and hand marking fixes
 	// preference (stored in dna.features) overrides it for this specific zone if present over species alpha
 	limb_alpha = owner_species?.specific_alpha || 255
-
 	markings_alpha = owner_species.markings_alpha // Has no default, and a null alpha renders nothing //GS13 EDIT: Moved this here as a fallback if there's no limb alpha set
 	var/limb_alpha_key = "limb_alpha_[body_zone]"
 	if(limb_alpha_key in human_owner.dna.features)
