@@ -43109,7 +43109,7 @@
 "oCn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
-/mob/living/carbon/human/species/monkey/punpun,
+/mob/living/basic/mothroach/bar,
 /turf/open/floor/iron,
 /area/station/service/bar)
 "oCE" = (

@@ -46,7 +46,7 @@ GLOBAL_DATUM(the_one_and_only_punpun, /mob/living)
 /mob/living/carbon/human/species/monkey/punpun/Initialize(mapload, datum/species/species)
 	. = ..()
 
-	REGISTER_REQUIRED_MAP_ITEM(1, 1) // pun pun is required on maps.
+	// REGISTER_REQUIRED_MAP_ITEM(1, 1) // pun pun is required on maps.	// GS13 EDIT no, punpun is not required on maps
 	if(mapload && (locate(/datum/station_trait/job/pun_pun) in SSstation.station_traits))
 		new /obj/effect/landmark/start/pun_pun(loc) //Pun Pun is a crewmember, and may late-join.
 		return INITIALIZE_HINT_QDEL

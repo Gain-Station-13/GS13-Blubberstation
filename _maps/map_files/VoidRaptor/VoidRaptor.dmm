@@ -34727,7 +34727,7 @@
 	},
 /area/station/cargo/storage)
 "jUa" = (
-/mob/living/carbon/human/species/monkey/punpun,
+/mob/living/basic/mothroach/bar,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/station/service/bar)

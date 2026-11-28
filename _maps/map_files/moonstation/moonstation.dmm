@@ -32362,7 +32362,7 @@
 /area/station/maintenance/abandon_exam)
 "iLy" = (
 /obj/structure/table/wood,
-/mob/living/carbon/human/species/monkey/punpun,
+/mob/living/basic/mothroach/bar,
 /obj/effect/turf_decal/siding/dark,
 /turf/open/floor/iron/grimy,
 /area/station/commons/lounge)

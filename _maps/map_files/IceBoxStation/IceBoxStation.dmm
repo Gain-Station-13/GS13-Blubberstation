@@ -48828,7 +48828,7 @@
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
-/mob/living/carbon/human/species/monkey/punpun,
+/mob/living/basic/mothroach/bar,
 /turf/open/floor/stone,
 /area/station/service/bar/atrium)
 "nuN" = (
