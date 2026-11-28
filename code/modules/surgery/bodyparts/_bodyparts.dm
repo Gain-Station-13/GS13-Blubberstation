@@ -1237,7 +1237,6 @@
 
 		markings_alpha = human_owner.dna.features[limb_alpha_key] //GS13 EDIT: Added here so that markings are not fully opaque
 		alpha = human_owner.dna.features[limb_alpha_key] //GS13 EDIT: Seems to make other bodyparts like tails, muzzles, belly parts, etc. more relyably transparent/opaque
-
 	//ORIGINAL: markings_alpha = owner_species.markings_alpha // Has no default, and a null alpha renders nothing //GS13 EDIT: Moved above to serve as a fallback
 
 	if(body_zone in owner_species.body_markings)
